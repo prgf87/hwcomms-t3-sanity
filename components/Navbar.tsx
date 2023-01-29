@@ -1,5 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
-// import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
@@ -14,14 +12,14 @@ function Navbar() {
     setNav(!nav);
   };
 
-  // window.onload = () => {
-  //   if (typeof document !== 'undefined') {
-  //     const body: HTMLBodyElement | null = document.querySelector('body');
-  //     if (nav === true) {
-  //       body.style.overflow = 'hidden';
-  //     } else body.style.overflow = 'auto';
-  //   }
-  // };
+  if (typeof document !== 'undefined') {
+    const body: HTMLBodyElement | null = document.querySelector('body');
+    if (nav === true) {
+      body!.style.overflow = 'hidden';
+    } else {
+      body!.style.overflow = 'auto';
+    }
+  }
 
   useEffect(() => {
     const changeColor = () => {
@@ -43,7 +41,7 @@ function Navbar() {
       <div className="max-w-[1040px] m-auto flex justify-between text-white items-center p-4">
         <Link href="/">
           <div className="flex gap-2 py-2">
-            <img src={'/logo.jpg'} alt="/" />
+            <img src={'/logo.jpg'} alt="Site Logo" />
           </div>
         </Link>
 
@@ -106,7 +104,9 @@ function Navbar() {
           onClick={() => {
             if (!nav === true) {
               setTextColor('white');
-            } else setTextColor('#000000');
+            } else if (!nav === false && window.scrollY >= 30) {
+              setTextColor('#000000');
+            }
           }}
           className="sm:hidden z-10"
         >

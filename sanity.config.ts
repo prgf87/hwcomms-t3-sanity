@@ -16,8 +16,8 @@ export default defineConfig({
   name: 'HWC_Content_Studio',
   title: 'HWC Content Studio',
 
-  projectId,
-  dataset,
+  projectId: 'vlh7m3oc',
+  dataset: 'production',
 
   plugins: [
     deskTool({

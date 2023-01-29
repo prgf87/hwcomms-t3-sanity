@@ -7,7 +7,7 @@ type Props = {
   posts: Post[];
 };
 
-function BlogList({ posts }: Props) {
+function PostList({ posts }: Props) {
   return (
     <div className="max-w-7xl mx-auto">
       <hr className="border-[#5EBCAA] mb-10" />
@@ -48,7 +48,7 @@ function BlogList({ posts }: Props) {
                             key={category._id}
                             className="bg-[#5EBCAA] text-center text-black px-3 py-1 rounded-full text-sm font-semibold"
                           >
-                            <p>{category.title}</p>
+                            <div>{category.title}</div>
                           </div>
                         );
                       })}
@@ -61,10 +61,12 @@ function BlogList({ posts }: Props) {
                     {post.description}
                   </p>
                 </div>
-                <p className="mt-5 font-bold flex items-center group-hover:underline">
-                  Read Post
-                  <ArrowUpRightIcon className="ml-2 h-4 w-4" />
-                </p>
+                <div>
+                  <p className="mt-5 font-bold flex items-center group-hover:underline">
+                    Read Post
+                    <ArrowUpRightIcon className="ml-2 h-4 w-4" />
+                  </p>
+                </div>
               </div>
             </ClientSideRoute>
           );
@@ -74,4 +76,4 @@ function BlogList({ posts }: Props) {
   );
 }
 
-export default BlogList;
+export default PostList;

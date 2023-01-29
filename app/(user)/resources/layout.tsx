@@ -1,9 +1,8 @@
 'use client';
 
-import BlogBanner from '@/components/BlogBanner';
 import HeroHome from '@/components/HeroHome';
 import Navbar from '@/components/Navbar';
-import '../globals.css';
+import '../../globals.css';
 
 export default function RootLayout({
   children,
@@ -15,11 +14,10 @@ export default function RootLayout({
       <body>
         <Navbar />
         <HeroHome
-          heading="Hailey Wilson Communications"
-          message="Where there's a Wilson, there's a way"
+          heading="Tips &amp; Resources"
+          message="Browse around and enjoy the content"
           btnmsg="Learn More"
         />
-        <BlogBanner />
         {children}
       </body>
     </html>

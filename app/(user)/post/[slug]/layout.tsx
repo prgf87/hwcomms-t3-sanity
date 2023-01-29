@@ -3,7 +3,7 @@
 import BlogBanner from '@/components/BlogBanner';
 import HeroHome from '@/components/HeroHome';
 import Navbar from '@/components/Navbar';
-import '../globals.css';
+import '../../../globals.css';
 
 export default function RootLayout({
   children,
@@ -15,8 +15,8 @@ export default function RootLayout({
       <body>
         <Navbar />
         <HeroHome
-          heading="Hailey Wilson Communications"
-          message="Where there's a Wilson, there's a way"
+          heading="Welcome to Hailey's Blog"
+          message="A collection of blogs about all sort of subjects that interest me"
           btnmsg="Learn More"
         />
         <BlogBanner />
