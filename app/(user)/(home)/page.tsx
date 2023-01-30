@@ -43,7 +43,6 @@ export default async function HomePage() {
   }
   const posts = await client.fetch(query);
   const tips = await client.fetch(queryTip);
-  console.log(tips);
 
   return (
     <main>

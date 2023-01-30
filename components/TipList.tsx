@@ -8,7 +8,6 @@ type Props = {
 };
 
 function TipList({ tips }: Props) {
-  console.log(tips);
   return (
     <div className="max-w-7xl mx-auto">
       <hr className="border-[#5EBCAA] mb-10" />
