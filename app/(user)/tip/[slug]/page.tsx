@@ -11,20 +11,19 @@ type Props = {
   };
 };
 
-// export async function generateStaticParams() {
-//   const query = groq`*[_type=='tip']
-//   {
-//     slug
-//   }`;
+export async function generateStaticParams() {
+  const query = groq`*[_type=='tip']
+  {
+    slug
+  }`;
 
-// const slugs: Tip[] = await client.fetch(query);
-// console.log(slugs);
-// const slugRoutes = slugs.map((slug) => slug.slug.current);
-//   return slugRoutes.map((slug) => ({
-//     slug: slug,
-//     revalidate: 30, // revalidate this page every /n seconds
-//   }));
-// }
+  const slugs: Tip[] = await client.fetch(query);
+  const slugRoutes = slugs.map((slug) => slug.slug.current);
+  return slugRoutes.map((slug) => ({
+    slug: slug,
+    revalidate: 30, // revalidate this page every /n seconds
+  }));
+}
 
 async function Tip({ params: { slug } }: Props) {
   const queryTip = groq`
