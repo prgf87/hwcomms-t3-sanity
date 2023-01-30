@@ -1,6 +1,6 @@
 'use client';
 
-import HeroHome from '@/components/HeroHome';
+import Hero from '@/components/Hero';
 import Navbar from '@/components/Navbar';
 import '../../globals.css';
 
@@ -13,10 +13,11 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Navbar />
-        <HeroHome
+        <Hero
           heading="Contact Hailey"
           message="To get a bespoke quote or to get answers to your questions"
           btnmsg="Learn More"
+          custombg="custom-img3"
         />
         {children}
       </body>

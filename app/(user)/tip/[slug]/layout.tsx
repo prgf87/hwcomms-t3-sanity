@@ -1,7 +1,7 @@
 'use client';
 
 import TipBanner from '@/components/TipBanner';
-import HeroHome from '@/components/HeroHome';
+import Hero from '@/components/Hero';
 import Navbar from '@/components/Navbar';
 import '../../../globals.css';
 
@@ -14,7 +14,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Navbar />
-        <HeroHome
+        <Hero
           heading="Tips &amp; Resources"
           message="Search through our many tips and Resources"
           btnmsg="Learn More"
