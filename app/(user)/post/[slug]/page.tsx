@@ -11,6 +11,8 @@ type Props = {
   };
 };
 
+export const revalidate = 30; // revalidate this page every /n seconds
+
 export async function generateStaticParams() {
   const query = groq`*[_type=='post']
   {
@@ -21,7 +23,6 @@ export async function generateStaticParams() {
   const slugRoutes = slugs.map((slug) => slug.slug.current);
   return slugRoutes.map((slug) => ({
     slug: slug,
-    revalidate: 30, // revalidate this page every /n seconds
   }));
 }
 
