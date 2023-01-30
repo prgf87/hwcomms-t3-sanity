@@ -1,4 +1,4 @@
-function BlogBanner() {
+function PostBanner() {
   return (
     <main className="max-w-[1240px] mx-auto flex flex-col lg:flex-row lg:space-x-5 justify-between font-bold px-10 my-10 ">
       <section>
@@ -20,4 +20,4 @@ function BlogBanner() {
   );
 }
 
-export default BlogBanner;
+export default PostBanner;

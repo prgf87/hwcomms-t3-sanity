@@ -4,9 +4,20 @@ import { client } from '@/lib/sanity.client';
 import PreviewPostList from '@/components/PreviewPostList';
 import PostList from '@/components/PostList';
 import PreviewSuspense from '@/components/PreviewSuspense';
+import TipList from '@/components/TipList';
+import PreviewTipList from '@/components/PreviewTipList';
+import PostBanner from '@/components/PostBanner';
+import TipBanner from '@/components/TipBanner';
 
 const query = groq`
 *[_type=='post'] {
+  ...,
+  author->,
+  categories[]->
+} | order(_createdAt desc)
+`;
+const queryTip = groq`
+*[_type=='tip'] {
   ...,
   author->,
   categories[]->
@@ -26,14 +37,20 @@ export default async function HomePage() {
         }
       >
         <PreviewPostList query={query} />
+        <PreviewTipList query={queryTip} />
       </PreviewSuspense>
     );
   }
   const posts = await client.fetch(query);
+  const tips = await client.fetch(queryTip);
+  console.log(tips);
 
   return (
     <main>
+      <PostBanner />
       <PostList posts={posts} />
+      <TipBanner />
+      <TipList tips={tips} />
     </main>
   );
 }

@@ -10,7 +10,7 @@ export const RichTextComponents = {
           <Image
             className="object-contain"
             src={urlFor(value).url()}
-            alt="Blog Post Image"
+            alt="Reference Image"
             fill
           />
         </div>

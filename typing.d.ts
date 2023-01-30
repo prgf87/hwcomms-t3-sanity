@@ -16,6 +16,16 @@ interface Post extends Base {
   description: string;
 }
 
+interface Tip extends Base {
+  author: Author;
+  body: Block[];
+  categories: Category[];
+  mainImage: Image;
+  slug: Slug;
+  title: string;
+  description: string;
+}
+
 interface Author extends Base {
   bio: Block[];
   image: Image;

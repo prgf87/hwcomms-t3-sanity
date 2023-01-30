@@ -5,7 +5,11 @@ export const getDefaultDocumentNode: DefaultDocumentNodeResolver = (
   S,
   { schemaType }
 ) => {
-  if (schemaType === 'post') {
+  if (
+    schemaType == 'post' ||
+    schemaType == 'tip' ||
+    (schemaType == 'post' && 'tip')
+  ) {
     return S.document().views([
       S.view.form(),
 
