@@ -4,21 +4,24 @@ import type { DefaultDocumentNodeResolver } from 'sanity/desk';
 export const getDefaultDocumentNode: DefaultDocumentNodeResolver = (
   S,
   { schemaType }
-) =>
-  S.document().views([
-    S.view.form(),
+) => {
+  if (schemaType == 'post' || schemaType == 'tip' || schemaType == 'quote') {
+    return S.document().views([
+      S.view.form(),
 
-    S.view
-      .component(Iframe)
-      .options({
-        url: `${
-          process.env.NEXT_PUBLIC_VERCEL_URL || 'http://localhost:3000'
-        }/api/preview`,
-        defaultSize: 'desktop',
-        reload: {
-          button: true,
-        },
-        attributes: {},
-      })
-      .title('Preview'),
-  ]);
+      S.view
+        .component(Iframe)
+        .options({
+          url: `${
+            process.env.NEXT_PUBLIC_VERCEL_URL || 'http://localhost:3000'
+          }/api/preview`,
+          defaultSize: 'desktop',
+          reload: {
+            button: true,
+          },
+          attributes: {},
+        })
+        .title('Preview'),
+    ]);
+  }
+};

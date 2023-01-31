@@ -2,6 +2,8 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { SocialIcon } from 'react-social-icons';
+import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 function Navbar() {
   const [nav, setNav] = useState(false);
@@ -23,6 +25,7 @@ function Navbar() {
 
   useEffect(() => {
     const changeColor = () => {
+      window.addEventListener('load', changeColor);
       if (window.scrollY >= 30) {
         setColor('#ffffff');
         setTextColor('#000000');
@@ -33,15 +36,30 @@ function Navbar() {
     };
     window.addEventListener('scroll', changeColor);
   }, []);
+
   return (
     <header
       style={{ backgroundColor: `${color}` }}
       className="fixed top-0 left-0 w-full z-10 ease-in duration-300"
     >
-      <div className="max-w-[1040px] m-auto flex justify-between text-white items-center p-4">
+      <motion.div
+        initial={{
+          y: -100,
+          opacity: 0,
+        }}
+        animate={{
+          y: 0,
+          opacity: 1,
+        }}
+        transition={{
+          duration: 1,
+          delay: 6,
+        }}
+        className="max-w-[1040px] m-auto flex justify-between text-white items-center p-4"
+      >
         <Link href="/">
-          <div className="flex gap-2 py-2">
-            <img src={'/logo.jpg'} alt="Site Logo" />
+          <div className="flex gap-2 my-2 h-[55px] w-[120px] cover">
+            <Image src={'/logo.jpg'} alt="Site Logo" width={120} height={55} />
           </div>
         </Link>
 
@@ -150,7 +168,7 @@ function Navbar() {
             </li>
           </ul>
         </div>
-      </div>
+      </motion.div>
     </header>
   );
 }

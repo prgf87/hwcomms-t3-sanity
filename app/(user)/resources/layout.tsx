@@ -17,6 +17,7 @@ export default function RootLayout({
           heading="Tips &amp; Resources"
           message="Browse around and enjoy the content"
           btnmsg="Learn More"
+          custombg="custom-img5"
         />
         {children}
       </body>
