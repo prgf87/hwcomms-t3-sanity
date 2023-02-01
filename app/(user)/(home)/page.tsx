@@ -8,6 +8,7 @@ import TipList from '@/components/TipList';
 import PreviewTipList from '@/components/PreviewTipList';
 import PostBanner from '@/components/PostBanner';
 import TipBanner from '@/components/TipBanner';
+import About from '@/components/About';
 
 const query = groq`
 *[_type=='post'] {
@@ -48,6 +49,7 @@ export default async function HomePage() {
 
   return (
     <main>
+      <About />
       <PostBanner />
       <PostList posts={posts} />
       <TipBanner />

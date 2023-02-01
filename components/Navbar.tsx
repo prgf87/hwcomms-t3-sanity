@@ -53,28 +53,28 @@ function Navbar() {
         }}
         transition={{
           duration: 1,
-          delay: 6,
+          delay: 1,
         }}
-        className="max-w-[1040px] m-auto flex justify-between text-white items-center p-4"
+        className="max-w-7xl m-auto flex justify-between text-white items-center p-4"
       >
-        <Link href="/">
-          <div className="flex gap-2 my-2 h-[55px] w-[120px] cover">
+        <div className="flex gap-2 my-2 h-[55px] w-[120px] cover">
+          <Link href="/">
             <Image src={'/logo.jpg'} alt="Site Logo" width={120} height={55} />
-          </div>
-        </Link>
+          </Link>
+        </div>
 
         <ul style={{ color: `${textColor}` }} className="hidden md:flex gap-4">
           <li className="p-2 hover:text-gray-400 text-xs md:text-sm lg:text-lg link link-underline link-underline-black">
             <Link href="/">Home</Link>
           </li>
           <li className="p-2 hover:text-gray-400 text-xs md:text-sm lg:text-lg link link-underline link-underline-black">
-            <Link href="/about">About</Link>
-          </li>
-          <li className="p-2 hover:text-gray-400 text-xs md:text-sm lg:text-lg link link-underline link-underline-black">
             <Link href="/services">Services</Link>
           </li>
           <li className="p-2 hover:text-gray-400 text-xs md:text-sm lg:text-lg link link-underline link-underline-black">
             <Link href="/contact">Contact</Link>
+          </li>
+          <li className="p-2 hover:text-gray-400 text-xs md:text-sm lg:text-lg link link-underline link-underline-black">
+            <Link href="/blog">Blog</Link>
           </li>
           <li className="p-2 hover:text-gray-400 text-xs md:text-sm lg:text-lg link link-underline link-underline-black">
             <Link href="/resources">Resources</Link>

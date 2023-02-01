@@ -2,7 +2,8 @@
 
 import Hero from '@/components/Hero';
 import Navbar from '@/components/Navbar';
-import '../../globals.css';
+import TipBanner from '@/components/TipBanner';
+import '../../../globals.css';
 
 export default function RootLayout({
   children,
@@ -10,8 +11,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body>
+    <>
+      <>
         <Navbar />
         <Hero
           heading="Tips &amp; Resources"
@@ -19,8 +20,9 @@ export default function RootLayout({
           href="/resources/#banner"
           custombg="custom-img4"
         />
+        <TipBanner />
         {children}
-      </body>
-    </html>
+      </>
+    </>
   );
 }

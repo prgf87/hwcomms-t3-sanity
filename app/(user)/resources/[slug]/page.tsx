@@ -39,8 +39,8 @@ async function Tip({ params: { slug } }: Props) {
   const tip: Tip = await client.fetch(queryTip, { slug });
 
   return (
-    <main>
-      <article className="px-10 pb-28 max-w-7xl mx-auto">
+    <main className="mt-20">
+      <article id="article" className="px-10 pb-28 max-w-7xl mx-auto">
         <section className="space-y-2 border-[#5EBCAA] text-gray-200 font-bold">
           <div className="relative min-h-[10rem] flex flex-col md:flex-row justify-between">
             <div className="absolute top-0 w-full h-full opacity-10 blur-sm p-10">

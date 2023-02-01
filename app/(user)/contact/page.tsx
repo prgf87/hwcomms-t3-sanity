@@ -1,13 +1,10 @@
+import ContactForm from '@/components/ContactForm';
+
 function Contact() {
   return (
     <div>
-      <h1>Contact Hailey</h1>
-      <form>
-        <h1>Contact Me</h1>
-        <input placeholder="name"></input>
-        <input placeholder="email"></input>
-        <input placeholder="message"></input>
-      </form>
+      <h1>Contact Hailey by filling in the form below</h1>
+      <ContactForm />
     </div>
   );
 }

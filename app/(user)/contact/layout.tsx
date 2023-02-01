@@ -16,8 +16,8 @@ export default function RootLayout({
         <Hero
           heading="Contact Hailey"
           message="To get a bespoke quote or to get answers to your questions"
-          btnmsg="Learn More"
           custombg="custom-img3"
+          href="/contact/#contact"
         />
         {children}
       </body>

@@ -1,13 +1,13 @@
 import { previewData } from 'next/headers';
 import { groq } from 'next-sanity';
 import { client } from '@/lib/sanity.client';
+import PreviewPostList from '@/components/PreviewPostList';
+import PostList from '@/components/PostList';
 import PreviewSuspense from '@/components/PreviewSuspense';
-import TipList from '@/components/TipList';
-import PreviewTipList from '@/components/PreviewTipList';
-import TipBanner from '@/components/TipBanner';
+import PostBanner from '@/components/PostBanner';
 
-const queryTip = groq`
-*[_type=='tip'] {
+const query = groq`
+*[_type=='post'] {
   ...,
   author->,
   categories[]->
@@ -16,7 +16,7 @@ const queryTip = groq`
 
 export const revalidate = 60;
 
-async function Resources() {
+export default async function HomePage() {
   if (previewData()) {
     return (
       <PreviewSuspense
@@ -28,18 +28,16 @@ async function Resources() {
           </div>
         }
       >
-        <PreviewTipList query={queryTip} />
+        <PreviewPostList query={query} />
       </PreviewSuspense>
     );
   }
-  const tips = await client.fetch(queryTip);
+  const posts = await client.fetch(query);
 
   return (
     <main>
-      <TipBanner />
-      <TipList tips={tips} />
+      <PostBanner />
+      <PostList posts={posts} />
     </main>
   );
 }
-
-export default Resources;

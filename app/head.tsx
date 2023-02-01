@@ -3,8 +3,8 @@ export default function Head({ title }: any) {
     <>
       <title>
         {title
-          ? title + ' - Hailey Wilson Commnications'
-          : 'Hailey Wilson Commnications'}
+          ? title + ' - Hailey Wilson Communications'
+          : 'Hailey Wilson Communications'}
       </title>
       <meta content="width=device-width, initial-scale=1" name="viewport" />
       <meta name="description" content="Developed by Xport" />

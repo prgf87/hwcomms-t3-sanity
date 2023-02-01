@@ -15,9 +15,9 @@ export default function RootLayout({
       <body>
         <Navbar />
         <Hero
-          heading="Welcome to Hailey's Blog"
-          message="A collection of blogs about all sort of subjects that interest me"
-          btnmsg="Learn More"
+          heading="Hailey's Blog"
+          message="Where there's a Wilson, there's a way"
+          href={`/blog/${children}/#blog-banner`}
           custombg="custom-img4"
         />
         <PostBanner />

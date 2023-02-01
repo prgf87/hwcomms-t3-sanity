@@ -17,6 +17,8 @@ export default function RootLayout({
           heading="Communication Services"
           message="These are the services we can perform"
           btnmsg="Learn More"
+          custombg="custom-img2"
+          href="/services/#services-list"
         />
         {children}
       </body>

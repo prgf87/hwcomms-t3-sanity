@@ -19,7 +19,7 @@ function PostList({ posts }: Props) {
           return (
             <ClientSideRoute
               key={post._id}
-              route={`/post/${post.slug.current}`}
+              route={`/blog/${post.slug.current}`}
             >
               <div className="flex flex-col group cursor-pointer">
                 <div className="relative w-full h-80 drop-shadow-xl group-hover:scale-105 transition-transform duration-200 ease-out">

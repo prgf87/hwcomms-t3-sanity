@@ -16,7 +16,7 @@ export default function RootLayout({
         <Hero
           heading="Hailey Wilson Communications"
           message="Where there's a Wilson, there's a way"
-          btnmsg="Learn More"
+          href="/#about"
           custombg="custom-img"
         />
         {children}

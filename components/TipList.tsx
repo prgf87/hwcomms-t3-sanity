@@ -17,7 +17,10 @@ function TipList({ tips }: Props) {
 
         {tips.map((tip) => {
           return (
-            <ClientSideRoute key={tip._id} route={`/tip/${tip.slug.current}`}>
+            <ClientSideRoute
+              key={tip._id}
+              route={`/resources/${tip.slug.current}`}
+            >
               <div className="flex flex-col group cursor-pointer">
                 <div className="relative w-full h-80 drop-shadow-xl group-hover:scale-105 transition-transform duration-200 ease-out">
                   <Image
