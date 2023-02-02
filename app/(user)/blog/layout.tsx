@@ -17,8 +17,9 @@ export default function RootLayout({
           heading="Hailey's Blog"
           message="Where there's a Wilson, there's a way"
           href="/blog/#blog-banner"
-          custombg="custom-img4"
+          custombg="custom-img5"
         />
+
         {children}
       </body>
     </html>

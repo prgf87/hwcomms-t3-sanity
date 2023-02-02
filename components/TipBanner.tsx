@@ -1,6 +1,9 @@
 function TipBanner() {
   return (
-    <section className="max-w-[800px] lg:max-w-7xl mx-auto flex flex-col lg:flex-row lg:space-x-5 justify-between font-bold px-10 my-10 ">
+    <section
+      id="resources-banner"
+      className="max-w-[800px] lg:max-w-7xl mx-auto flex flex-col lg:flex-row lg:space-x-5 justify-between font-bold px-10 my-10 "
+    >
       <div>
         <h1 className="text-2xl md:text-6xl mb-2">Tips &amp; Resources</h1>
         <h2 className="mt-5 md:mt-0">

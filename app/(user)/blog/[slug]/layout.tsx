@@ -1,8 +1,6 @@
 'use client';
 
 import PostBanner from '@/components/PostBanner';
-import Hero from '@/components/Hero';
-import Navbar from '@/components/Navbar';
 import '../../../globals.css';
 
 export default function RootLayout({
@@ -11,18 +9,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body>
-        <Navbar />
-        <Hero
-          heading="Hailey's Blog"
-          message="Where there's a Wilson, there's a way"
-          href={`/blog/${children}/#blog-banner`}
-          custombg="custom-img4"
-        />
+    <>
+      <>
         <PostBanner />
         {children}
-      </body>
-    </html>
+      </>
+    </>
   );
 }

@@ -49,7 +49,9 @@ export default async function HomePage() {
 
   return (
     <main>
-      <About />
+      <section id="about">
+        <About />
+      </section>
       <PostBanner />
       <PostList posts={posts} />
       <TipBanner />

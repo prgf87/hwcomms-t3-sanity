@@ -37,7 +37,7 @@ function Hero({ heading, message, href, custombg }: any) {
         }}
         className={`absolute top-0 left-0 right-0 bottom-0 h-screen md:bg-black bg-black/60 z-[2]`}
       />
-      <div className="absolute top-0 left-0 right-0 bottom-0 p-5 text-white z-[2] mt-[10rem] mx-auto flex justify-center items-center">
+      <div className="absolute top-0 left-0 right-0 bottom-0 p-5 text-white z-[2] mt-[30rem] mx-auto flex justify-center items-center">
         <motion.div
           initial={{
             opacity: 0,
@@ -72,11 +72,11 @@ function Hero({ heading, message, href, custombg }: any) {
             delay: 3,
           }}
         >
-          <Link href={href}>
+          <a href={href}>
             <button className="absolute right-0 bottom-0 m-5 lg:m-20 md:pr-5 animate-bounce">
               <ChevronDownIcon className="h-6 w-6 md:h-10 md:w-10 text-white" />
             </button>
-          </Link>
+          </a>
         </motion.div>
       </div>
     </section>

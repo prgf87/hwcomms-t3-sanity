@@ -3,8 +3,8 @@ import React from 'react';
 function ServicesList() {
   return (
     <section id="services-list" className="snap-center">
-      <div className="grid grid-cols-1 grid-rows-6 md:grid-cols-2 m-10 gap-10 max-w-5xl items-center">
-        <div className="border-2 min-h-1/2 rounded-xl p-5 border-[#5EBCAA] bg-gray-200">
+      <div className="grid grid-cols-1 grid-auto-rows md:grid-cols-2 m-10 gap-10 max-w-5xl items-center">
+        <div className="border-2  rounded-xl p-5 border-[#5EBCAA] bg-gray-200">
           <h1 className="text-3xl font-bold">
             Employee, Executive &amp; Internal Communications
           </h1>
@@ -22,7 +22,7 @@ function ServicesList() {
             turpis egestas maecenas.
           </p>
         </div>
-        <div className="border-2 min-h-1/2 rounded-xl p-5 border-[#5EBCAA] bg-gray-200">
+        <div className="border-2  rounded-xl p-5 border-[#5EBCAA] bg-gray-200">
           <h1 className="text-3xl font-bold">Reputational Management</h1>
           <p className="py-4">
             Morbi tincidunt ornare massa eget egestas. Lobortis mattis aliquam
@@ -42,7 +42,7 @@ function ServicesList() {
             Pretium aenean pharetra magna ac.
           </p>
         </div>
-        <div className="border-2 min-h-1/2 rounded-xl p-5 border-[#5EBCAA] bg-gray-200">
+        <div className="border-2  rounded-xl p-5 border-[#5EBCAA] bg-gray-200">
           <h1 className="text-3xl font-bold">Crisis Communications </h1>
           <h3 className="text-xl text-gray-500">Training / Planning</h3>
           <p className="py-4">
@@ -63,7 +63,7 @@ function ServicesList() {
             Pretium aenean pharetra magna ac.
           </p>
         </div>
-        <div className="border-2 min-h-1/2 rounded-xl p-5 border-[#5EBCAA] bg-gray-200">
+        <div className="border-2  rounded-xl p-5 border-[#5EBCAA] bg-gray-200">
           <h1 className="text-3xl font-bold">Social Media</h1>
           <h3 className="text-xl text-gray-500">
             Planning &amp; Content Creation

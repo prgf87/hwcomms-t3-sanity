@@ -6,7 +6,12 @@ export default function CustomStudioHead() {
   return (
     <>
       <NextStudioHead favicons={false} />
-      <link rel="icon" type="image/jpg" sizes="32x32" href="/logo.jpg" />
+      <link
+        rel="icon"
+        type="image/jpg"
+        sizes="32x32"
+        href="/images/logo2.png"
+      />
     </>
   );
 }

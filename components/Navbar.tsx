@@ -59,7 +59,12 @@ function Navbar() {
       >
         <div className="flex gap-2 my-2 h-[55px] w-[120px] cover">
           <Link href="/">
-            <Image src={'/logo.jpg'} alt="Site Logo" width={120} height={55} />
+            <Image
+              src={'/images/logo2.png'}
+              alt="Site Logo"
+              height={508}
+              width={1038}
+            />
           </Link>
         </div>
 

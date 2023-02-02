@@ -16,7 +16,7 @@ export default function RootLayout({
         <Hero
           heading="Tips &amp; Resources"
           message="Search through our many tips and Resources"
-          href="/resources/#banner"
+          href="/resources/#resources-banner"
           custombg="custom-img4"
         />
         {children}

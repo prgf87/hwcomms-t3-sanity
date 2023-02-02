@@ -5,8 +5,8 @@ import Link from 'next/link';
 
 function About() {
   return (
-    <section className="bg-[#5EBCAA]/70 py-10">
-      <div className="max-w-lg md:max-w-4xl lg:max-w-7xl text-[1.5rem] items-center m-auto">
+    <section className="bg-[#5EBCAA]/70 py-10 snap-y">
+      <div className="snap-center max-w-lg md:max-w-4xl lg:max-w-7xl text-[1.5rem] items-center m-auto">
         <div className="grid grid-cols-1 mx-auto">
           <div className="grid grid-cols-2 mx-auto lg:my-5">
             <div className="justify-center items-center mt-20">
@@ -18,10 +18,14 @@ function About() {
               </h1>
             </div>
             <div className="h-60 w-60 rounded-full overflow-hidden m-auto flex items-center">
-              <Image src={'/img1.png'} alt="/" width={1024} height={1024} />
+              <Image
+                src={'/images/image1.jpg'}
+                alt="/"
+                width={1024}
+                height={1024}
+              />
             </div>
           </div>
-          <div className="m-4"></div>
           <div className="col-span-2 items-center">
             <p className="p-2">
               As a down-to-earth communicator, strategist and storyteller, I

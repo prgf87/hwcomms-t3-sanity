@@ -8,7 +8,7 @@ export default function Head({ title }: any) {
       </title>
       <meta content="width=device-width, initial-scale=1" name="viewport" />
       <meta name="description" content="Developed by Xport" />
-      <link rel="icon" href="/logo.jpg" />
+      <link rel="icon" href="/images/logo2.png" />
     </>
   );
 }

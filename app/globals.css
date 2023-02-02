@@ -9,14 +9,18 @@
   font-family: 'Playfair Display', serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .custom-img {
-  background-image: url('/bg1.jpg');
+  background-image: url('/images/bg1.jpg');
   background-position: center;
   background-size: cover;
 }
 
 .custom-img2 {
-  background-image: url('/bg2.jpg');
+  background-image: url('/images/bg3.png');
   background-position: center;
   background-size: cover;
 }
