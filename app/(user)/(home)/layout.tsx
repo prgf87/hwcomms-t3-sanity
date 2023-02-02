@@ -2,6 +2,7 @@
 
 import Hero from '@/components/Hero';
 import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 import '../../globals.css';
 
 export default function RootLayout({
@@ -20,6 +21,7 @@ export default function RootLayout({
           custombg="custom-img"
         />
         {children}
+        <Footer />
       </body>
     </html>
   );

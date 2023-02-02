@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 function About() {
   return (
-    <section className="bg-[#5EBCAA]/70 py-10 snap-y">
+    <section className="bg-[#5EBCAA]/70 text-gray-600 py-10 snap-y">
       <div className="snap-center max-w-lg md:max-w-4xl lg:max-w-7xl text-[1.5rem] items-center m-auto">
         <div className="grid grid-cols-1 mx-auto">
           <div className="grid grid-cols-2 mx-auto lg:my-5">
@@ -17,9 +17,9 @@ function About() {
                 Hailey Wilson?
               </h1>
             </div>
-            <div className="h-60 w-60 rounded-full overflow-hidden m-auto flex items-center">
+            <div className="h-60 w-60 rounded-full overflow-hidden border-4 border-gray-900 m-auto flex items-center">
               <Image
-                src={'/images/image1.jpg'}
+                src={'/images/img1.png'}
                 alt="/"
                 width={1024}
                 height={1024}

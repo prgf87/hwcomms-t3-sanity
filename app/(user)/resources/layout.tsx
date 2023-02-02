@@ -1,5 +1,6 @@
 'use client';
 
+import Footer from '@/components/Footer';
 import Hero from '@/components/Hero';
 import Navbar from '@/components/Navbar';
 import '../../globals.css';
@@ -20,6 +21,7 @@ export default function RootLayout({
           custombg="custom-img4"
         />
         {children}
+        <Footer />
       </body>
     </html>
   );

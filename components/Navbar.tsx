@@ -62,8 +62,8 @@ function Navbar() {
             <Image
               src={'/images/logo2.png'}
               alt="Site Logo"
-              height={508}
-              width={1038}
+              height={447}
+              width={966}
             />
           </Link>
         </div>

@@ -8,8 +8,8 @@ function Header() {
         <Link href="/">
           <Image
             className="object-cover"
-            height={508}
-            width={1038}
+            height={447}
+            width={966}
             src="/images/logo2.png"
             alt="Logo"
           />
