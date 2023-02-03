@@ -1,10 +1,9 @@
 import { motion } from 'framer-motion';
 import { ChevronDownIcon } from '@heroicons/react/24/solid';
-import Link from 'next/link';
 import { Cursor, useTypewriter } from 'react-simple-typewriter';
 
 function Hero({ heading, message, href, custombg }: any) {
-  const [text, count] = useTypewriter({
+  const [text] = useTypewriter({
     words: ['', heading, message],
     loop: true,
     delaySpeed: 2500,
@@ -35,9 +34,9 @@ function Hero({ heading, message, href, custombg }: any) {
           duration: 1.5,
           delay: 0,
         }}
-        className={`absolute top-0 left-0 right-0 bottom-0 h-screen md:bg-black bg-black/60 z-[2]`}
+        className={`absolute top-0 left-0 right-0 bottom-0 h-screen bg-black z-[2]`}
       />
-      <div className="absolute top-0 left-0 right-0 bottom-0 p-5 text-white z-[2] mt-[30rem] mx-auto flex justify-center items-center">
+      <div className="absolute top-0 left-0 right-0 bottom-0 p-5 text-white z-[2] mx-auto flex justify-center items-center">
         <motion.div
           initial={{
             opacity: 0,

@@ -26,6 +26,23 @@ interface Tip extends Base {
   description: string;
 }
 
+interface Quote extends Base {
+  author: Author;
+  mainImage: Image;
+  slug: Slug;
+  title: string;
+  quotation: string;
+}
+
+interface Review extends Base {
+  author: Author;
+  mainImage: Image;
+  bgImage: Image;
+  slug: Slug;
+  title: string;
+  review: string;
+}
+
 interface Author extends Base {
   bio: Block[];
   image: Image;
@@ -73,7 +90,17 @@ interface MainImage {
   asset: Reference;
 }
 
+interface BgImage {
+  _type: 'image';
+  asset: Reference;
+}
+
 interface Title {
   _type: 'string';
+  current: string;
+}
+
+interface Review {
+  _type: 'review';
   current: string;
 }

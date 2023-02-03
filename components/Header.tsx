@@ -10,7 +10,7 @@ function Header() {
             className="object-cover"
             height={447}
             width={966}
-            src="/images/logo2.png"
+            src="/images/logo.png"
             alt="Logo"
           />
         </Link>

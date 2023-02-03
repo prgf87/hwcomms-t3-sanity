@@ -14,7 +14,7 @@ function TipBanner() {
           &nbsp;for all your Communincations needs
         </h2>
       </div>
-      <div className="mt-5 md:mt-2 text-gray-400 max-w-md">
+      <div className="mt-5 md:mt-2 text-gray-500 max-w-md">
         <p>| Talking points</p>
         <p>| The latest in Communications </p>
         <p>| Tips, Resources &amp; More</p>

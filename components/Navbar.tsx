@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { SocialIcon } from 'react-social-icons';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
+import Logo from './Logo';
 
 function Navbar() {
   const [nav, setNav] = useState(false);
@@ -40,7 +40,7 @@ function Navbar() {
   return (
     <header
       style={{ backgroundColor: `${color}` }}
-      className="fixed top-0 left-0 w-full z-10 ease-in duration-300"
+      className="fixed top-0 left-0 w-full z-10 ease-in duration-300 p-4"
     >
       <motion.div
         initial={{
@@ -55,22 +55,20 @@ function Navbar() {
           duration: 1,
           delay: 1,
         }}
-        className="max-w-7xl m-auto flex justify-between text-white items-center p-4"
+        className="max-w-md md:max-w-7xl m-auto flex justify-between text-white items-center"
       >
-        <div className="flex gap-2 my-2 h-[55px] w-[120px] cover">
+        <div className="flex gap-2 h-[55px] w-[120px] cover">
           <Link href="/">
-            <Image
-              src={'/images/logo2.png'}
-              alt="Site Logo"
-              height={447}
-              width={966}
-            />
+            <Logo />
           </Link>
         </div>
 
         <ul style={{ color: `${textColor}` }} className="hidden md:flex gap-4">
           <li className="p-2 hover:text-gray-400 text-xs md:text-sm lg:text-lg link link-underline link-underline-black">
             <Link href="/">Home</Link>
+          </li>
+          <li className="p-2 hover:text-gray-400 text-xs md:text-sm lg:text-lg link link-underline link-underline-black">
+            <Link href="/about">About</Link>
           </li>
           <li className="p-2 hover:text-gray-400 text-xs md:text-sm lg:text-lg link link-underline link-underline-black">
             <Link href="/services">Services</Link>
@@ -85,27 +83,27 @@ function Navbar() {
             <Link href="/resources">Resources</Link>
           </li>
         </ul>
-        <div className="pl-2 py-5">
+        <div>
           <SocialIcon
             style={{ height: 30, width: 30 }}
             url="https://www.facebook.com"
             fgColor={textColor}
             bgColor="transparent"
-            className="sm:p-6"
+            className="p-6"
           />
           <SocialIcon
             style={{ height: 30, width: 30 }}
             url="https://www.twitter.com"
             fgColor={textColor}
             bgColor="transparent"
-            className="sm:p-6"
+            className="p-6"
           />
           <SocialIcon
             style={{ height: 30, width: 30 }}
             url="https://www.linkedin.com"
             fgColor={textColor}
             bgColor="transparent"
-            className="sm:p-6"
+            className="p-6"
           />
         </div>
         <div className="hidden sm:flex justify-center items-center cursor-pointer link link-underline link-underline-black">

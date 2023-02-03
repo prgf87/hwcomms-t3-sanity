@@ -7,9 +7,9 @@ import { SocialIcon } from 'react-social-icons';
 export default function Footer() {
   return (
     <div className="p-10 bg-black text-gray-200">
-      <div className="max-w-7xl mx-auto justify-center">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
-          <div className="mb-5">
+      <div className="md:max-w-7xl mx-auto justify-center">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-2">
+          <div className="mb-5 px-8">
             <h4 className="font-bold text-2xl pb-4 flex place-content-center md:place-content-start">
               Hailey Wilson Communications
             </h4>
@@ -118,7 +118,7 @@ export default function Footer() {
             </ul>
           </div> */}
 
-          <div className="mb-5 col-start-2 col-span-1">
+          <div className="mb-5 col-start-2 col-span-1 px-8">
             <h4 className="font-bold text-2xl pb-4 flex place-content-center md:place-content-start">
               Social Media
             </h4>
@@ -127,8 +127,8 @@ export default function Footer() {
             </p>
 
             <div className="w-full">
-              <div className="flex gap-3 p-2 pr-1 justify-evenly place-items-center">
-                <div className="pl-2 py-5">
+              <div className="flex gap-3 justify-evenly place-items-center">
+                <div className="px-8 py-5">
                   <SocialIcon
                     style={{ height: 30, width: 30 }}
                     url="https://www.facebook.com"
@@ -154,7 +154,7 @@ export default function Footer() {
               </div>
             </div>
           </div>
-          <div className="hidden sm:block justify-end items-center cursor-pointer link link-underline link-underline-black">
+          <div className="hidden sm:block justify-end items-center cursor-pointer link link-underline link-underline-black px-8">
             <h1 className="text-2xl font-bold pb-3">Contact me</h1>
             <p className="text-gray-200 place-content-center md:place-content-start">
               <strong>Email: </strong>&nbsp;hwilsoncomms@gmail.com
