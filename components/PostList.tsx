@@ -12,7 +12,7 @@ function PostList({ posts }: Props) {
     <div className="max-w-[800px] lg:max-w-7xl mx-auto">
       <hr className="border-[#5EBCAA] border-4 mb-10" />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 px-10 gap-10 gap-y-16 pb-24">
+      <div className="grid grid-cols-2 max-grid-rows-4 px-10 gap-10 gap-y-16 pb-24">
         {/* Posts */}
 
         {posts.map((post) => {
@@ -57,7 +57,7 @@ function PostList({ posts }: Props) {
                 </div>
                 <div className="mt-5 flex-1">
                   <p className="underline text-lg font-bold">{post.title}</p>
-                  <p className="line-clamp-2 text-gray-500">
+                  <p className="line-clamp-1 text-gray-300">
                     {post.description}
                   </p>
                 </div>

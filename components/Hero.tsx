@@ -9,7 +9,7 @@ function Hero({ heading, message, href, custombg }: any) {
     delaySpeed: 2500,
   });
   return (
-    <section>
+    <>
       <motion.section
         initial={{
           opacity: 0,
@@ -36,7 +36,7 @@ function Hero({ heading, message, href, custombg }: any) {
         }}
         className={`absolute top-0 left-0 right-0 bottom-0 h-screen bg-black z-[2]`}
       />
-      <div className="absolute top-0 left-0 right-0 bottom-0 p-5 text-white z-[2] mx-auto flex justify-center items-center">
+      <div className="absolute top-0 left-0 right-0 bottom-0 text-white z-[2] mx-auto flex justify-center items-center">
         <motion.div
           initial={{
             opacity: 0,
@@ -48,12 +48,12 @@ function Hero({ heading, message, href, custombg }: any) {
             opacity: 1,
           }}
           transition={{
-            duration: 1.5,
-            delay: 1.5,
+            duration: 0.5,
+            delay: 1,
           }}
         >
-          <div className="">
-            <h1 className="text-lg sm:text-2xl md:text-4xl">
+          <div>
+            <h1 className="text-lg sm:text-2xl md:text-4xl px-6">
               <span>{text}</span>
               <Cursor cursorColor="white" />
             </h1>
@@ -78,7 +78,7 @@ function Hero({ heading, message, href, custombg }: any) {
           </a>
         </motion.div>
       </div>
-    </section>
+    </>
   );
 }
 

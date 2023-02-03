@@ -10,9 +10,9 @@ type Props = {
 function TipList({ tips }: Props) {
   return (
     <div className="max-w-[800px] lg:max-w-7xl mx-auto">
-      <hr className="border-[#5EBCAA] mb-10" />
+      <hr className="border-4 border-[#5EBCAA] mb-10" />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 px-10 gap-10 gap-y-16 pb-24">
+      <div className="grid grid-cols-2 px-10 gap-10 gap-y-16 pb-24">
         {/* Tips */}
 
         {tips.map((tip) => {
@@ -31,7 +31,7 @@ function TipList({ tips }: Props) {
                   />
                   <div className="absolute bottom-0 w-full bg-opacity-20 bg-black backdrop-blur-lg rounded drop-shadow-lg text-white p-10 flex justify-between">
                     <div>
-                      <p className="font-bold">{tip.title}</p>
+                      <p className="font-bold line-clamp-1">{tip.title}</p>
                       <p>
                         {new Date(tip._createdAt).toLocaleDateString('en-US', {
                           day: 'numeric',
@@ -56,8 +56,10 @@ function TipList({ tips }: Props) {
                   </div>
                 </div>
                 <div className="mt-5 flex-1">
-                  <p className="underline text-lg font-bold">{tip.title}</p>
-                  <p className="line-clamp-2 text-gray-500">
+                  <p className="underline text-lg font-bold line-clamp-1">
+                    {tip.title}
+                  </p>
+                  <p className="line-clamp-2 text-gray-300">
                     {tip.description}
                   </p>
                 </div>

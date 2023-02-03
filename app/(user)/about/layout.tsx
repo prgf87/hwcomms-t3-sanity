@@ -17,8 +17,8 @@ export default function RootLayout({
         <Hero
           heading="About Hailey"
           message="Learn about what drives me"
-          custombg="custom-img2"
-          href="/about/#bio"
+          custombg="custom-img4"
+          href="/about"
         />
         {children}
         <Footer />

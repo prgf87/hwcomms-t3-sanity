@@ -24,5 +24,8 @@ module.exports = {
       },
     },
   },
+  variants: {
+    scrollSnapType: ['proximity'],
+  },
   plugins: [require('@tailwindcss/line-clamp')],
 };

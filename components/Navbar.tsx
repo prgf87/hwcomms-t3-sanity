@@ -40,7 +40,7 @@ function Navbar() {
   return (
     <header
       style={{ backgroundColor: `${color}` }}
-      className="fixed top-0 left-0 w-full z-10 ease-in duration-300 p-4"
+      className="fixed top-0 left-0 w-full z-10 ease-in duration-300 "
     >
       <motion.div
         initial={{
@@ -55,15 +55,16 @@ function Navbar() {
           duration: 1,
           delay: 1,
         }}
-        className="max-w-md md:max-w-7xl m-auto flex justify-between text-white items-center"
+        // className="flex w-full justify-evenly items-center px-20"
+        className="max-w-[1240px] m-auto flex justify-between text-white items-center p-4"
       >
-        <div className="flex gap-2 h-[55px] w-[120px] cover">
+        <div className="flex h-[55px] w-[120px] bg-cover">
           <Link href="/">
             <Logo />
           </Link>
         </div>
 
-        <ul style={{ color: `${textColor}` }} className="hidden md:flex gap-4">
+        <ul style={{ color: `${textColor}` }} className="hidden lg:flex gap-4">
           <li className="p-2 hover:text-gray-400 text-xs md:text-sm lg:text-lg link link-underline link-underline-black">
             <Link href="/">Home</Link>
           </li>
@@ -83,7 +84,7 @@ function Navbar() {
             <Link href="/resources">Resources</Link>
           </li>
         </ul>
-        <div>
+        <div className="pl-2">
           <SocialIcon
             style={{ height: 30, width: 30 }}
             url="https://www.facebook.com"
@@ -129,7 +130,7 @@ function Navbar() {
               setTextColor('#000000');
             }
           }}
-          className="sm:hidden z-10"
+          className="inline sm:hidden z-10"
         >
           {nav ? (
             <AiOutlineClose

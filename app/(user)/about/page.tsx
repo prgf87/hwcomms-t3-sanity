@@ -1,5 +1,3 @@
-'use client';
-
 import Banner from '@/components/Banner';
 import Bio from '@/components/Bio';
 import { groq } from 'next-sanity';
@@ -8,6 +6,7 @@ import PostBanner from '@/components/PostBanner';
 import PostList from '@/components/PostList';
 import TipBanner from '@/components/TipBanner';
 import TipList from '@/components/TipList';
+import Values from '@/components/Values';
 
 const query = groq`
 *[_type=='post'] {
@@ -24,21 +23,18 @@ const queryTip = groq`
 } | order(_createdAt desc)
 `;
 
-export const revalidate = 60;
-
-async function About() {
+export default async function AboutPage() {
   const posts = await client.fetch(query);
   const tips = await client.fetch(queryTip);
   return (
-    <div className="bg-main">
+    <main>
       <Bio />
+      <Values />
       <PostBanner />
       <PostList posts={posts} />
       <Banner />
       <TipBanner />
       <TipList tips={tips} />
-    </div>
+    </main>
   );
 }
-
-export default About;

@@ -7,22 +7,23 @@ import PreviewTipList from '@/components/PreviewTipList';
 import Intro from '@/components/Intro';
 import QuoteCarousel from '@/components/QuoteCarousel';
 import Snapshots from '@/components/Snapshots';
-import Banner from '@/components/Banner';
 import ReviewCarousel from '@/components/ReviewCarousel';
+// import HomePreviews from '@/components/HomePreviews';
+import Banner from '@/components/Banner';
 import PostList from '@/components/PostList';
 import TipList from '@/components/TipList';
 import PostBanner from '@/components/PostBanner';
 import TipBanner from '@/components/TipBanner';
 
 const query = groq`
-*[_type=='post'] {
+*[_type=='post'][0..3] {
   ...,
   author->,
   categories[]->
 } | order(_createdAt desc)
 `;
 const queryTip = groq`
-*[_type=='tip'] {
+*[_type=='tip'][0..3] {
   ...,
   author->,
   categories[]->
@@ -68,29 +69,45 @@ export default async function HomePage() {
   const reviews = await client.fetch(queryReview);
 
   return (
-    <main className="snap-mandatory snap-y">
-      <div id="intro" className="snap-center">
+    <main>
+      <div id="home" className="relative top-[-80px] " />
+      <div>
+        <div id="intro" className="relative top-[-80px] " />
         <Intro />
       </div>
-      <div id="snapshot" className="snap-start">
+      <div>
+        <div id="quotes" className="relative top-[-80px] " />
+        <QuoteCarousel quotes={quotes} />
+      </div>
+      <div>
+        <div id="snapshot" className="relative top-[-80px] " />
         <Snapshots />
       </div>
       <div>
-        <Banner />
-      </div>
-      <div id="quotes" className="snap-center">
-        <QuoteCarousel quotes={quotes} />
-      </div>
-      <div id="review" className="snap-center">
+        <div id="review" className="relative top-[-80px] " />
         <ReviewCarousel reviews={reviews} />
       </div>
-      <div id="blog" className="snap-center">
-        <PostBanner />
-        <PostList posts={posts} />
-      </div>
-      <div id="resources" className="snap-center">
-        <TipBanner />
-        <TipList tips={tips} />
+
+      {/* Blog and Resources */}
+
+      <div className="custom-img9 relative">
+        <div className="grid grid-cols-1 max-w-3xl lg:max-w-7xl mx-auto text-gray-100">
+          <div className="absolute left-0 top-0 right-0 bottom-0 bg-gradient-to-b from-black/60 to-black/90 z-[0]" />
+          <div className=" ml-2 z-[2]">
+            <div id="blog" className="relative top-[-80px] " />
+
+            <PostBanner />
+            <PostList posts={posts} />
+          </div>
+          <div id="resources" className=" mr-2  z-[2]">
+            <TipBanner />
+            <TipList tips={tips} />
+          </div>
+        </div>
+        <div>
+          <div id="banner" className="relative top-[-80px] " />
+          <Banner />
+        </div>
       </div>
     </main>
   );

@@ -3,12 +3,12 @@ import React from 'react';
 function ServicesList() {
   return (
     <section id="services-list" className="snap-center">
-      <div className="grid grid-cols-1 grid-auto-rows md:grid-cols-2 m-10 gap-10 max-w-5xl items-center">
-        <div className="border-2  rounded-xl p-5 border-[#5EBCAA] bg-gray-200">
+      <div className="grid grid-cols-2 m-10 gap-10 max-w-7xl items-center">
+        <div className="grid border-2 rounded-xl p-5 border-[#5EBCAA] bg-gray-200">
           <h1 className="text-3xl font-bold">
             Employee, Executive &amp; Internal Communications
           </h1>
-          <p className="py-4">
+          <p className="py-4 line-clamp-4">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet
             nulla facilisi morbi tempus iaculis urna id volutpat lacus. Tempus
@@ -22,9 +22,9 @@ function ServicesList() {
             turpis egestas maecenas.
           </p>
         </div>
-        <div className="border-2  rounded-xl p-5 border-[#5EBCAA] bg-gray-200">
+        <div className="grid border-2  rounded-xl p-5 border-[#5EBCAA] bg-gray-200">
           <h1 className="text-3xl font-bold">Reputational Management</h1>
-          <p className="py-4">
+          <p className="py-4 line-clamp-4">
             Morbi tincidunt ornare massa eget egestas. Lobortis mattis aliquam
             faucibus purus in massa tempor. Morbi quis commodo odio aenean sed
             adipiscing diam. Donec ultrices tincidunt arcu non. Mauris in
@@ -42,10 +42,10 @@ function ServicesList() {
             Pretium aenean pharetra magna ac.
           </p>
         </div>
-        <div className="border-2  rounded-xl p-5 border-[#5EBCAA] bg-gray-200">
+        <div className="grid border-2  rounded-xl p-5 border-[#5EBCAA] bg-gray-200">
           <h1 className="text-3xl font-bold">Crisis Communications </h1>
           <h3 className="text-xl text-gray-500">Training / Planning</h3>
-          <p className="py-4">
+          <p className="py-4 line-clamp-4">
             Morbi tincidunt ornare massa eget egestas. Lobortis mattis aliquam
             faucibus purus in massa tempor. Morbi quis commodo odio aenean sed
             adipiscing diam. Donec ultrices tincidunt arcu non. Mauris in
@@ -63,12 +63,12 @@ function ServicesList() {
             Pretium aenean pharetra magna ac.
           </p>
         </div>
-        <div className="border-2  rounded-xl p-5 border-[#5EBCAA] bg-gray-200">
+        <div className="grid border-2  rounded-xl p-5 border-[#5EBCAA] bg-gray-200">
           <h1 className="text-3xl font-bold">Social Media</h1>
           <h3 className="text-xl text-gray-500">
             Planning &amp; Content Creation
           </h3>
-          <p className="py-4">
+          <p className="py-4 line-clamp-4">
             Morbi tincidunt ornare massa eget egestas. Lobortis mattis aliquam
             faucibus purus in massa tempor. Morbi quis commodo odio aenean sed
             adipiscing diam. Donec ultrices tincidunt arcu non. Mauris in

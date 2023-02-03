@@ -15,8 +15,8 @@ export default function RootLayout({
       <body>
         <Navbar />
         <Hero
-          heading="Contact Hailey"
-          message="To get a bespoke quote or to get answers to your questions"
+          heading="Contact me"
+          message="Use the form below to send me a message"
           custombg="custom-img3"
           href="/contact/#contact"
         />

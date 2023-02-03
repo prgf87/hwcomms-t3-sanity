@@ -1,5 +1,5 @@
 import { ChevronRightIcon } from '@heroicons/react/24/solid';
-import Image from 'next/image';
+// import Image from 'next/image';
 import Link from 'next/link';
 
 import { SocialIcon } from 'react-social-icons';
@@ -9,14 +9,14 @@ export default function Footer() {
     <div className="p-10 bg-black text-gray-200">
       <div className="md:max-w-7xl mx-auto justify-center">
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-2">
-          <div className="mb-5 px-8">
-            <h4 className="font-bold text-2xl pb-4 flex place-content-center md:place-content-start">
+          <div className="mb-5 px-8 text-xs md:text-base">
+            <h4 className="font-bold text-xl pb-4 flex place-content-center md:place-content-start">
               Hailey Wilson Communications
             </h4>
 
             <div className="text-gray-200 flex cursor-pointer place-content-left">
               <p className="hover:brightness-50 flex">
-                <ChevronRightIcon className="h-5 w-5 pt-1 text-blue-500 " />
+                <ChevronRightIcon className="h-5 w-5 pt-1 text-gray-200 " />
                 <Link href={'/'}>
                   <u>Home</u>
                 </Link>
@@ -24,7 +24,7 @@ export default function Footer() {
             </div>
             <div className="text-gray-200 flex cursor-pointer place-content-left">
               <p className="hover:brightness-50 flex">
-                <ChevronRightIcon className="h-5 w-5 pt-1 text-blue-500 " />
+                <ChevronRightIcon className="h-5 w-5 pt-1 text-gray-200 " />
                 <Link href={'/services'}>
                   <u>Services</u>
                 </Link>
@@ -32,7 +32,7 @@ export default function Footer() {
             </div>
             <div className="text-gray-200 flex cursor-pointer place-content-left">
               <p className="hover:brightness-50 flex">
-                <ChevronRightIcon className="h-5 w-5 pt-1 text-blue-500 " />
+                <ChevronRightIcon className="h-5 w-5 pt-1 text-gray-200 " />
                 <Link href={'/contact'}>
                   <u>Contact</u>
                 </Link>
@@ -40,7 +40,7 @@ export default function Footer() {
             </div>
             <div className="text-gray-200 flex cursor-pointer place-content-left">
               <p className="hover:brightness-50 flex">
-                <ChevronRightIcon className="h-5 w-5 pt-1 text-blue-500 " />
+                <ChevronRightIcon className="h-5 w-5 pt-1 text-gray-200 " />
                 <Link href={'/blog'}>
                   <u>Blog</u>
                 </Link>
@@ -48,87 +48,25 @@ export default function Footer() {
             </div>
             <div className="text-gray-200 flex cursor-pointer place-content-left">
               <p className="hover:brightness-50 flex">
-                <ChevronRightIcon className="h-5 w-5 pt-1 text-blue-500 " />
-                <Link href={'/'}>
-                  <u>Tips &amp; Resources</u>
+                <ChevronRightIcon className="h-5 w-5 pt-1 text-gray-200 " />
+                <Link href="/resources">
+                  <u>Resources</u>
                 </Link>
               </p>
             </div>
           </div>
-          {/* <div className="mb-5">
-            <h4 className="font-bold text-2xl pb-4 flex place-content-center md:place-content-start">
-              Useful Links
-            </h4>
-            <ul className="text-gray-200">
-              <li className="flex cursor-pointer place-content-center md:place-content-start">
-                <ChevronRightIcon className="h-5 w-5 pt-1 text-blue-500 " />
-                <p className="hover:brightness-50">
-                  <Link href={'/'}>Home</Link>
-                </p>
-              </li>
-              <li className="flex cursor-pointer place-content-center md:place-content-start">
-                <ChevronRightIcon className="h-5 w-5 pt-1 text-blue-500 " />
-                <p className="hover:brightness-50">
-                  <Link href={'/about'}>About Us</Link>
-                </p>
-              </li>
-              <li className="flex cursor-pointer place-content-center md:place-content-start">
-                <ChevronRightIcon className="h-5 w-5 pt-1 text-blue-500 " />
-                <p className="hover:brightness-50">
-                  <Link href={'/policies/terms'}>Terms of Services</Link>
-                </p>
-              </li>
-              <li className="flex cursor-pointer place-content-center md:place-content-start">
-                <ChevronRightIcon className="h-5 w-5 pt-1 text-blue-500 " />
-                <p className="hover:brightness-50">
-                  <Link href={'/policies/privacy'}>Privacy policy</Link>
-                </p>
-              </li>
-            </ul>
-          </div> */}
-          {/* <div className="mb-5">
-            <h4 className="font-bold text-2xl pb-4 flex place-content-center md:place-content-start">
-              Services
-            </h4>
-            <ul className="text-gray-200">
-              <li className="flex  cursor-pointer place-content-center md:place-content-start">
-                <ChevronRightIcon className="h-5 w-5 pt-1 text-blue-500 " />
-                <p className="hover:brightness-50">
-                  <Link href={'/contact'}>Contact Us</Link>
-                </p>
-              </li>
-              <li className="flex cursor-pointer place-content-center md:place-content-start">
-                <ChevronRightIcon className="h-5 w-5 pt-1 text-blue-500 " />
-                <p className="hover:brightness-50">
-                  <Link href={'/policies/returns'}>Returns Policy</Link>
-                </p>
-              </li>
-              <li className="flex cursor-pointer place-content-center md:place-content-start">
-                <ChevronRightIcon className="h-5 w-5 pt-1 text-blue-500 " />
-                <p className="hover:brightness-50">
-                  <Link href={'/policies/shipping'}>Shipping Policy</Link>
-                </p>
-              </li>
-              <li className="flex cursor-pointer place-content-center md:place-content-start">
-                <ChevronRightIcon className="h-5 w-5 pt-1 text-blue-500 " />
-                <p className="hover:brightness-50">
-                  <Link href={'/policies/cookies'}>Cookies Policy</Link>
-                </p>
-              </li>
-            </ul>
-          </div> */}
 
           <div className="mb-5 col-start-2 col-span-1 px-8">
-            <h4 className="font-bold text-2xl pb-4 flex place-content-center md:place-content-start">
+            <h4 className="font-bold text-xl pb-4 flex place-content-center md:place-content-start">
               Social Media
             </h4>
-            <p className="text-sm italic px-12 md:px-0">
+            <p className="hidden md:block text-sm italic px-12 md:px-0">
               Come and say hello over on our social media or send us an email
             </p>
 
             <div className="w-full">
               <div className="flex gap-3 justify-evenly place-items-center">
-                <div className="px-8 py-5">
+                <div className="p-0 md:px-6 md:py-5 md:flex">
                   <SocialIcon
                     style={{ height: 30, width: 30 }}
                     url="https://www.facebook.com"
@@ -154,12 +92,12 @@ export default function Footer() {
               </div>
             </div>
           </div>
-          <div className="hidden sm:block justify-end items-center cursor-pointer link link-underline link-underline-black px-8">
-            <h1 className="text-2xl font-bold pb-3">Contact me</h1>
+          <div className="hidden sm:block justify-end items-center cursor-pointer px-8 text-xs">
+            <h1 className="text-xl font-bold pb-3">Contact me</h1>
             <p className="text-gray-200 place-content-center md:place-content-start">
               <strong>Email: </strong>&nbsp;hwilsoncomms@gmail.com
             </p>
-            <div className="hidden sm:flex items-center">
+            <div className="hidden sm:flex items-center justify-center md:justify-start">
               <SocialIcon
                 url="/contact/#contact"
                 network="email"
@@ -174,9 +112,13 @@ export default function Footer() {
               </p>
             </div>
           </div>
-          <p className="col-span-3 text-gray-200 flex place-content-center md:place-content-center">
-            Copyright&nbsp;&copy;&nbsp;Hailey Wilson Communications
-          </p>
+          <div className="col-span-3">
+            <Link href="/#home">
+              <p className=" text-gray-200 flex place-content-center md:place-content-center">
+                Copyright&nbsp;&copy;&nbsp;Hailey Wilson Communications
+              </p>
+            </Link>
+          </div>
         </div>
       </div>
     </div>
