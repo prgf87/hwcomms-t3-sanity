@@ -1,3 +1,5 @@
+'use client';
+
 import { motion } from 'framer-motion';
 import { ChevronDownIcon } from '@heroicons/react/24/solid';
 import { Cursor, useTypewriter } from 'react-simple-typewriter';
@@ -6,7 +8,7 @@ function Hero({ heading, message, href, custombg }: any) {
   const [text] = useTypewriter({
     words: ['', heading, message],
     loop: true,
-    delaySpeed: 2500,
+    delaySpeed: 2000,
   });
   return (
     <>
@@ -18,7 +20,7 @@ function Hero({ heading, message, href, custombg }: any) {
           opacity: 1,
         }}
         transition={{
-          duration: 1,
+          duration: 1.5,
           delay: 0.5,
         }}
         className={`flex items-center justify-center h-screen bg-fixed bg-fill bg-center ${custombg}`}
@@ -28,7 +30,7 @@ function Hero({ heading, message, href, custombg }: any) {
           opacity: 1,
         }}
         animate={{
-          opacity: 0.7,
+          opacity: [0.9, 0.8, 0.7],
         }}
         transition={{
           duration: 1.5,

@@ -56,7 +56,7 @@ function Navbar() {
           delay: 1,
         }}
         // className="flex w-full justify-evenly items-center px-20"
-        className="max-w-[1240px] m-auto flex justify-between text-white items-center p-4"
+        className="max-w-[1240px] mx-auto flex justify-between text-white items-center p-5"
       >
         <div className="flex h-[55px] w-[120px] bg-cover">
           <Link href="/">
@@ -66,7 +66,7 @@ function Navbar() {
 
         <ul style={{ color: `${textColor}` }} className="hidden lg:flex gap-4">
           <li className="p-2 hover:text-gray-400 text-xs md:text-sm lg:text-lg link link-underline link-underline-black">
-            <Link href="/">Home</Link>
+            <Link href={'/#home'}>Home</Link>
           </li>
           <li className="p-2 hover:text-gray-400 text-xs md:text-sm lg:text-lg link link-underline link-underline-black">
             <Link href="/about">About</Link>
@@ -74,9 +74,9 @@ function Navbar() {
           <li className="p-2 hover:text-gray-400 text-xs md:text-sm lg:text-lg link link-underline link-underline-black">
             <Link href="/services">Services</Link>
           </li>
-          <li className="p-2 hover:text-gray-400 text-xs md:text-sm lg:text-lg link link-underline link-underline-black">
+          {/* <li className="p-2 hover:text-gray-400 text-xs md:text-sm lg:text-lg link link-underline link-underline-black">
             <Link href="/contact">Contact</Link>
-          </li>
+          </li> */}
           <li className="p-2 hover:text-gray-400 text-xs md:text-sm lg:text-lg link link-underline link-underline-black">
             <Link href="/blog">Blog</Link>
           </li>
@@ -84,7 +84,7 @@ function Navbar() {
             <Link href="/resources">Resources</Link>
           </li>
         </ul>
-        <div className="pl-2">
+        <div className="pl-2 hidden sm:flex">
           <SocialIcon
             style={{ height: 30, width: 30 }}
             url="https://www.facebook.com"
@@ -108,17 +108,22 @@ function Navbar() {
           />
         </div>
         <div className="hidden sm:flex justify-center items-center cursor-pointer link link-underline link-underline-black">
-          <SocialIcon
-            network="email"
-            fgColor={textColor}
-            bgColor="transparent"
-          />
-          <p
-            style={{ color: `${textColor}` }}
-            className="uppercase text-xs hidden lg:block "
+          <Link
+            href="/contact/#contact"
+            className="hidden sm:flex items-center "
           >
-            Get in touch
-          </p>
+            <SocialIcon
+              network="email"
+              fgColor={textColor}
+              bgColor="transparent"
+            />
+            <p
+              style={{ color: `${textColor}` }}
+              className="uppercase text-xs hidden lg:block "
+            >
+              Get in touch
+            </p>
+          </Link>
         </div>
 
         {/*Mobile Menu Button */}

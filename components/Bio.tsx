@@ -3,23 +3,23 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-function About() {
+function Bio() {
   return (
-    <>
+    <section>
       <div id="bio" className="relative top-[-100px]" />
-      <section className="py-10 snap-y">
-        <div className="snap-center max-w-lg md:max-w-xl lg:max-w-7xl text-[1.5rem] items-center m-auto bg-gray-800  text-gray-300 p-5 rounded-3xl">
-          <div className="grid grid-cols-1 mx-auto">
-            <div className="grid grid-cols-2 mx-auto">
-              <div className="justify-center items-center p-8 lg:mt-20">
-                <h1 className="text-2xl md:text-4xl font-bold md:mt-4 tracking-[5px] text-left">
+      <section className="bg-transient-to-b from-zinc-900/90 via-zinc-900/20 to-transparent text-gray-200">
+        <div className="max-w-lg md:max-w-xl lg:max-w-7xl text-[1.5rem] items-center m-auto  rounded-3xl">
+          <div className="grid grid-cols-1 mx-auto mt-20">
+            <div className="grid grid-cols-2 mx-auto space-x-20">
+              <div className="justify-center items-center m-auto pl-8">
+                <h1 className="text-3xl md:text-4xl font-bold md:mt-4 tracking-[2px] text-right">
                   Who is
                 </h1>
-                <h1 className="text-2xl md:text-4xl font-bold tracking-[5px] text-left">
+                <h1 className="text-4xl md:text-4xl font-bold tracking-[10px] text-left text-gray-100">
                   Hailey Wilson?
                 </h1>
               </div>
-              <div className="h-60 w-60 rounded-full overflow-hidden border-4 border-gray-900 flex items-center">
+              <div className="h-40 w-40 lg:h-60 lg:w-60 rounded-full overflow-hidden border-4 border-gray-900 flex items-center">
                 <Image
                   src={'/images/img1.png'}
                   alt="/"
@@ -28,7 +28,7 @@ function About() {
                 />
               </div>
             </div>
-            <div className="col-span-2 items-center lg:px-20">
+            <div className="col-span-2 text-center lg:px-20">
               <p className="p-8">
                 As a down-to-earth communicator, strategist and storyteller, I
                 have a single goal for all of my projects: Be authentic.
@@ -73,13 +73,9 @@ function About() {
                 I&apos;m writing and chronicling stories of my eccentric family.
               </p>
             </div>
-
-            {/* <div className="w-full rounded-full overflow-hidden m-auto">
-            <Image src={'/img1.png'} alt="/" width={1024} height={1024} />
-          </div> */}
             <div className="col-span-2 flex justify-center items-center">
               <Link href="/contact">
-                <button className="btn1 px-8 py-2 text-xl mb-10 mt-3">
+                <button className="btn1-large px-12 py-4 text-2xl mb-10 mt-3">
                   Get in Touch
                 </button>
               </Link>
@@ -87,8 +83,8 @@ function About() {
           </div>
         </div>
       </section>
-    </>
+    </section>
   );
 }
 
-export default About;
+export default Bio;

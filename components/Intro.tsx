@@ -9,8 +9,8 @@ import { ChevronDownIcon } from '@heroicons/react/24/solid';
 function Intro() {
   return (
     <div className="w-full min-h-screen flex bg-gradient text-gray-100">
-      <section className="max-w-3xl lg:max-w-7xl mx-auto grid grid-cols-1 pb-10">
-        <div className="text-center py-5 lg:pt-5 lg:pb-5 uppercase">
+      <section className="max-w-3xl lg:max-w-7xl mx-auto grid grid-cols-1">
+        <div className="text-center py-5 lg:pt-5 lg:pb-5 uppercase ">
           <h1 className="text-3xl md:text-6xl pt-8 pb-4 tracking-widest">
             Think like a scientist
           </h1>
@@ -18,21 +18,21 @@ function Intro() {
             Sound like a human
           </h2>
         </div>
-        <section className="grid grid-cols-1 md:grid-cols-2 max-w-[1040px]">
+        <section className="grid grid-cols-1 md:grid-cols-2 max-w-[1280px] gap-5">
           <div className="relative mx-auto">
             <Image
               src="/images/gif2.gif"
               alt="Gif"
               width={960}
               height={960}
-              className="h-[30rem] w-[30rem]"
+              className="h-[45vh] w-[45vh]"
             />
           </div>
-          <div className="mx-4">
-            <h1 className="text-4xl font-bold py-5 md:pb-5 lg:pb-10">
+          <div className="mx-4 text-right">
+            <h1 className="text-4xl font-bold px-2 md:pb-5 lg:pb-5">
               Deep understanding leads to deep connections
             </h1>
-            <p className="p-lite">
+            <p className="p-lite px-5 ">
               Welcome! My unique approach to communications strategy blends
               empathy practices with a deep knowledge of how our brains work.
               <br></br>
@@ -52,7 +52,7 @@ function Intro() {
 
         <div className="mx-auto">
           <Link href="https://www.talkingpointsforlife.com/">
-            <button className="my-5 text-2xl btn1">Talking Points</button>
+            <button className="my-5 text-3xl btn1-large">Talking Points</button>
           </Link>
         </div>
       </section>
@@ -69,7 +69,7 @@ function Intro() {
             delay: 3,
           }}
         >
-          <div className="absolute right-0 bottom-[4.25rem] m-5 lg:m-20 md:pr-5 ">
+          <div className="absolute right-0 bottom-[4.5rem] m-5 lg:m-20 md:pr-5 ">
             <button className="animate-bounce">
               <a href="#quotes">
                 <ChevronDownIcon className="h-6 w-6 md:h-10 md:w-10 text-white" />

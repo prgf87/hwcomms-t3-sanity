@@ -1,8 +1,8 @@
 import { ChevronRightIcon } from '@heroicons/react/24/solid';
-// import Image from 'next/image';
 import Link from 'next/link';
 
 import { SocialIcon } from 'react-social-icons';
+import BackToTop from './BackToTop';
 
 export default function Footer() {
   return (
@@ -92,14 +92,17 @@ export default function Footer() {
               </div>
             </div>
           </div>
-          <div className="hidden sm:block justify-end items-center cursor-pointer px-8 text-xs">
+          <Link
+            href="/contact"
+            className="hidden sm:block justify-end items-center cursor-pointer px-8 text-xs"
+          >
             <h1 className="text-xl font-bold pb-3">Contact me</h1>
             <p className="text-gray-200 place-content-center md:place-content-start">
               <strong>Email: </strong>&nbsp;hwilsoncomms@gmail.com
             </p>
             <div className="hidden sm:flex items-center justify-center md:justify-start">
               <SocialIcon
-                url="/contact/#contact"
+                url=""
                 network="email"
                 fgColor="white"
                 bgColor="transparent"
@@ -111,13 +114,13 @@ export default function Footer() {
                 Get in touch
               </p>
             </div>
-          </div>
+          </Link>
           <div className="col-span-3">
-            <Link href="/#home">
+            <BackToTop path="/#home">
               <p className=" text-gray-200 flex place-content-center md:place-content-center">
                 Copyright&nbsp;&copy;&nbsp;Hailey Wilson Communications
               </p>
-            </Link>
+            </BackToTop>
           </div>
         </div>
       </div>

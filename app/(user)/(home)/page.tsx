@@ -8,22 +8,22 @@ import Intro from '@/components/Intro';
 import QuoteCarousel from '@/components/QuoteCarousel';
 import Snapshots from '@/components/Snapshots';
 import ReviewCarousel from '@/components/ReviewCarousel';
-// import HomePreviews from '@/components/HomePreviews';
 import Banner from '@/components/Banner';
 import PostList from '@/components/PostList';
 import TipList from '@/components/TipList';
 import PostBanner from '@/components/PostBanner';
 import TipBanner from '@/components/TipBanner';
+import Hero from '@/components/Hero';
 
 const query = groq`
-*[_type=='post'][0..3] {
+*[_type=='post'][0..1] {
   ...,
   author->,
   categories[]->
 } | order(_createdAt desc)
 `;
 const queryTip = groq`
-*[_type=='tip'][0..3] {
+*[_type=='tip'][0..1] {
   ...,
   author->,
   categories[]->
@@ -69,10 +69,18 @@ export default async function HomePage() {
   const reviews = await client.fetch(queryReview);
 
   return (
-    <main>
-      <div id="home" className="relative top-[-80px] " />
+    <main className="z-0">
       <div>
-        <div id="intro" className="relative top-[-80px] " />
+        <div id="home" className="fixed top-0" />
+        <Hero
+          heading="Hailey Wilson Communications"
+          message="Where there's a Wilson, there's a way"
+          href="/#intro"
+          custombg="custom-img"
+        />
+      </div>
+      <div>
+        <div id="intro" className="relative top-[-80px]" />
         <Intro />
       </div>
       <div>
@@ -104,10 +112,10 @@ export default async function HomePage() {
             <TipList tips={tips} />
           </div>
         </div>
-        <div>
-          <div id="banner" className="relative top-[-80px] " />
-          <Banner />
-        </div>
+      </div>
+      <div>
+        <div id="banner" className="relative top-[-80px] " />
+        <Banner />
       </div>
     </main>
   );

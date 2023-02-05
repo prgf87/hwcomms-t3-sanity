@@ -12,13 +12,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body className="bg-gradient-invert">
         <Navbar />
         <Hero
           heading="About Hailey"
           message="Learn about what drives me"
-          custombg="custom-img4"
-          href="/about"
+          custombg="custom-img2"
+          href="/about/#bio"
         />
         {children}
         <Footer />

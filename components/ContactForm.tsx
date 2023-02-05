@@ -5,11 +5,11 @@ function ContactForm() {
     <section id="contact" className="bg-gradient-invert dark:bg-gray-900">
       <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
         <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-300 dark:text-white">
-          Contact Us
+          Contact Me
         </h2>
-        <p className="mb-8 lg:mb-16 font-light text-center text-gray-200 dark:text-gray-400 sm:text-xl">
+        <p className="mb-8 lg:mb-16 font-light text-center text-gray-200 dark:text-gray-400 sm:text-xl px-20">
           Got a technical issue? Want to send feedback about a feature? Need to
-          contact us directly about anything else? Let us know.
+          talk to me directly about anything else? Get in touch.
         </p>
         <form action="#" className="space-y-8">
           <div>

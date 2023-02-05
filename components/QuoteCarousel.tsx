@@ -43,7 +43,7 @@ function QuoteCarousel({ quotes }: Props) {
               >
                 {index === current && (
                   <div className="bg-[#2d5a52]/90 w-full text-white grid grid-cols-2 z-[1]">
-                    <div className="m-auto py-4 pl-10 md:pl-[7.5rem] lg:pl-80 font-bold z-[2]">
+                    <div className="m-auto py-4 pl-10 md:pl-[6rem] lg:pl-80 font-bold z-[2]">
                       <h2 className="text-xs md:text-2xl">{quote.quotation}</h2>
                       <p className="text-xs md:text-lg pt-2">
                         {quote.author.name}
@@ -61,12 +61,12 @@ function QuoteCarousel({ quotes }: Props) {
               </div>
             );
           })}
-          <div className="relative left-0 top-[-100px] md:top-[-250px] right-0 bottom-0 flex justify-between md:px-8 z-[2]">
+          <div className="relative left-0 top-[-100px] md:top-[-275px] right-0 bottom-0 flex justify-between md:px-8 z-[2]">
             <button onClick={prevQuote}>
-              <ChevronLeftIcon className="h-6 w-6 md:h-10 md:w-10 text-gray-200" />
+              <ChevronLeftIcon className="h-6 w-6 md:h-12 md:w-12 text-gray-300 ml-10" />
             </button>
             <button onClick={nextQuote}>
-              <ChevronRightIcon className="h-6 w-6 md:h-10 md:w-10 text-gray-200" />
+              <ChevronRightIcon className="h-6 w-6 md:h-12 md:w-12 text-gray-300 mr-10" />
             </button>
           </div>
         </div>
@@ -84,7 +84,7 @@ function QuoteCarousel({ quotes }: Props) {
             delay: 3,
           }}
         >
-          <div className="absolute right-0 bottom-[-26rem] m-5 lg:m-20 md:pr-5 ">
+          <div className="absolute right-0 bottom-[-22.5rem] m-5 lg:mx-20 md:pr-5 ">
             <button className="animate-bounce">
               <a href="#snapshot">
                 <ChevronDownIcon className="h-6 w-6 md:h-10 md:w-10 text-white" />

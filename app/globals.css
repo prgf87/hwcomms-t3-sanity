@@ -22,7 +22,11 @@ body {
 }
 
 .btn1 {
-  @apply px-8 py-2 border border-gray-500 rounded-full tracking-widest text-gray-200 transition hover:border-gray-600/70 hover:bg-[#0a725f] hover:text-white active:bg-gray-300/30 active:border-white;
+  @apply px-8 py-2 border border-gray-800 rounded-full tracking-widest text-gray-200 transition hover:border-gray-600/70 hover:bg-[#5EBCAA]/30 hover:text-white active:bg-[#5EBCAA]/70 active:border-gray-500;
+}
+
+.btn1-large {
+  @apply px-20 py-6 border border-gray-800 rounded-full tracking-widest text-gray-200 transition hover:border-gray-600/70 hover:bg-[#5EBCAA]/30 hover:text-white active:bg-[#5EBCAA]/60 active:border-gray-400;
 }
 
 .btn2 {

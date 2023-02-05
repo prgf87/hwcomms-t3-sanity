@@ -17,15 +17,10 @@ function PostBanner() {
           </span>
           &nbsp;for all your Communincations needs
         </h2>
-        <div className="mt-5 md:mt-2 text-gray-500 max-w-md">
+        <div className="my-5 md:mt-2 text-gray-500 max-w-md">
           <p>| Talking points</p>
           <p>| The latest in Communications </p>
           <p>| Tips, Resources &amp; More</p>
-        </div>
-        <div className="my-6 flex items-center justify-start">
-          <Link href="/blog">
-            <button className="btn1">More Blogs</button>
-          </Link>
         </div>
       </section>
     </main>
