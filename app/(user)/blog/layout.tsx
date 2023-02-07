@@ -17,12 +17,12 @@ export default function RootLayout({
         <Hero
           heading="Hailey's Blog"
           message="Where there's a Wilson, there's a way"
-          href="/blog/#blog-banner"
+          heroanchor="/blog/#blog-banner"
           custombg="custom-img5"
         />
 
         {children}
-        <Footer />
+        <Footer anchor={'/blog/#blog'} />
       </body>
     </html>
   );

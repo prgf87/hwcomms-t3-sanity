@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
@@ -55,18 +57,20 @@ function Navbar() {
           duration: 1,
           delay: 1,
         }}
-        // className="flex w-full justify-evenly items-center px-20"
-        className="max-w-[1240px] mx-auto flex justify-between text-white items-center p-5"
+        className="max-w-[1240px] mx-auto flex justify-between text-white items-center p-2"
       >
-        <div className="flex h-[55px] w-[120px] bg-cover">
+        <div
+          style={{ color: `${textColor}` }}
+          className="flex h-[55px] w-[120px] bg-cover transition-transform hover:scale-110 duration-200"
+        >
           <Link href="/">
             <Logo />
           </Link>
         </div>
 
-        <ul style={{ color: `${textColor}` }} className="hidden lg:flex gap-4">
+        <ul style={{ color: `${textColor}` }} className="hidden md:flex gap-4">
           <li className="p-2 hover:text-gray-400 text-xs md:text-sm lg:text-lg link link-underline link-underline-black">
-            <Link href={'/#home'}>Home</Link>
+            <Link href="/#home">Home</Link>
           </li>
           <li className="p-2 hover:text-gray-400 text-xs md:text-sm lg:text-lg link link-underline link-underline-black">
             <Link href="/about">About</Link>
@@ -74,9 +78,6 @@ function Navbar() {
           <li className="p-2 hover:text-gray-400 text-xs md:text-sm lg:text-lg link link-underline link-underline-black">
             <Link href="/services">Services</Link>
           </li>
-          {/* <li className="p-2 hover:text-gray-400 text-xs md:text-sm lg:text-lg link link-underline link-underline-black">
-            <Link href="/contact">Contact</Link>
-          </li> */}
           <li className="p-2 hover:text-gray-400 text-xs md:text-sm lg:text-lg link link-underline link-underline-black">
             <Link href="/blog">Blog</Link>
           </li>
@@ -90,40 +91,36 @@ function Navbar() {
             url="https://www.facebook.com"
             fgColor={textColor}
             bgColor="transparent"
-            className="p-6"
+            className="p-6 transition-transform hover:scale-125 duration-200"
           />
           <SocialIcon
             style={{ height: 30, width: 30 }}
             url="https://www.twitter.com"
             fgColor={textColor}
             bgColor="transparent"
-            className="p-6"
+            className="p-6 transition-transform hover:scale-125 duration-200"
           />
           <SocialIcon
             style={{ height: 30, width: 30 }}
             url="https://www.linkedin.com"
             fgColor={textColor}
             bgColor="transparent"
-            className="p-6"
+            className="p-6 transition-transform hover:scale-125 duration-200"
           />
         </div>
-        <div className="hidden sm:flex justify-center items-center cursor-pointer link link-underline link-underline-black">
-          <Link
-            href="/contact/#contact"
-            className="hidden sm:flex items-center "
+        <div className="flex justify-center items-center cursor-pointer link link-underline link-underline-black">
+          <SocialIcon
+            network="email"
+            fgColor={textColor}
+            bgColor="transparent"
+            url="/contact/#contact"
+          />
+          <p
+            style={{ color: `${textColor}` }}
+            className="md:hidden lg:block uppercase text-xs"
           >
-            <SocialIcon
-              network="email"
-              fgColor={textColor}
-              bgColor="transparent"
-            />
-            <p
-              style={{ color: `${textColor}` }}
-              className="uppercase text-xs hidden lg:block "
-            >
-              Get in touch
-            </p>
-          </Link>
+            Get in touch
+          </p>
         </div>
 
         {/*Mobile Menu Button */}

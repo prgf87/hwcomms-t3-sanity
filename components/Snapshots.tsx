@@ -59,7 +59,7 @@ function Snapshots() {
     //     >
     //       <div className="absolute right-0 bottom-[-3.5rem] m-5 lg:m-20 md:pr-5 ">
     //         <button className="animate-bounce">
-    //           <a href="#review">
+    //           <Link href="#review">
     //             <ChevronDownIcon className="h-6 w-6 md:h-10 md:w-10 text-white" />
     //           </a>
     //         </button>

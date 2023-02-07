@@ -17,12 +17,11 @@ export default function RootLayout({
         <Hero
           heading="Communication Services"
           message="These are the services we can perform"
-          btnmsg="Learn More"
           custombg="custom-img6"
-          href="/services/#services-list"
+          heroanchor="/services/#services-list"
         />
         {children}
-        <Footer />
+        <Footer anchor={'/services/#services'} />
       </body>
     </html>
   );

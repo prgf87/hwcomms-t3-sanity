@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { ChevronDownIcon } from '@heroicons/react/24/solid';
 import { Cursor, useTypewriter } from 'react-simple-typewriter';
 
-function Hero({ heading, message, href, custombg }: any) {
+function Hero({ heading, message, heroanchor, custombg }: any) {
   const [text] = useTypewriter({
     words: ['', heading, message],
     loop: true,
@@ -73,8 +73,8 @@ function Hero({ heading, message, href, custombg }: any) {
             delay: 3,
           }}
         >
-          <a href={href}>
-            <button className="absolute right-0 bottom-0 m-5 lg:m-20 md:pr-5 animate-bounce">
+          <a href={heroanchor}>
+            <button className="nav-chev-down absolute right-0 bottom-0 m-5 lg:m-20 md:pr-5 animate-bounce">
               <ChevronDownIcon className="h-6 w-6 md:h-10 md:w-10 text-white" />
             </button>
           </a>

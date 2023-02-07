@@ -15,7 +15,7 @@ export default function RootLayout({
         <Navbar />
 
         {children}
-        <Footer />
+        <Footer anchor={'/#home'} />
       </body>
     </html>
   );

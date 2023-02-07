@@ -9,6 +9,7 @@ import {
 } from '@heroicons/react/24/solid';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 type Props = {
   reviews: Review[];
@@ -27,13 +28,26 @@ function ReviewCarousel({ reviews }: Props) {
   };
 
   return (
-    <section className="relative custom-img8 bg-cover">
-      <div className="" />
-      <div className="h-screen bg-gradient-to-b from-black/70 via-black/50 to-black/70 left-0 top-0 right-0 bottom-0 z-[10]">
-        <div className="">
-          <h1 className="text-6xl text-center py-20 text-gray-400 tracking-[15px] uppercase">
-            Reviews
-          </h1>
+    <section className="relative h-screen custom-img8 bg-fill">
+      <div className="h-screen bg-gradient-to-b from-black/40 via-black/70 to-black/90 left-0 top-0 right-0 bottom-0 z-[10]">
+        <div>
+          <motion.h1
+            initial={{
+              opacity: 0,
+            }}
+            whileInView={{
+              opacity: 1,
+            }}
+            transition={{
+              duration: 1,
+            }}
+            viewport={{
+              once: true,
+            }}
+            className="text-5xl text-center py-20 text-gray-400 tracking-[15px] uppercase"
+          >
+            Words From Colleagues
+          </motion.h1>
           {/* Reviews */}
           {reviews.map((review, index) => {
             return (
@@ -46,7 +60,21 @@ function ReviewCarousel({ reviews }: Props) {
                 }
               >
                 {index === current && (
-                  <div className="z-[0]">
+                  <motion.div
+                    initial={{
+                      opacity: 0,
+                    }}
+                    whileInView={{
+                      opacity: 1,
+                    }}
+                    transition={{
+                      duration: 1,
+                    }}
+                    viewport={{
+                      once: true,
+                    }}
+                    className="z-[0]"
+                  >
                     <div className="z-[-1] py-5">
                       <img
                         src={urlFor(review.author.image).url()}
@@ -58,20 +86,20 @@ function ReviewCarousel({ reviews }: Props) {
                       <p className="p-2 text-2xl">{review.review}</p>
                       <h2 className="text-3xl p-2">{review.author.name}</h2>
                     </div>
-                  </div>
+                  </motion.div>
                 )}
               </div>
             );
           })}
-          <div className="relative left-0 top-0 right-0 bottom-0 flex sm:hidden justify-center items-center gap-40">
+          <div className="relative left-0 top-0 right-0 bottom-0 flex lg:hidden justify-center items-center gap-40 pb-10">
             <button onClick={prevReview}>
-              <ChevronLeftIcon className="h-6 w-6 md:h-10 md:w-10 text-gray-200" />
+              <ChevronLeftIcon className="h-10 w-10 md:h-10 md:w-10 text-gray-200" />
             </button>
             <button onClick={nextReview}>
-              <ChevronRightIcon className="h-6 w-6 md:h-10 md:w-10 text-gray-200" />
+              <ChevronRightIcon className="h-10 w-10 md:h-10 md:w-10 text-gray-200" />
             </button>
           </div>
-          <div className="hidden relative left-0 top- right-0 bottom-[16rem] sm:flex justify-between px-2 animate-pulse">
+          <div className="hidden relative left-0 top-0 right-0 bottom-[14rem] lg:flex justify-between animate-pulse px-60">
             <button onClick={prevReview}>
               <ChevronLeftIcon className="h-6 w-6 md:h-10 md:w-10 text-gray-200 ml-[10rem] xl:ml-[25rem]" />
             </button>
@@ -93,13 +121,13 @@ function ReviewCarousel({ reviews }: Props) {
               delay: 3,
             }}
           >
-            <div className="absolute right-0 bottom-[-2rem] m-5 lg:m-20 md:pr-5 ">
-              <a href="#blog">
+            <a href="#blog">
+              <div className="nav-chev-down absolute right-0 bottom-[-3rem] m-5 lg:m-20 md:pr-5 ">
                 <button className="animate-bounce">
                   <ChevronDownIcon className="h-6 w-6 md:h-10 md:w-10 text-white" />
                 </button>
-              </a>
-            </div>
+              </div>
+            </a>
           </motion.div>
         </div>
       </div>

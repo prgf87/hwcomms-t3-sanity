@@ -12,7 +12,6 @@
 
 html {
   color-scheme: dark light;
-  scroll-behavior: smooth;
 }
 
 body {
@@ -26,11 +25,19 @@ body {
 }
 
 .btn1-large {
-  @apply px-20 py-6 border border-gray-800 rounded-full tracking-widest text-gray-200 transition hover:border-gray-600/70 hover:bg-[#5EBCAA]/30 hover:text-white active:bg-[#5EBCAA]/60 active:border-gray-400;
+  @apply px-10 py-4 bg-[#737899]/50 border border-gray-500 rounded-full tracking-widest text-gray-100 transition duration-300 hover:border-gray-400/70 hover:bg-[#5EBCAA]/60 hover:text-white active:bg-[#5EBCAA]/60 active:border-gray-400;
 }
 
 .btn2 {
   @apply px-8 py-2 border border-gray-500 rounded-full tracking-widest text-gray-800 transition hover:border-gray-600/70 hover:bg-[#0a725f] hover:text-white active:bg-gray-300/30 active:border-white;
+}
+
+.btn3 {
+  @apply px-8 py-2 border border-gray-800 rounded-full bg-gradient-to-t from-zinc-800 via-black to-zinc-800 tracking-widest text-gray-200 transition hover:border-gray-600/70 hover:bg-[#5EBCAA]/70 hover:text-gray-500 active:bg-[#5EBCAA]/70 active:border-gray-500 active:text-white;
+}
+
+.nav-chev-down {
+  @apply hidden md:block;
 }
 
 section.snapshot {
@@ -200,6 +207,18 @@ section.snapshot {
 
 .custom-img9 {
   background-image: url('/images/img10.png');
+  background-position: center;
+  background-size: cover;
+}
+
+.custom-img10 {
+  background-image: url('/images/img17.png');
+  background-position: center;
+  background-size: cover;
+}
+
+.custom-img11 {
+  background-image: url('/images/img30.png');
   background-position: center;
   background-size: cover;
 }

@@ -18,10 +18,10 @@ export default function RootLayout({
           heading="Contact me"
           message="Use the form below to send me a message"
           custombg="custom-img3"
-          href="/contact/#contact"
+          heroanchor="/contact/#contact"
         />
         {children}
-        <Footer />
+        <Footer anchor={'/contact/#contact'} />
       </body>
     </html>
   );

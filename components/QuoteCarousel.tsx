@@ -9,6 +9,7 @@ import {
 } from '@heroicons/react/24/solid';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 type Props = {
   quotes: Quote[];
@@ -43,13 +44,13 @@ function QuoteCarousel({ quotes }: Props) {
               >
                 {index === current && (
                   <div className="bg-[#2d5a52]/90 w-full text-white grid grid-cols-2 z-[1]">
-                    <div className="m-auto py-4 pl-10 md:pl-[6rem] lg:pl-80 font-bold z-[2]">
+                    <div className="m-auto py-4 pl-20 sm:pl-28  md:pl-[10rem] lg:pl-40 font-bold z-[2]">
                       <h2 className="text-xs md:text-2xl">{quote.quotation}</h2>
                       <p className="text-xs md:text-lg pt-2">
                         {quote.author.name}
                       </p>
                     </div>
-                    <div className="relative left-20 overflow-hidden h-[10vh] w-[10vh] md:h-[25vh] md:w-[25vh] lg:h-[35vh] lg:w-[35vh] m-5 md:m-20">
+                    <div className="relative sm:left-5 md:left-[-2rem] overflow-hidden h-[20vh] w-[20vh] md:h-[25vh] md:w-[25vh] lg:h-[35vh] lg:w-[35vh] p-5 sm:m-5 md:m-20">
                       <img
                         src={urlFor(quote.mainImage).url()}
                         alt={quote.title}
@@ -61,7 +62,7 @@ function QuoteCarousel({ quotes }: Props) {
               </div>
             );
           })}
-          <div className="relative left-0 top-[-100px] md:top-[-275px] right-0 bottom-0 flex justify-between md:px-8 z-[2]">
+          <div className="relative left-0 top-[-110px] sm:top-[-130px] md:top-[-225px] right-0 bottom-0 flex justify-between md:px-8 z-[2]">
             <button onClick={prevQuote}>
               <ChevronLeftIcon className="h-6 w-6 md:h-12 md:w-12 text-gray-300 ml-10" />
             </button>
@@ -84,13 +85,13 @@ function QuoteCarousel({ quotes }: Props) {
             delay: 3,
           }}
         >
-          <div className="absolute right-0 bottom-[-22.5rem] m-5 lg:mx-20 md:pr-5 ">
-            <button className="animate-bounce">
-              <a href="#snapshot">
+          <a href="#snapshot">
+            <div className="nav-chev-down absolute right-0 bottom-[-22.5rem] m-5 lg:mx-20 md:pr-5 ">
+              <button className="animate-bounce">
                 <ChevronDownIcon className="h-6 w-6 md:h-10 md:w-10 text-white" />
-              </a>
-            </button>
-          </div>
+              </button>
+            </div>
+          </a>
         </motion.div>
       </div>
     </section>
