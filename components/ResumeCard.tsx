@@ -6,23 +6,23 @@ type Props = {};
 
 function ResumeCard({}: Props) {
   return (
-    <article className="max-w-full flex flex-col rounded-lg items-center space-y-5 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px] snap-center bg-slate-700/90 p-10 opacity-40 hover:opacity-100 cursor-pointer transition-opacity duration-200 overflow-hidden">
-      <motion.div
-        initial={{
-          opacity: 0,
-          y: -100,
-        }}
-        whileInView={{
-          opacity: 1,
-          y: 0,
-        }}
-        transition={{
-          duration: 1.2,
-        }}
-        viewport={{
-          once: true,
-        }}
-      >
+    <motion.article
+      initial={{
+        opacity: 0,
+      }}
+      whileInView={{
+        opacity: 1,
+      }}
+      transition={{
+        duration: 2,
+        delay: 1,
+      }}
+      viewport={{
+        once: true,
+      }}
+      className="max-w-full flex flex-col rounded-lg items-center space-y-5 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px] snap-center bg-slate-700/90 p-10 opacity-70 hover:opacity-100 cursor-pointer transition-opacity duration-200 overflow-hidden"
+    >
+      <div>
         <Image
           src="/images/img1.png"
           alt="/"
@@ -30,7 +30,7 @@ function ResumeCard({}: Props) {
           height={100}
           className="h-32 w-32 rounded-full xl:w-[200px] xl:h-[200px] object-cover object-center"
         />
-      </motion.div>
+      </div>
 
       <div className="px-0 md:px-10">
         <h1 className="text-4xl font-light">
@@ -59,7 +59,7 @@ function ResumeCard({}: Props) {
           <li>...</li>
         </ul> */}
       </div>
-    </article>
+    </motion.article>
   );
 }
 

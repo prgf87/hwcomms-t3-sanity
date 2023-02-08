@@ -27,5 +27,5 @@ module.exports = {
   variants: {
     scrollSnapType: ['mandatory'],
   },
-  plugins: [require('@tailwindcss/line-clamp')],
+  plugins: [require('@tailwindcss/line-clamp', 'tailwind-scrollbar')],
 };

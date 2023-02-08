@@ -3,30 +3,62 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import ResumeCard from './ResumeCard';
+import { ChevronDownIcon } from '@heroicons/react/24/solid';
 
 type Props = {};
 
 function Resume({}: Props) {
   return (
-    <div className="h-screen custom-img11 relative overflow-hidden z-0 max-w-full">
+    <div className="h-screen custom-img11 relative overflow-y-hidden z-0 max-w-full">
       <motion.div
         initial={{ opacity: 1 }}
-        whileInView={{ opacity: [1, 0.3, 0.6] }}
+        whileInView={{ opacity: 0.6 }}
         transition={{ duration: 1.5 }}
+        viewport={{ once: true }}
         className="absolute left-0 top-0 right-0 bottom-0 bg-cover bg-black z-[0] flex justify-evenly items-center"
       />
       <div className="relative flex flex-col text-left md:flex-row max-w-full px-10 justify-center items-center mx-auto">
-        <h3 className="absolute top-20 uppercase tracking-[20px] text-gray-300 text-5xl">
+        <motion.h3
+          initial={{
+            opacity: 0,
+          }}
+          whileInView={{
+            opacity: 1,
+          }}
+          transition={{
+            duration: 1.5,
+            delay: 0.5,
+          }}
+          viewport={{
+            once: true,
+          }}
+          className="absolute top-20 uppercase tracking-[20px] text-gray-300 text-5xl"
+        >
           My Resume
-        </h3>
+        </motion.h3>
         <div className="h-screen flex flex-col text-left md:flex-row max-w-full px-10 justify-center items-center mx-auto text-gray-200">
-          <div className="w-full flex space-x-5 overflow-x-scroll p-10 snap-x snap-proximity">
+          <div className="w-3/5 flex space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory">
             <ResumeCard />
             <ResumeCard />
             <ResumeCard />
             <ResumeCard />
           </div>
-          {/* <div>
+        </div>
+        <a href="#banner" className="relative">
+          <button className="nav-chev-down absolute right-[-2.3rem] bottom-[-25.5rem] m-5 lg:m-20 md:pr-5 animate-bounce">
+            <ChevronDownIcon className="h-6 w-6 md:h-10 md:w-10 text-white" />
+          </button>
+        </a>
+      </div>
+      <div></div>
+    </div>
+  );
+}
+
+export default Resume;
+
+{
+  /* <div>
             <h3>July 2022 - October 2022</h3>
             <h1>
               Atria Wealth Solutions, Vice President of Corporate Communications
@@ -42,13 +74,15 @@ function Resume({}: Props) {
               programs, including innovative storytelling and engagement ideas
               to communicate and align key messages.
             </p>
-          </div> */}
-        </div>
-      </div>
-      <div>
-        {/* BG IMAGE with text in the middle*/}
+          </div> */
+}
 
-        {/* <div>
+{
+  /* BG IMAGE with text in the middle*/
+}
+
+{
+  /* <div>
           <h3>August 2021 - May 2022</h3>
           <h1>Cetera Financial Group, Director of Internal Communications</h1>
           <p>
@@ -232,10 +266,5 @@ function Resume({}: Props) {
             systems, and managed crisis communications, media relations, and
             internal engagement efforts.
           </p>
-        </div> */}
-      </div>
-    </div>
-  );
+        </div> */
 }
-
-export default Resume;

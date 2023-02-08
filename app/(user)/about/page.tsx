@@ -6,13 +6,13 @@ import Values from '@/components/Values';
 
 export default async function AboutPage() {
   return (
-    <main>
+    <main className="overflow-x-hidden">
       <div>
         <div>
           <div id="home" className="fixed top-0" />
           <Hero
-            heading="About Hailey"
-            message="Learn about what drives me"
+            heading="Learn about what drives me"
+            message="Scroll down to find out more"
             custombg="custom-img2"
             heroanchor="#bio"
           />
@@ -22,11 +22,11 @@ export default async function AboutPage() {
           <Bio />
         </div>
         <div>
-          <div id="values" className="relative top-[-80px]" />
+          <div id="values" className="relative top-[-70px]" />
           <Values />
         </div>
         <div>
-          <div id="resume" className="relative top-[-80px]" />
+          <div id="resume" className="relative top-[-70px]" />
           <Resume />
         </div>
         <div>

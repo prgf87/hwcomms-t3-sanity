@@ -7,9 +7,9 @@ type Props = {};
 
 function Values({}: Props) {
   return (
-    <section className="relative flex items-center justify-center min-h-screen bg-fixed bg-fill bg-center custom-img10 text-gray-100">
+    <section className="relative flex items-center justify-center h-screen bg-fixed bg-fill bg-center custom-img10 text-gray-100">
       <div className="absolute top-0 left-0 right-0 bottom-0 h-screen bg-black/70 z-[2]" />
-      <div className="absolute top-0 left-0 right-0 bottom-0 text-gray-200 text-[1.5rem] z-[2] mx-auto">
+      <div className="absolute top-0 left-0 right-0 bottom-0 text-gray-200 text-[1rem] lg:text-[1.5rem] z-[2] mx-auto">
         <motion.h1
           initial={{
             opacity: 0,
@@ -23,7 +23,7 @@ function Values({}: Props) {
           viewport={{
             once: true,
           }}
-          className="text-7xl text-center py-20 text-gray-400 tracking-[15px] uppercase"
+          className="text-5xl lg:text-7xl text-center pt-20 lg:py-16 text-gray-300 tracking-[15px] uppercase"
         >
           My Values
         </motion.h1>
@@ -39,14 +39,13 @@ function Values({}: Props) {
                 x: 0,
               }}
               transition={{
-                duration: 1,
-                delay: 1,
+                duration: 1.5,
               }}
               viewport={{
                 once: true,
               }}
             >
-              <h2 className="p-8 text-xl md:text-3xl tracking-[20px] text-gray-400 uppercase">
+              <h2 className="p-8 text-xl lg:text-3xl tracking-[20px] text-gray-400 uppercase">
                 Seek Extraordinary Experiences
               </h2>
               <p className="p-lite px-20 py-2">
@@ -65,14 +64,15 @@ function Values({}: Props) {
                 x: 0,
               }}
               transition={{
-                duration: 1,
-                delay: 1.5,
+                duration: 1.5,
+                delay: 0.5,
               }}
               viewport={{
                 once: true,
               }}
+              className="px-5"
             >
-              <h2 className="p-8 text-xl md:text-3xl tracking-[20px] text-gray-400 uppercase">
+              <h2 className="p-8 text-xl lg:text-3xl tracking-[20px] text-gray-400 uppercase">
                 Be Thorough
               </h2>
               <p className="p-lite px-20 py-2">
@@ -94,14 +94,13 @@ function Values({}: Props) {
                 x: 0,
               }}
               transition={{
-                duration: 1,
-                delay: 1,
+                duration: 1.5,
               }}
               viewport={{
                 once: true,
               }}
             >
-              <h2 className="p-8 text-xl md:text-3xl tracking-[20px] text-gray-400 uppercase">
+              <h2 className="p-8 text-xl lg:text-3xl tracking-[20px] text-gray-400 uppercase">
                 Have Integrity
               </h2>
               <p className="p-lite px-20 py-2">
@@ -120,14 +119,14 @@ function Values({}: Props) {
                 x: 0,
               }}
               transition={{
-                duration: 1,
-                delay: 1.5,
+                duration: 1.5,
+                delay: 0.5,
               }}
               viewport={{
                 once: true,
               }}
             >
-              <h2 className="p-8 text-xl md:text-3xl tracking-[20px] text-gray-400 uppercase">
+              <h2 className="p-8 text-xl lg:text-3xl tracking-[20px] text-gray-400 uppercase">
                 Move Forward, Move Fast
               </h2>
               <p className="p-lite px-20 py-2">
@@ -138,8 +137,8 @@ function Values({}: Props) {
                 the way) so that your communications are fresh and relevant.
               </p>
             </motion.div>
-            <a href="#values" className="relative">
-              <button className="nav-chev-down absolute right-[-37rem] bottom-[-8.5rem] m-5 lg:m-20 md:pr-5 animate-bounce">
+            <a href="#resume" className="relative">
+              <button className="nav-chev-down absolute right-[-36.8rem] bottom-[-11rem] m-5 lg:m-20 md:pr-5 animate-bounce">
                 <ChevronDownIcon className="h-6 w-6 md:h-10 md:w-10 text-white" />
               </button>
             </a>

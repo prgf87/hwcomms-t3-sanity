@@ -30,13 +30,14 @@ function Bio() {
                   viewport={{
                     once: true,
                   }}
+                  className="z-[0]"
                 >
                   <Image
                     src="/images/hailey3.jpg"
                     alt="Hailey Wilson Hiking"
                     width={960}
                     height={720}
-                    className="rounded-full h-[50rem] w-[40rem] object-cover object-right"
+                    className="rounded-full h-[50rem] max-w-[30rem] object-cover object-right ml-10 opacity-50 lg:opacity-100"
                   />
                 </motion.div>
               </div>
@@ -55,7 +56,7 @@ function Bio() {
                 viewport={{
                   once: true,
                 }}
-                className="col-span-2 justify-center items-center mx-auto pl-8 md:mt-5"
+                className="col-span-2 justify-center items-center mx-auto pl-8 md:mt-5 md:pr-20 z-[2]"
               >
                 <h1 className="text-3xl md:text-4xl font-bold tracking-widest pr-2 text-center md:text-right">
                   Who is
@@ -267,7 +268,7 @@ function Bio() {
                       delay: 1,
                     }}
                   >
-                    <div className="flex justify-between gap-x-5 items-center my-10 lg:mt-5 mx-20">
+                    <div className="flex justify-between gap-x-1 items-center my-10 lg:mt-5 mx-20 lg:mx-40">
                       <Link href="/contact">
                         <button className="btn1 px-12 py-4 text-xl mb-10 lg:mb-5 mt-3">
                           Get in Touch
@@ -286,7 +287,7 @@ function Bio() {
             </div>
             <a href="#values" className="relative">
               <button className="nav-chev-down absolute right-[-14.5rem] bottom-[2.2rem] m-5 lg:m-20 md:pr-5 animate-bounce">
-                <ChevronDownIcon className="h-6 w-6 md:h-10 md:w-10 text-white" />
+                <ChevronDownIcon className="h-6 w-6 md:h-10 md:w-10" />
               </button>
             </a>
           </div>
