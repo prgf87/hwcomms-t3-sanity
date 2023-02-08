@@ -29,7 +29,7 @@ function QuoteCarousel({ quotes }: Props) {
 
   return (
     <section className="custom-img7 m-auto flex justify-center items-center h-screen">
-      <div className="max-w-[1440px] mx-auto">
+      <div className="w-[1440px] mx-auto">
         <div className="mx-auto">
           {/* Quotes */}
           {quotes.map((quote, index) => {
