@@ -2,6 +2,7 @@ import Banner from '@/components/Banner';
 import Bio from '@/components/Bio';
 import Hero from '@/components/Hero';
 import Resume from '@/components/Resume';
+import Snapshots from '@/components/Snapshots';
 import Values from '@/components/Values';
 
 export default async function AboutPage() {
@@ -26,6 +27,10 @@ export default async function AboutPage() {
           <Values />
         </div>
         <div>
+          <div>
+            <div id="snapshot" className="relative top-[-80px]" />
+            <Snapshots />
+          </div>
           <div id="resume" className="relative top-[-70px]" />
           <Resume />
         </div>

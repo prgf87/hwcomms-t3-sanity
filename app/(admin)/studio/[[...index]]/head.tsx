@@ -11,7 +11,7 @@ export default function CustomStudioHead() {
         rel="icon"
         type="image/jpg"
         sizes="55x120"
-        href="/images/logo.png"
+        href="/images/logo2.jpg"
       />
     </>
   );

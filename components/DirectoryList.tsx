@@ -1,16 +1,15 @@
 import urlFor from '@/lib/urlFor';
-import { Post } from '@/typing';
-import { ArrowUpRightIcon, ChevronDownIcon } from '@heroicons/react/24/solid';
+import { Directory } from '@/typing';
+import { ArrowUpRightIcon } from '@heroicons/react/24/solid';
 import Image from 'next/image';
 import Link from 'next/link';
-// import Link from 'next/link';
 import ClientSideRoute from './ClientSideRoute';
 
 type Props = {
-  posts: Post[];
+  directories: Directory[];
 };
 
-function PostList({ posts }: Props) {
+function DirectoryList({ directories }: Props) {
   return (
     <>
       <div className="max-w-[800px] lg:max-w-7xl mx-auto">
@@ -19,25 +18,24 @@ function PostList({ posts }: Props) {
         <div className="grid grid-cols-1 px-10 gap-10 gap-y-16 pb-24">
           {/* Posts */}
 
-          {posts.map((post) => {
+          {directories.map((directory, index) => {
             return (
-              <ClientSideRoute
-                key={post._id}
-                route={`/blog/${post.slug.current}`}
-              >
+              <ClientSideRoute key={index} route={'/'}>
                 <div className="flex flex-col group cursor-pointer">
                   <div className="relative w-full h-80 drop-shadow-xl group-hover:scale-105 transition-transform duration-200 ease-out">
                     <Image
                       className="object-cover object-left lg:object-center"
-                      src={urlFor(post.mainImage).url()}
-                      alt={post.author.name}
+                      src={urlFor(directory.mainImage).url()}
+                      alt={directory.title}
                       fill
                     />
                     <div className="absolute bottom-0 w-full bg-opacity-20 bg-black backdrop-blur-lg rounded drop-shadow-lg text-white p-10 flex justify-between">
                       <div>
-                        <p className="font-bold line-clamp-1">{post.title}</p>
+                        <p className="font-bold line-clamp-1">
+                          {directory.title}
+                        </p>
                         <p>
-                          {new Date(post._createdAt).toLocaleDateString(
+                          {new Date(directory._createdAt).toLocaleDateString(
                             'en-US',
                             {
                               day: 'numeric',
@@ -47,32 +45,19 @@ function PostList({ posts }: Props) {
                           )}
                         </p>
                       </div>
-
-                      <div className="flex flex-col md:flex-row gap-y-2 md:gap-x-2 items-center">
-                        {post.categories.map((category) => {
-                          return (
-                            <div
-                              key={category._id}
-                              className="bg-[#5EBCAA] text-center text-black px-3 py-1 rounded-full text-sm font-semibold"
-                            >
-                              <div>{category.title}</div>
-                            </div>
-                          );
-                        })}
-                      </div>
                     </div>
                   </div>
                   <div className="mt-5 flex-1">
                     <p className="underline text-lg font-bold line-clamp-1">
-                      {post.title}
+                      {directory.title}
                     </p>
                     <p className="line-clamp-1 text-gray-300">
-                      {post.description}
+                      {directory.description}
                     </p>
                   </div>
                   <div>
                     <p className="mt-5 font-bold flex items-center group-hover:underline">
-                      Read Blog
+                      Go to Tool
                       <ArrowUpRightIcon className="ml-2 h-4 w-4" />
                     </p>
                   </div>
@@ -90,11 +75,14 @@ function PostList({ posts }: Props) {
     */}
       <div className="mb-6 flex items-center justify-center bottom-10 relative">
         <Link href="/blog">
-          <button className="btn1-large text-xl">Hailey&apos; Blog</button>
+          <button className="btn1-large text-xl">
+            {' '}
+            Online Resource Directory
+          </button>
         </Link>
       </div>
     </>
   );
 }
 
-export default PostList;
+export default DirectoryList;

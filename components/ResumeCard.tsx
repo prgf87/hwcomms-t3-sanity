@@ -1,27 +1,13 @@
 import Image from 'next/image';
 import React from 'react';
 import { motion } from 'framer-motion';
+import urlFor from '@/lib/urlFor';
 
 type Props = {};
 
 function ResumeCard({}: Props) {
   return (
-    <motion.article
-      initial={{
-        opacity: 0,
-      }}
-      whileInView={{
-        opacity: 1,
-      }}
-      transition={{
-        duration: 2,
-        delay: 1,
-      }}
-      viewport={{
-        once: true,
-      }}
-      className="max-w-full flex flex-col rounded-lg items-center space-y-5 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px] snap-center bg-slate-700/90 p-10 opacity-70 hover:opacity-100 cursor-pointer transition-opacity duration-200 overflow-hidden"
-    >
+    <article className="max-w-full flex flex-col rounded-lg items-center space-y-5 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px] snap-center bg-slate-700/90 p-10 opacity-70 hover:opacity-100 cursor-pointer transition-opacity duration-200 overflow-x-hidden overflow-y-scroll">
       <div>
         <Image
           src="/images/img1.png"
@@ -59,7 +45,7 @@ function ResumeCard({}: Props) {
           <li>...</li>
         </ul> */}
       </div>
-    </motion.article>
+    </article>
   );
 }
 

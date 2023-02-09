@@ -15,7 +15,7 @@ export default function RootLayout({
       <body>
         <Navbar />
         <Hero
-          heading="Tips &amp; Resources"
+          heading="Resources &amp; Tips"
           message="Search through our many tips and Resources"
           heroanchor="/resources/#resources-banner"
           custombg="custom-img4"

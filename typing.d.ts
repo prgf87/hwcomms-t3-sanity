@@ -1,3 +1,5 @@
+import { Url } from 'url';
+
 type Base = {
   _createdAt: string;
   _id: string;
@@ -41,6 +43,45 @@ interface Review extends Base {
   slug: Slug;
   title: string;
   review: string;
+}
+
+interface Directory extends Base {
+  title: string;
+  slug: Slug;
+  description: string;
+  mainImage: Image;
+  categories: Category[];
+  body: Block[];
+}
+
+interface Experience extends Base {
+  jobtitle: string;
+  slug: Slug;
+  companyImage: Image;
+  company: string;
+  dateStarted: date;
+  dateEnded: date;
+  categories: Category[];
+  body: Block[];
+}
+
+interface Trick extends Base {
+  title: string;
+  slug: Slug;
+  description: string;
+  mainImage: Image;
+  categories: Category[];
+  linktotrick: string;
+}
+
+interface Toolbox extends Base {
+  title: string;
+  slug: Slug;
+  description: string;
+  mainImage: Image;
+  categories: Category[];
+  body: Block[];
+  linktotoolbox: string;
 }
 
 interface Author extends Base {

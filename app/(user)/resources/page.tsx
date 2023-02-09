@@ -5,9 +5,19 @@ import PreviewSuspense from '@/components/PreviewSuspense';
 import TipList from '@/components/TipList';
 import PreviewTipList from '@/components/PreviewTipList';
 import TipBanner from '@/components/TipBanner';
+import PreviewPostList from '@/components/PreviewPostList';
+import PostBanner from '@/components/PostBanner';
+import PostList from '@/components/PostList';
 
 const queryTip = groq`
 *[_type=='tip'] {
+  ...,
+  author->,
+  categories[]->
+} | order(_createdAt desc)
+`;
+const query = groq`
+*[_type=='post'] {
   ...,
   author->,
   categories[]->
@@ -29,15 +39,29 @@ async function Resources() {
         }
       >
         <PreviewTipList query={queryTip} />
+        <PreviewPostList query={query} />
       </PreviewSuspense>
     );
   }
   const tips = await client.fetch(queryTip);
+  const posts = await client.fetch(query);
 
   return (
-    <main>
-      <TipBanner />
-      <TipList tips={tips} />
+    <main className="bg-gradient text-gray-200 grid grid-cols-2 gap-10 p-10">
+      <div>
+        <h1 className="text-5xl text-center pt-20 text-gray-300 tracking-[15px] uppercase transition transform hover:scale-105 hover:text-gray-300 hover:text-opacity-75 mx-auto rounded-3xl">
+          Resources &amp; Tips
+        </h1>
+        <TipBanner />
+        <TipList tips={tips} />
+      </div>
+      <div>
+        <h1 className="text-5xl text-center mt-20 text-gray-300 tracking-[15px] uppercase transition transform hover:scale-105 hover:text-gray-300 hover:text-opacity-75 mx-auto rounded-3xl">
+          Hailey&apos;s Blog
+        </h1>
+        <PostBanner />
+        <PostList posts={posts} />
+      </div>
     </main>
   );
 }

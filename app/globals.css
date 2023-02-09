@@ -87,10 +87,6 @@ section.snapshot {
   padding: 1.5rem;
 }
 
-.bg-main {
-  @apply bg-[#5EBCAA]/20;
-}
-
 .bg-gradient {
   background-image: linear-gradient(45deg, #000000, rgb(18, 20, 49), #286464);
 }
@@ -181,8 +177,8 @@ section.snapshot {
 
 .custom-img {
   background-image: url('/images/bg1.png');
-  background-position: center;
-  background-size: cover;
+  background-position: 75% 50%;
+  background-size: fill;
 }
 
 .custom-img2 {
@@ -198,8 +194,8 @@ section.snapshot {
 }
 
 .custom-img4 {
-  background-image: url('https://images.unsplash.com/photo-1485988412941-77a35537dae4');
-  background-position: center;
+  background-image: url('/images/img31.png');
+  background-position: 0% 0%;
   background-size: cover;
 }
 
@@ -228,7 +224,7 @@ section.snapshot {
 }
 
 .custom-img9 {
-  background-image: url('/images/img10.png');
+  background-image: url('/images/img12.png');
   background-position: center;
   background-size: cover;
 }

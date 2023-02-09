@@ -9,7 +9,7 @@ import {
 } from '@heroicons/react/24/solid';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import Link from 'next/link';
+import { Review } from '@/typing';
 
 type Props = {
   reviews: Review[];
@@ -28,8 +28,8 @@ function ReviewCarousel({ reviews }: Props) {
   };
 
   return (
-    <section className="relative h-screen custom-img8 bg-fill">
-      <div className="h-screen bg-gradient-to-b from-black/40 via-black/70 to-black/90 left-0 top-0 right-0 bottom-0 z-[10]">
+    <section className="relative min-h-screen custom-img8 bg-fill">
+      <div className="min-h-screen bg-gradient-to-b from-black/40 via-black/70 to-black/90 left-0 top-0 right-0 bottom-0 z-[10]">
         <div>
           <motion.h1
             initial={{

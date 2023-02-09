@@ -41,11 +41,12 @@ export default function Footer({ anchor }: any) {
             <div className="text-gray-200 flex cursor-pointer place-content-left">
               <p className="hover:brightness-50 flex">
                 <ChevronRightIcon className="h-5 w-5 pt-1 text-gray-200 " />
-                <Link href={'/blog'}>
-                  <u>Blog</u>
+                <Link href={'/contact'}>
+                  <u>Contact</u>
                 </Link>
               </p>
             </div>
+
             <div className="text-gray-200 flex cursor-pointer place-content-left">
               <p className="hover:brightness-50 flex">
                 <ChevronRightIcon className="h-5 w-5 pt-1 text-gray-200 " />
@@ -96,7 +97,13 @@ export default function Footer({ anchor }: any) {
             <div>
               <h1 className="text-xl font-bold pb-3">Contact me</h1>
               <p className="text-gray-200 place-content-center md:place-content-center">
-                <strong>Email: </strong>&nbsp;hwilsoncomms@gmail.com
+                <strong>Email: </strong>
+                <a
+                  href="mailto:hwilsoncomms@gmail.com"
+                  className="cursor-pointer hover:text-gray-400"
+                >
+                  &nbsp;hwilsoncomms@gmail.com
+                </a>
               </p>
             </div>
             <div className="mx-auto p-2 cursor-pointer link link-underline link-underline-black">

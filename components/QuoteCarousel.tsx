@@ -10,6 +10,7 @@ import {
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { Quote } from '@/typing';
 
 type Props = {
   quotes: Quote[];
@@ -28,7 +29,7 @@ function QuoteCarousel({ quotes }: Props) {
   };
 
   return (
-    <section className="custom-img7 m-auto flex justify-center items-center h-screen">
+    <section className="custom-img7 m-auto flex justify-center items-center py-10 xl:h-screen">
       <div className="w-[1440px] mx-auto">
         <div className="mx-auto">
           {/* Quotes */}

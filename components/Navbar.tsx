@@ -11,6 +11,7 @@ function Navbar() {
   const [nav, setNav] = useState(false);
   const [color, setColor] = useState('transparent');
   const [textColor, setTextColor] = useState('white');
+  const [dropdownOpen, setdropdownOpen] = useState(false);
 
   const handleNav = () => {
     setNav(!nav);
@@ -57,7 +58,7 @@ function Navbar() {
           duration: 1,
           delay: 1,
         }}
-        className="max-w-[1240px] mx-auto flex justify-between text-white items-center p-2"
+        className="max-w-[1240px] mx-auto flex justify-between text-white items-center p-4"
       >
         <div
           style={{ color: `${textColor}` }}
@@ -76,13 +77,55 @@ function Navbar() {
             <Link href="/about">About</Link>
           </li>
           <li className="p-2 hover:text-gray-400 text-xs md:text-sm lg:text-lg link link-underline link-underline-black">
+            <Link href="/contact">Contact</Link>
+          </li>
+          <li className="p-2 hover:text-gray-400 text-xs md:text-sm lg:text-lg link link-underline link-underline-black">
             <Link href="/services">Services</Link>
           </li>
-          <li className="p-2 hover:text-gray-400 text-xs md:text-sm lg:text-lg link link-underline link-underline-black">
-            <Link href="/blog">Blog</Link>
-          </li>
-          <li className="p-2 hover:text-gray-400 text-xs md:text-sm lg:text-lg link link-underline link-underline-black">
-            <Link href="/resources">Resources</Link>
+
+          <li className="relative">
+            <button
+              onClick={() => setdropdownOpen(!dropdownOpen)}
+              className="flex justify-center items-center p-2 hover:text-gray-400 text-xs md:text-sm lg:text-lg link link-underline link-underline-black"
+            >
+              More
+            </button>
+            <div
+              className={`${
+                dropdownOpen
+                  ? `top-full opacity-100 visible`
+                  : 'top-[110%] invisible opacity-0'
+              } absolute top-0 left-0 z-40 mt-2 w-[18rem] rounded bg-black py-5 shadow-card transition-all`}
+            >
+              <Link
+                onClick={() => setdropdownOpen(!dropdownOpen)}
+                href="/resources"
+                className="block py-2 px-5 text-xs font-semibold text-gray-200 hover:bg-gray-800/60 hover:text-primary"
+              >
+                Resources &amp; Tips
+              </Link>
+              <Link
+                onClick={() => setdropdownOpen(!dropdownOpen)}
+                href="/resources/toolbox"
+                className="block py-2 px-5 text-xs font-semibold text-gray-200 hover:bg-gray-800/60 hover:text-primary"
+              >
+                Writer&apos;s Toolbox
+              </Link>
+              <Link
+                onClick={() => setdropdownOpen(!dropdownOpen)}
+                href="/resources/tricks"
+                className="block py-2 px-5 text-xs font-semibold text-gray-200 hover:bg-gray-800/60 hover:text-primary"
+              >
+                Graphic Designer&apos;s Bag of Tricks
+              </Link>
+              <Link
+                onClick={() => setdropdownOpen(!dropdownOpen)}
+                href="/resources/directory"
+                className="block py-2 px-5 text-xs font-semibold text-gray-200 hover:bg-gray-800/60 hover:text-primary"
+              >
+                The Creator&apos;s Online Resource Directory
+              </Link>
+            </div>
           </li>
         </ul>
         <div className="pl-2 hidden sm:flex">
@@ -108,7 +151,7 @@ function Navbar() {
             className="p-6 transition-transform hover:scale-125 duration-200"
           />
         </div>
-        <div className="flex justify-center items-center cursor-pointer link link-underline link-underline-black">
+        {/* <div className="flex justify-center items-center cursor-pointer link link-underline link-underline-black">
           <SocialIcon
             network="email"
             fgColor={textColor}
@@ -121,7 +164,7 @@ function Navbar() {
           >
             Get in touch
           </p>
-        </div>
+        </div> */}
 
         {/*Mobile Menu Button */}
         <div

@@ -11,34 +11,40 @@ function Hero({ heading, message, heroanchor, custombg }: any) {
     delaySpeed: 2000,
   });
   return (
-    <>
+    <div className="bg-gradient">
       <motion.section
         initial={{
           opacity: 0,
+          scale: 1,
+          y: -100,
         }}
         animate={{
           opacity: 1,
+          scale: 1,
+          y: 0,
         }}
         transition={{
-          duration: 1.5,
-          delay: 0.5,
+          duration: 2.5,
+          delay: -1,
         }}
-        className={`flex items-center justify-center h-screen bg-fixed bg-fill bg-center ${custombg}`}
+        className={`flex items-center justify-center h-[50vh] ${custombg}`}
       />
       <motion.div
         initial={{
           opacity: 1,
+          scale: 4,
         }}
         animate={{
-          opacity: [0.9, 0.8, 0.7],
+          opacity: 0.7,
+          scale: 1,
         }}
         transition={{
-          duration: 1.5,
-          delay: 0,
+          duration: 2.5,
+          delay: -1,
         }}
-        className={`absolute top-0 left-0 right-0 bottom-0 h-screen bg-black z-[2]`}
+        className={`absolute top-0 left-0 right-0 bottom-0 h-[50vh] bg-black z-[2]`}
       />
-      <div className="absolute top-0 left-0 right-0 bottom-0 text-white z-[2] mx-auto flex justify-center items-center">
+      <div className="absolute top-0 left-0 right-0 bottom-[25rem] text-white z-[2] mx-auto flex justify-center items-center">
         <motion.div
           initial={{
             opacity: 0,
@@ -73,14 +79,14 @@ function Hero({ heading, message, heroanchor, custombg }: any) {
             delay: 3,
           }}
         >
-          <a href={heroanchor}>
+          {/* <a href={heroanchor}>
             <button className="nav-chev-down absolute right-0 bottom-0 m-5 lg:m-20 md:pr-5 animate-bounce">
               <ChevronDownIcon className="h-6 w-6 md:h-10 md:w-10 text-white" />
             </button>
-          </a>
+          </a> */}
         </motion.div>
       </div>
-    </>
+    </div>
   );
 }
 

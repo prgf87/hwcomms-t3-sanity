@@ -37,7 +37,7 @@ function Resume({}: Props) {
           My Resume
         </motion.h3>
         <div className="h-screen flex flex-col text-left md:flex-row max-w-full px-10 justify-center items-center mx-auto text-gray-200">
-          <div className="w-3/5 flex space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory">
+          <div className="max-w-full flex space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory mt-40">
             <ResumeCard />
             <ResumeCard />
             <ResumeCard />

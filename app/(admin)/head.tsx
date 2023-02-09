@@ -3,7 +3,7 @@ export default function Head() {
     <>
       <title></title>
       <meta content="width=device-width, initial-scale=1" name="viewport" />
-      <link rel="icon" href="/images/logo2.png" />
+      <link rel="icon" href="/images/logo.png" />
     </>
   );
 }

@@ -2,7 +2,6 @@
 
 import { useRef } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
-import ReCAPTCHA from 'react-google-recaptcha';
 
 type Inputs = {
   name: string;
@@ -19,7 +18,7 @@ type Inputs = {
 type Props = {};
 
 function ContactForm({}: Props) {
-  const recaptchaRef = useRef<ReCAPTCHA>(null);
+  const recaptchaRef = useRef(null);
   // const [name, setName] = useState('');
   // const [email, setEmail] = useState('');
   // const [message, setMessage] = useState('');
@@ -27,45 +26,47 @@ function ContactForm({}: Props) {
 
   const { register } = useForm<Inputs>();
 
-  const handleSubmit = (e: any) => {
-    e.preventDefault();
-    recaptchaRef.current?.execute();
-  };
+  // const handleSubmit = (e: any) => {
+  //   // e.preventDefault();
+  //   // recaptchaRef.current?.execute();
+  // };
 
-  const onReCAPTCHAChange = async (captchaCode: any) => {
-    if (!captchaCode) {
-      return;
-    }
-    try {
-      const response = await fetch('/api/auth', {
-        method: 'POST',
-        body: JSON.stringify({ captcha: captchaCode }),
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
+  const onSubmit: SubmitHandler<Inputs> = (formData) => console.log(formData);
 
-      if (response.ok) {
-        // If the response is ok than show the success alert
-        console.log('****User Validated Correctly*****');
-        console.log('Response: ', response);
-        const onSubmit: SubmitHandler<Inputs> = (formData) =>
-          console.log(formData);
-        return onSubmit;
-      } else {
-        // Else throw an error with the message returned
-        // from the API
-        const error = await response.json();
-        throw new Error(error.message);
-      }
-    } catch (error) {
-      alert(error || 'Something went wrong');
-    } finally {
-      // Reset the reCAPTCHA when the request has failed or succeeeded
-      // so that it can be executed again if user submits another email.
-      recaptchaRef.current?.reset();
-    }
-  };
+  // const onReCAPTCHAChange = async (captchaCode: any) => {
+  //   if (!captchaCode) {
+  //     return;
+  //   }
+  //   try {
+  //     const response = await fetch('/api/auth', {
+  //       method: 'POST',
+  //       body: JSON.stringify({ captcha: captchaCode }),
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //       },
+  //     });
+
+  //     if (response.ok) {
+  //       // If the response is ok than show the success alert
+  //       console.log('****User Validated Correctly*****');
+  //       console.log('Response: ', response);
+  //       const onSubmit: SubmitHandler<Inputs> = (formData) =>
+  //         console.log(formData);
+  //       return onSubmit;
+  //     } else {
+  //       // Else throw an error with the message returned
+  //       // from the API
+  //       const error = await response.json();
+  //       throw new Error(error.message);
+  //     }
+  //   } catch (error) {
+  //     alert(error || 'Something went wrong');
+  //   } finally {
+  //     // Reset the reCAPTCHA when the request has failed or succeeeded
+  //     // so that it can be executed again if user submits another email.
+  //     // recaptchaRef.current?.reset();
+  //   }
+  // };
 
   //   let recaptchaInstance: any;
   //   const executeCaptcha = (
@@ -86,7 +87,10 @@ function ContactForm({}: Props) {
           talk to me directly about anything else? Get in touch.
         </p>
 
-        <form onSubmit={handleSubmit} action="#" className="space-y-8">
+        <form
+          // onSubmit={handleS}
+          className="space-y-8"
+        >
           <div>
             <label
               htmlFor="name"
@@ -272,7 +276,7 @@ function ContactForm({}: Props) {
             className="flex justify-center items-center my-5"
           /> */}
 
-          <ReCAPTCHA
+          {/* <ReCAPTCHA
             ref={recaptchaRef}
             data-sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_KEY}
             data-callback="onSubmit"
@@ -283,7 +287,7 @@ function ContactForm({}: Props) {
 
             // ref={(e: any) => (recaptchaInstance = e)}
             // onChange={handleSubmit(onSubmit)}
-          />
+          /> */}
         </form>
       </div>
     </section>

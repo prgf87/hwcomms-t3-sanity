@@ -1,7 +1,9 @@
 import urlFor from '@/lib/urlFor';
+import { Tip } from '@/typing';
 import { ArrowUpRightIcon, ChevronDownIcon } from '@heroicons/react/24/solid';
 import Image from 'next/image';
 import Link from 'next/link';
+// import Link from 'next/link';
 import ClientSideRoute from './ClientSideRoute';
 
 type Props = {
@@ -14,7 +16,7 @@ function TipList({ tips }: Props) {
       <div className="max-w-[800px] lg:max-w-7xl mx-auto">
         <hr className="border-2 border-[#5EBCAA] my-2" />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 px-10 gap-10 gap-y-16 pb-24">
+        <div className="grid grid-cols-1 px-10 gap-10 gap-y-16 pb-24">
           {/* Tips */}
 
           {tips.map((tip) => {
@@ -64,7 +66,7 @@ function TipList({ tips }: Props) {
                     <p className="underline text-lg font-bold line-clamp-1">
                       {tip.title}
                     </p>
-                    <p className="line-clamp-2 text-gray-300">
+                    <p className="line-clamp-1 text-gray-300">
                       {tip.description}
                     </p>
                   </div>
@@ -80,14 +82,15 @@ function TipList({ tips }: Props) {
           })}
         </div>
       </div>
-      <a href="#banner">
+      {/* <a href="#banner">
         <button className="nav-chev-down absolute right-[-19.4rem] bottom-[1.7rem] m-5 lg:m-20 md:pr-5 animate-bounce">
           <ChevronDownIcon className="h-6 w-6 md:h-10 md:w-10 text-white" />
         </button>
       </a>
-      <div className="mb-6 flex items-center justify-center bottom-10 relative">
+      */}
+      <div className="col-span-2 mb-6 flex items-center justify-center bottom-10 relative">
         <Link href="/resources">
-          <button className="btn1-large text-xl">Tips &amp; Resources</button>
+          <button className="btn1-large text-xl">Resources &amp; Tips</button>
         </Link>
       </div>
     </>
