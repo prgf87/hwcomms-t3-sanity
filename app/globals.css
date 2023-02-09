@@ -50,9 +50,12 @@ section.snapshot {
 }
 
 .wrapper {
-  max-width: 50rem;
+  max-width: 30rem;
   margin-inline: auto;
-  padding: 1rem;
+  padding: 3rem;
+  text-align: center;
+  color: #d3d3d3;
+  opacity: calc(75%);
 }
 
 .site-title {
@@ -216,6 +219,12 @@ section.snapshot {
 
 .custom-img11 {
   background-image: url('/images/img30.png');
+  background-position: center;
+  background-size: cover;
+}
+
+.custom-img12 {
+  background-image: url('/images/img32.png');
   background-position: center;
   background-size: cover;
 }

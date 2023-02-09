@@ -1,7 +1,7 @@
 'use client';
 
-import { usePreview } from '../lib/sanity.preview';
-import TipList from './TipList';
+import { usePreview } from '@/lib/sanity.preview';
+import TipList from '../tip/TipList';
 
 type Props = {
   query: string;

@@ -8,9 +8,31 @@ import { ChevronDownIcon } from '@heroicons/react/24/solid';
 
 function Intro() {
   return (
-    <div className="w-full flex bg-gradient text-gray-100 min-h-screen p-2">
+    <div className="w-full bg-gradient text-gray-100 min-h-screen">
+      <motion.div
+        initial={{
+          opacity: 0,
+        }}
+        whileInView={{
+          opacity: 1,
+        }}
+        transition={{
+          delay: 1,
+          duration: 1.5,
+        }}
+        viewport={{
+          once: true,
+        }}
+      >
+        <h1 className="text-3xl text-center md:text-5xl lg:text-7xl pt-8 lg:pb-20 xl:pb-0 tracking-widest overflow-y-hidden z-[2]">
+          Think like a scientist
+        </h1>
+        <h2 className="text-3xl text-center md:text-4xl lg:text-5xl pt-4 tracking-[20px] text-gray-400 overflow-y-hidden">
+          Sound like a human
+        </h2>
+      </motion.div>
       <section className="max-w-3xl lg:max-w-7xl mx-auto grid grid-cols-1">
-        <motion.div
+        {/* <motion.div
           initial={{
             opacity: 0,
           }}
@@ -24,7 +46,7 @@ function Intro() {
           viewport={{
             once: true,
           }}
-          className="text-center py-5 lg:pt-5  uppercase "
+          className="hidden text-center py-5 lg:pt-5 uppercase "
         >
           <h1 className="text-3xl md:text-5xl lg:text-7xl pt-8 pb-0 sm:pb-20 xl:pb-0 tracking-widest">
             Think like a scientist
@@ -32,7 +54,8 @@ function Intro() {
           <h2 className="text-xl md:text-4xl lg:text-5xl pt-4 tracking-[20px] text-gray-400">
             Sound like a human
           </h2>
-        </motion.div>
+        </motion.div> */}
+
         <motion.div
           initial={{
             opacity: 0,
@@ -56,8 +79,8 @@ function Intro() {
             alt="Gif"
             width={960}
             height={960}
-            className="h-[40vh] w-[40vh] m-6"
-            priority
+            className="h-80 w-80 md:h-[40vh] md:w-[40vh] m-6 object-cover"
+            priority={true}
           />
         </motion.div>
 
@@ -150,11 +173,11 @@ function Intro() {
           </motion.div>
         </section>
         <div className="md:col-span-2 xl:hidden">
-          <div className="mx-4 text-center mb-10 sm:mb-5 md:col-span-2">
-            <h1 className="text-4xl font-bold px-10 py-5 md:pb-5 md:px-2 lg:pb-5">
+          <div className="text-center mb-5 sm:mb-5 md:col-span-2">
+            <h1 className="text-4xl font-bold px-4 pb-5 md:pb-5 md:px-2 lg:pb-5">
               Deep understanding leads to deep connections
             </h1>
-            <p className="p-lite px-10 md:px-2">
+            <p className="px-6 md:px-2">
               Welcome! My unique approach to communications strategy blends
               empathy practices with a deep knowledge of how our brains work.
               <br></br>

@@ -1,14 +1,23 @@
-import ServicesList from '@/components/ServicesList';
+import Banner from '@/components/modules/Banner';
+import ServicesList from '@/components/modules/ServicesList';
+import Snapshots from '@/components/modules/Snapshots';
 
 function Services() {
   return (
-    <div className="flex justify-center items-center text-center">
-      <div>
-        <h1 className="text-5xl font-bold py-4">Services from Hailey</h1>
-        <p>How can I help you communicate better?</p>
+    <section>
+      <div className="flex justify-center items-center text-center">
+        <div id="services" className="relative top-[-70px]" />
         <ServicesList />
       </div>
-    </div>
+      <div>
+        <div id="snapshot" className="relative top-[-70px]" />
+        <Snapshots />
+      </div>
+      <div>
+        <div id="banner" className="relative top-[-70px]" />
+        <Banner />
+      </div>
+    </section>
   );
 }
 

@@ -21,7 +21,7 @@ export default defineType({
     }),
     defineField({
       name: 'companyImage',
-      title: 'Company image',
+      title: 'CompanyImage',
       type: 'image',
       options: {
         hotspot: true,
@@ -35,12 +35,12 @@ export default defineType({
 
     defineField({
       name: 'dateStarted',
-      title: 'Date Started',
+      title: 'DateStarted',
       type: 'date',
     }),
     defineField({
       name: 'dateEnded',
-      title: 'Date Ended',
+      title: 'DateEnded',
       type: 'date',
     }),
     defineField({

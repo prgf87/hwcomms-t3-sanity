@@ -1,9 +1,9 @@
-import Banner from '@/components/Banner';
-import Bio from '@/components/Bio';
-import Hero from '@/components/Hero';
-import Resume from '@/components/Resume';
-import Snapshots from '@/components/Snapshots';
-import Values from '@/components/Values';
+import Banner from '@/components/modules/Banner';
+import Bio from '@/components/modules/Bio';
+import Hero from '@/components/modules/Hero';
+import Resume from '@/components/modules/Resume';
+import Snapshots from '@/components/modules/Snapshots';
+import Values from '@/components/modules/Values';
 
 export default async function AboutPage() {
   return (

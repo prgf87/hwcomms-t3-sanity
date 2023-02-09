@@ -45,7 +45,7 @@ function Hero({ heading, message, heroanchor, custombg }: any) {
         className={`absolute top-0 left-0 right-0 bottom-0 h-[50vh] bg-black z-[2]`}
       />
       <div className="absolute top-0 left-0 right-0 bottom-[25rem] text-white z-[2] mx-auto flex justify-center items-center">
-        <motion.div
+        {/* <motion.div
           initial={{
             opacity: 0,
           }}
@@ -66,7 +66,7 @@ function Hero({ heading, message, heroanchor, custombg }: any) {
               <Cursor cursorColor="white" />
             </h1>
           </div>
-        </motion.div>
+        </motion.div> */}
         <motion.div
           initial={{
             opacity: 0,
@@ -79,11 +79,11 @@ function Hero({ heading, message, heroanchor, custombg }: any) {
             delay: 3,
           }}
         >
-          {/* <a href={heroanchor}>
-            <button className="nav-chev-down absolute right-0 bottom-0 m-5 lg:m-20 md:pr-5 animate-bounce">
+          <a href={heroanchor}>
+            <button className="nav-chev-down absolute right-0 bottom-6 m-5 lg:m-20 md:pr-5 animate-bounce">
               <ChevronDownIcon className="h-6 w-6 md:h-10 md:w-10 text-white" />
             </button>
-          </a> */}
+          </a>
         </motion.div>
       </div>
     </div>

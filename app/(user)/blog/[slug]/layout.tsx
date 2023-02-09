@@ -1,6 +1,6 @@
 'use client';
 
-import PostBanner from '@/components/PostBanner';
+import PostBanner from '@/components/post/PostBanner';
 import '../../../globals.css';
 
 export default function RootLayout({

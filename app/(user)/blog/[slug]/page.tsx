@@ -3,7 +3,7 @@ import urlFor from '@/lib/urlFor';
 import { groq } from 'next-sanity';
 import Image from 'next/image';
 import { PortableText } from '@portabletext/react';
-import { RichTextComponents } from '@/components/RichTextComponents';
+import { RichTextComponents } from '@/components/modules/RichTextComponents';
 
 type Props = {
   params: {

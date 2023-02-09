@@ -2,7 +2,7 @@ import { ChevronRightIcon } from '@heroicons/react/24/solid';
 import Link from 'next/link';
 
 import { SocialIcon } from 'react-social-icons';
-import BackToTop from './BackToTop';
+import BackToTop from '../navigation/BackToTop';
 
 export default function Footer({ anchor }: any) {
   return (

@@ -7,7 +7,7 @@ export default function Head({ title }: any) {
           : 'Hailey Wilson Communications'}
       </title>
       <meta content="width=device-width, initial-scale=1" name="viewport" />
-      <meta name="description" content="Developed by WebTechSystems" />
+      <meta name="description" content="Developed by Global Web Systems - UK" />
       <link rel="icon" href="/images/logo.png" />
     </>
   );

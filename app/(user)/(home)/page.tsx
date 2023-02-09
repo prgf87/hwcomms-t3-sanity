@@ -1,32 +1,35 @@
 import { previewData } from 'next/headers';
 import { groq } from 'next-sanity';
 import { client } from '@/lib/sanity.client';
-import PreviewPostList from '@/components/PreviewPostList';
-import PreviewSuspense from '@/components/PreviewSuspense';
-import PreviewTipList from '@/components/PreviewTipList';
-import Intro from '@/components/Intro';
-import QuoteCarousel from '@/components/QuoteCarousel';
-import Snapshots from '@/components/Snapshots';
-import ReviewCarousel from '@/components/ReviewCarousel';
-import Banner from '@/components/Banner';
-import PostList from '@/components/PostList';
-import TipList from '@/components/TipList';
-import Hero from '@/components/Hero';
 import Link from 'next/link';
-import ToolboxList from '@/components/ToolboxList';
-import TrickList from '@/components/TrickList';
-import Image from 'next/image';
-import DirectoryList from '@/components/DirectoryList';
+import ToolboxList from '@/components/toolbox/ToolboxList';
+import TrickList from '@/components/tricks/TrickList';
+import DirectoryList from '@/components/directory/DirectoryList';
+import PreviewPostList from '@/components/preview/PreviewPostList';
+import PreviewSuspense from '@/components/preview/PreviewSuspense';
+import PreviewTipList from '@/components/preview/PreviewTipList';
+import Intro from '@/components/modules/Intro';
+import Snapshots from '@/components/modules/Snapshots';
+import PreviewToolboxList from '@/components/preview/PreviewToolboxList';
+import PreviewTrickList from '@/components/preview/PreviewTrickList';
+import PreviewDirectoryList from '@/components/preview/PreviewDirectoryList';
+import PreviewQuoteCarousel from '@/components/preview/PreviewQuoteCarousel';
+import PreviewReviewCarousel from '@/components/preview/PreviewReviewCarousel';
+import QuoteCarousel from '@/components/quote/QuoteCarousel';
+import ReviewCarousel from '@/components/review/ReviewCarousel';
+import TipList from '@/components/tip/TipList';
+import PostList from '@/components/post/PostList';
+import Banner from '@/components/modules/Banner';
 
 const query = groq`
-*[_type=='post'][0..1] {
+*[_type=='post'] {
   ...,
   author->,
   categories[]->
 } | order(_createdAt asc)
 `;
 const queryTip = groq`
-*[_type=='tip'][0..1] {
+*[_type=='tip'] {
   ...,
   author->,
   categories[]->
@@ -47,21 +50,21 @@ const queryReview = groq`
 } | order(_createdAt asc)
 `;
 const queryToolbox = groq`
-*[_type=='toolbox'][0..1] {
+*[_type=='toolbox'] {
   ...,
   author->,
   categories[]->
 } | order(_createdAt asc)
 `;
 const queryTrick = groq`
-*[_type=='trick'][0..1] {
+*[_type=='trick'] {
   ...,
   author->,
   categories[]->
 } | order(_createdAt asc)
 `;
 const queryDirectory = groq`
-*[_type=='directory'][0..1] {
+*[_type=='directory'] {
   ...,
   author->,
   categories[]->
@@ -82,8 +85,35 @@ export default async function HomePage() {
           </div>
         }
       >
-        <PreviewPostList query={query} />
-        <PreviewTipList query={queryTip} />
+        <div>
+          <h1 className="fixed text-7xl z-40 opacity-10 bottom-0">
+            PREVIEW MODE - PREVIEW MODE - PREVIEW MODE PREVIEW MODE - PREVIEW
+            MODE - PREVIEW MODE PREVIEW MODE - PREVIEW MODE - PREVIEW MODE
+          </h1>
+          <div className="flex flex-col">
+            <div>
+              <PreviewPostList query={query} />
+            </div>
+            <div>
+              <PreviewTipList query={queryTip} />
+            </div>
+            <div>
+              <PreviewToolboxList query={queryToolbox} />
+            </div>
+            <div>
+              <PreviewTrickList query={queryTrick} />
+            </div>
+            <div>
+              <PreviewDirectoryList query={queryDirectory} />
+            </div>
+            <div>
+              <PreviewQuoteCarousel query={queryQuote} />
+            </div>
+            <div>
+              <PreviewReviewCarousel query={queryReview} />
+            </div>
+          </div>
+        </div>
       </PreviewSuspense>
     );
   }
@@ -96,16 +126,8 @@ export default async function HomePage() {
   const directories = await client.fetch(queryDirectory);
 
   return (
-    <main className="min-h-screen w-screen">
-      <div className="overflow-x-hidden">
-        <div id="home" className="snap-start" />
-        <Hero
-          heading="Hailey Wilson Communications"
-          message="Where there's a Wilson, there's a way"
-          heroanchor="/#intro"
-          custombg="custom-img"
-        />
-
+    <main>
+      <div>
         <div>
           <div id="intro" className="relative top-[-80px]" />
           <Intro />

@@ -2,13 +2,13 @@ import { previewData } from 'next/headers';
 import { groq } from 'next-sanity';
 import { client } from '@/lib/sanity.client';
 import PreviewSuspense from '@/components/preview/PreviewSuspense';
-import PreviewTipList from '@/components/preview/PreviewTipList';
+import PreviewTrickList from '@/components/preview/PreviewTrickList';
 import PreviewPostList from '@/components/preview/PreviewPostList';
-import TipListSmall from '@/components/tip/TipListSmall';
+import TrickListSmall from '@/components/tricks/TrickListSmall';
 import PostListSmall from '@/components/post/PostListSmall';
 
-const queryTip = groq`
-*[_type=='tip'] {
+const queryTrick = groq`
+*[_type=='trick'] {
   ...,
   author->,
   categories[]->
@@ -36,12 +36,12 @@ async function Resources() {
           </div>
         }
       >
-        <PreviewTipList query={queryTip} />
+        <PreviewTrickList query={queryTrick} />
         <PreviewPostList query={query} />
       </PreviewSuspense>
     );
   }
-  const tips = await client.fetch(queryTip);
+  const tricks = await client.fetch(queryTrick);
   const posts = await client.fetch(query);
 
   return (
@@ -50,8 +50,8 @@ async function Resources() {
         <h1 className="text-3xl xl:text-5xl text-center text-gray-300 tracking-[10px] uppercase transition transform hover:scale-105 hover:text-gray-300 hover:text-opacity-75 mx-auto rounded-3xl px-20">
           Resources &amp; Tips
         </h1>
-        {/* <TipBanner /> */}
-        <TipListSmall tips={tips} />
+        {/* <TrickBanner /> */}
+        <TrickListSmall tricks={tricks} />
       </div>
       <div>
         <h1 className="text-3xl xl:text-5xl text-center text-gray-300 tracking-[15px] uppercase transition transform hover:scale-105 hover:text-gray-300 hover:text-opacity-75 mx-auto rounded-3xl">

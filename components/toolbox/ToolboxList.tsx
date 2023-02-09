@@ -1,15 +1,16 @@
 import urlFor from '@/lib/urlFor';
-import { Directory } from '@/typing';
-import { ArrowUpRightIcon } from '@heroicons/react/24/solid';
+import { Toolbox } from '@/typing';
+import { ArrowUpRightIcon, ChevronDownIcon } from '@heroicons/react/24/solid';
 import Image from 'next/image';
 import Link from 'next/link';
-import ClientSideRoute from './ClientSideRoute';
+// import Link from 'next/link';
+import ClientSideRoute from '../navigation/ClientSideRoute';
 
 type Props = {
-  directories: Directory[];
+  toolboxes: Toolbox[];
 };
 
-function DirectoryList({ directories }: Props) {
+function ToolboxList({ toolboxes }: Props) {
   return (
     <>
       <div className="max-w-[800px] lg:max-w-7xl mx-auto">
@@ -18,24 +19,24 @@ function DirectoryList({ directories }: Props) {
         <div className="grid grid-cols-1 px-10 gap-10 gap-y-16 pb-24">
           {/* Posts */}
 
-          {directories.map((directory, index) => {
+          {toolboxes.map((toolbox, index) => {
             return (
-              <ClientSideRoute key={index} route={'/'}>
+              <ClientSideRoute key={index} route={toolbox.linktotoolbox}>
                 <div className="flex flex-col group cursor-pointer">
                   <div className="relative w-full h-80 drop-shadow-xl group-hover:scale-105 transition-transform duration-200 ease-out">
                     <Image
                       className="object-cover object-left lg:object-center"
-                      src={urlFor(directory.mainImage).url()}
-                      alt={directory.title}
+                      src={urlFor(toolbox.mainImage).url()}
+                      alt={toolbox.title}
                       fill
                     />
                     <div className="absolute bottom-0 w-full bg-opacity-20 bg-black backdrop-blur-lg rounded drop-shadow-lg text-white p-10 flex justify-between">
                       <div>
                         <p className="font-bold line-clamp-1">
-                          {directory.title}
+                          {toolbox.title}
                         </p>
                         <p>
-                          {new Date(directory._createdAt).toLocaleDateString(
+                          {new Date(toolbox._createdAt).toLocaleDateString(
                             'en-US',
                             {
                               day: 'numeric',
@@ -49,10 +50,10 @@ function DirectoryList({ directories }: Props) {
                   </div>
                   <div className="mt-5 flex-1">
                     <p className="underline text-lg font-bold line-clamp-1">
-                      {directory.title}
+                      {toolbox.title}
                     </p>
                     <p className="line-clamp-1 text-gray-300">
-                      {directory.description}
+                      {toolbox.description}
                     </p>
                   </div>
                   <div>
@@ -75,14 +76,11 @@ function DirectoryList({ directories }: Props) {
     */}
       <div className="mb-6 flex items-center justify-center bottom-10 relative">
         <Link href="/blog">
-          <button className="btn1-large text-xl">
-            {' '}
-            Online Resource Directory
-          </button>
+          <button className="btn1-large text-xl">Writer&apos;s Toolbox</button>
         </Link>
       </div>
     </>
   );
 }
 
-export default DirectoryList;
+export default ToolboxList;

@@ -12,7 +12,7 @@ function PostBanner() {
           <span className="underline decoration-4 decoration-[#5EBCAA]">
             the best Resources online
           </span>
-          &nbsp;for all your Communincations needs
+          &nbsp;for all your Communications needs
         </h2>
         <div className="mt-5 md:mt-2 text-gray-500 max-w-md">
           <p>| Talking points</p>

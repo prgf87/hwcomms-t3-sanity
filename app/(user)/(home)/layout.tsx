@@ -1,7 +1,8 @@
 'use client';
 
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
+import Footer from '@/components/modules/Footer';
+import Hero from '@/components/modules/Hero';
+import Navbar from '@/components/navigation/Navbar';
 import '../../globals.css';
 
 export default function RootLayout({
@@ -13,6 +14,13 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Navbar />
+        <div id="home" className="snap-start" />
+        <Hero
+          heading="Hailey Wilson Communications"
+          message="Where there's a Wilson, there's a way"
+          heroanchor="/#intro"
+          custombg="custom-img"
+        />
 
         {children}
         <Footer anchor={'/#home'} />

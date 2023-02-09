@@ -8,11 +8,15 @@ import Link from 'next/link';
 function Snapshots() {
   return (
     <>
-      <section className="bg-gradient-invert h-screen">
-        <div className="snapshot grid grid-cols-3 max-w-[1440px] mx-auto space-x-20 space-y-20  text-gray-200 text-center pt-20">
-          <h1 className="col-span-3 mx-auto text-7xl tracking-[20px] uppercase text-gray-300">
-            Snapshots
-          </h1>
+      <section className="bg-gradient-invert min-h-screen">
+        {/* <div className="snapshot grid xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 max-w-[1440px] space-x-5 space-y-5 xl:space-x-20 xl:space-y-20 text-gray-200 text-center pt-5 lg:pt-20 p-20 lg:m-0"> */}
+        <h1
+          className="text-7xl text-gray-300 tracking-[20px] uppercase text-center pt-20"
+          // className="xl:col-span-3 lg:col-span-2 col-span-1 mx-auto text-3xl lg:text-7xl tracking-[20px] uppercase text-gray-300"
+        >
+          Snapshots
+        </h1>
+        <div className="snapshot grid grid-cols-3 m-10 gap-10">
           <section className="diagonal">
             <div className="wrapper">
               <img src="/images/img27.png" alt="/" />
@@ -33,7 +37,7 @@ function Snapshots() {
               </p>
             </div>
           </section>
-          <section className="diagonal3">
+          <section className="diagonal3 lg:col-span-2 xl:col-span-1">
             <div className="wrapper">
               <img src="/images/img26.png" alt="/" />
               <h2 className="section-title">Brain Nerd</h2>

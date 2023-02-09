@@ -4,7 +4,7 @@ import { client } from '@/lib/sanity.client';
 import PreviewPostList from '@/components/PreviewPostList';
 import PostList from '@/components/PostList';
 import PreviewSuspense from '@/components/PreviewSuspense';
-import PostBanner from '@/components/PostBanner';
+import PostBanner from '@/components/post/PostBanner';
 
 const query = groq`
 *[_type=='post'] {

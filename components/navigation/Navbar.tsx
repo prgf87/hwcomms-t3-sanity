@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { SocialIcon } from 'react-social-icons';
 import { motion } from 'framer-motion';
-import Logo from './Logo';
+import Logo from '../modules/Logo';
 
 function Navbar() {
   const [nav, setNav] = useState(false);

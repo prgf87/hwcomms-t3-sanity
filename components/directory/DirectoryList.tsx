@@ -1,16 +1,15 @@
 import urlFor from '@/lib/urlFor';
-import { Trick } from '@/typing';
-import { ArrowUpRightIcon, ChevronDownIcon } from '@heroicons/react/24/solid';
+import { Directory } from '@/typing';
+import { ArrowUpRightIcon } from '@heroicons/react/24/solid';
 import Image from 'next/image';
 import Link from 'next/link';
-// import Link from 'next/link';
-import ClientSideRoute from './ClientSideRoute';
+import ClientSideRoute from '../navigation/ClientSideRoute';
 
 type Props = {
-  tricks: Trick[];
+  directories: Directory[];
 };
 
-function TrickList({ tricks }: Props) {
+function DirectoryList({ directories }: Props) {
   return (
     <>
       <div className="max-w-[800px] lg:max-w-7xl mx-auto">
@@ -19,22 +18,24 @@ function TrickList({ tricks }: Props) {
         <div className="grid grid-cols-1 px-10 gap-10 gap-y-16 pb-24">
           {/* Posts */}
 
-          {tricks.map((trick, index) => {
+          {directories.map((directory, index) => {
             return (
-              <ClientSideRoute key={index} route={trick.linktotrick}>
+              <ClientSideRoute key={index} route={'/'}>
                 <div className="flex flex-col group cursor-pointer">
                   <div className="relative w-full h-80 drop-shadow-xl group-hover:scale-105 transition-transform duration-200 ease-out">
                     <Image
                       className="object-cover object-left lg:object-center"
-                      src={urlFor(trick.mainImage).url()}
-                      alt={trick.title}
+                      src={urlFor(directory.mainImage).url()}
+                      alt={directory.title}
                       fill
                     />
                     <div className="absolute bottom-0 w-full bg-opacity-20 bg-black backdrop-blur-lg rounded drop-shadow-lg text-white p-10 flex justify-between">
                       <div>
-                        <p className="font-bold line-clamp-1">{trick.title}</p>
+                        <p className="font-bold line-clamp-1">
+                          {directory.title}
+                        </p>
                         <p>
-                          {new Date(trick._createdAt).toLocaleDateString(
+                          {new Date(directory._createdAt).toLocaleDateString(
                             'en-US',
                             {
                               day: 'numeric',
@@ -48,10 +49,10 @@ function TrickList({ tricks }: Props) {
                   </div>
                   <div className="mt-5 flex-1">
                     <p className="underline text-lg font-bold line-clamp-1">
-                      {trick.title}
+                      {directory.title}
                     </p>
                     <p className="line-clamp-1 text-gray-300">
-                      {trick.description}
+                      {directory.description}
                     </p>
                   </div>
                   <div>
@@ -74,11 +75,14 @@ function TrickList({ tricks }: Props) {
     */}
       <div className="mb-6 flex items-center justify-center bottom-10 relative">
         <Link href="/blog">
-          <button className="btn1-large text-xl">Bag of Tricks</button>
+          <button className="btn1-large text-xl">
+            {' '}
+            Online Resource Directory
+          </button>
         </Link>
       </div>
     </>
   );
 }
 
-export default TrickList;
+export default DirectoryList;
