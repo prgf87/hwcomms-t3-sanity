@@ -2,7 +2,6 @@ import urlFor from '@/lib/urlFor';
 import { Post } from '@/typing';
 import { ArrowUpRightIcon } from '@heroicons/react/24/solid';
 import Image from 'next/image';
-import Link from 'next/link';
 import ClientSideRoute from '../navigation/ClientSideRoute';
 
 type Props = {
@@ -12,8 +11,8 @@ type Props = {
 function PostList({ posts }: Props) {
   return (
     <>
-      <div className="max-w-[800px] lg:max-w-7xl mx-auto py-5">
-        <h1 className="text-3xl text-center md:text-5xl lg:text-7xl py-8 tracking-[15px] text-gray-200/80 uppercase">
+      <div className="max-w-[100%] mx-auto pt-20">
+        <h1 className="text-3xl text-center md:text-5xl lg:text-7xl pb-5 tracking-[15px] text-gray-200/80 uppercase">
           Hailey&apos;s Blog
         </h1>
 
@@ -28,7 +27,7 @@ function PostList({ posts }: Props) {
                 key={post._id}
                 route={`/blog/${post.slug.current}`}
               >
-                <div className="flex flex-col group cursor-pointer">
+                <div className="flex flex-col group cursor-pointer max-w-[800px]">
                   <div className="relative w-full h-80 drop-shadow-xl group-hover:scale-105 transition-transform duration-200 ease-out">
                     <Image
                       className="object-cover object-left lg:object-center"

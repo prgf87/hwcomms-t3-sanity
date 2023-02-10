@@ -1,6 +1,6 @@
 'use client';
 
-import Button from '../navigation/Button';
+import Button from './Button';
 
 function Banner() {
   return (

@@ -7,7 +7,7 @@ import Snapshots from '@/components/modules/Snapshots';
 import PreviewQuoteCarousel from '@/components/preview/PreviewQuoteCarousel';
 import PreviewReviewCarousel from '@/components/preview/PreviewReviewCarousel';
 import QuoteCarousel from '@/components/modules/QuoteCarousel';
-import Banner from '@/components/modules/Banner';
+import Banner from '@/components/navigation/Banner';
 import ReviewCarousel from '@/components/modules/ReviewCarousel';
 // import PreviewPostList from '@/components/preview/PreviewPostList';
 // import PreviewTipList from '@/components/preview/PreviewTipList';
@@ -130,11 +130,6 @@ export default async function HomePage() {
         <div>
           <div id="quotes" className="relative top-[-75px]" />
           <QuoteCarousel quotes={quotes} />
-        </div>
-
-        <div>
-          <div id="snapshot" className="relative top-[-70px]" />
-          <Snapshots />
         </div>
 
         <div>

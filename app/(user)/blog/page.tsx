@@ -4,8 +4,8 @@ import { client } from '@/lib/sanity.client';
 import PreviewPostList from '@/components/preview/PreviewPostList';
 import PreviewSuspense from '@/components/preview/PreviewSuspense';
 import PostList from '@/components/post/PostList';
-import Banner from '@/components/modules/Banner';
-import BannerOptions from '@/components/modules/BannerOptions';
+import Banner from '@/components/navigation/Banner';
+import BannerOptions from '@/components/navigation/BannerOptions';
 
 const query = groq`
 *[_type=='post'] {
@@ -36,7 +36,7 @@ export default async function HomePage() {
   const posts = await client.fetch(query);
 
   return (
-    <main className="custom-img15 bg-fixed text-gray-200 z-[0]">
+    <main className="custom-img15 bg-fixed text-gray-200 z-[0] p-10 gap-10">
       <div>
         <BannerOptions />
       </div>

@@ -1,9 +1,10 @@
 'use client';
 
-import Footer from '@/components/modules/Footer';
+import Banner from '@/components/navigation/Banner';
 import Hero from '@/components/modules/Hero';
 import Navbar from '@/components/navigation/Navbar';
 import '../../globals.css';
+import Footer from '@/components/navigation/Footer';
 
 export default function RootLayout({
   children,
@@ -21,6 +22,7 @@ export default function RootLayout({
           custombg="custom-img4"
         />
         {children}
+        <Banner />
         <Footer anchor={'/resources/#resources'} />
       </body>
     </html>

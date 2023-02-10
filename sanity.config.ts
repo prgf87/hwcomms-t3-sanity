@@ -6,7 +6,7 @@ import { myTheme } from './theme';
 
 import { getDefaultDocumentNode } from './structure';
 import Logo from './components/modules/Logo';
-import StudioNavbar from './components/modules/StudioNavbar';
+import StudioNavbar from './components/navigation/StudioNavbar';
 
 const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID;
 const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET;

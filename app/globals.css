@@ -26,7 +26,7 @@ body {
 }
 
 .btn1-large {
-  @apply px-10 py-4 bg-[#737899]/50 border border-gray-500 rounded-full tracking-widest text-gray-100 transition duration-300 hover:border-gray-400/70 hover:bg-[#5EBCAA]/60 hover:text-white active:bg-[#5EBCAA]/60 active:border-gray-400;
+  @apply px-10 py-4 w-56 bg-[#737899]/50 border border-gray-500 rounded-full tracking-widest text-gray-100 transition duration-300 hover:border-gray-400/70 hover:bg-[#5EBCAA]/60 hover:text-white active:bg-[#5EBCAA]/60 active:border-gray-400;
 }
 
 .btn2 {
@@ -253,6 +253,12 @@ section.snapshot {
   background-size: cover;
 }
 
+.custom-img16 {
+  background-image: url('/images/img29.png');
+  background-position: 0% 60%;
+  background-size: cover;
+}
+
 /*Link Underline Animation*/
 .link-underline {
   border-bottom-width: 1;
@@ -272,60 +278,4 @@ section.snapshot {
 .link-underline:hover {
   background-size: 100% 2px;
   background-position: 15 100%;
-}
-
-/* Accordion CSS */
-
-.tab-content {
-  max-height: 0;
-  -webkit-transition: max-height 0.35s;
-  -o-transition: max-height 0.35s;
-  transition: max-height 0.35s;
-  border-color: #fb4849;
-}
-.tab {
-  background-color: #979797;
-  direction: rtl;
-}
-/* :checked - resize to full height */
-.tab input:checked ~ .tab-content {
-  max-height: 100vh;
-}
-/* Label formatting when open */
-.tab input:checked + label {
-  /*@apply text-xl p-5 border-l-2 border-indigo-500 bg-gray-100 text-indigo*/
-  font-size: 1.25rem; /*.text-xl*/
-}
-/* Icon */
-.tab label::before {
-  float: left;
-  display: block;
-  width: 1.5em;
-  height: 1.5em;
-  line-height: 0.3;
-  font-size: 1.25rem;
-  text-align: center;
-  -webkit-transition: all 0.35s;
-  -o-transition: all 0.35s;
-  transition: all 0.35s;
-}
-/* Icon formatting - closed */
-.tab input[type='checkbox'] + label::before {
-  content: '+';
-  font-weight: bold; /*.font-bold*/
-  border-radius: 9999px; /*.rounded-full */
-}
-.tab input[type='radio'] + label::before {
-  content: '\25BE';
-  font-weight: bold; /*.font-bold*/
-  border-radius: 9999px; /*.rounded-full */
-}
-/* Icon formatting - open */
-.tab input[type='checkbox']:checked + label::before {
-  transform: rotate(315deg);
-  color: #f8fafc; /*.text-grey-lightest*/
-}
-.tab input[type='radio']:checked + label::before {
-  transform: rotateX(180deg);
-  color: #f8fafc; /*.text-grey-lightest*/
 }

@@ -17,9 +17,9 @@ function ToolboxListSmall({ toolboxes }: Props) {
             <button className="btn1-large text-xl">Resources &amp; toolboxes</button>
           </Link>
         </div> */}
-        <hr className="border-2 border-[#5EBCAA] my-2" />
+        {/* <hr className="border-2 border-[#5EBCAA] my-2" /> */}
 
-        <div className="grid grid-cols-1 px-8 py-2 gap-y-4 pb-24 mt-8">
+        <div className="grid grid-cols-1 px-8 py-2 gap-y-4 pb-8 mt-8">
           {/* toolboxes */}
 
           {toolboxes.map((toolbox) => {
@@ -60,7 +60,7 @@ function ToolboxListSmall({ toolboxes }: Props) {
                       </div> */}
                       <div className="flex justify-center items-center">
                         <p className="mt-5 font-bold flex items-center group-hover:underline">
-                          Read Tip
+                          Read Toolbox
                           <ArrowUpRightIcon className="ml-2 h-4 w-4" />
                         </p>
                       </div>

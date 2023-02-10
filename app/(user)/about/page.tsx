@@ -2,13 +2,11 @@ import { previewData } from 'next/headers';
 import { groq } from 'next-sanity';
 import { client } from '@/lib/sanity.client';
 import PreviewSuspense from '@/components/preview/PreviewSuspense';
-import Banner from '@/components/modules/Banner';
+import Banner from '@/components/navigation/Banner';
 import Bio from '@/components/modules/Bio';
 import Hero from '@/components/modules/Hero';
 import Resume from '@/components/modules/Resume';
-import Snapshots from '@/components/modules/Snapshots';
 import Values from '@/components/modules/Values';
-import { Experience } from '@/typing';
 
 const queryExperience = groq`
 *[_type=='experience'] {
@@ -43,8 +41,8 @@ export default async function AboutPage() {
 
   const experiences = await client.fetch(queryExperience);
   return (
-    <main className="overflow-x-hidden">
-      <div className="overflow-y-hidden">
+    <main>
+      <div className="overflow-x-hidden">
         <div>
           <div id="home" className="fixed top-0" />
           <Hero
@@ -63,10 +61,6 @@ export default async function AboutPage() {
           <Values />
         </div>
         <div>
-          <div>
-            <div id="snapshot" className="relative top-[-80px]" />
-            <Snapshots />
-          </div>
           <div id="resume" className="relative top-[-70px]" />
           <Resume experiences={experiences} />
         </div>

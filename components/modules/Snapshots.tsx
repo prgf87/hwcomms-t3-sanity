@@ -2,22 +2,46 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ChevronDownIcon } from '@heroicons/react/24/solid';
-import Link from 'next/link';
 
 function Snapshots() {
   return (
     <>
       <section className="bg-gradient-invert">
-        {/* <div className="snapshot grid xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 max-w-[1440px] space-x-5 space-y-5 xl:space-x-20 xl:space-y-20 text-gray-200 text-center pt-5 lg:pt-20 p-20 lg:m-0"> */}
-        <h1
+        <motion.h1
+          initial={{
+            opacity: 0,
+          }}
+          whileInView={{
+            opacity: 1,
+          }}
+          transition={{
+            duration: 1.5,
+          }}
+          viewport={{
+            once: true,
+          }}
           className="text-7xl text-gray-300 tracking-[20px] uppercase text-center pt-20"
-          // className="xl:col-span-3 lg:col-span-2 col-span-1 mx-auto text-3xl lg:text-7xl tracking-[20px] uppercase text-gray-300"
         >
           Snapshots
-        </h1>
-        <div className="snapshot grid grid-cols-1 lg:grid-cols-3 mx-40 mt-10 pb-20 rounded-xl gap-10">
-          <section className="diagonal">
+        </motion.h1>
+        <div className="snapshot grid grid-cols-1 lg:grid-cols-3 mx-40 mt-10 pb-20 gap-10">
+          <motion.section
+            initial={{
+              opacity: 0,
+              x: -100,
+            }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+            }}
+            transition={{
+              duration: 1.5,
+            }}
+            viewport={{
+              once: true,
+            }}
+            className="diagonal "
+          >
             <div className="wrapper">
               <img src="/images/img27.png" alt="/" />
               <h2 className="section-title">Experienced Communicator</h2>
@@ -26,8 +50,24 @@ function Snapshots() {
                 crisis and internal communications.
               </p>
             </div>
-          </section>
-          <section className="diagonal2">
+          </motion.section>
+          <motion.section
+            initial={{
+              opacity: 0,
+              y: 100,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              duration: 1.5,
+            }}
+            viewport={{
+              once: true,
+            }}
+            className="diagonal2"
+          >
             <div className="wrapper">
               <img src="/images/img12.png" alt="/" />
               <h2 className="section-title">Writer, Editor, and Producer</h2>
@@ -36,8 +76,24 @@ function Snapshots() {
                 and drives a positive narrative.
               </p>
             </div>
-          </section>
-          <section className="diagonal3 lg:col-span-2 xl:col-span-1">
+          </motion.section>
+          <motion.section
+            initial={{
+              opacity: 0,
+              x: 100,
+            }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+            }}
+            transition={{
+              duration: 1.5,
+            }}
+            viewport={{
+              once: true,
+            }}
+            className="diagonal3 lg:col-span-2 xl:col-span-1"
+          >
             <div className="wrapper">
               <img src="/images/img26.png" alt="/" />
               <h2 className="section-title">Brain Nerd</h2>
@@ -48,7 +104,7 @@ function Snapshots() {
                 plants.
               </p>
             </div>
-          </section>
+          </motion.section>
         </div>
         {/* <div className="relative">
           <motion.div

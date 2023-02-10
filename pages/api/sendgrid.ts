@@ -1,9 +1,6 @@
-// import sendgrid from '@sendgrid/mail';
 import { NextApiRequest, NextApiResponse } from 'next';
 import { sendEmail } from '@/services/emailService';
 import { GetEmailBody, GetEmailSubject } from '@/services/emailTemplateService';
-
-// sendgrid.setApiKey(process.env.SENDGRID_API_KEY as string);
 
 async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
@@ -18,13 +15,7 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
     const data = {
       name: name,
       email: email,
-      phone: phone,
-      org: org,
-      date: date,
-      address: address,
-      type: type,
-      hear: hear,
-      message: message,
+      message: [message, phone, org, date, address, type, hear],
     };
 
     const emailBody = await GetEmailBody('contact/contact_body.txt', data);

@@ -17,9 +17,9 @@ function TrickListSmall({ tricks }: Props) {
             <button className="btn1-large text-xl">Resources &amp; Tricks</button>
           </Link>
         </div> */}
-        <hr className="border-2 border-[#5EBCAA] my-2" />
+        {/* <hr className="border-2 border-[#5EBCAA] my-2" /> */}
 
-        <div className="grid grid-cols-1 px-8 py-2 gap-y-4 pb-24 mt-8">
+        <div className="grid grid-cols-1 px-8 py-2 gap-y-4 pb-8 mt-8">
           {/* Tricks */}
 
           {tricks.map((trick) => {
@@ -46,7 +46,7 @@ function TrickListSmall({ tricks }: Props) {
                           }
                         )}
                       </p>
-                      <div className="flex flex-col md:flex-row gap-y-2 md:gap-x-2 items-center justify-center pt-2">
+                      {/* <div className="flex flex-col md:flex-row gap-y-2 md:gap-x-2 items-center justify-center pt-2">
                         {trick.categories.map((category) => {
                           return (
                             <div
@@ -57,7 +57,7 @@ function TrickListSmall({ tricks }: Props) {
                             </div>
                           );
                         })}
-                      </div>
+                      </div> */}
                       <div className="flex justify-center items-center">
                         <p className="mt-5 font-bold flex items-center group-hover:underline">
                           Read Trick

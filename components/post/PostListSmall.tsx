@@ -45,7 +45,7 @@ function PostListSmall({ posts }: Props) {
                           year: 'numeric',
                         })}
                       </p>
-                      <div className="flex flex-col md:flex-row gap-y-2 md:gap-x-2 items-center justify-center pt-2">
+                      {/* <div className="flex flex-col md:flex-row gap-y-2 md:gap-x-2 items-center justify-center pt-2">
                         {post.categories.map((category) => {
                           return (
                             <div
@@ -56,7 +56,7 @@ function PostListSmall({ posts }: Props) {
                             </div>
                           );
                         })}
-                      </div>
+                      </div> */}
                     </div>
                   </div>
 

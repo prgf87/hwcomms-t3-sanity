@@ -39,10 +39,6 @@ async function Resources() {
   return (
     <main className="bg-gradient p-10 md:p-3">
       <div className="mx-auto ">
-        {/* <h1 className="text-3xl xl:text-7xl text-center text-gray-300 tracking-[10px] uppercase transition transform mx-auto my-16">
-          Graphic Designer&apos;s
-          <br></br> Bag of Tricks
-        </h1> */}
         <div className="text-gray-200 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5 items-center mx-auto max-w-[500px] lg:max-w-[1000px] xl:max-w-full">
           {tricks.map((trick: any) => {
             return (

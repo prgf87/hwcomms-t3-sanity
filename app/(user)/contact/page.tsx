@@ -5,7 +5,6 @@ function Contact() {
     <main>
       <div className="overflow-y-hidden">
         <div id="contact" className="relative top-[-80px]" />
-        {/* <ContactForm /> */}
         <ContactMe />
       </div>
     </main>

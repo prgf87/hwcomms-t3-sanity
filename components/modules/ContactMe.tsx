@@ -56,7 +56,7 @@ export default function ContactMe() {
   const handleSubmit = async (e: any) => {
     console.log(email, name, phone, org, date, address, type, hear, message);
 
-    e.preventDefault();
+    // e.preventDefault();
 
     // let isValidForm = handleValidation();
 
@@ -80,20 +80,20 @@ export default function ContactMe() {
     //   method: 'POST',
     // });
 
-    // const { data } = await res.json();
-    // if (data.error) {
-    //   console.log(data.error);
-    //   setShowSuccessMessage(false);
-    //   setShowFailureMessage(true);
+    //   const { error } = await res.json();
+    //   if (error) {
+    //     console.log(error);
+    //     setShowSuccessMessage(false);
+    //     setShowFailureMessage(true);
+    //     setButtonText('Send');
+    //     return;
+    //   }
+    //   setShowSuccessMessage(true);
+    //   setShowFailureMessage(false);
     //   setButtonText('Send');
-    //   return;
-    // }
-    // setShowSuccessMessage(true);
-    // setShowFailureMessage(false);
-    // setButtonText('Send');
-    // console.log('*** Message Sent! ***');
-    // console.log(res);
-    // }
+    //   console.log('*** Message Sent! ***');
+    //   console.log(res);
+    // };
     // console.log(
     //   email,
     //   subject,
@@ -107,7 +107,6 @@ export default function ContactMe() {
     //   message
     // );
   };
-
   return (
     <section id="contact" className="bg-gradient-invert dark:bg-gray-900">
       <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">

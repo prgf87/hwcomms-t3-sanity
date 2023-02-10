@@ -20,49 +20,47 @@ function DirectoryList({ directories }: Props) {
 
           {directories.map((directory, index) => {
             return (
-              <ClientSideRoute key={index} route={'/'}>
-                <div className="flex flex-col group cursor-pointer">
-                  <div className="relative w-full h-80 drop-shadow-xl group-hover:scale-105 transition-transform duration-200 ease-out">
-                    <Image
-                      className="object-cover object-left lg:object-center"
-                      src={urlFor(directory.mainImage).url()}
-                      alt={directory.title}
-                      fill
-                    />
-                    <div className="absolute bottom-0 w-full bg-opacity-20 bg-black backdrop-blur-lg rounded drop-shadow-lg text-white p-10 flex justify-between">
-                      <div>
-                        <p className="font-bold line-clamp-1">
-                          {directory.title}
-                        </p>
-                        <p>
-                          {new Date(directory._createdAt).toLocaleDateString(
-                            'en-US',
-                            {
-                              day: 'numeric',
-                              month: 'long',
-                              year: 'numeric',
-                            }
-                          )}
-                        </p>
-                      </div>
+              <div key={index} className="flex flex-col group cursor-pointer">
+                <div className="relative w-full h-80 drop-shadow-xl group-hover:scale-105 transition-transform duration-200 ease-out">
+                  <Image
+                    className="object-cover object-left lg:object-center"
+                    src={urlFor(directory.mainImage).url()}
+                    alt={directory.title}
+                    fill
+                  />
+                  <div className="absolute bottom-0 w-full bg-opacity-20 bg-black backdrop-blur-lg rounded drop-shadow-lg text-white p-10 flex justify-between">
+                    <div>
+                      <p className="font-bold line-clamp-1">
+                        {directory.title}
+                      </p>
+                      <p>
+                        {new Date(directory._createdAt).toLocaleDateString(
+                          'en-US',
+                          {
+                            day: 'numeric',
+                            month: 'long',
+                            year: 'numeric',
+                          }
+                        )}
+                      </p>
                     </div>
                   </div>
-                  <div className="mt-5 flex-1">
-                    <p className="underline text-lg font-bold line-clamp-1">
-                      {directory.title}
-                    </p>
-                    <p className="line-clamp-1 text-gray-300">
-                      {directory.description}
-                    </p>
-                  </div>
-                  <div>
-                    <p className="mt-5 font-bold flex items-center group-hover:underline">
-                      Go to Tool
-                      <ArrowUpRightIcon className="ml-2 h-4 w-4" />
-                    </p>
-                  </div>
                 </div>
-              </ClientSideRoute>
+                <div className="mt-5 flex-1">
+                  <p className="underline text-lg font-bold line-clamp-1">
+                    {directory.title}
+                  </p>
+                  <p className="line-clamp-1 text-gray-300">
+                    {directory.description}
+                  </p>
+                </div>
+                <div>
+                  <p className="mt-5 font-bold flex flex-row items-center group-hover:underline">
+                    Go to Tool
+                    <ArrowUpRightIcon className="ml-2 h-4 w-4" />
+                  </p>
+                </div>
+              </div>
             );
           })}
         </div>
@@ -73,14 +71,14 @@ function DirectoryList({ directories }: Props) {
         </button>
       </a>
     */}
-      <div className="mb-6 flex items-center justify-center bottom-10 relative">
+      {/* <div className="mb-6 flex items-center justify-center bottom-10 relative">
         <Link href="/blog">
           <button className="btn1-large text-xl">
             {' '}
             Online Resource Directory
           </button>
         </Link>
-      </div>
+      </div>*/}
     </>
   );
 }

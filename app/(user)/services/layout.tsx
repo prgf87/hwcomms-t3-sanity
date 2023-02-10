@@ -1,7 +1,7 @@
 'use client';
 
-import Footer from '@/components/modules/Footer';
 import Hero from '@/components/modules/Hero';
+import Footer from '@/components/navigation/Footer';
 import Navbar from '@/components/navigation/Navbar';
 import '../../globals.css';
 
@@ -15,9 +15,9 @@ export default function RootLayout({
       <body>
         <Navbar />
         <Hero
-          heading="Communication Services"
-          message="Broswer through the services I offer"
-          custombg="custom-img6"
+          heading="Hailey Wilson Communication Services"
+          message="Browse through the services I have to offer"
+          custombg="custom-img16"
           heroanchor="/services/#services-list"
         />
         {children}
