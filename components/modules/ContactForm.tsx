@@ -88,7 +88,7 @@ function ContactForm({}: Props) {
         </p>
 
         <form
-          // onSubmit={handleS}
+          // onSubmit={handleSubmit}
           className="space-y-8"
         >
           <div>

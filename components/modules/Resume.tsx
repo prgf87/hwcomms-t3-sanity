@@ -4,12 +4,15 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import ResumeCard from './ResumeCard';
 import { ChevronDownIcon } from '@heroicons/react/24/solid';
+import { Experience } from '@/typing';
 
-type Props = {};
+type Props = {
+  experiences: Experience[];
+};
 
-function Resume({}: Props) {
+function Resume({ experiences }: Props) {
   return (
-    <div className="h-screen custom-img11 relative overflow-y-hidden z-0 max-w-full">
+    <div className="relative min-h-screen custom-img11 bg-fixed overflow-y-hidden z-0 max-w-full">
       <motion.div
         initial={{ opacity: 1 }}
         whileInView={{ opacity: 0.6 }}
@@ -37,18 +40,19 @@ function Resume({}: Props) {
           My Resume
         </motion.h3>
         <div className="h-screen flex flex-col text-left md:flex-row max-w-full px-10 justify-center items-center mx-auto text-gray-200">
-          <div className="max-w-full flex space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory mt-40">
-            <ResumeCard />
-            <ResumeCard />
-            <ResumeCard />
-            <ResumeCard />
+          <div className="max-w-full flex space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory mt-10">
+            {experiences?.map((experience) => {
+              return (
+                <ResumeCard key={experience._id} experience={experience} />
+              );
+            })}
           </div>
         </div>
-        <a href="#banner" className="relative">
+        {/* <a href="#banner" className="relative">
           <button className="nav-chev-down absolute right-[-2.3rem] bottom-[-25.5rem] m-5 lg:m-20 md:pr-5 animate-bounce">
             <ChevronDownIcon className="h-6 w-6 md:h-10 md:w-10 text-white" />
           </button>
-        </a>
+        </a> */}
       </div>
       <div></div>
     </div>

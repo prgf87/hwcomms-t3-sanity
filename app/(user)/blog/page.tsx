@@ -1,10 +1,11 @@
 import { previewData } from 'next/headers';
 import { groq } from 'next-sanity';
 import { client } from '@/lib/sanity.client';
-import PreviewPostList from '@/components/PreviewPostList';
-import PostList from '@/components/PostList';
-import PreviewSuspense from '@/components/PreviewSuspense';
-import PostBanner from '@/components/post/PostBanner';
+import PreviewPostList from '@/components/preview/PreviewPostList';
+import PreviewSuspense from '@/components/preview/PreviewSuspense';
+import PostList from '@/components/post/PostList';
+import Banner from '@/components/modules/Banner';
+import BannerOptions from '@/components/modules/BannerOptions';
 
 const query = groq`
 *[_type=='post'] {
@@ -35,12 +36,14 @@ export default async function HomePage() {
   const posts = await client.fetch(query);
 
   return (
-    <main className="custom-img9 relative text-gray-200 z-[0]">
-      <section className="absolute left-0 top-0 right-0 bottom-0 bg-gradient-to-b from-black/60 to-black/90 z-[0]" />
-      <div className="z-[4] ">
-        <PostBanner />
-        <PostList posts={posts} />
+    <main className="custom-img15 bg-fixed text-gray-200 z-[0]">
+      <div>
+        <BannerOptions />
       </div>
+      <section className="left-0 top-0 right-0 bottom-0 bg-gradient-to-b from-black/80 to-black/70 z-[2]">
+        <PostList posts={posts} />
+      </section>
+      <Banner />
     </main>
   );
 }

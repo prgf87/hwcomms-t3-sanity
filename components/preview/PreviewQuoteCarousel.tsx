@@ -1,7 +1,7 @@
 'use client';
 
 import { usePreview } from '@/lib/sanity.preview';
-import QuoteCarousel from '../quote/QuoteCarousel';
+import QuoteCarousel from '../modules/QuoteCarousel';
 
 type Props = {
   query: string;

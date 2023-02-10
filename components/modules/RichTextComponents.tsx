@@ -38,8 +38,14 @@ export const RichTextComponents = {
     h4: ({ children }: any) => {
       return <h4 className="text-2xl py-5 font-bold">{children}</h4>;
     },
-    normal: ({ children }: any) => {
+    h5: ({ children }: any) => {
+      return <div className="text-xl py-5 font-semibold">{children}</div>;
+    },
+    h6: ({ children }: any) => {
       return <div className="text-lg py-5 font-semibold">{children}</div>;
+    },
+    normal: ({ children }: any) => {
+      return <div className="text-sm py-2 font-light">{children}</div>;
     },
 
     blockquote: ({ children }: any) => {
@@ -57,7 +63,7 @@ export const RichTextComponents = {
         : undefined;
 
       return (
-        <div className="underline decoration-[#5EBCAA] hover:decoration-black text-xl">
+        <div className="underline text-sm py-2 decoration-[#5EBCAA] hover:decoration-[#5EBCAA]/40">
           <Link href={value.href} rel={rel}>
             {children}
           </Link>

@@ -47,16 +47,14 @@ function Navbar() {
     >
       <motion.div
         initial={{
-          y: -100,
           opacity: 0,
         }}
         animate={{
-          y: 0,
           opacity: 1,
         }}
         transition={{
-          duration: 1,
-          delay: 1,
+          duration: 1.2,
+          delay: 0.5,
         }}
         className="max-w-[1240px] mx-auto flex justify-between text-white items-center p-4"
       >
@@ -95,33 +93,40 @@ function Navbar() {
                 dropdownOpen
                   ? `top-full opacity-100 visible`
                   : 'top-[110%] invisible opacity-0'
-              } absolute top-0 left-0 z-40 mt-2 w-[18rem] rounded bg-black py-5 shadow-card transition-all`}
+              } absolute top-0 left-0 z-40 mt-2 w-[22rem] rounded bg-slate-800/60 py-2 shadow-card transition-all`}
             >
               <Link
                 onClick={() => setdropdownOpen(!dropdownOpen)}
+                href="/blog"
+                className="block py-2 px-5 text-base font-semibold text-gray-200 hover:bg-gray-800/60 hover:text-primary"
+              >
+                Hailey&apos;s Blog
+              </Link>
+              <Link
+                onClick={() => setdropdownOpen(!dropdownOpen)}
                 href="/resources"
-                className="block py-2 px-5 text-xs font-semibold text-gray-200 hover:bg-gray-800/60 hover:text-primary"
+                className="block py-2 px-5 text-base font-semibold text-gray-200 hover:bg-gray-800/60 hover:text-primary"
               >
                 Resources &amp; Tips
               </Link>
               <Link
                 onClick={() => setdropdownOpen(!dropdownOpen)}
-                href="/resources/toolbox"
-                className="block py-2 px-5 text-xs font-semibold text-gray-200 hover:bg-gray-800/60 hover:text-primary"
+                href="/toolbox"
+                className="block py-2 px-5 text-base font-semibold text-gray-200 hover:bg-gray-800/60 hover:text-primary"
               >
                 Writer&apos;s Toolbox
               </Link>
               <Link
                 onClick={() => setdropdownOpen(!dropdownOpen)}
-                href="/resources/tricks"
-                className="block py-2 px-5 text-xs font-semibold text-gray-200 hover:bg-gray-800/60 hover:text-primary"
+                href="/tricks"
+                className="block py-2 px-5 text-base font-semibold text-gray-200 hover:bg-gray-800/60 hover:text-primary"
               >
                 Graphic Designer&apos;s Bag of Tricks
               </Link>
               <Link
                 onClick={() => setdropdownOpen(!dropdownOpen)}
-                href="/resources/directory"
-                className="block py-2 px-5 text-xs font-semibold text-gray-200 hover:bg-gray-800/60 hover:text-primary"
+                href="/directory"
+                className="block py-2 px-5 text-base font-semibold text-gray-200 hover:bg-gray-800/60 hover:text-primary"
               >
                 The Creator&apos;s Online Resource Directory
               </Link>

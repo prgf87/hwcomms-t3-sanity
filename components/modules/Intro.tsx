@@ -74,13 +74,14 @@ function Intro() {
           }}
           className="xl:hidden mx-auto mb-2"
         >
-          <Image
-            src="/images/gif2.gif"
-            alt="Gif"
+          <video
+            src="/videos/tpgif.webm"
+            autoPlay
+            muted
+            playsInline
             width={960}
             height={960}
             className="h-80 w-80 md:h-[40vh] md:w-[40vh] m-6 object-cover"
-            priority={true}
           />
         </motion.div>
 
@@ -103,13 +104,14 @@ function Intro() {
             }}
             className="hidden xl:block mx-auto mb-10 sm:mb-0"
           >
-            <Image
-              src="/images/gif2.gif"
-              alt="Gif"
+            <video
+              src="/videos/tpgif.webm"
+              autoPlay
+              muted
+              playsInline
               width={960}
               height={960}
               className="h-[60vh] w-[60vh] mb-5"
-              priority
             />
             <div className="hidden md:flex xl:hidden items-center justify-center pt-5">
               <Link href="https://www.talkingpointsforlife.com/">
@@ -219,7 +221,7 @@ function Intro() {
         </motion.div>
       </section>
 
-      <section className="relative">
+      {/* <section className="relative">
         <motion.div
           initial={{
             opacity: 0,
@@ -242,7 +244,7 @@ function Intro() {
             </div>
           </a>
         </motion.div>
-      </section>
+      </section> */}
     </div>
   );
 }

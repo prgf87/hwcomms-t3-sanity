@@ -4,6 +4,7 @@ import { groq } from 'next-sanity';
 import Image from 'next/image';
 import { PortableText } from '@portabletext/react';
 import { RichTextComponents } from '@/components/modules/RichTextComponents';
+import { Tip } from '@/typing';
 
 type Props = {
   params: {

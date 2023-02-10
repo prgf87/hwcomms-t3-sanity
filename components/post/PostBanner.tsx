@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 function PostBanner() {
   return (
-    <main className="max-w-[800px] lg:max-w-7xl mx-auto flex flex-col lg:flex-row lg:space-x-5 justify-between font-bold px-10 mt-10">
+    <main className="max-w-[800px] lg:max-w-7xl mx-auto flex flex-col lg:flex-row lg:space-x-5 justify-between font-bold px-10 pt-10">
       <section>
         {/* <Link href="/blog">
           <h1 className="text-2xl md:text-4xl mb-2">Hailey&apos;s Blog</h1>

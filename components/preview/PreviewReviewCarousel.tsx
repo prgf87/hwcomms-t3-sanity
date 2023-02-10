@@ -1,7 +1,7 @@
 'use client';
 
 import { usePreview } from '@/lib/sanity.preview';
-import ReviewCarousel from '../review/ReviewCarousel';
+import ReviewCarousel from '../modules/ReviewCarousel';
 
 type Props = {
   query: string;

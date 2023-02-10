@@ -1,8 +1,8 @@
 'use client';
 
-import Footer from '@/components/Footer';
-import Hero from '@/components/Hero';
-import Navbar from '@/components/Navbar';
+import Footer from '@/components/modules/Footer';
+import Hero from '@/components/modules/Hero';
+import Navbar from '@/components/navigation/Navbar';
 import '../../globals.css';
 
 export default function RootLayout({

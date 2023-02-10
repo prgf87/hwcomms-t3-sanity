@@ -1,11 +1,14 @@
-import ContactForm from '@/components/ContactForm';
+import ContactMe from '@/components/modules/ContactMe';
 
 function Contact() {
   return (
-    <div>
-      <div id="contact" className="relative top-[-80px]" />
-      <ContactForm />
-    </div>
+    <main>
+      <div className="overflow-y-hidden">
+        <div id="contact" className="relative top-[-80px]" />
+        {/* <ContactForm /> */}
+        <ContactMe />
+      </div>
+    </main>
   );
 }
 

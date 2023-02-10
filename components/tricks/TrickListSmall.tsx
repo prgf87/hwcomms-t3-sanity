@@ -24,10 +24,7 @@ function TrickListSmall({ tricks }: Props) {
 
           {tricks.map((trick) => {
             return (
-              <ClientSideRoute
-                key={trick._id}
-                route={`/resources/${trick.slug.current}`}
-              >
+              <ClientSideRoute key={trick._id} route={trick.linktotrick}>
                 <div className="grid grid-cols-2 group cursor-pointer text-sm text-center items-center">
                   <div className="relative w-40 h-40 drop-shadow-xl group-hover:scale-105 transition-transform duration-200 ease-out">
                     <Image

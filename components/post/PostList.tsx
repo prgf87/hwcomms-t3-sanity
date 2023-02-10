@@ -12,10 +12,14 @@ type Props = {
 function PostList({ posts }: Props) {
   return (
     <>
-      <div className="max-w-[800px] lg:max-w-7xl mx-auto">
-        <hr className="border-2 border-[#5EBCAA] my-2" />
+      <div className="max-w-[800px] lg:max-w-7xl mx-auto py-5">
+        <h1 className="text-3xl text-center md:text-5xl lg:text-7xl py-8 tracking-[15px] text-gray-200/80 uppercase">
+          Hailey&apos;s Blog
+        </h1>
 
-        <div className="grid grid-cols-1 px-10 gap-10 gap-y-16 pb-24">
+        <hr className="border-2 border-[#5EBCAA]" />
+
+        <div className="grid grid-cols-2 px-10 py-5 gap-10 gap-y-5 pb-24">
           {/* Posts */}
 
           {posts.map((post) => {
@@ -61,7 +65,7 @@ function PostList({ posts }: Props) {
                       </div>
                     </div>
                   </div>
-                  <div className="mt-5 flex-1">
+                  <div className="mt-5 justify-center items-center">
                     <p className="underline text-lg font-bold line-clamp-1">
                       {post.title}
                     </p>
@@ -87,11 +91,11 @@ function PostList({ posts }: Props) {
         </button>
       </a>
     */}
-      <div className="mb-6 flex items-center justify-center bottom-10 relative">
+      {/* <div className="mb-6 flex items-center justify-center bottom-10 relative">
         <Link href="/blog">
           <button className="btn1-large text-xl">Hailey&apos; Blog</button>
         </Link>
-      </div>
+      </div> */}
     </>
   );
 }

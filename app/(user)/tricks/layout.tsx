@@ -15,13 +15,13 @@ export default function RootLayout({
       <body>
         <Navbar />
         <Hero
-          heading="Writer's Toolbox"
-          message="Find some of the best resources online for creative writers"
-          heroanchor="/resources/#resources-banner"
-          custombg="custom-img4"
+          heading="Graphic Designer's Bag of Tricks"
+          message="Helpful tools I've discovered online"
+          heroanchor="/tricks/#tricks-banner"
+          custombg="custom-img13"
         />
         {children}
-        <Footer anchor={'/resources/#resources'} />
+        <Footer anchor={'/tricks/#tricks'} />
       </body>
     </html>
   );

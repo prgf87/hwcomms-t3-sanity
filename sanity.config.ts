@@ -3,9 +3,10 @@ import { deskTool } from 'sanity/desk';
 import { schemaTypes } from './schemas';
 import { visionTool } from '@sanity/vision';
 import { myTheme } from './theme';
-import StudioNavbar from './components/StudioNavbar';
-import Logo from './components/Logo';
+
 import { getDefaultDocumentNode } from './structure';
+import Logo from './components/modules/Logo';
+import StudioNavbar from './components/modules/StudioNavbar';
 
 const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID;
 const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET;

@@ -65,38 +65,38 @@ export default function Footer({ anchor }: any) {
               </p>
 
               <div className="w-full">
-                <div className="flex gap-3 justify-evenly place-items-center">
-                  <div className="p-2 md:px-6 md:py-5 md:flex">
+                <div className="flex gap-3 justify-evenly">
+                  <div className="p-2 md:px-6 md:py-5 md:flex mt-5">
                     <SocialIcon
                       style={{ height: 30, width: 30 }}
                       url="https://www.facebook.com"
                       fgColor="white"
                       bgColor="transparent"
-                      className="p-2 sm:p-6 transition-transform hover:scale-125 duration-200"
+                      className="p-2 sm:p-6 transition-transform hover:scale-125 duration-200 hover:opacity-50"
                     />
                     <SocialIcon
                       style={{ height: 30, width: 30 }}
                       url="https://www.twitter.com"
                       fgColor="white"
                       bgColor="transparent"
-                      className="sm:p-6 transition-transform hover:scale-125 duration-200"
+                      className="sm:p-6 transition-transform hover:scale-125 duration-200 hover:opacity-50"
                     />
                     <SocialIcon
                       style={{ height: 30, width: 30 }}
                       url="https://www.linkedin.com"
                       fgColor="white"
                       bgColor="transparent"
-                      className="sm:p-6 transition-transform hover:scale-125 duration-200"
+                      className="sm:p-6 transition-transform hover:scale-125 duration-200 hover:opacity-50"
                     />
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div className="grid justify-center items-center text-center">
+          <div className="text-right">
             <div>
               <h1 className="text-xl font-bold pb-3">Contact me</h1>
-              <p className="text-gray-200 place-content-center md:place-content-center">
+              <p className="text-gray-200">
                 <strong>Email: </strong>
                 <a
                   href="mailto:hwilsoncomms@gmail.com"
@@ -106,7 +106,7 @@ export default function Footer({ anchor }: any) {
                 </a>
               </p>
             </div>
-            <div className="mx-auto p-2 cursor-pointer link link-underline link-underline-black">
+            <div className="flex justify-end items-center cursor-pointer mt-14 hover:opacity-50">
               <SocialIcon
                 network="email"
                 fgColor="white"

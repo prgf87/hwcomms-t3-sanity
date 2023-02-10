@@ -4,6 +4,7 @@ import { groq } from 'next-sanity';
 import Image from 'next/image';
 import { PortableText } from '@portabletext/react';
 import { RichTextComponents } from '@/components/modules/RichTextComponents';
+import { Post } from '@/typing';
 
 type Props = {
   params: {
@@ -38,7 +39,7 @@ async function Post({ params: { slug } }: Props) {
     `;
   const post: Post = await client.fetch(query, { slug });
   return (
-    <main>
+    <main className="diagonal">
       <article className="px-10 pb-28 max-w-[800px] lg:max-w-7xl mx-auto">
         <section className="space-y-2 border-[#5EBCAA] border-2 text-gray-200 font-bold">
           <div className="relative min-h-[10rem] flex flex-col md:flex-row justify-between">

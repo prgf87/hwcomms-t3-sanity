@@ -23,7 +23,7 @@ function Values({}: Props) {
           viewport={{
             once: true,
           }}
-          className="text-5xl lg:text-7xl text-center pt-20 lg:py-16 text-gray-300 tracking-[15px] uppercase"
+          className="text-5xl lg:text-7xl text-center pt-40 lg:pb-10 text-gray-300 tracking-[15px] uppercase"
         >
           My Values
         </motion.h1>
@@ -137,11 +137,11 @@ function Values({}: Props) {
                 the way) so that your communications are fresh and relevant.
               </p>
             </motion.div>
-            <a href="#resume" className="relative">
+            {/* <a href="#resume" className="relative">
               <button className="nav-chev-down absolute right-[-36.8rem] bottom-[-11rem] m-5 lg:m-20 md:pr-5 animate-bounce">
                 <ChevronDownIcon className="h-6 w-6 md:h-10 md:w-10 text-white" />
               </button>
-            </a>
+            </a> */}
           </div>
         </div>
       </div>

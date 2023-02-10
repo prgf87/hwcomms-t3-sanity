@@ -46,19 +46,21 @@ async function Resources() {
 
   return (
     <main className="bg-gradient text-gray-200 grid grid-cols-1 md:grid-cols-2 gap-10 p-10">
-      <div className="mx-auto">
-        <h1 className="text-3xl xl:text-5xl text-center text-gray-300 tracking-[10px] uppercase transition transform hover:scale-105 hover:text-gray-300 hover:text-opacity-75 mx-auto rounded-3xl px-20">
-          Resources &amp; Tips
-        </h1>
-        {/* <TipBanner /> */}
-        <TipListSmall tips={tips} />
-      </div>
-      <div>
-        <h1 className="text-3xl xl:text-5xl text-center text-gray-300 tracking-[15px] uppercase transition transform hover:scale-105 hover:text-gray-300 hover:text-opacity-75 mx-auto rounded-3xl">
-          Hailey&apos;s Blog
-        </h1>
-        {/* <PostBanner /> */}
-        <PostListSmall posts={posts} />
+      <div className="overflow-y-hidden">
+        <div className="mx-auto">
+          <h1 className="text-3xl xl:text-5xl text-center text-gray-300 tracking-[10px] uppercase transition transform hover:scale-105 hover:text-gray-300 hover:text-opacity-75 mx-auto rounded-3xl px-20">
+            Resources &amp; Tips
+          </h1>
+          {/* <TipBanner /> */}
+          <TipListSmall tips={tips} />
+        </div>
+        <div>
+          <h1 className="text-3xl xl:text-5xl text-center text-gray-300 tracking-[15px] uppercase transition transform hover:scale-105 hover:text-gray-300 hover:text-opacity-75 mx-auto rounded-3xl">
+            Hailey&apos;s Blog
+          </h1>
+          {/* <PostBanner /> */}
+          <PostListSmall posts={posts} />
+        </div>
       </div>
     </main>
   );

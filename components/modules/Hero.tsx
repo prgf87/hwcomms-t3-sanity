@@ -11,53 +11,62 @@ function Hero({ heading, message, heroanchor, custombg }: any) {
     delaySpeed: 2000,
   });
   return (
-    <div className="bg-gradient">
+    <div className="bg-black">
       <motion.section
         initial={{
           opacity: 0,
           scale: 1,
-          y: -100,
         }}
         animate={{
           opacity: 1,
           scale: 1,
-          y: 0,
         }}
         transition={{
-          duration: 2.5,
-          delay: -1,
+          duration: 1.5,
+          delay: 0,
+        }}
+        viewport={{
+          once: true,
         }}
         className={`flex items-center justify-center h-[50vh] ${custombg}`}
       />
       <motion.div
         initial={{
+          y: 500,
           opacity: 1,
-          scale: 4,
+          scale: 1,
         }}
         animate={{
           opacity: 0.7,
           scale: 1,
+          y: 0,
         }}
         transition={{
-          duration: 2.5,
-          delay: -1,
+          duration: 1.2,
+          delay: 0,
         }}
-        className={`absolute top-0 left-0 right-0 bottom-0 h-[50vh] bg-black z-[2]`}
+        viewport={{
+          once: true,
+        }}
+        className={`absolute h-[100vh] top-[-50vh] left-0 right-0 bottom-0 bg-black z-[2]`}
       />
       <div className="absolute top-0 left-0 right-0 bottom-[25rem] text-white z-[2] mx-auto flex justify-center items-center">
-        {/* <motion.div
+        <motion.div
           initial={{
             opacity: 0,
           }}
           animate={{
-            opacity: [0, 0.7, 1],
+            opacity: [0, 0.3, 1],
           }}
           whileInView={{
             opacity: 1,
           }}
           transition={{
-            duration: 0.5,
+            duration: 1.5,
             delay: 1,
+          }}
+          viewport={{
+            once: true,
           }}
         >
           <div>
@@ -66,8 +75,8 @@ function Hero({ heading, message, heroanchor, custombg }: any) {
               <Cursor cursorColor="white" />
             </h1>
           </div>
-        </motion.div> */}
-        <motion.div
+        </motion.div>
+        {/* <motion.div
           initial={{
             opacity: 0,
           }}
@@ -76,7 +85,10 @@ function Hero({ heading, message, heroanchor, custombg }: any) {
           }}
           transition={{
             duration: 1,
-            delay: 3,
+            delay: 1.5,
+          }}
+          viewport={{
+            once: true,
           }}
         >
           <a href={heroanchor}>
@@ -84,7 +96,7 @@ function Hero({ heading, message, heroanchor, custombg }: any) {
               <ChevronDownIcon className="h-6 w-6 md:h-10 md:w-10 text-white" />
             </button>
           </a>
-        </motion.div>
+        </motion.div> */}
       </div>
     </div>
   );

@@ -1,0 +1,14 @@
+You have received a new Contact Form from your website!
+
+Here are the client's contact details and their message:
+
+Name: ${name}
+Email: ${email}
+Phone: ${phone}
+Organisation: ${org}
+Address: ${address}
+Project Start Date: ${date}
+Project Type: ${type}
+How they heard about you: ${hear}
+Subject: ${subject}
+Message: ${message}

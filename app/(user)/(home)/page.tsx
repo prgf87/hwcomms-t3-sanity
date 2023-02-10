@@ -1,40 +1,34 @@
 import { previewData } from 'next/headers';
 import { groq } from 'next-sanity';
 import { client } from '@/lib/sanity.client';
-import Link from 'next/link';
-import ToolboxList from '@/components/toolbox/ToolboxList';
-import TrickList from '@/components/tricks/TrickList';
-import DirectoryList from '@/components/directory/DirectoryList';
-import PreviewPostList from '@/components/preview/PreviewPostList';
 import PreviewSuspense from '@/components/preview/PreviewSuspense';
-import PreviewTipList from '@/components/preview/PreviewTipList';
 import Intro from '@/components/modules/Intro';
 import Snapshots from '@/components/modules/Snapshots';
-import PreviewToolboxList from '@/components/preview/PreviewToolboxList';
-import PreviewTrickList from '@/components/preview/PreviewTrickList';
-import PreviewDirectoryList from '@/components/preview/PreviewDirectoryList';
 import PreviewQuoteCarousel from '@/components/preview/PreviewQuoteCarousel';
 import PreviewReviewCarousel from '@/components/preview/PreviewReviewCarousel';
-import QuoteCarousel from '@/components/quote/QuoteCarousel';
-import ReviewCarousel from '@/components/review/ReviewCarousel';
-import TipList from '@/components/tip/TipList';
-import PostList from '@/components/post/PostList';
+import QuoteCarousel from '@/components/modules/QuoteCarousel';
 import Banner from '@/components/modules/Banner';
+import ReviewCarousel from '@/components/modules/ReviewCarousel';
+// import PreviewPostList from '@/components/preview/PreviewPostList';
+// import PreviewTipList from '@/components/preview/PreviewTipList';
+// import PreviewToolboxList from '@/components/preview/PreviewToolboxList';
+// import PreviewTrickList from '@/components/preview/PreviewTrickList';
+// import PreviewDirectoryList from '@/components/preview/PreviewDirectoryList';
 
-const query = groq`
-*[_type=='post'] {
-  ...,
-  author->,
-  categories[]->
-} | order(_createdAt asc)
-`;
-const queryTip = groq`
-*[_type=='tip'] {
-  ...,
-  author->,
-  categories[]->
-} | order(_createdAt asc)
-`;
+// const query = groq`
+// *[_type=='post'] {
+//   ...,
+//   author->,
+//   categories[]->
+// } | order(_createdAt asc)
+// `;
+// const queryTip = groq`
+// *[_type=='tip'] {
+//   ...,
+//   author->,
+//   categories[]->
+// } | order(_createdAt asc)
+// `;
 const queryQuote = groq`
 *[_type=='quote'] {
   ...,
@@ -49,27 +43,27 @@ const queryReview = groq`
   categories[]->
 } | order(_createdAt asc)
 `;
-const queryToolbox = groq`
-*[_type=='toolbox'] {
-  ...,
-  author->,
-  categories[]->
-} | order(_createdAt asc)
-`;
-const queryTrick = groq`
-*[_type=='trick'] {
-  ...,
-  author->,
-  categories[]->
-} | order(_createdAt asc)
-`;
-const queryDirectory = groq`
-*[_type=='directory'] {
-  ...,
-  author->,
-  categories[]->
-} | order(_createdAt asc)
-`;
+// const queryToolbox = groq`
+// *[_type=='toolbox'] {
+//   ...,
+//   author->,
+//   categories[]->
+// } | order(_createdAt asc)
+// `;
+// const queryTrick = groq`
+// *[_type=='trick'] {
+//   ...,
+//   author->,
+//   categories[]->
+// } | order(_createdAt asc)
+// `;
+// const queryDirectory = groq`
+// *[_type=='directory'] {
+//   ...,
+//   author->,
+//   categories[]->
+// } | order(_createdAt asc)
+// `;
 
 export const revalidate = 60;
 
@@ -91,7 +85,7 @@ export default async function HomePage() {
             MODE - PREVIEW MODE PREVIEW MODE - PREVIEW MODE - PREVIEW MODE
           </h1>
           <div className="flex flex-col">
-            <div>
+            {/* <div>
               <PreviewPostList query={query} />
             </div>
             <div>
@@ -105,7 +99,7 @@ export default async function HomePage() {
             </div>
             <div>
               <PreviewDirectoryList query={queryDirectory} />
-            </div>
+            </div> */}
             <div>
               <PreviewQuoteCarousel query={queryQuote} />
             </div>
@@ -117,29 +111,32 @@ export default async function HomePage() {
       </PreviewSuspense>
     );
   }
-  const posts = await client.fetch(query);
-  const tips = await client.fetch(queryTip);
   const quotes = await client.fetch(queryQuote);
   const reviews = await client.fetch(queryReview);
-  const toolboxes = await client.fetch(queryToolbox);
-  const tricks = await client.fetch(queryTrick);
-  const directories = await client.fetch(queryDirectory);
+  // const posts = await client.fetch(query);
+  // const tips = await client.fetch(queryTip);
+  // const toolboxes = await client.fetch(queryToolbox);
+  // const tricks = await client.fetch(queryTrick);
+  // const directories = await client.fetch(queryDirectory);
 
   return (
     <main>
-      <div>
+      <div className="overflow-y-hidden">
         <div>
           <div id="intro" className="relative top-[-80px]" />
           <Intro />
         </div>
+
         <div>
           <div id="quotes" className="relative top-[-75px]" />
           <QuoteCarousel quotes={quotes} />
         </div>
+
         <div>
           <div id="snapshot" className="relative top-[-70px]" />
           <Snapshots />
         </div>
+
         <div>
           <div id="review" className="relative top-[-80px]" />
           <ReviewCarousel reviews={reviews} />
@@ -147,7 +144,7 @@ export default async function HomePage() {
 
         {/* Blog and Resources */}
 
-        <div className="custom-img9 relative">
+        {/* <div className="custom-img9 relative">
           <div className="grid grid-cols-1 max-w-3xl lg:max-w-7xl mx-auto text-gray-100">
             <div className="absolute left-0 top-0 right-0 bottom-0 bg-gradient-to-b from-black/70 to-black/50 z-[0]" />
 
@@ -193,7 +190,8 @@ export default async function HomePage() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
+
         <div>
           <div id="banner" className="relative bottom-0" />
           <Banner />

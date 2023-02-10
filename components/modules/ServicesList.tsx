@@ -3,95 +3,209 @@ import React from 'react';
 function ServicesList() {
   return (
     <section id="services-list" className="bg-gradient-invert w-screen">
-      <div className="grid grid-cols-1 max-w-xl mx-auto my-10 gap-10 items-center ">
-        <h1 className="text-gray-100 text-3xl md:text-5xl lg:text-7xl pt-8 pb-0 sm:pb-20 md:pb-0 tracking-widest">
-          Services from Hailey
-        </h1>
-        <h2 className="text-xl md:text-4xl lg:text-5xl pt-4 tracking-[20px] text-gray-400">
-          How can I help you communicate better?
-        </h2>
-        <div className="grid border-2 rounded-xl p-5 border-gray-500 bg-gray-200 hover:bg-gray-100/80 hover:border-gray-800/20 transition-transform ease-in duration-500">
-          <h1 className="text-3xl font-bold">
-            Employee, Executive &amp; Internal Communications
-          </h1>
-          <p className="py-4 line-clamp-2 hover:line-clamp-none">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet
-            nulla facilisi morbi tempus iaculis urna id volutpat lacus. Tempus
-            egestas sed sed risus. Condimentum vitae sapien pellentesque
-            habitant morbi tristique senectus et. Ac placerat vestibulum lectus
-            mauris. Viverra nibh cras pulvinar mattis nunc. Purus faucibus
-            ornare suspendisse sed nisi lacus sed viverra tellus. Vel facilisis
-            volutpat est velit egestas dui id. Varius sit amet mattis vulputate
-            enim nulla aliquet porttitor lacus. Feugiat vivamus at augue eget
-            arcu dictum varius duis at. Senectus et netus et malesuada fames ac
-            turpis egestas maecenas.
-          </p>
+      <div className="grid grid-cols-1 xl:grid-cols-2 max-w-screen items-center min-h-screen">
+        <div className="col-start-1 xl:col-span-2">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl xl:text-7xl text-center tracking-[20px] text-gray-200 px-20 py-5 xl:px-[20rem] ">
+            How I can help you communicate better
+          </h2>
         </div>
-        <div className="grid border-2 rounded-xl p-5 border-gray-500 bg-gray-200 hover:bg-gray-100/80 hover:border-gray-800/20 transition-transform ease-in duration-500">
-          <h1 className="text-3xl font-bold">Reputational Management</h1>
-          <p className="py-4 line-clamp-2 hover:line-clamp-none">
-            Morbi tincidunt ornare massa eget egestas. Lobortis mattis aliquam
-            faucibus purus in massa tempor. Morbi quis commodo odio aenean sed
-            adipiscing diam. Donec ultrices tincidunt arcu non. Mauris in
-            aliquam sem fringilla ut morbi. Morbi tristique senectus et netus et
-            malesuada fames. Laoreet non curabitur gravida arcu ac tortor
-            dignissim convallis aenean. Nisi scelerisque eu ultrices vitae
-            auctor eu. Sed risus ultricies tristique nulla aliquet enim tortor
-            at auctor. Urna nunc id cursus metus aliquam eleifend. Viverra vitae
-            congue eu consequat ac felis donec et odio. Sit amet mattis
-            vulputate enim nulla aliquet porttitor lacus luctus. Tristique magna
-            sit amet purus gravida quis blandit. Dui faucibus in ornare quam
-            viverra orci sagittis eu. Nec sagittis aliquam malesuada bibendum.
-            Odio pellentesque diam volutpat commodo sed. Est placerat in egestas
-            erat imperdiet sed euismod nisi porta. Non sodales neque sodales ut.
-            Pretium aenean pharetra magna ac.
-          </p>
+        <div>
+          <div>
+            <video
+              src="/videos/gif1.webm"
+              autoPlay
+              muted
+              playsInline
+              loop
+              width={960}
+              height={960}
+              className="bg-contain px-10 pb-5 mx-auto"
+            />
+          </div>
         </div>
-        <div className="grid border-2 rounded-xl p-5 border-gray-500 bg-gray-200 hover:bg-gray-100/80 hover:border-gray-800/20 transition-transform ease-in duration-500">
-          <h1 className="text-3xl font-bold">Crisis Communications </h1>
-          <h3 className="text-xl text-gray-500">Training / Planning</h3>
-          <p className="py-4 line-clamp-2 hover:line-clamp-none">
-            Morbi tincidunt ornare massa eget egestas. Lobortis mattis aliquam
-            faucibus purus in massa tempor. Morbi quis commodo odio aenean sed
-            adipiscing diam. Donec ultrices tincidunt arcu non. Mauris in
-            aliquam sem fringilla ut morbi. Morbi tristique senectus et netus et
-            malesuada fames. Laoreet non curabitur gravida arcu ac tortor
-            dignissim convallis aenean. Nisi scelerisque eu ultrices vitae
-            auctor eu. Sed risus ultricies tristique nulla aliquet enim tortor
-            at auctor. Urna nunc id cursus metus aliquam eleifend. Viverra vitae
-            congue eu consequat ac felis donec et odio. Sit amet mattis
-            vulputate enim nulla aliquet porttitor lacus luctus. Tristique magna
-            sit amet purus gravida quis blandit. Dui faucibus in ornare quam
-            viverra orci sagittis eu. Nec sagittis aliquam malesuada bibendum.
-            Odio pellentesque diam volutpat commodo sed. Est placerat in egestas
-            erat imperdiet sed euismod nisi porta. Non sodales neque sodales ut.
-            Pretium aenean pharetra magna ac.
-          </p>
+
+        <div className="w-full md:w-3/5 mx-auto p-8">
+          <div className="text-white">
+            <div className="tab mb-1 w-full p-2 pt-1 overflow-hidden border-t">
+              <span className="font-hairline text-xs">Design Thinking</span>
+              <input
+                className="absolute opacity-0 "
+                id="tab-multi-one"
+                type="checkbox"
+                name="tabs"
+              />
+              <label
+                className="block leading-normal whitespace-no-wrap cursor-pointer"
+                htmlFor="tab-multi-one"
+              ></label>
+              <div className="tab-content overflow-hidden leading-normal">
+                <p className="p-5">Box 1</p>
+              </div>
+            </div>
+            <div className="tab mb-1 w-full p-2 pt-1 overflow-hidden border-t">
+              <span className="font-hairline text-xs">Service Design</span>
+              <input
+                className="absolute opacity-0"
+                id="tab-multi-two"
+                type="checkbox"
+                name="tabs"
+              />
+              <label
+                className="block leading-normal whitespace-no-wrap cursor-pointer"
+                htmlFor="tab-multi-two"
+              ></label>
+              <div className="tab-content overflow-hidden leading-normal">
+                <p className="p-5">Box2</p>
+              </div>
+            </div>
+            <div className="tab mb-1 w-full p-2 pt-1 overflow-hidden border-t">
+              <span className="font-hairline text-xs">Agile Innovation</span>
+              <input
+                className="absolute opacity-0"
+                id="tab-multi-three"
+                type="checkbox"
+                name="tabs"
+              />
+              <label
+                className="block w-full whitespace-no-wrap cursor-pointer"
+                htmlFor="tab-multi-three"
+              ></label>
+
+              <div className="tab-content overflow-hidden leading-normal">
+                <p className="p-5">Box 3</p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="grid border-2 rounded-xl p-5 border-gray-500 bg-gray-200 hover:bg-gray-100/80 hover:border-gray-800/20 transition-transform ease-in duration-500">
-          <h1 className="text-3xl font-bold">Social Media</h1>
-          <h3 className="text-xl text-gray-500">
-            Planning &amp; Content Creation
-          </h3>
-          <p className="py-4 line-clamp-2 hover:line-clamp-none">
-            Morbi tincidunt ornare massa eget egestas. Lobortis mattis aliquam
-            faucibus purus in massa tempor. Morbi quis commodo odio aenean sed
-            adipiscing diam. Donec ultrices tincidunt arcu non. Mauris in
-            aliquam sem fringilla ut morbi. Morbi tristique senectus et netus et
-            malesuada fames. Laoreet non curabitur gravida arcu ac tortor
-            dignissim convallis aenean. Nisi scelerisque eu ultrices vitae
-            auctor eu. Sed risus ultricies tristique nulla aliquet enim tortor
-            at auctor. Urna nunc id cursus metus aliquam eleifend. Viverra vitae
-            congue eu consequat ac felis donec et odio. Sit amet mattis
-            vulputate enim nulla aliquet porttitor lacus luctus. Tristique magna
-            sit amet purus gravida quis blandit. Dui faucibus in ornare quam
-            viverra orci sagittis eu. Nec sagittis aliquam malesuada bibendum.
-            Odio pellentesque diam volutpat commodo sed. Est placerat in egestas
-            erat imperdiet sed euismod nisi porta. Non sodales neque sodales ut.
-            Pretium aenean pharetra magna ac.
-          </p>
-        </div>
+
+        {/* <div className="max-w-lg mx-auto mt-8">
+          <div className="relative mb-1">
+            <input type="checkbox" id="toggle1" className="toggle hidden" />
+            <label
+              className="title block font-bold bg-white p-4 cursor-pointer"
+              for="toggle1"
+            >
+              Title goes here
+            </label>
+            <div className="content bg-white overflow-hidden">
+              <p className="p-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat
+              </p>
+            </div>
+          </div>
+          <div className="relative mb-1">
+            <input type="checkbox" id="toggle2" className="toggle hidden" />
+            <label
+              className="title block font-bold bg-white p-4 cursor-pointer"
+              for="toggle2"
+            >
+              Title goes here
+            </label>
+            <div className="content bg-white overflow-hidden">
+              <p className="p-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat
+              </p>
+            </div>
+          </div>
+          <div className="relative mb-1">
+            <input type="checkbox" id="toggle3" className="toggle hidden" />
+            <label
+              className="title block font-bold bg-white p-4 cursor-pointer"
+              for="toggle3"
+            >
+              Title goes here
+            </label>
+            <div className="content bg-white overflow-hidden">
+              <p className="p-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat
+              </p>
+            </div>
+          </div>
+        </div> */}
+
+        {/* <div className="pt-12 pb-24">
+          <div className="px-20 space-y-6">
+            <div className="grid border-2 rounded-xl border-gray-800/20 p-[0.10rem] px-10 bg-slate-600/70 text-gray-200 hover:text-gray-300 hover:bg-gray-700/80 hover:border-gray-800/20 transition transform ease-in duration-500">
+              <h1 className="text-2xl font-bold">
+                Internal/Employee Communications Consultation
+              </h1>
+              <p className="my-2 line-clamp-1 hover:line-clamp-none transition transform ease-in duration-500">
+                My services are customized to meet the specific needs of each
+                client. I work collaboratively throughout the entire process and
+                guarantee measurable results. Contact me to find out how I can
+                help today.
+              </p>
+            </div>
+
+            <div className="grid border-2 rounded-xl border-gray-800/20 p-[0.10rem] px-10 bg-slate-600/70 text-gray-200 hover:text-gray-300 hover:bg-gray-700/80 hover:border-gray-800/20 transition transform ease-in duration-500">
+              <h1 className="text-2xl font-bold">
+                Crisis Communication/Issue Management Consultation
+              </h1>
+              <p className="my-2 line-clamp-1 hover:line-clamp-none transition transform ease-in duration-500">
+                Dealing with a sticky issue and not quite sure how to
+                communicate it to your employees or customers? I&apos;ll create
+                and execute a strategy to guide you through it.
+              </p>
+            </div>
+
+            <div className="grid border-2 rounded-xl border-gray-800/20 p-[0.10rem] px-10 bg-slate-600/70 text-gray-200 hover:text-gray-300 hover:bg-gray-700/80 hover:border-gray-800/20 transition transform ease-in duration-500">
+              <h1 className="text-2xl font-bold">
+                Change Management Communications Consultation
+              </h1>
+              <p className="my-2 line-clamp-1 hover:line-clamp-none transition transform ease-in duration-500">
+                Change is hard, but I can help you through it by executing a
+                people-first strategy. Combining a deep knowledge of brain
+                science and nearly 15 years of communications experience, I will
+                create a plan to help your employees or customers navigate
+                change.
+              </p>
+            </div>
+
+            <div className="grid border-2 rounded-xl border-gray-800/20 p-[0.10rem] px-10 bg-slate-600/70 text-gray-200 hover:text-gray-300 hover:bg-gray-700/80 hover:border-gray-800/20 transition transform ease-in duration-500">
+              <h1 className="text-2xl font-bold">
+                Empathy Communications Training
+              </h1>
+
+              <p className="my-2 line-clamp-1 hover:line-clamp-none transition transform ease-in duration-500">
+                While I can&apos;t make anyone feel more empathy, I can help you
+                communicate more empathetically. This training is great for
+                managers and customer-facing employees. I will give your team
+                the ability to communicate effectively in high-stress situations
+                (e.g., handling a customer complaint) with confidence.
+              </p>
+            </div>
+
+            <div className="grid border-2 rounded-xl border-gray-800/20 p-[0.10rem] px-10 bg-slate-600/70 text-gray-200 hover:text-gray-300 hover:bg-gray-700/80 hover:border-gray-800/20 transition transform ease-in duration-500">
+              <h1 className="text-2xl font-bold">Empathy Mapping Workshop</h1>
+
+              <p className="my-2 line-clamp-1 hover:line-clamp-none transition transform ease-in duration-500">
+                I&apos;ll work with your Marketing Team to create customer
+                personas, and journey and empathy maps. This workshop is
+                designed to give your team the skills and tools to fully
+                understand your customers&apos; needs.
+              </p>
+            </div>
+
+            <div className="grid border-2 rounded-xl border-gray-800/20 p-[0.10rem] px-10 bg-slate-600/70 text-gray-200 hover:text-gray-300 hover:bg-gray-700/80 hover:border-gray-800/20 transition transform ease-in duration-500">
+              <h1 className="text-2xl font-bold">Design Thinking Workshop</h1>
+
+              <p className="my-2 line-clamp-1 hover:line-clamp-none transition transform ease-in duration-500">
+                Have a sticky project or process challenge? Designing a new
+                product or program? Design Thinking is a proven way to
+                crowdsource and test the best ideas from your team.
+              </p>
+            </div>
+          </div>
+        </div> */}
       </div>
     </section>
   );

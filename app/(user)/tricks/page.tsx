@@ -3,19 +3,13 @@ import { groq } from 'next-sanity';
 import { client } from '@/lib/sanity.client';
 import PreviewSuspense from '@/components/preview/PreviewSuspense';
 import PreviewTrickList from '@/components/preview/PreviewTrickList';
-import PreviewPostList from '@/components/preview/PreviewPostList';
-import TrickListSmall from '@/components/tricks/TrickListSmall';
-import PostListSmall from '@/components/post/PostListSmall';
+import ClientSideRoute from '@/components/navigation/ClientSideRoute';
+import Image from 'next/image';
+import urlFor from '@/lib/urlFor';
+import { ArrowUpRightIcon } from '@heroicons/react/24/solid';
 
 const queryTrick = groq`
 *[_type=='trick'] {
-  ...,
-  author->,
-  categories[]->
-} | order(_createdAt desc)
-`;
-const query = groq`
-*[_type=='post'] {
   ...,
   author->,
   categories[]->
@@ -37,28 +31,51 @@ async function Resources() {
         }
       >
         <PreviewTrickList query={queryTrick} />
-        <PreviewPostList query={query} />
       </PreviewSuspense>
     );
   }
   const tricks = await client.fetch(queryTrick);
-  const posts = await client.fetch(query);
 
   return (
-    <main className="bg-gradient text-gray-200 grid grid-cols-1 md:grid-cols-2 gap-10 p-10">
-      <div className="mx-auto">
-        <h1 className="text-3xl xl:text-5xl text-center text-gray-300 tracking-[10px] uppercase transition transform hover:scale-105 hover:text-gray-300 hover:text-opacity-75 mx-auto rounded-3xl px-20">
-          Resources &amp; Tips
-        </h1>
-        {/* <TrickBanner /> */}
-        <TrickListSmall tricks={tricks} />
-      </div>
-      <div>
-        <h1 className="text-3xl xl:text-5xl text-center text-gray-300 tracking-[15px] uppercase transition transform hover:scale-105 hover:text-gray-300 hover:text-opacity-75 mx-auto rounded-3xl">
-          Hailey&apos;s Blog
-        </h1>
-        {/* <PostBanner /> */}
-        <PostListSmall posts={posts} />
+    <main className="bg-gradient p-10 md:p-3">
+      <div className="mx-auto ">
+        {/* <h1 className="text-3xl xl:text-7xl text-center text-gray-300 tracking-[10px] uppercase transition transform mx-auto my-16">
+          Graphic Designer&apos;s
+          <br></br> Bag of Tricks
+        </h1> */}
+        <div className="text-gray-200 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5 items-center mx-auto max-w-[500px] lg:max-w-[1000px] xl:max-w-full">
+          {tricks.map((trick: any) => {
+            return (
+              <ClientSideRoute key={trick._id} route={trick.linktotrick}>
+                <div>
+                  <div className="grid grid-cols-2 group cursor-pointer bg-slate-600/70">
+                    <div className="relative w-60 h-60 drop-shadow-xl group-hover:scale-105 transition-transform duration-200 ease-out">
+                      <Image
+                        className="object-cover object-center rounded-xl m-auto p-1"
+                        src={urlFor(trick.mainImage).url()}
+                        alt={trick.title}
+                        fill
+                      />
+                      <div className="absolute hidden xl:block w-60 h-60 bg-opacity-10 bg-black rounded text-white" />
+                    </div>
+                    <div className="z-[2] text-left mt-10 ml-5 lg:ml-10 group-hover:underline">
+                      <p className="font-bold text-xl">{trick.title}</p>
+                      <div className="flex justify-start items-center">
+                        <p className="mt-5 font-bold flex items-center text-sm">
+                          Read Trick
+                          <ArrowUpRightIcon className="ml-2 h-4 w-4" />
+                        </p>
+                      </div>
+                      <p className="font-bold py-4 pr-10 md:pr-0 xl:pr-5 text-sm">
+                        {trick.description}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </ClientSideRoute>
+            );
+          })}
+        </div>
       </div>
     </main>
   );
