@@ -88,7 +88,7 @@ async function Resources() {
           </h1>
           <hr className="border-2 border-[#5EBCAA] my-2" />
 
-          <div className="grid grid-cols-4 mx-auto">
+          <div className="grid grid-cols-2 lg:grid-cols-4 mx-auto">
             <div className="flex justify-center items-center">
               <div>
                 <TipListSmall tips={tips} />

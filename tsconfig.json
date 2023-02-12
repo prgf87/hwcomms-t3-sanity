@@ -21,7 +21,8 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./*"],
+      "@sendgrid/*": ["packages/*", "./node_modules/@types/react"]
     }
   },
   "include": [
@@ -29,6 +30,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
+    "pages/api/enquiry.ts",
     "pages/api/sendgrid.ts"
   ],
   "exclude": ["node_modules"]

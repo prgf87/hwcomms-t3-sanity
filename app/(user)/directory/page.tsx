@@ -46,7 +46,7 @@ async function Resources() {
     <main className="bg-gradient p-10 gap-10">
       <BannerOptions />
       <div className="mx-auto md:p-3">
-        <div className="text-gray-200 grid grid-cols-1 lg:grid-cols-2 gap-20 p-20 items-center mx-auto max-w-[500px] lg:max-w-full">
+        <div className="text-gray-200 grid grid-cols-1 lg:grid-cols-3 gap-20 p-20 items-center mx-auto max-w-[500px] lg:max-w-full">
           {directories.map((directory: any) => {
             return (
               <div key={directory._id}>

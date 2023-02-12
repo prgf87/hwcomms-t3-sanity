@@ -5,6 +5,7 @@ import Hero from '@/components/modules/Hero';
 import Navbar from '@/components/navigation/Navbar';
 import '../../globals.css';
 import Footer from '@/components/navigation/Footer';
+import BannerOptions from '@/components/navigation/BannerOptions';
 
 export default function RootLayout({
   children,
@@ -22,6 +23,7 @@ export default function RootLayout({
           custombg="custom-img4"
         />
         {children}
+        <BannerOptions />
         <Banner />
         <Footer anchor={'/resources/#resources'} />
       </body>

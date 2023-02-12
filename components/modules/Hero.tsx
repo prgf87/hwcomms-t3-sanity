@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ChevronDownIcon } from '@heroicons/react/24/solid';
+// import { ChevronDownIcon } from '@heroicons/react/24/solid';
 import { Cursor, useTypewriter } from 'react-simple-typewriter';
 
 function Hero({ heading, message, heroanchor, custombg }: any) {

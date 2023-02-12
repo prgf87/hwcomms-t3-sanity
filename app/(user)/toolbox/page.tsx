@@ -43,7 +43,7 @@ async function ToolboxPage() {
           Graphic Designer&apos;s
           <br></br> Bag of Tricks
         </h1> */}
-        <div className="text-gray-200 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5 items-center mx-auto max-w-[500px] lg:max-w-[1000px] xl:max-w-full">
+        <div className="text-gray-200 grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-3 gap-5 items-center mx-auto max-w-[800px] lg:max-w-[1000px] xl:max-w-full">
           {toolboxes.map((toolbox: any) => {
             return (
               <ClientSideRoute key={toolbox._id} route={toolbox.linktotoolbox}>

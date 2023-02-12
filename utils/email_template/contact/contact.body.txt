@@ -1,7 +1,0 @@
-You have received a new Contact Form from your website!
-
-Here are the client's contact details and their message:
-
-Name: ${name}
-Email: ${email}
-Message: ${message}

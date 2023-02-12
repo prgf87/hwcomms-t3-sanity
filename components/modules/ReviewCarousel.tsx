@@ -2,14 +2,11 @@
 'use client';
 
 import urlFor from '@/lib/urlFor';
-import {
-  ChevronDownIcon,
-  ChevronLeftIcon,
-  ChevronRightIcon,
-} from '@heroicons/react/24/solid';
+import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/solid';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Review } from '@/typing';
+import Image from 'next/image';
 
 type Props = {
   reviews: Review[];
@@ -29,7 +26,7 @@ function ReviewCarousel({ reviews }: Props) {
 
   return (
     <section className="relative min-h-screen custom-img8 bg-fixed">
-      <div className="min-h-screen bg-gradient-to-b from-black/40 via-black/70 to-black/90 left-0 top-0 right-0 bottom-0 z-[10]">
+      <div className="min-h-screen bg-gradient-to-b from-black/40 via-black/70 to-black/90 left-0 top-0 right-0 bottom-0 z-[10] lg:py-20">
         <div>
           <motion.h1
             initial={{
@@ -44,7 +41,7 @@ function ReviewCarousel({ reviews }: Props) {
             viewport={{
               once: true,
             }}
-            className="text-5xl text-center py-20 text-gray-400 tracking-[15px] uppercase"
+            className="text-3xl md:text-5xl text-center py-5 text-gray-400 tracking-[15px] uppercase"
           >
             Words From Colleagues
           </motion.h1>
@@ -76,10 +73,12 @@ function ReviewCarousel({ reviews }: Props) {
                     className="z-[0]"
                   >
                     <div className="z-[-1] py-5">
-                      <img
+                      <Image
                         src={urlFor(review.author.image).url()}
                         alt={review.title}
-                        className="h-60 w-60 rounded-full mx-auto items-center"
+                        width={9999}
+                        height={9999}
+                        className="h-[30vh] w-[30vh] rounded-full mx-auto items-center"
                       />
                     </div>
                     <div className="max-w-3xl mx-auto z-[2] text-gray-200 px-8 py-5 text-center">

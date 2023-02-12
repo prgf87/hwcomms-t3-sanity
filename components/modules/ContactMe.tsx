@@ -1,6 +1,6 @@
-'use client';
-
-import React, { useState } from 'react';
+import { useState } from 'react';
+import { useCallback } from 'react';
+import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 
 export default function ContactMe() {
   // States for contact form fields
@@ -11,102 +11,121 @@ export default function ContactMe() {
   const [org, setOrg] = useState('');
   const [date, setDate] = useState('');
   const [address, setAddress] = useState('');
-  const [type, setType] = useState('');
+  const [projectType, setProjectType] = useState('');
   const [hear, setHear] = useState('');
+  const [subject, setSubject] = useState('');
+  const [defaultValue] = useState('Select an option');
 
   //   Form validation state
-  // const [errors, setErrors] = useState({});
+  // const formValid = document.querySelector('form');
+  // const emailValid = document.getElementById('email');
+  // const emailValidError = document.querySelector('#email + span.error');
+  // const nameValid = document.getElementById('name');
+  // const nameValidError = document.querySelector('#name + span.error');
+  // const subjectValid = document.getElementById('subject');
+  // const subjectValidError = document.querySelector('#subject + span.error');
+  // const messageValid = document.getElementById('message');
+  // const messageValidError = document.querySelector('#message + span.error');
+
+  // Validation check method
 
   //   Setting button text on form submission
-  const [buttonText, setButtonText] = useState('Send');
+  const [buttonText, setButtonText] = useState('Send message');
 
   // Setting success or failure messages states
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
   const [showFailureMessage, setShowFailureMessage] = useState(false);
 
-  // Validation check method
-  // const handleValidation = () => {
-  //   let tempErrors = {};
-  //   let isValid = true;
+  const { executeRecaptcha } = useGoogleReCaptcha();
 
-  //   if (name.length <= 0) {
-  //     tempErrors['name'] = true;
-  //     isValid = false;
-  //   }
-  //   if (email.length <= 0) {
-  //     tempErrors['email'] = true;
-  //     isValid = false;
-  //   }
-  //   if (subject.length <= 0) {
-  //     tempErrors['subject'] = true;
-  //     isValid = false;
-  //   }
-  //   if (message.length <= 0) {
-  //     tempErrors['message'] = true;
-  //     isValid = false;
-  //   }
+  const handleSumit = useCallback(
+    (e: any) => {
+      e.preventDefault();
+      if (!executeRecaptcha) {
+        console.log('Execute recaptcha not yet available');
+        return;
+      }
 
-  //   setErrors({ ...tempErrors });
-  //   console.log('errors', errors);
-  //   return isValid;
-  // };
+      executeRecaptcha('enquiryFormSubmit').then((gReCaptchaToken) => {
+        console.log(gReCaptchaToken, 'response Google reCaptcha server');
+        async function submitEnquiryForm(gReCaptchaToken: string) {
+          fetch('/api/enquiry', {
+            method: 'POST',
+            headers: {
+              Accept: 'application/json, text/plain, */*',
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              gRecaptchaToken: gReCaptchaToken,
+            }),
+          })
+            .then((res) => res.json())
+            .then((res) => {
+              console.log(res, 'response from backend');
+              if (res?.status === 'success') {
+                console.log('**** Success Response!! ****', res?.message);
+              } else {
+                console.log('**** ERROR RESPONSE!! ****', res?.message);
+              }
 
-  //   Handling form submit
+              handleEmail(e);
+            });
+        }
+        submitEnquiryForm(gReCaptchaToken);
+        const handleEmail = async (e: any) => {
+          e.preventDefault();
+          setButtonText('Sending');
+          const res = await fetch('/api/sendgrid', {
+            body: JSON.stringify({
+              name: name,
+              email: email,
+              subject: subject,
+              message: message,
+              phone: phone,
+              org: org,
+              date: date,
+              address: address,
+              projectType: projectType,
+              hear: hear,
+            }),
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            method: 'POST',
+          });
 
-  const handleSubmit = async (e: any) => {
-    console.log(email, name, phone, org, date, address, type, hear, message);
+          const { error } = await res.json();
+          if (error) {
+            console.log(error);
+            setShowSuccessMessage(false);
+            setShowFailureMessage(true);
+            setButtonText('Send');
+            return;
+          }
+          setShowSuccessMessage(true);
+          setShowFailureMessage(false);
+          setButtonText('Send');
+          console.log('*** Message Sent! ***');
+          console.log(res);
+        };
+        gReCaptchaToken = '';
+      });
+    },
+    [
+      address,
+      date,
+      email,
+      executeRecaptcha,
+      hear,
+      message,
+      name,
+      org,
+      phone,
+      projectType,
+      subject,
+    ]
+  );
 
-    // e.preventDefault();
-
-    // let isValidForm = handleValidation();
-
-    // if (isValidForm) {
-    // setButtonText('Sending');
-    // const res = await fetch('/api/sendgrid', {
-    //   body: JSON.stringify({
-    //     name: name,
-    //     email: email,
-    //     message: message,
-    //     phone: phone,
-    //     org: org,
-    //     date: date,
-    //     address: address,
-    //     type: type,
-    //     hear: hear,
-    //   }),
-    //   headers: {
-    //     'Content-Type': 'application/json',
-    //   },
-    //   method: 'POST',
-    // });
-
-    //   const { error } = await res.json();
-    //   if (error) {
-    //     console.log(error);
-    //     setShowSuccessMessage(false);
-    //     setShowFailureMessage(true);
-    //     setButtonText('Send');
-    //     return;
-    //   }
-    //   setShowSuccessMessage(true);
-    //   setShowFailureMessage(false);
-    //   setButtonText('Send');
-    //   console.log('*** Message Sent! ***');
-    //   console.log(res);
-    // };
-    // console.log(
-    //   email,
-    //   subject,
-    //   name,
-    //   phone,
-    //   org,
-    //   date,
-    //   address,
-    //   type,
-    //   hear,
-    //   message
-    // );
-  };
   return (
     <section id="contact" className="bg-gradient-invert dark:bg-gray-900">
       <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
@@ -118,7 +137,8 @@ export default function ContactMe() {
           talk to me directly about anything else? Get in touch.
         </p>
         <form
-          onSubmit={handleSubmit}
+          noValidate={false}
+          onSubmit={handleSumit}
           className="rounded-lg shadow-xl flex flex-col px-8 py-8 bg-white dark:bg-blue-500"
         >
           <h1 className="text-2xl font-bold dark:text-gray-50">
@@ -131,12 +151,16 @@ export default function ContactMe() {
           >
             Full Name<span className="text-red-500 dark:text-gray-50">*</span>
           </label>
+
           <input
+            id="name"
             type="text"
             name="name"
             value={name}
+            required
+            minLength={6}
             onChange={(e) => {
-              setName(e.target.value);
+              setName(e?.target?.value);
             }}
             className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500"
           />
@@ -147,12 +171,16 @@ export default function ContactMe() {
           >
             E-mail<span className="text-red-500">*</span>
           </label>
+
           <input
+            id="email"
             type="email"
             name="email"
+            required
+            minLength={6}
             value={email}
             onChange={(e) => {
-              setEmail(e.target.value);
+              setEmail(e?.target?.value);
             }}
             className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500"
           />
@@ -163,12 +191,14 @@ export default function ContactMe() {
           >
             Phone Number
           </label>
+
           <input
+            id="phone"
             type="text"
             name="phone"
             value={phone}
             onChange={(e) => {
-              setPhone(e.target.value);
+              setPhone(e?.target?.value);
             }}
             className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500"
           />
@@ -179,12 +209,14 @@ export default function ContactMe() {
           >
             Organisation
           </label>
+
           <input
+            id="org"
             type="text"
             name="org"
             value={org}
             onChange={(e) => {
-              setOrg(e.target.value);
+              setOrg(e?.target?.value);
             }}
             className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500"
           />
@@ -195,12 +227,14 @@ export default function ContactMe() {
           >
             Project Start Date
           </label>
+
           <input
+            id="date"
             type="date"
             name="date"
             value={date}
             onChange={(e) => {
-              setDate(e.target.value);
+              setDate(e?.target?.value);
             }}
             className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500"
           />
@@ -211,43 +245,35 @@ export default function ContactMe() {
           >
             Business Address
           </label>
+
           <input
+            id="address"
             type="text"
             name="address"
             value={address}
             onChange={(e) => {
-              setAddress(e.target.value);
+              setAddress(e?.target?.value);
             }}
             className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500"
           />
 
           <label
-            htmlFor="type"
+            htmlFor="projectType"
             className="text-gray-500 font-light mt-4 mb-4 dark:text-gray-50"
           >
             What type of project are you looking for?
           </label>
+
           <select
-            name="type"
-            id="type"
-            value={type}
+            name="projectType"
+            id="projectType"
+            value={projectType}
             onChange={(e) => {
-              setType(e.target.value);
+              setProjectType(e?.target?.value);
             }}
             className="bg-transparent border-b py-4 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light block w-full text-sm text-gray-600 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
           >
-            <option
-              value=""
-              onChange={(e: any) => {
-                setType(e.target.value);
-              }}
-              disabled
-              selected
-              hidden
-            >
-              Select an option
-            </option>
-
+            <option>{defaultValue}</option>
             <option>Bio &amp; Social Interview</option>
             <option>Coaching - 1 on 1</option>
             <option>Coaching - Team / Group</option>
@@ -272,21 +298,12 @@ export default function ContactMe() {
             id="hear"
             value={hear}
             onChange={(e) => {
-              setHear(e.target.value);
+              setHear(e?.target?.value);
             }}
             className="bg-transparent border-b py-4 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light block w-full text-sm text-gray-600 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
           >
-            <option
-              value=""
-              onChange={(e: any) => {
-                setHear(e.target.value);
-              }}
-              disabled
-              selected
-              hidden
-            >
-              Select an option
-            </option>
+            <option>{defaultValue}</option>
+
             <option>Personal Website</option>
             <option>Google</option>
             <option>Facebook</option>
@@ -299,16 +316,40 @@ export default function ContactMe() {
           </select>
 
           <label
+            htmlFor="subject"
+            className="text-gray-500 font-light mt-4 dark:text-gray-50"
+          >
+            Subject<span className="text-red-500">*</span>
+          </label>
+
+          <input
+            id="subject"
+            type="text"
+            name="subject"
+            required
+            minLength={6}
+            value={subject}
+            onChange={(e) => {
+              setSubject(e?.target?.value);
+            }}
+            className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500"
+          />
+
+          <label
             htmlFor="message"
             className="text-gray-500 font-light mt-4 dark:text-gray-50"
           >
             Message<span className="text-red-500">*</span>
           </label>
           <textarea
+            id="message"
             name="message"
+            required
+            minLength={30}
+            maxLength={250}
             value={message}
             onChange={(e) => {
-              setMessage(e.target.value);
+              setMessage(e?.target?.value);
             }}
             className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500"
           />
@@ -317,9 +358,11 @@ export default function ContactMe() {
               type="submit"
               className="py-3 px-5 text-lg font-bold text-center text-white rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 mt-10"
             >
-              Send message
+              {buttonText}
             </button>
           </div>
+          {(showSuccessMessage && <p>{showSuccessMessage}</p>) ||
+            (showFailureMessage && <p>{showFailureMessage}</p>)}
         </form>
       </div>
     </section>

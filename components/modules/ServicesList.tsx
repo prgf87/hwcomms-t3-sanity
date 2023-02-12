@@ -11,10 +11,10 @@ function ServicesList() {
       <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-6xl text-center tracking-[20px] text-gray-200 px-20 py-5 lg:pt-16 xl:px-[30rem] uppercase">
         The ways in which I can help
       </h2>
-      <div className="grid grid-cols-1 xl:max-w-[45vw] items-center mx-auto">
+      <div className="grid grid-cols-1 max-w-[70vw] lg:max-w-[45vw] items-center mx-auto">
         <div className="xl:absolute xl:top-[75%] xl:right-[50%] px-5 lg:-p-0">
           <video
-            src="/videos/gif1.webm"
+            src="/videos/gif1.mp4"
             autoPlay
             muted
             playsInline
@@ -26,7 +26,7 @@ function ServicesList() {
         </div>
         {/* <div className="xl:absolute xl:top-[75%] xl:right-[50%]">
           <video
-            src="/videos/gif1.webm"
+            src="/videos/gif1.mp4"
             autoPlay
             muted
             playsInline

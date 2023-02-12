@@ -4,8 +4,6 @@ import { client } from '@/lib/sanity.client';
 import PreviewPostList from '@/components/preview/PreviewPostList';
 import PreviewSuspense from '@/components/preview/PreviewSuspense';
 import PostList from '@/components/post/PostList';
-import Banner from '@/components/navigation/Banner';
-import BannerOptions from '@/components/navigation/BannerOptions';
 
 const query = groq`
 *[_type=='post'] {
@@ -37,13 +35,9 @@ export default async function HomePage() {
 
   return (
     <main className="custom-img15 bg-fixed text-gray-200 z-[0] p-10 gap-10">
-      <div>
-        <BannerOptions />
-      </div>
       <section className="left-0 top-0 right-0 bottom-0 bg-gradient-to-b from-black/80 to-black/70 z-[2]">
         <PostList posts={posts} />
       </section>
-      <Banner />
     </main>
   );
 }
