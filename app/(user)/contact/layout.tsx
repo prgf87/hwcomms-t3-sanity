@@ -14,12 +14,12 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Navbar />
-        <Hero
+        {/* <Hero
           heading="Contact me"
           message="Use the form below to send me a message"
           custombg="custom-img3"
           heroanchor="/contact/#contact"
-        />
+        /> */}
         {children}
         <Footer anchor={'/contact/#contact'} />
       </body>

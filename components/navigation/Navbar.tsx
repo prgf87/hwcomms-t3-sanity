@@ -62,7 +62,7 @@ function Navbar() {
           style={{ color: `${textColor}` }}
           className="flex h-[55px] w-[120px] bg-cover transition-transform hover:scale-110 duration-200"
         >
-          <Link href="/">
+          <Link href="/" className="pt-2">
             <Logo />
           </Link>
         </div>
@@ -80,6 +80,11 @@ function Navbar() {
           <li className="p-2 hover:text-gray-400 text-xs md:text-sm lg:text-lg link link-underline link-underline-black">
             <Link href="/services">Services</Link>
           </li>
+          <li className="p-2 hover:text-gray-400 text-xs md:text-sm lg:text-lg link link-underline link-underline-black">
+            <Link href="https://www.talkingpointsforlife.com/">
+              Talking Points
+            </Link>
+          </li>
 
           <li className="relative">
             <button
@@ -93,40 +98,40 @@ function Navbar() {
                 dropdownOpen
                   ? `top-full opacity-100 visible`
                   : 'top-[110%] invisible opacity-0'
-              } absolute top-0 left-0 z-40 mt-2 w-[22rem] rounded bg-slate-800/60 py-2 shadow-card transition-all`}
+              } absolute top-0 left-0 z-40 mt-2 w-[22rem] rounded bg-slate-800/60 py-2 shadow-card transition-all duration-300`}
             >
               <Link
                 onClick={() => setdropdownOpen(!dropdownOpen)}
-                href="/blog"
-                className="block py-2 px-5 text-base font-semibold text-gray-200 hover:bg-gray-800/60 hover:text-primary"
+                href="http://haileycomms.substack.com/"
+                className="block py-2 px-5 text-base font-semibold text-gray-200 hover:bg-gray-800/60 hover:text-primary link link-underline link-underline-black"
               >
-                Hailey&apos;s Blog
+                Hailey&apos;s SubStack Blog
               </Link>
               <Link
                 onClick={() => setdropdownOpen(!dropdownOpen)}
                 href="/resources"
-                className="block py-2 px-5 text-base font-semibold text-gray-200 hover:bg-gray-800/60 hover:text-primary"
+                className="block py-2 px-5 text-base font-semibold text-gray-200 hover:bg-gray-800/60 hover:text-primary link link-underline link-underline-black"
               >
                 Resources &amp; Tips
               </Link>
               <Link
                 onClick={() => setdropdownOpen(!dropdownOpen)}
                 href="/toolbox"
-                className="block py-2 px-5 text-base font-semibold text-gray-200 hover:bg-gray-800/60 hover:text-primary"
+                className="block py-2 px-5 text-base font-semibold text-gray-200 hover:bg-gray-800/60 hover:text-primary link link-underline link-underline-black"
               >
                 Writer&apos;s Toolbox
               </Link>
               <Link
                 onClick={() => setdropdownOpen(!dropdownOpen)}
                 href="/tricks"
-                className="block py-2 px-5 text-base font-semibold text-gray-200 hover:bg-gray-800/60 hover:text-primary"
+                className="block py-2 px-5 text-base font-semibold text-gray-200 hover:bg-gray-800/60 hover:text-primary link link-underline link-underline-black"
               >
                 Graphic Designer&apos;s Bag of Tricks
               </Link>
               <Link
                 onClick={() => setdropdownOpen(!dropdownOpen)}
                 href="/directory"
-                className="block py-2 px-5 text-base font-semibold text-gray-200 hover:bg-gray-800/60 hover:text-primary"
+                className="block py-2 px-5 text-base font-semibold text-gray-200 hover:bg-gray-800/60 hover:text-primary link link-underline link-underline-black"
               >
                 The Creator&apos;s Online Resource Directory
               </Link>
@@ -134,13 +139,6 @@ function Navbar() {
           </li>
         </ul>
         <div className="pl-2 hidden sm:flex">
-          <SocialIcon
-            style={{ height: 30, width: 30 }}
-            url="https://www.facebook.com"
-            fgColor={textColor}
-            bgColor="transparent"
-            className="p-6 transition-transform hover:scale-125 duration-200"
-          />
           <SocialIcon
             style={{ height: 30, width: 30 }}
             url="https://www.twitter.com"
@@ -156,20 +154,6 @@ function Navbar() {
             className="p-6 transition-transform hover:scale-125 duration-200"
           />
         </div>
-        {/* <div className="flex justify-center items-center cursor-pointer link link-underline link-underline-black">
-          <SocialIcon
-            network="email"
-            fgColor={textColor}
-            bgColor="transparent"
-            url="/contact/#contact"
-          />
-          <p
-            style={{ color: `${textColor}` }}
-            className="md:hidden lg:block uppercase text-xs"
-          >
-            Get in touch
-          </p>
-        </div> */}
 
         {/*Mobile Menu Button */}
         <div
@@ -196,6 +180,7 @@ function Navbar() {
             />
           )}
         </div>
+
         {/*Mobile Menu */}
         <div
           className={

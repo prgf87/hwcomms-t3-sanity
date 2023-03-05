@@ -19,14 +19,7 @@ export default defineType({
         maxLength: 96,
       },
     }),
-    defineField({
-      name: 'companyImage',
-      title: 'CompanyImage',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
-    }),
+
     defineField({
       name: 'company',
       title: 'Company',

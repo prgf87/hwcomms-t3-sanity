@@ -25,10 +25,10 @@ async function Services() {
           <BannerOptions />
         </div>
 
-        <div>
+        {/* <div>
           <div id="banner" className="relative top-[-70px]" />
           <Banner />
-        </div>
+        </div> */}
       </div>
     </section>
   );

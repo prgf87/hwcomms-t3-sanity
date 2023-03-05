@@ -8,6 +8,7 @@ import PreviewReviewCarousel from '@/components/preview/PreviewReviewCarousel';
 import QuoteCarousel from '@/components/modules/QuoteCarousel';
 import Banner from '@/components/navigation/Banner';
 import ReviewCarousel from '@/components/modules/ReviewCarousel';
+import BannerBio from '@/components/navigation/BannerBio';
 // import Snapshots from '@/components/modules/Snapshots';
 // import PreviewPostList from '@/components/preview/PreviewPostList';
 // import PreviewTipList from '@/components/preview/PreviewTipList';
@@ -189,7 +190,7 @@ export default async function HomePage() {
 
         <div>
           <div id="banner" className="relative bottom-0" />
-          <Banner />
+          <BannerBio />
         </div>
       </div>
     </main>

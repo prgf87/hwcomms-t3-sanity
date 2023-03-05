@@ -3,26 +3,23 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ChevronDownIcon } from '@heroicons/react/24/solid';
-import BannerOptions from '../navigation/BannerOptions';
 
 function Bio() {
   return (
     <section className="bg-gradient">
       <div id="bio" className="relative top-[-100px]" />
-      <section className="text-gray-300">
-        <div className="max-w-xl md:max-w-5xl lg:max-w-[1440px] text-2xl items-center mx-auto rounded-3xl px-10">
+      <section className="text-gray-300 pt-20">
+        {/* Large/Medium Screens */}
+        <div className="sm:max-w-xl md:max-w-5xl lg:max-w-[1440px] text-[1rem] leading-5 sm:leading-7 sm:text-[1.3rem] items-center mx-auto sm:px-10">
           <div className="grid grid-cols-1 mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 space-x-8 h-screen">
+            <div className="grid grid-cols-1 md:grid-cols-3 min-h-[95vh] mx-auto">
               <div className="grid">
                 <motion.div
                   initial={{
                     opacity: 0,
-                    x: -500,
                   }}
                   whileInView={{
                     opacity: 1,
-                    x: -200,
                   }}
                   transition={{
                     duration: 1,
@@ -31,25 +28,23 @@ function Bio() {
                   viewport={{
                     once: true,
                   }}
-                  className="z-[0] absolute left-[31vh]"
+                  className="z-[0] flex justify-center items-center"
                 >
                   <Image
                     src="/images/hailey3.jpg"
                     alt="Hailey Wilson Hiking"
                     width={960}
                     height={720}
-                    className="h-[100vh] max-w-[50rem] object-cover object-right opacity-50 lg:opacity-100 rounded-full m-auto"
+                    className="h-[48rem] sm:h-[40rem] w-[40rem] object-cover object-right rounded-full m-auto sm:ml-20 lg:ml-60 absolute opacity-20 top-20 sm:top-0 sm:relative sm:opacity-100"
                   />
                 </motion.div>
               </div>
               <motion.div
                 initial={{
                   opacity: 0,
-                  x: 500,
                 }}
                 whileInView={{
                   opacity: 1,
-                  x: 0,
                 }}
                 transition={{
                   duration: 1,
@@ -57,16 +52,14 @@ function Bio() {
                 viewport={{
                   once: true,
                 }}
-                className="col-span-2 justify-center items-center mx-auto pl-28 md:pr-16 z-[2]"
+                className="col-span-2 justify-center items-center mx-auto lg:pl-28 lg:pr-16 z-[2]"
               >
                 <motion.div
                   initial={{
                     opacity: 0,
-                    x: 500,
                   }}
                   whileInView={{
                     opacity: 1,
-                    x: 0,
                   }}
                   transition={{
                     duration: 1,
@@ -77,19 +70,19 @@ function Bio() {
                   }}
                   className="px-4 py-2 mb-2"
                 >
-                  <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold tracking-widest pr-2 text-center md:text-right mt-10 xl:mt-18">
+                  <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold tracking-widest sm:pr-2 text-center md:text-right mt-10 xl:mt-40">
                     Who is?
                   </h1>
-                  <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold tracking-[10px] text-center md:text-right text-gray-200">
+                  <h1 className="text-2xl md:text-4xl lg:text-6xl font-bold tracking-[10px] text-center md:text-right text-gray-200">
                     Hailey Wilson
                   </h1>
-                  <div className="pl-28 text-justify">
+                  <div className="sm:pl-8 lg:pl-28 text-justify">
                     <p className="px-4 py-2 mt-6">
-                      As a down-to-earth communicator, strategist and
+                      As a down to earth communicator, strategist and
                       storyteller, I have a single goal for all of my projects:
                     </p>
 
-                    <p className="px-4 py-2 my-4 text-5xl uppercase text-center">
+                    <p className="px-4 py-2 my-4 text-3xl uppercase text-center font-bold">
                       Be authentic
                     </p>
 
@@ -126,34 +119,49 @@ function Bio() {
                       once: true,
                     }}
                   >
-                    <div className="flex justify-evenly gap-x-1 items-center mt-10 pl-40">
-                      <Link href="/contact">
-                        <button className="btn1-large px-12 py-4 text-lg">
-                          Get in Touch
-                        </button>
-                      </Link>
-
-                      <Link href="https://www.talkingpointsforlife.com/">
-                        <button className="btn1-large px-12 py-4 text-lg">
-                          Talking Points
-                        </button>
-                      </Link>
+                    <div className="sm:hidden grid grid-cols-1 lg:grid-cols-2">
+                      <div className="flex justify-evenly gap-x-1 items-center mt-10">
+                        <Link href="/contact">
+                          <button className="btn1-large px-12 py-4 text-lg">
+                            Get in Touch
+                          </button>
+                        </Link>
+                      </div>
+                      <div className="flex justify-evenly gap-x-1 items-center mt-10">
+                        <Link href="https://www.talkingpointsforlife.com/">
+                          <button className="btn1-large px-12 py-4 text-lg">
+                            Talking Points
+                          </button>
+                        </Link>
+                      </div>
                     </div>
                   </motion.div>
                 </motion.div>
               </motion.div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 space-x-8 h-screen">
-              <div className="col-span-2 justify-center items-center mx-auto md:mt-5 md:pr-40 z-[2]">
+            <div className="grid grid-cols-1 md:grid-cols-3 min-h-[95vh] mx-auto">
+              <motion.div
+                initial={{
+                  opacity: 0,
+                }}
+                whileInView={{
+                  opacity: 1,
+                }}
+                transition={{
+                  duration: 1,
+                }}
+                viewport={{
+                  once: true,
+                }}
+                className="sm:col-span-2 justify-center items-center mx-auto  md:pr-8 z-[2]"
+              >
                 <motion.div
                   initial={{
                     opacity: 0,
-                    x: -500,
                   }}
                   whileInView={{
                     opacity: 1,
-                    x: 0,
                   }}
                   transition={{
                     duration: 1,
@@ -162,34 +170,35 @@ function Bio() {
                   viewport={{
                     once: true,
                   }}
-                  className="pr-48 text-justify pt-20 pb-10 xl:mt-10"
+                  className="px-4 py-2 mb-2 pt-5 sm:pt-20"
                 >
-                  <p className="px-4 py-2">
-                    Whether it is explaining complex energy issues to business
-                    leaders, or detailing changes to a popular company policy to
-                    employees, I meet each challenge by remembering successful
-                    communications involve the following:
-                  </p>
-                  <p className="py-2 px-10 pt-8">
-                    ☞ Balancing what needs to be communicated with the way the
-                    audience wants to hear it.
-                  </p>
-                  <p className="py-2 px-10 pt-8">
-                    ☞ Respecting the audience by using an authentic style and
-                    avoiding jargon.
-                  </p>
-                  <p className="px-10 py-8">
-                    ☞ Earning the audience&apos;s attention through descriptive
-                    language and dynamic content.
-                  </p>
-                  <p className="px-4 py-2">
-                    I&apos;ve had a lot of success by following these simple
-                    rules and I&apos;m thankful to the hundreds of employees,
-                    executives and community members who have taught me through
-                    experience.
-                  </p>
-                </motion.div>
-                <div className="pr-52">
+                  <div className="lg:pl-28 text-justify">
+                    <p className="px-4 py-2">
+                      Whether it is explaining complex energy issues to business
+                      leaders, or detailing changes to a popular company policy
+                      to employees, I meet each challenge by remembering
+                      successful communications involve the following:
+                    </p>
+                    <p className="px-8 pt-4">
+                      ☞ Balancing what needs to be communicated with the way the
+                      audience wants to hear it.
+                    </p>
+                    <p className="px-8 pt-4">
+                      ☞ Respecting the audience by using an authentic style and
+                      avoiding jargon.
+                    </p>
+                    <p className="px-8 py-4">
+                      ☞ Earning the audience&apos;s attention through
+                      descriptive language and dynamic content.
+                    </p>
+                    <p className="px-4 py-2">
+                      I&apos;ve had a lot of success by following these simple
+                      rules and I&apos;m thankful to the hundreds of employees,
+                      executives and community members who have taught me
+                      through experience.
+                    </p>
+                  </div>
+
                   <motion.div
                     initial={{
                       opacity: 0,
@@ -205,58 +214,52 @@ function Bio() {
                       once: true,
                     }}
                   >
-                    <div className="flex justify-evenly gap-x-1 lg:gap-x-5 items-center">
-                      <Link href="/contact">
-                        <button className="btn1-large px-12 py-4 text-lg">
-                          Get in Touch
-                        </button>
-                      </Link>
-
-                      <Link href="https://www.talkingpointsforlife.com/">
-                        <button className="btn1-large px-12 py-4 text-lg">
-                          Talking Points
-                        </button>
-                      </Link>
+                    <div className="sm:hidden grid grid-cols-1 lg:grid-cols-2">
+                      <div className="flex justify-evenly gap-x-1 items-center mt-10">
+                        <Link href="/services">
+                          <button className="btn1-large px-12 py-4 text-lg">
+                            My Services
+                          </button>
+                        </Link>
+                      </div>
+                      <div className="flex justify-evenly gap-x-1 items-center mt-10">
+                        <Link href="/resources">
+                          <button className="btn1-large px-12 py-4 text-lg">
+                            Resources
+                          </button>
+                        </Link>
+                      </div>
                     </div>
                   </motion.div>
-                </div>
-              </div>
-
+                </motion.div>
+              </motion.div>
               <div className="grid">
                 <motion.div
                   initial={{
                     opacity: 0,
-                    x: 500,
                   }}
                   whileInView={{
                     opacity: 1,
-                    x: -200,
                   }}
                   transition={{
                     duration: 1,
-                    delay: 1,
                   }}
                   viewport={{
                     once: true,
                   }}
-                  className="z-[0] absolute right-0"
+                  className="z-[0] flex justify-center items-center"
                 >
                   <Image
                     src="/images/hailey2.png"
                     alt="Hailey Wilson Hiking"
                     width={952}
                     height={1400}
-                    className="h-[100vh] max-w-[50rem] object-cover object-bottom opacity-50 lg:opacity-100 rounded-full m-auto"
+                    className="h-[48rem] sm:h-[40rem]
+                    sm:top-[-7rem] w-[40rem] object-cover object-center rounded-full m-auto absolute opacity-20 top-[55rem] sm:relative sm:opacity-100"
                   />
                 </motion.div>
               </div>
             </div>
-
-            {/* <a href="#values" className="relative">
-              <button className="nav-chev-down absolute right-[-14.5rem] bottom-[2.2rem] m-5 lg:m-20 md:pr-5 animate-bounce">
-                <ChevronDownIcon className="h-6 w-6 md:h-10 md:w-10" />
-              </button>
-            </a> */}
           </div>
         </div>
       </section>

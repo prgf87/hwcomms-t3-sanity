@@ -4,7 +4,6 @@ import { client } from '@/lib/sanity.client';
 import PreviewSuspense from '@/components/preview/PreviewSuspense';
 import PreviewTipList from '@/components/preview/PreviewTipList';
 import PreviewPostList from '@/components/preview/PreviewPostList';
-import TipListSmall from '@/components/tip/TipListSmall';
 import TrickListSmall from '@/components/tricks/TrickListSmall';
 import PreviewTrickList from '@/components/preview/PreviewTrickList';
 import ToolboxListSmall from '@/components/toolbox/ToolboxListSmall';
@@ -12,7 +11,6 @@ import PreviewToolboxList from '@/components/preview/PreviewToolboxList';
 import DirectoryListSmall from '@/components/directory/DirectoryListSmall';
 import PreviewDirectoryList from '@/components/preview/PreviewDirectoryList';
 import Link from 'next/link';
-import PostList from '@/components/post/PostList';
 import BannerOptions from '@/components/navigation/BannerOptions';
 
 const query = groq`
@@ -82,14 +80,14 @@ async function Resources() {
   return (
     <main className="bg-gradient text-gray-200 grid grid-cols-1 gap-10 p-10">
       <div className="overflow-x-hidden">
-        <div className="mx-auto">
+        <div className="mx-auto pt-28">
           <h1 className="text-3xl text-center md:text-5xl lg:text-7xl pb-8 tracking-[15px] text-gray-200/80 uppercase px-20">
             Resources &amp; Tips
           </h1>
           <hr className="border-2 border-[#5EBCAA] my-2" />
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 mx-auto">
-            <div className="flex justify-center items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 mx-auto">
+            {/* <div className="flex justify-center items-center">
               <div>
                 <TipListSmall tips={tips} />
                 <Link
@@ -101,7 +99,7 @@ async function Resources() {
                   </button>
                 </Link>
               </div>
-            </div>
+            </div> */}
             <div className="flex justify-center items-center">
               <div>
                 <TrickListSmall tricks={tricks} />
@@ -142,10 +140,6 @@ async function Resources() {
               </div>
             </div>
           </div>
-        </div>
-
-        <div>
-          <PostList posts={posts} />
         </div>
       </div>
     </main>

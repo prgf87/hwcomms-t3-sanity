@@ -42,15 +42,15 @@ export default async function AboutPage() {
   const experiences = await client.fetch(queryExperience);
   return (
     <main>
-      <div className="overflow-x-hidden">
+      <div className="scroll-overflow-hidden">
         <div>
           <div id="home" className="fixed top-0" />
-          <Hero
-            heading="Learn about what drives me"
+          {/* <Hero
+            heading="About me"
             message="Scroll down to find out more"
             custombg="custom-img2"
             heroanchor="#bio"
-          />
+          /> */}
         </div>
         <div>
           <div id="bio" className="relative top-[-80px]" />

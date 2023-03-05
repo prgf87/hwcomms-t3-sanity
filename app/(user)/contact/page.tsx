@@ -11,7 +11,7 @@ function Contact() {
         <GoogleReCaptchaProvider
           reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_KEY as string}
           scriptProps={{
-            async: false,
+            async: true,
             defer: false,
             appendTo: 'head',
             nonce: undefined,

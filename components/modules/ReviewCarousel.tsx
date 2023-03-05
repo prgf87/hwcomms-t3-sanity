@@ -26,7 +26,7 @@ function ReviewCarousel({ reviews }: Props) {
 
   return (
     <section className="relative min-h-screen custom-img8 bg-fixed">
-      <div className="min-h-screen bg-gradient-to-b from-black/40 via-black/70 to-black/90 left-0 top-0 right-0 bottom-0 z-[10] lg:py-20">
+      <div className="min-h-screen bg-gradient-to-b from-black/50 via-black/70 to-black/90 left-0 top-0 right-0 bottom-0 z-[10] lg:py-20">
         <div>
           <motion.h1
             initial={{
@@ -41,9 +41,9 @@ function ReviewCarousel({ reviews }: Props) {
             viewport={{
               once: true,
             }}
-            className="text-3xl md:text-5xl text-center py-5 text-gray-400 tracking-[15px] uppercase"
+            className="text-xl md:text-3xl lg:text-5xl text-center pt-10 text-gray-400 md:tracking-[15px] uppercase md:px-20 lg:px-[32rem]"
           >
-            Words From Colleagues
+            Words From Clients & Colleagues
           </motion.h1>
           {/* Reviews */}
           {reviews.map((review, index) => {
@@ -82,7 +82,7 @@ function ReviewCarousel({ reviews }: Props) {
                       />
                     </div>
                     <div className="max-w-3xl mx-auto z-[2] text-gray-200 px-8 py-5 text-center">
-                      <p className="p-2 text-2xl">{review.review}</p>
+                      <p className="p-2 text-xl">{review.review}</p>
                       <h2 className="text-3xl p-2">{review.author.name}</h2>
                     </div>
                   </motion.div>
