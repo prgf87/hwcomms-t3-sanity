@@ -33,8 +33,8 @@ function ToolboxListSmall({ toolboxes }: Props) {
                       alt={toolbox.title}
                       fill
                     />
-                    <div className="absolute w-[22rem] h-40 bg-opacity-30 bg-black backdrop-blur-md rounded  text-white flex justify-between" />
-                    <div className="relative right-[-10rem] top-4 z-[2]">
+                    <div className="absolute w-[22rem] h-40 bg-opacity-40 bg-black rounded  text-white flex justify-between" />
+                    <div className="relative right-[-10rem] top-4 z-[2] px-4">
                       <p className="font-bold line-clamp-2">{toolbox.title}</p>
                       <p>
                         {new Date(toolbox._createdAt).toLocaleDateString(

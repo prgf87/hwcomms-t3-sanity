@@ -2,8 +2,6 @@ import { previewData } from 'next/headers';
 import { groq } from 'next-sanity';
 import { client } from '@/lib/sanity.client';
 import PreviewSuspense from '@/components/preview/PreviewSuspense';
-import PreviewTipList from '@/components/preview/PreviewTipList';
-import PreviewPostList from '@/components/preview/PreviewPostList';
 import TrickListSmall from '@/components/tricks/TrickListSmall';
 import PreviewTrickList from '@/components/preview/PreviewTrickList';
 import ToolboxListSmall from '@/components/toolbox/ToolboxListSmall';
@@ -11,22 +9,11 @@ import PreviewToolboxList from '@/components/preview/PreviewToolboxList';
 import DirectoryListSmall from '@/components/directory/DirectoryListSmall';
 import PreviewDirectoryList from '@/components/preview/PreviewDirectoryList';
 import Link from 'next/link';
+import { Directory } from '@/typing';
 import BannerOptions from '@/components/navigation/BannerOptions';
+import BannerBio from '@/components/navigation/BannerBio';
+import ReviewCarousel from '@/components/modules/ReviewCarousel';
 
-const query = groq`
-*[_type=='post'][0..3] {
-  ...,
-  author->,
-  categories[]->
-} | order(_createdAt desc)
-`;
-const queryTip = groq`
-*[_type=='tip'][0..2] {
-  ...,
-  author->,
-  categories[]->
-} | order(_createdAt desc)
-`;
 const queryTrick = groq`
 *[_type=='trick'][0..2] {
   ...,
@@ -48,6 +35,13 @@ const queryDirectory = groq`
   categories[]->
 } | order(_createdAt desc)
 `;
+const queryReview = groq`
+*[_type=='review'] {
+  ...,
+  author->,
+  categories[]->
+} | order(_createdAt asc)
+`;
 
 export const revalidate = 60;
 
@@ -63,44 +57,33 @@ async function Resources() {
           </div>
         }
       >
-        <PreviewPostList query={query} />
-        <PreviewTipList query={queryTip} />
         <PreviewTrickList query={queryTrick} />
         <PreviewToolboxList query={queryToolbox} />
         <PreviewDirectoryList query={queryDirectory} />
       </PreviewSuspense>
     );
   }
-  const posts = await client.fetch(query);
-  const tips = await client.fetch(queryTip);
+
   const tricks = await client.fetch(queryTrick);
   const toolboxes = await client.fetch(queryToolbox);
   const directories = await client.fetch(queryDirectory);
+  const reviews = await client.fetch(queryReview);
 
   return (
-    <main className="bg-gradient text-gray-200 grid grid-cols-1 gap-10 p-10">
+    <main className="bg-gradient text-gray-200 grid grid-cols-1">
       <div className="overflow-x-hidden">
-        <div className="mx-auto pt-28">
-          <h1 className="text-3xl text-center md:text-5xl lg:text-7xl pb-8 tracking-[15px] text-gray-200/80 uppercase px-20">
+        <div className="mx-auto pt-12">
+          <h1 className="text-3xl text-center md:text-5xl lg:text-7xl pb-8 tracking-[15px] text-gray-200 uppercase px-20">
             Resources &amp; Tips
           </h1>
           <hr className="border-2 border-[#5EBCAA] my-2" />
+          <BannerOptions />
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 mx-auto">
-            {/* <div className="flex justify-center items-center">
-              <div>
-                <TipListSmall tips={tips} />
-                <Link
-                  href="/resources"
-                  className="flex justify-center items-center"
-                >
-                  <button className="btn1-large text-center text-base">
-                    Useful Tips
-                  </button>
-                </Link>
-              </div>
-            </div> */}
-            <div className="flex justify-center items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 mx-auto p-10">
+            <div className="grid justify-center items-center">
+              <h1 className="text-center mt-10 text-2xl tracking-widest">
+                Graphic Designer&apos;s Bag of Tricks
+              </h1>
               <div>
                 <TrickListSmall tricks={tricks} />
                 <Link
@@ -108,12 +91,15 @@ async function Resources() {
                   className="flex justify-center items-center"
                 >
                   <button className="btn1-large text-center text-base">
-                    Design Tricks
+                    Click for More
                   </button>
                 </Link>
               </div>
             </div>
-            <div className="flex justify-center items-center">
+            <div className="grid justify-center items-center">
+              <h1 className="text-center mt-10 text-2xl tracking-widest">
+                Creative Writer&apos;s Toolbox
+              </h1>
               <div>
                 <ToolboxListSmall toolboxes={toolboxes} />
                 <Link
@@ -121,12 +107,15 @@ async function Resources() {
                   className="flex justify-center items-center"
                 >
                   <button className="btn1-large text-center text-base">
-                    Writer&apos;s Toolbox
+                    Click for More
                   </button>
                 </Link>
               </div>
             </div>
-            <div className="flex justify-center items-center">
+            <div className="grid justify-center items-center">
+              <h1 className="text-center mt-10 text-2xl tracking-widest">
+                Online Resource Directory
+              </h1>
               <div>
                 <DirectoryListSmall directories={directories} />
                 <Link
@@ -134,7 +123,7 @@ async function Resources() {
                   className="flex justify-center items-center"
                 >
                   <button className="btn1-large text-center text-base">
-                    Resource Directory
+                    Click for More{' '}
                   </button>
                 </Link>
               </div>
@@ -142,6 +131,8 @@ async function Resources() {
           </div>
         </div>
       </div>
+      <ReviewCarousel reviews={reviews} />
+      <BannerBio />
     </main>
   );
 }

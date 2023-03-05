@@ -45,7 +45,7 @@ export const RichTextComponents = {
       return <div className="text-xl py-5 font-semibold">{children}</div>;
     },
     normal: ({ children }: any) => {
-      return <div className="text-lg py-5 font-light">{children}</div>;
+      return <div className="text-xl py-5 font-light">{children}</div>;
     },
 
     blockquote: ({ children }: any) => {

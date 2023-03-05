@@ -12,16 +12,8 @@ function TrickListSmall({ tricks }: Props) {
   return (
     <>
       <div className="max-w-[800px] lg:max-w-7xl mx-auto">
-        {/* <div className="col-span-2 flex items-center justify-center py-4">
-          <Link href="/resources">
-            <button className="btn1-large text-xl">Resources &amp; Tricks</button>
-          </Link>
-        </div> */}
-        {/* <hr className="border-2 border-[#5EBCAA] my-2" /> */}
-
         <div className="grid grid-cols-1 px-8 py-2 gap-y-4 pb-8 mt-8">
           {/* Tricks */}
-
           {tricks.map((trick) => {
             return (
               <ClientSideRoute key={trick._id} route={trick.linktotrick}>
@@ -33,8 +25,8 @@ function TrickListSmall({ tricks }: Props) {
                       alt={trick.title}
                       fill
                     />
-                    <div className="absolute w-[22rem] h-40 bg-opacity-30 bg-black backdrop-blur-md rounded  text-white flex justify-between" />
-                    <div className="relative right-[-10rem] top-4 z-[2]">
+                    <div className="absolute w-[22rem] h-40 bg-opacity-40 bg-black rounded  text-white flex justify-between" />
+                    <div className="relative right-[-10rem] top-4 z-[2] px-4">
                       <p className="font-bold line-clamp-2">{trick.title}</p>
                       <p>
                         {new Date(trick._createdAt).toLocaleDateString(
@@ -46,18 +38,7 @@ function TrickListSmall({ tricks }: Props) {
                           }
                         )}
                       </p>
-                      {/* <div className="flex flex-col md:flex-row gap-y-2 md:gap-x-2 items-center justify-center pt-2">
-                        {trick.categories.map((category) => {
-                          return (
-                            <div
-                              key={category._id}
-                              className="bg-[#5EBCAA] text-center text-black px-3 py-1 rounded-full text-sm font-semibold"
-                            >
-                              <div>{category.title}</div>
-                            </div>
-                          );
-                        })}
-                      </div> */}
+
                       <div className="flex justify-center items-center">
                         <p className="mt-5 font-bold flex items-center group-hover:underline">
                           Read Trick
@@ -72,12 +53,6 @@ function TrickListSmall({ tricks }: Props) {
           })}
         </div>
       </div>
-      {/* <a href="#banner">
-        <button className="nav-chev-down absolute right-[-19.4rem] bottom-[1.7rem] m-5 lg:m-20 md:pr-5 animate-bounce">
-          <ChevronDownIcon className="h-6 w-6 md:h-10 md:w-10 text-white" />
-        </button>
-      </a>
-      */}
     </>
   );
 }

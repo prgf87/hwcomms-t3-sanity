@@ -81,7 +81,6 @@ export default function Footer({ anchor }: any) {
           </div>
         </div>
         <div className="sm:hidden p-10 text-center">
-          <h1 className="text-xl font-bold pb-4">Contact me</h1>
           <p className="text-gray-200 italic">
             Please feel free to send me an email:
           </p>

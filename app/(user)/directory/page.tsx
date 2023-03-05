@@ -9,6 +9,7 @@ import { Directory } from '@/typing';
 import { PortableText } from '@portabletext/react';
 import { RichTextComponents } from '@/components/modules/RichTextComponents';
 import BannerOptions from '@/components/navigation/BannerOptions';
+import BannerBio from '@/components/navigation/BannerBio';
 
 type Pros = {
   directories: Directory[];
@@ -51,14 +52,14 @@ async function Resources() {
             return (
               <div key={directory._id}>
                 <div className="grid grid-cols-1 bg-blue-900/20 rounded-2xl border border-gray-900/20 shadow-2xl">
-                  <div className="relative col-span-2 w-80 h-80 drop-shadow-xl mx-auto">
+                  <div className="relative col-span-2 w-40 h-40 drop-shadow-xl mx-auto">
                     <Image
                       className="object-cover object-center rounded-full my-5 shadow-xl"
                       src={urlFor(directory.mainImage).url()}
                       alt={directory.title}
                       fill
                     />
-                    <div className="absolute hidden xl:block w-80 h-80 bg-opacity-10 bg-black text-white rounded-full my-5" />
+                    {/* <div className="absolute hidden xl:block w-80 h-80 bg-opacity-10 bg-black text-white rounded-full my-5" /> */}
                   </div>
                   <div className="z-[2] text-center mt-10 ml-5 lg:ml-10 group-hover:underline">
                     <p className="font-bold text-2xl">{directory.title}</p>
@@ -79,6 +80,7 @@ async function Resources() {
           })}
         </div>
       </div>
+      <BannerBio />
     </main>
   );
 }

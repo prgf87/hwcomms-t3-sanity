@@ -105,7 +105,7 @@ function Navbar() {
                 href="http://haileycomms.substack.com/"
                 className="block py-2 px-5 text-base font-semibold text-gray-200 hover:bg-gray-800/60 hover:text-primary link link-underline link-underline-black"
               >
-                Hailey&apos;s SubStack Blog
+                Hailey&apos;s Blog
               </Link>
               <Link
                 onClick={() => setdropdownOpen(!dropdownOpen)}
@@ -126,14 +126,14 @@ function Navbar() {
                 href="/tricks"
                 className="block py-2 px-5 text-base font-semibold text-gray-200 hover:bg-gray-800/60 hover:text-primary link link-underline link-underline-black"
               >
-                Graphic Designer&apos;s Bag of Tricks
+                Designer&apos;s Bag of Tricks
               </Link>
               <Link
                 onClick={() => setdropdownOpen(!dropdownOpen)}
                 href="/directory"
                 className="block py-2 px-5 text-base font-semibold text-gray-200 hover:bg-gray-800/60 hover:text-primary link link-underline link-underline-black"
               >
-                The Creator&apos;s Online Resource Directory
+                Online Resource Directory
               </Link>
             </div>
           </li>
@@ -164,7 +164,7 @@ function Navbar() {
               setTextColor('#000000');
             }
           }}
-          className="inline sm:hidden z-10"
+          className="inline md:hidden z-10"
         >
           {nav ? (
             <AiOutlineClose
@@ -185,8 +185,8 @@ function Navbar() {
         <div
           className={
             nav
-              ? 'sm:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300'
-              : 'sm:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300'
+              ? 'md:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300'
+              : 'md:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300'
           }
         >
           <ul onClick={handleNav}>
@@ -204,6 +204,20 @@ function Navbar() {
             </li>
             <li className="p-4 text-4xl hover:text-gray-500">
               <Link href="/resources">Resources</Link>
+            </li>
+            <li className="p-4 text-4xl hover:text-gray-500">
+              <Link href="http://haileycomms.substack.com/">
+                Hailey&apos;s Blog
+              </Link>
+            </li>
+            <li className="p-4 text-4xl hover:text-gray-500">
+              <Link href="/toolbox">Writer&apos;s Toolbox</Link>
+            </li>
+            <li className="p-4 text-4xl hover:text-gray-500">
+              <Link href="/tricks">Designer&apos;s Bag of Tricks</Link>
+            </li>
+            <li className="p-4 text-4xl hover:text-gray-500">
+              <Link href="/directory">Online Resource Directory</Link>
             </li>
           </ul>
         </div>

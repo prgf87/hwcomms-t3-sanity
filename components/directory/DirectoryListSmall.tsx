@@ -26,8 +26,8 @@ function DirectoryListSmall({ directories }: Props) {
                       alt={directory.title}
                       fill
                     />
-                    <div className="absolute w-[22rem] h-40 bg-opacity-30 bg-black backdrop-blur-md rounded  text-white flex justify-between" />
-                    <div className="relative right-[-10rem] top-4 z-[2]">
+                    <div className="absolute w-[22rem] h-40 bg-opacity-40 bg-black rounded  text-white flex justify-between" />
+                    <div className="relative right-[-10rem] top-4 z-[2] px-4">
                       <p className="font-bold line-clamp-2">
                         {directory.title}
                       </p>
@@ -41,18 +41,7 @@ function DirectoryListSmall({ directories }: Props) {
                           }
                         )}
                       </p>
-                      {/* <div className="flex flex-col md:flex-row gap-y-2 md:gap-x-2 items-center justify-center pt-2">
-                        {directory.categories.map((category: any) => {
-                          return (
-                            <div
-                              key={category._id}
-                              className="bg-[#5EBCAA] text-center text-black px-3 py-1 rounded-full text-sm font-semibold"
-                            >
-                              <div>{category.title}</div>
-                            </div>
-                          );
-                        })}
-                      </div> */}
+
                       <div className="flex justify-center items-center">
                         <p className="mt-5 font-bold flex items-center group-hover:underline">
                           Read Directory
@@ -67,12 +56,6 @@ function DirectoryListSmall({ directories }: Props) {
           })}
         </div>
       </div>
-      {/* <a href="#banner">
-        <button className="nav-chev-down absolute right-[-19.4rem] bottom-[1.7rem] m-5 lg:m-20 md:pr-5 animate-bounce">
-          <ChevronDownIcon className="h-6 w-6 md:h-10 md:w-10 text-white" />
-        </button>
-      </a>
-      */}
     </>
   );
 }
