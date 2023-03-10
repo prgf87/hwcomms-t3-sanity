@@ -15,19 +15,7 @@ export default function ContactMe() {
   const [hear, setHear] = useState('');
   const [subject, setSubject] = useState('');
   const [defaultValue] = useState('Select an option');
-
-  //   Form validation state
-  // const formValid = document.querySelector('form');
-  // const emailValid = document.getElementById('email');
-  // const emailValidError = document.querySelector('#email + span.error');
-  // const nameValid = document.getElementById('name');
-  // const nameValidError = document.querySelector('#name + span.error');
-  // const subjectValid = document.getElementById('subject');
-  // const subjectValidError = document.querySelector('#subject + span.error');
-  // const messageValid = document.getElementById('message');
-  // const messageValidError = document.querySelector('#message + span.error');
-
-  // Validation check method
+  const [buttonDis, setButtonDis] = useState(false);
 
   //   Setting button text on form submission
   const [buttonText, setButtonText] = useState('Send message');
@@ -41,6 +29,7 @@ export default function ContactMe() {
   const handleSumit = useCallback(
     (e: any) => {
       e.preventDefault();
+
       if (!executeRecaptcha) {
         console.log('Execute recaptcha not yet available');
         return;
@@ -61,7 +50,7 @@ export default function ContactMe() {
           })
             .then((res) => res.json())
             .then((res) => {
-              console.log(res, 'response from backend');
+              console.log('Response from backend: ', res);
               if (res?.status === 'success') {
                 console.log('**** Success Response!! ****', res?.message);
               } else {
@@ -74,7 +63,20 @@ export default function ContactMe() {
         submitEnquiryForm(gReCaptchaToken);
         const handleEmail = async (e: any) => {
           e.preventDefault();
+
           setButtonText('Sending');
+          setButtonDis(true);
+          setName('');
+          setEmail('');
+          setMessage('');
+          setPhone('');
+          setOrg('');
+          setDate('');
+          setAddress('');
+          setProjectType('');
+          setHear('');
+          setSubject('');
+
           const res = await fetch('/api/sendgrid', {
             body: JSON.stringify({
               name: name,
@@ -96,26 +98,38 @@ export default function ContactMe() {
 
           const { error } = await res.json();
           if (error) {
+            setButtonText('Try Again');
+            setButtonDis(true);
+            setName('');
+            setEmail('');
+            setMessage('');
+            setPhone('');
+            setOrg('');
+            setDate('');
+            setAddress('');
+            setProjectType('');
+            setHear('');
+            setSubject('');
             console.log(error);
-            setShowSuccessMessage(false);
-            setShowFailureMessage(true);
-            setButtonText('Send');
             return;
           }
           setShowSuccessMessage(true);
           setShowFailureMessage(false);
-          setButtonText('Send');
-          console.log('*** Message Sent! ***');
-          console.log(res);
+          setButtonText('Sent');
+          setButtonDis(false);
         };
         gReCaptchaToken = '';
+        setTimeout(() => {
+          setButtonText('Send Message');
+          setButtonDis(false);
+        }, 5000);
       });
     },
     [
+      executeRecaptcha,
       address,
       date,
       email,
-      executeRecaptcha,
       hear,
       message,
       name,
@@ -356,6 +370,7 @@ export default function ContactMe() {
           <div className="flex justify-center items-center">
             <button
               type="submit"
+              disabled={buttonDis}
               className="py-3 px-5 text-lg font-bold text-center text-white rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 mt-10"
             >
               {buttonText}

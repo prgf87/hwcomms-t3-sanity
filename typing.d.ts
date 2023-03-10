@@ -8,26 +8,6 @@ type Base = {
   _updatedAt: string;
 };
 
-interface Post extends Base {
-  author: Author;
-  body: Block[];
-  categories: Category[];
-  mainImage: Image;
-  slug: Slug;
-  title: string;
-  description: string;
-}
-
-interface Tip extends Base {
-  author: Author;
-  body: Block[];
-  categories: Category[];
-  mainImage: Image;
-  slug: Slug;
-  title: string;
-  description: string;
-}
-
 interface Quote extends Base {
   author: Author;
   mainImage: Image;
@@ -57,7 +37,6 @@ interface Directory extends Base {
 interface Experience extends Base {
   jobtitle: string;
   slug: Slug;
-  companyImage: Image;
   company: string;
   dateStarted: date;
   dateEnded: date;
