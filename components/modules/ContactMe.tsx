@@ -221,7 +221,7 @@ export default function ContactMe() {
             htmlFor="org"
             className="text-gray-500 font-light mt-4 dark:text-gray-50"
           >
-            Organisation
+            Organization
           </label>
 
           <input
@@ -359,7 +359,7 @@ export default function ContactMe() {
             id="message"
             name="message"
             required
-            minLength={30}
+            minLength={15}
             maxLength={250}
             value={message}
             onChange={(e) => {

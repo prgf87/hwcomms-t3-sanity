@@ -20,11 +20,12 @@ function Intro() {
         viewport={{
           once: true,
         }}
+        className="py-8"
       >
-        <h1 className="text-3xl text-center md:text-5xl lg:text-7xl pt-8 pb-5 xl:pb-0 tracking-widest overflow-y-hidden z-[2]">
+        <h1 className="text-3xl text-center md:text-5xl lg:text-7xl pt-8 pb-5 xl:pb-0 tracking-widest overflow-y-hidden z-[2] uppercase">
           Think like a scientist
         </h1>
-        <h2 className="text-3xl text-center md:text-5xl lg:text-5xl tracking-[10px] text-gray-300 overflow-y-hidden">
+        <h2 className="text-3xl text-center md:text-5xl lg:text-5xl pt-6 tracking-widest text-gray-300 overflow-y-hidden">
           Sound like a human
         </h2>
       </motion.div>
@@ -81,7 +82,7 @@ function Intro() {
               loop
               width={960}
               height={960}
-              className="h-80 w-80 md:h-[40vh] md:w-[40vh] xl:h-[65vh] xl:w-[65vh] m-6 object-cover"
+              className="h-[25rem] w-[25rem] md:h-[40vh] md:w-[40vh] xl:h-[65vh] xl:w-[65vh] m-6 object-cover"
             >
               <source src="/videos/tpgif.mp4" />
             </video>
@@ -115,12 +116,12 @@ function Intro() {
             viewport={{
               once: true,
             }}
-            className="hidden xl:block mx-4 text-right text-[1.25rem] mb-5"
+            className="hidden xl:block mx-4 text-left text-[1.3rem] mb-5"
           >
-            <h1 className="text-4xl font-bold px-4 md:pb-5 lg:pb-5 tracking-widest pt-5">
+            <h1 className="text-3xl font-bold px-4 pr-36 ml-8 md:pb-5 lg:pb-5 pt-5">
               Deep understanding leads to deep connections
             </h1>
-            <p className="px-6 md:px-2 text-justify ml-10">
+            <p className="px-6 md:px-2 text-left ml-10">
               Welcome! My unique approach to communications strategy blends
               empathy practices with a deep knowledge of how our brains work.
               This approach connects my clients to their desired audiences in

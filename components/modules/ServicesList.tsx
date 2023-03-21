@@ -6,7 +6,7 @@ function ServicesList() {
   return (
     <section id="services-list" className="bg-gradient-invert w-screen">
       <div className="min-h-screen my-20">
-        <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-6xl text-center tracking-[20px] text-gray-200 sm:px-20 py-5 lg:pt-16 xl:px-[30rem] uppercase pt-20">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-6xl text-center tracking-[20px] text-gray-200 sm:px-20 py-5 lg:pt-16 xl:px-[15rem] uppercase pt-20">
           I&apos;m here to help
         </h2>
         <button className="btn4-large my-10 xl:text-4xl">
