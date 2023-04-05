@@ -20,7 +20,7 @@ function Resume({ experiences }: Props) {
         viewport={{ once: true }}
         className="absolute left-0 top-0 right-0 bottom-0 bg-cover bg-black z-[0] flex justify-evenly"
       />
-      <div className="relative flex flex-col md:flex-row max-w-full px-10 mx-auto">
+      <div className="relative flex flex-col md:flex-row max-w-full px-80 mx-auto">
         <motion.h3
           initial={{
             opacity: 0,

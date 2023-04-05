@@ -19,6 +19,11 @@ body {
   /* font-family: 'Playfair Display', serif; */
   /* font-family: 'Libre Caslon Text', serif; */
   /* font-family: 'PT Serif', serif; */
+  font-family: sans-serif;
+}
+
+h1,
+h2 {
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 

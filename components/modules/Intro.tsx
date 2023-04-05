@@ -20,12 +20,12 @@ function Intro() {
         viewport={{
           once: true,
         }}
-        className="py-8"
+        className="pt-8"
       >
-        <h1 className="text-3xl text-center md:text-5xl lg:text-7xl pt-8 pb-5 xl:pb-0 tracking-widest overflow-y-hidden z-[2] uppercase">
+        <h1 className="text-3xl text-center md:text-5xl lg:text-7xl pt-8 pb-5 xl:pb-0 tracking-[15px] overflow-y-hidden z-[2] uppercase">
           Think like a scientist
         </h1>
-        <h2 className="text-3xl text-center md:text-5xl lg:text-5xl pt-6 tracking-widest text-gray-300 overflow-y-hidden">
+        <h2 className="text-3xl text-center md:text-5xl lg:text-[4rem] pt-6 tracking-[15px] text-gray-300 overflow-y-hidden uppercase">
           Sound like a human
         </h2>
       </motion.div>
