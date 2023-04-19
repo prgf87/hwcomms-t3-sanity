@@ -21,7 +21,7 @@ function Resume({ experiences }: Props) {
         className="absolute left-0 top-0 right-0 bottom-0 bg-cover bg-black z-[0] flex justify-evenly"
       />
       <div className="relative flex flex-col md:flex-row max-w-full px-80 mx-auto">
-        <motion.h3
+        <motion.h1
           initial={{
             opacity: 0,
           }}
@@ -35,10 +35,10 @@ function Resume({ experiences }: Props) {
           viewport={{
             once: true,
           }}
-          className="absolute left-0 right-0 top-16 text-center uppercase tracking-[20px] text-gray-300 text-5xl"
+          className="absolute left-0 right-0 top-16 text-center text-gray-200 sm:text-5xl lg:text-7xl tracking-widest sm:tracking-[15px] uppercase font-bold"
         >
           My Resume
-        </motion.h3>
+        </motion.h1>
         <div className="min-h-screen w-full grid px-10 justify-left items-left mx-auto text-gray-200">
           <div className="grid p-10 mt-40 gap-y-20">
             {experiences.map((experience) => {

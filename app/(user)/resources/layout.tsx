@@ -15,16 +15,19 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Navbar />
-        <Hero
-          heading="Resources &amp; Tips"
-          message="Search through our many tips and Resources"
-          heroanchor="/resources/#resources-banner"
-          custombg="custom-img4"
-        />
+        <div className="hero-image-container-resources">
+          <Hero
+            heading="Resources &amp; Tips"
+            message="Search through our many tips and resources"
+            heroanchor="/resources/#resources-banner"
+            custombg="img31.png"
+            position="center bottom"
+          />
+        </div>
 
         {children}
 
-        <Footer anchor={'/resources/#resources'} />
+        <Footer anchor={'resources/#resources'} />
       </body>
     </html>
   );

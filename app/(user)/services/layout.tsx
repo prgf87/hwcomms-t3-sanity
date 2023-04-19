@@ -21,7 +21,7 @@ export default function RootLayout({
           heroanchor="/services/#services-list"
         /> */}
         {children}
-        <Footer anchor={'/services/#services'} />
+        <Footer anchor={'services/#services'} />
       </body>
     </html>
   );

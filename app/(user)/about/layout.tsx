@@ -15,7 +15,7 @@ export default function RootLayout({
         <Navbar />
 
         {children}
-        <Footer anchor={'/about/#about'} />
+        <Footer anchor={'about/#about'} />
       </body>
     </html>
   );

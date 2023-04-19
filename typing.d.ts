@@ -32,6 +32,7 @@ interface Directory extends Base {
   mainImage: Image;
   categories: Category[];
   body: Block[];
+  linktotrick: string;
 }
 
 interface Experience extends Base {

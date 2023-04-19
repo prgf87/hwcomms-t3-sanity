@@ -28,15 +28,15 @@ h2 {
 }
 
 .btn1 {
-  @apply px-8 py-2 border border-gray-800 rounded-full tracking-widest text-gray-200 transition hover:border-gray-600/70 hover:bg-[#5EBCAA]/30 hover:text-white active:bg-[#5EBCAA]/70 active:border-gray-500;
+  @apply px-8 py-2 border border-gray-800 rounded-full tracking-widest text-gray-200 transition hover:border-gray-600/70 hover:bg-[#737899]/90 hover:text-gray-100 active:bg-[#737899]/70 active:border-gray-500;
 }
 
 .btn1-large {
-  @apply px-10 py-4 w-56 bg-[#737899]/50 border border-gray-500 rounded-full tracking-widest text-gray-100 transition duration-300 hover:border-gray-400/70 hover:bg-[#5EBCAA]/60 hover:text-white active:bg-[#5EBCAA]/60 active:border-gray-400;
+  @apply px-10 py-4 w-56 bg-[#737899]/50 border border-gray-500 rounded-full tracking-widest text-gray-100 transition duration-300 hover:border-gray-400/70 hover:bg-[#737899]/90 hover:text-gray-100 active:bg-[#737899]/60 active:border-gray-400;
 }
 
 .btn2 {
-  @apply px-8 py-2 border border-gray-500 rounded-full tracking-widest text-gray-800 transition hover:border-gray-600/70 hover:bg-[#0a725f] hover:text-white active:bg-gray-300/30 active:border-white;
+  @apply px-8 py-2 border border-gray-500 rounded-full tracking-widest text-gray-800 transition hover:border-gray-600/70 hover:bg-[#0a725f] hover:text-gray-100 active:bg-gray-300/30 active:border-white;
 }
 
 .btn4-large {
@@ -44,7 +44,7 @@ h2 {
 }
 
 .btn3 {
-  @apply px-8 py-2 border border-gray-800 rounded-full bg-gradient-to-t from-zinc-800 via-black to-zinc-800 tracking-widest text-gray-200 transition hover:border-gray-600/70 hover:bg-[#5EBCAA]/70 hover:text-gray-500 active:bg-[#5EBCAA]/70 active:border-gray-500 active:text-white;
+  @apply px-8 py-2 border border-gray-800 rounded-full bg-gradient-to-t from-zinc-800 via-black to-zinc-800 tracking-widest text-gray-200 transition hover:border-gray-600/70 hover:bg-[#737899]/90 hover:text-gray-500 active:bg-[#737899]/70 active:border-gray-500 active:text-white;
 }
 
 .nav-chev-down {
@@ -185,6 +185,10 @@ section.snapshot {
   background-size: cover;
 }
 
+.hero-image-container-resources {
+  object-position: 0% 0%;
+}
+
 .custom-img5 {
   background-image: url('/images/img23.png');
   background-position: center;
@@ -255,6 +259,10 @@ section.snapshot {
   background-image: url('/images/img29.png');
   background-position: 0% 60%;
   background-size: cover;
+}
+
+link {
+  text-decoration: none;
 }
 
 /*Link Underline Animation*/

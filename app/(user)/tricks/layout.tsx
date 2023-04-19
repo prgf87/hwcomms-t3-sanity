@@ -1,6 +1,6 @@
 'use client';
 
-import Hero from '@/components/modules/Hero';
+import BannerOptions from '@/components/navigation/BannerOptions';
 import Footer from '@/components/navigation/Footer';
 import Navbar from '@/components/navigation/Navbar';
 import '../../globals.css';
@@ -14,14 +14,9 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Navbar />
-        <Hero
-          heading="Graphic Designer's Bag of Tricks"
-          message="Helpful tools I've discovered online"
-          heroanchor="/tricks/#tricks-banner"
-          custombg="custom-img13"
-        />
         {children}
-        <Footer anchor={'/tricks/#tricks'} />
+        <BannerOptions />
+        <Footer anchor={'tricks/#tricks'} />
       </body>
     </html>
   );

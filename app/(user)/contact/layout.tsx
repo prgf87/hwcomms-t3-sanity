@@ -21,7 +21,7 @@ export default function RootLayout({
           heroanchor="/contact/#contact"
         /> */}
         {children}
-        <Footer anchor={'/contact/#contact'} />
+        <Footer anchor={'contact/#contact'} />
       </body>
     </html>
   );

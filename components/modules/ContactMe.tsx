@@ -153,7 +153,7 @@ export default function ContactMe() {
         <form
           noValidate={false}
           onSubmit={handleSumit}
-          className="rounded-lg shadow-xl flex flex-col px-8 py-8 bg-white dark:bg-blue-500"
+          className="rounded-lg shadow-xl flex flex-col px-8 py-8 bg-zinc-200 dark:bg-blue-500"
         >
           <h1 className="text-2xl font-bold dark:text-gray-50">
             Send a message
@@ -163,7 +163,8 @@ export default function ContactMe() {
             htmlFor="name"
             className="text-gray-500 font-light mt-8 dark:text-gray-50"
           >
-            Full Name<span className="text-red-500 dark:text-gray-50">*</span>
+            Full Name
+            <span className="text-black ml-0.5 dark:text-gray-50">*</span>
           </label>
 
           <input
@@ -183,7 +184,7 @@ export default function ContactMe() {
             htmlFor="email"
             className="text-gray-500 font-light mt-4 dark:text-gray-50"
           >
-            E-mail<span className="text-red-500">*</span>
+            E-mail<span className="text-black ml-0.5">*</span>
           </label>
 
           <input
@@ -333,7 +334,7 @@ export default function ContactMe() {
             htmlFor="subject"
             className="text-gray-500 font-light mt-4 dark:text-gray-50"
           >
-            Subject<span className="text-red-500">*</span>
+            Subject<span className="text-black ml-0.5">*</span>
           </label>
 
           <input
@@ -353,7 +354,7 @@ export default function ContactMe() {
             htmlFor="message"
             className="text-gray-500 font-light mt-4 dark:text-gray-50"
           >
-            Message<span className="text-red-500">*</span>
+            Message<span className="text-black ml-0.5">*</span>
           </label>
           <textarea
             id="message"

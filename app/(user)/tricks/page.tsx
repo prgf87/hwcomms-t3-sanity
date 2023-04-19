@@ -38,12 +38,16 @@ async function Resources() {
 
   return (
     <main className="bg-gradient p-10 md:p-3">
-      <div className="mx-auto ">
+      <div className="mx-auto pt-80">
+        <h1 className="absolute left-0 right-0 top-44 text-center text-gray-200 sm:text-5xl lg:text-6xl tracking-widest sm:tracking-[12px] uppercase font-bold">
+          Designer&apos;s Bag of Tricks
+        </h1>
+
         <div className="text-gray-200 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5 items-center mx-auto max-w-[500px] lg:max-w-[1000px] xl:max-w-full">
           {tricks.map((trick: any) => {
             return (
               <ClientSideRoute key={trick._id} route={trick.linktotrick}>
-                <div>
+                <div className="overflow-hidden">
                   <div className="grid grid-cols-2 group cursor-pointer bg-slate-600/70">
                     <div className="relative w-60 h-60 drop-shadow-xl group-hover:scale-105 transition-transform duration-200 ease-out">
                       <Image

@@ -6,6 +6,7 @@ import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/solid';
 import { useEffect, useState } from 'react';
 // import { motion } from 'framer-motion';
 import { Quote } from '@/typing';
+import Image from 'next/image';
 
 type Props = {
   quotes: Quote[];
@@ -37,12 +38,21 @@ function QuoteCarousel({ quotes }: Props) {
   };
 
   return (
-    <section className="relative custom-img7 bg-fixed h-[50vh] sm:h-screen z-[0]">
-      <div className="absolute left-0 top-0 right-0 bottom-0 bg-black/90 flex justify-center items-center py-10 z-[2]">
+    <section className="relative min-h-screen z-[0]">
+      <Image
+        src={`/images/img21.png`}
+        width={1920}
+        height={800}
+        alt={'/'}
+
+        // objectFit={fill}
+        // objectPosition={75% 50%}
+      />
+      <div className="absolute left-0 top-0 right-0 bottom-0 bg-black/70 flex justify-center items-center py-10 z-[2]">
         <div className="w-[1440px] mx-auto">
           <div className="mx-auto">
             {/* Quotes */}
-            <div className="relative top-[18rem] flex items-center justify-between z-[2] opacity-0 hover:opacity-100">
+            <div className="hidden relative top-[8rem] md:top-[14rem] lg:top-[18rem] sm:flex items-center justify-between z-[2] opacity-0 hover:opacity-100">
               <button onClick={prevQuote}>
                 <ChevronLeftIcon className="h-6 w-6 md:h-12 md:w-12 text-gray-300" />
               </button>
@@ -56,8 +66,8 @@ function QuoteCarousel({ quotes }: Props) {
                   key={index}
                   className={
                     index === current
-                      ? 'opacity-[1] transition-opacity duration-500'
-                      : 'opacity-0 transition-opacity duration-500'
+                      ? ' transition-transform duration-500'
+                      : 'transition-transform duration-500'
                   }
                 >
                   {index === current && (

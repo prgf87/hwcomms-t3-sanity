@@ -6,6 +6,7 @@ import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { SocialIcon } from 'react-social-icons';
 import { motion } from 'framer-motion';
 import Logo from '../modules/Logo';
+import Image from 'next/image';
 
 function Navbar() {
   const [nav, setNav] = useState(false);
@@ -80,11 +81,6 @@ function Navbar() {
           <li className="p-2 hover:text-gray-400 text-xs md:text-sm lg:text-lg link link-underline link-underline-black">
             <Link href="/services">Services</Link>
           </li>
-          <li className="p-2 hover:text-gray-400 text-xs md:text-sm lg:text-lg link link-underline link-underline-black">
-            <Link href="https://www.talkingpointsforlife.com/">
-              Talking Points
-            </Link>
-          </li>
 
           <li className="relative">
             <button
@@ -138,6 +134,7 @@ function Navbar() {
             </div>
           </li>
         </ul>
+
         <div className="pl-2 hidden sm:flex">
           <SocialIcon
             style={{ height: 30, width: 30 }}
@@ -153,6 +150,17 @@ function Navbar() {
             bgColor="transparent"
             className="p-6 transition-transform hover:scale-125 duration-200"
           />
+        </div>
+
+        <div className="relative h-12 w-12 hover:scale-105 transition-transform ease-in-out duration-300">
+          <Link href="https://www.talkingpointsforlife.com/">
+            <Image
+              src={'/images/tpfl-logo.png'}
+              alt={'Logo'}
+              width={490}
+              height={490}
+            />
+          </Link>
         </div>
 
         {/*Mobile Menu Button */}

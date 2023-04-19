@@ -1,6 +1,6 @@
 'use client';
 
-import Hero from '@/components/modules/Hero';
+import BannerOptions from '@/components/navigation/BannerOptions';
 import Footer from '@/components/navigation/Footer';
 import Navbar from '@/components/navigation/Navbar';
 import '../../globals.css';
@@ -14,14 +14,10 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Navbar />
-        <Hero
-          heading="Writer's Toolbox"
-          message="Find some of the best resources online for creative writers"
-          heroanchor="/toolbox/#toolbox"
-          custombg="custom-img12"
-        />
+
         {children}
-        <Footer anchor={'/resources/#resources'} />
+        <BannerOptions />
+        <Footer anchor={'resources/#resources'} />
       </body>
     </html>
   );

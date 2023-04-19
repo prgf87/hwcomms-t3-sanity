@@ -1,57 +1,66 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 // import { ChevronDownIcon } from '@heroicons/react/24/solid';
-import { Cursor, useTypewriter } from 'react-simple-typewriter';
+// import { Cursor, useTypewriter } from 'react-simple-typewriter';
 
-function Hero({ heading, message, heroanchor, custombg }: any) {
-  const [text] = useTypewriter({
-    words: ['', heading, message],
-    loop: true,
-    delaySpeed: 2000,
-  });
+function Hero({ custombg, position }: any) {
+  // const [text] = useTypewriter({
+  //   words: ['', heading, message],
+  //   loop: true,
+  //   delaySpeed: 2000,
+  // });
   return (
-    <div className="bg-black">
+    <div>
       <motion.section
         initial={{
-          opacity: 0,
-          scale: 1,
-        }}
-        animate={{
           opacity: 1,
           scale: 1,
         }}
+        animate={{
+          opacity: 0.6,
+          scale: 1,
+        }}
         transition={{
-          duration: 1.5,
+          duration: 1,
           delay: 0,
         }}
         viewport={{
           once: true,
         }}
-        className={`flex items-center justify-center h-[50vh] ${custombg}`}
+        className={`relative flex items-center justify-center h-[50vh] bg-black z-[2]`}
       />
+
       <motion.div
         initial={{
-          y: 500,
-          opacity: 1,
-          scale: 1,
+          opacity: 0,
         }}
         animate={{
-          opacity: 0.7,
-          scale: 1,
-          y: 0,
+          opacity: 1,
         }}
         transition={{
-          duration: 1.2,
+          duration: 1,
           delay: 0,
         }}
         viewport={{
           once: true,
         }}
-        className={`absolute h-[100vh] top-[-50vh] left-0 right-0 bottom-0 bg-black z-[2]`}
-      />
+        className="absolute left-0 top-[-28.5vh] right-0 bottom-0 z-0 opacity-100 h-[50vh]"
+      >
+        <Image
+          src={`/images/${custombg}`}
+          width={1920}
+          height={800}
+          alt={'/'}
+          style={{ objectFit: 'fill' }}
+          priority
+          // objectFit={fill}
+          // objectPosition={75% 50%}
+        />
+      </motion.div>
       <div className="absolute top-0 left-0 right-0 bottom-[25rem] text-white z-[2] mx-auto flex justify-center items-center">
-        <motion.div
+        {/* <motion.div
           initial={{
             opacity: 0,
           }}
@@ -69,13 +78,13 @@ function Hero({ heading, message, heroanchor, custombg }: any) {
             once: true,
           }}
         >
-          <div>
+          {/* <div>
             <h1 className="text-lg sm:text-2xl md:text-4xl px-6">
               <span>{text}</span>
               <Cursor cursorColor="white" />
             </h1>
-          </div>
-        </motion.div>
+          </div> 
+        </motion.div> */}
         {/* <motion.div
           initial={{
             opacity: 0,
