@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 
 function Hero2(custombg: any, position: any) {
   return (
-    <div className="relative h-[400px]">
+    <div className="relative h-[400px] z-[0]">
       <Image
         src={`/images/bg1.png`}
         width={1920}
@@ -17,6 +17,7 @@ function Hero2(custombg: any, position: any) {
         // objectFit={fill}
         // objectPosition={75% 50%}
       />
+      <div className="absolute w-full bg-black/50 top-0 object-cover h-[400px] z-[1]"></div>
     </div>
   );
 }
