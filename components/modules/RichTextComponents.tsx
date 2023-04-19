@@ -36,16 +36,16 @@ export const RichTextComponents = {
       return <h3 className="text-4xl py-5 font-bold">{children}</h3>;
     },
     h4: ({ children }: any) => {
-      return <h4 className="text-3xl py-5 font-bold">{children}</h4>;
+      return <h4 className="text-xl py-5 font-bold">{children}</h4>;
     },
     h5: ({ children }: any) => {
-      return <div className="text-2xl py-5 font-semibold">{children}</div>;
+      return <div className="text-lg py-5 font-semibold">{children}</div>;
     },
     h6: ({ children }: any) => {
-      return <div className="text-xl py-5 font-semibold">{children}</div>;
+      return <div className="text- py-5">{children}</div>;
     },
     normal: ({ children }: any) => {
-      return <div className="text-xl py-5 font-light">{children}</div>;
+      return <div className="py-5 font-light">{children}</div>;
     },
 
     blockquote: ({ children }: any) => {
