@@ -138,14 +138,14 @@ function Navbar() {
         <div className="pl-2 hidden sm:flex">
           <SocialIcon
             style={{ height: 30, width: 30 }}
-            url="https://www.twitter.com"
+            url="https://twitter.com/HaileyComms"
             fgColor={textColor}
             bgColor="transparent"
             className="p-6 transition-transform hover:scale-125 duration-200"
           />
           <SocialIcon
             style={{ height: 30, width: 30 }}
-            url="https://www.linkedin.com"
+            url="https://www.linkedin.com/in/haileycomms/"
             fgColor={textColor}
             bgColor="transparent"
             className="p-6 transition-transform hover:scale-125 duration-200"
