@@ -21,7 +21,7 @@ export default function RootLayout({
             message="Search through our many tips and resources"
             heroanchor="/resources/#resources-banner"
             custombg="img31.png"
-            position="center bottom"
+            position="object-cover object-bottom"
           />
         </div>
 

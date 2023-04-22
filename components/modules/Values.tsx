@@ -2,14 +2,22 @@
 
 import { ChevronDownIcon } from '@heroicons/react/24/solid';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
+import Link from 'next/link';
 
 type Props = {};
 
 function Values({}: Props) {
   return (
-    <section className="relative left-0 top-0 right-0 bottom-0 min-h-screen flex items-center justify-center bg-fixed bg-fill bg-center custom-img10 text-gray-100 z-[0]">
-      <div className="absolute min-h-screen left-0 top-0 right-0 bottom-0 object-cover bg-black/90 z-[2]">
-        {/* <div className="absolute top-0 left-0 right-0 bottom-0 text-gray-200 text-[1rem] lg:text-[1.5rem] z-[2] mx-auto"> */}
+    <section className="relative bg-black h-[950px] z-[0]">
+      <Image
+        src={'/images/img17.png'}
+        alt={'Background Image'}
+        width={1920}
+        height={768}
+        className="absolute object-center"
+      />
+      <div className="absolute left-0 top-0 right-0 bottom-0 object-cover bg-gradient-to-b from-black/40 to-black/80 z-[2] text-gray-200">
         <motion.h1
           initial={{
             opacity: 0,
@@ -23,7 +31,7 @@ function Values({}: Props) {
           viewport={{
             once: true,
           }}
-          className="text-2xl sm:text-5xl lg:text-7xl text-center pt-20 lg:pt-40 lg:pb-10 text-gray-200 tracking-widest sm:tracking-[15px] uppercase font-bold"
+          className="text-2xl sm:text-5xl lg:text-7xl text-center pt-20 pb-10 text-gray-200 tracking-widest sm:tracking-[15px] uppercase"
         >
           My Values
         </motion.h1>
@@ -43,7 +51,7 @@ function Values({}: Props) {
                 once: true,
               }}
             >
-              <h2 className="pt-20 text-xl lg:text-3xl lg:tracking-[20px] text-gray-300 uppercase">
+              <h2 className="text-xl lg:text-3xl lg:tracking-[10px] text-gray-300 uppercase">
                 Seek Extraordinary Experiences
               </h2>
               <p className="p-lite px-4 md:px-20 py-2">
@@ -68,7 +76,7 @@ function Values({}: Props) {
               }}
               className="px-5"
             >
-              <h2 className="pt-8 text-xl lg:text-3xl lg:tracking-[20px] text-gray-300 uppercase">
+              <h2 className="pt-8 text-xl lg:text-3xl lg:tracking-[10px] text-gray-300 uppercase">
                 Be Thorough
               </h2>
               <p className="p-lite px-4 md:px-20 py-2">
@@ -92,7 +100,7 @@ function Values({}: Props) {
                 once: true,
               }}
             >
-              <h2 className="pt-8 text-xl lg:text-3xl lg:tracking-[20px] text-gray-300 uppercase">
+              <h2 className="pt-8 text-xl lg:text-3xl lg:tracking-[10px] text-gray-300 uppercase">
                 Have Integrity
               </h2>
               <p className="p-lite px-20 py-2">
@@ -116,7 +124,7 @@ function Values({}: Props) {
                 once: true,
               }}
             >
-              <h2 className="pt-8 text-xl lg:text-3xl lg:tracking-[20px] text-gray-300 uppercase">
+              <h2 className="pt-8 text-xl lg:text-3xl lg:tracking-[10px] text-gray-300 uppercase">
                 Move Forward, Move Fast
               </h2>
               <p className="p-lite px-20 py-2">
@@ -127,11 +135,18 @@ function Values({}: Props) {
                 the way) so that your communications are fresh and relevant.
               </p>
             </motion.div>
-            {/* <a href="#resume" className="relative">
-              <button className="nav-chev-down absolute right-[-36.8rem] bottom-[-11rem] m-5 lg:m-20 md:pr-5 animate-bounce">
-                <ChevronDownIcon className="h-6 w-6 md:h-10 md:w-10 text-white" />
-              </button>
-            </a> */}
+            <div className="space-x-8">
+              <Link href="/services" className="relative">
+                <button className="btn1-large mt-10 sm:mt-28">
+                  My Services
+                </button>
+              </Link>
+              <Link href="/contact" className="relative">
+                <button className="btn1-large mt-10 sm:mt-28">
+                  Contact Me
+                </button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>

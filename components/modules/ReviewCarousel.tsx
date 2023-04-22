@@ -25,18 +25,15 @@ function ReviewCarousel({ reviews }: Props) {
   };
 
   return (
-    <section className="relative min-h-screen z-0">
+    <section className="relative h-[900px] z-0">
       <Image
         src={`/images/img28.png`}
         width={1920}
         height={800}
         alt={'/'}
-        className="absolute left-0 top-0 right-0 bottom-0 opacity-100 z-0"
-
-        // objectFit={fill}
-        // objectPosition={75% 50%}
+        className="absolute h-[900px] object-cover"
       />
-      <div className="absolute min-h-screen bg-gradient-to-b from-black/90 via-black/60 to-black/90 left-0 top-0 right-0 bottom-0 z-[1] lg:py-20 opacity-100" />
+      <div className="absolute h-[900px] bg-gradient-to-b from-black/90 via-black/60 to-black/90 left-0 top-0 right-0 bottom-0 z-[1] lg:py-20 opacity-100" />
       <div className="absolute z-[10]">
         <motion.h1
           initial={{
@@ -51,7 +48,7 @@ function ReviewCarousel({ reviews }: Props) {
           viewport={{
             once: true,
           }}
-          className="text-xl md:text-3xl lg:text-5xl text-center pt-20 text-gray-200 md:tracking-[15px] uppercase md:px-20 lg:px-[32rem]"
+          className="text-2xl md:text-3xl lg:text-5xl text-center pt-20 text-gray-200 md:tracking-[15px] uppercase md:px-20 lg:px-[32rem]"
         >
           Words From Clients & Colleagues
         </motion.h1>
@@ -62,8 +59,8 @@ function ReviewCarousel({ reviews }: Props) {
               key={index}
               className={
                 index === current
-                  ? 'transition-transform ease-in-out duration-1000'
-                  : 'transition-transform ease-in-out duration-1000'
+                  ? 'transition-transform ease-in-out duration-300'
+                  : 'transition-transform ease-in-out duration-300'
               }
             >
               {index === current && (
@@ -78,7 +75,7 @@ function ReviewCarousel({ reviews }: Props) {
                     />
                   </div>
                   <div className="max-w-3xl mx-auto z-[2] text-gray-200 px-8 py-5 text-center">
-                    <p className="p-2 text-xl">{review.review}</p>
+                    <p className="p-2">{review.review}</p>
                     <h2 className="text-3xl p-2">{review.author.name}</h2>
                   </div>
                 </div>

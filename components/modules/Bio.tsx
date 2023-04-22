@@ -8,21 +8,22 @@ function Bio() {
   return (
     <section className="bg-gradient">
       <div id="bio" className="relative top-[-100px]" />
-      <section className="text-gray-300 pt-20">
-        {/* Large/Medium Screens */}
+      <section className="text-gray-300 pt-20 lg:pt-0">
         <div className="sm:max-w-xl md:max-w-5xl lg:max-w-[1440px] text-[1rem] leading-5 sm:leading-7 sm:text-[1.3rem] items-center mx-auto sm:px-10">
           <div className="grid grid-cols-1 mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 min-h-[95vh] mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:min-h-[95vh] mx-auto">
               <div className="grid">
                 <motion.div
                   initial={{
                     opacity: 0,
+                    x: -150,
                   }}
                   whileInView={{
                     opacity: 1,
+                    x: 0,
                   }}
                   transition={{
-                    duration: 1,
+                    duration: 0.5,
                     delay: 1,
                   }}
                   viewport={{
@@ -42,12 +43,15 @@ function Bio() {
               <motion.div
                 initial={{
                   opacity: 0,
+                  x: 150,
                 }}
                 whileInView={{
                   opacity: 1,
+                  x: 0,
                 }}
                 transition={{
-                  duration: 1,
+                  duration: 0.5,
+                  delay: 1,
                 }}
                 viewport={{
                   once: true,
@@ -62,7 +66,7 @@ function Bio() {
                     opacity: 1,
                   }}
                   transition={{
-                    duration: 1,
+                    duration: 0.5,
                     delay: 1,
                   }}
                   viewport={{
@@ -70,10 +74,10 @@ function Bio() {
                   }}
                   className="px-4 py-2 mb-2"
                 >
-                  <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold tracking-widest sm:pr-2 text-center md:text-right mt-10 xl:mt-40">
+                  <h1 className="text-3xl md:text-3xl lg:text-5xl font-bold tracking-widest sm:pr-2 text-center md:text-right mt-40 uppercase">
                     Who is?
                   </h1>
-                  <h1 className="text-2xl md:text-4xl lg:text-6xl font-bold tracking-[10px] text-center md:text-right text-gray-200">
+                  <h1 className="text-3xl md:text-3xl lg:text-5xl font-bold tracking-[10px] text-center md:text-right text-gray-200 uppercase">
                     Hailey Wilson
                   </h1>
                   <div className="sm:pl-8 lg:pl-28 text-justify">
@@ -82,9 +86,9 @@ function Bio() {
                       storyteller, I have a single goal for all of my projects:
                     </p>
 
-                    <p className="px-4 py-2 my-4 text-3xl uppercase text-center font-bold">
+                    <h1 className="px-4 py-2 my-4 text-3xl uppercase text-center font-bold">
                       Be authentic
-                    </p>
+                    </h1>
 
                     <p className="px-4 py-2">
                       Regardless if you&apos;re communicating internally or
@@ -119,19 +123,15 @@ function Bio() {
                       once: true,
                     }}
                   >
-                    <div className="sm:hidden grid grid-cols-1 lg:grid-cols-2">
+                    <div className="sm:hidden grid grid-cols-1 lg:grid-cols-2 pb-10 lg:pb-0">
                       <div className="flex justify-evenly gap-x-1 items-center mt-10">
                         <Link href="/contact">
-                          <button className="btn1-large px-12 py-4 text-lg">
-                            Get in Touch
-                          </button>
+                          <button className="btn1-large">Get in Touch</button>
                         </Link>
                       </div>
                       <div className="flex justify-evenly gap-x-1 items-center mt-10">
                         <Link href="https://www.talkingpointsforlife.com/">
-                          <button className="btn1-large px-12 py-4 text-lg">
-                            Talking Points
-                          </button>
+                          <button className="btn1-large">Talking Points</button>
                         </Link>
                       </div>
                     </div>
@@ -140,7 +140,7 @@ function Bio() {
               </motion.div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 min-h-[95vh] mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 pb-10 lg:pb-0 lg:min-h-[40vh] mx-auto">
               <motion.div
                 initial={{
                   opacity: 0,
@@ -154,23 +154,25 @@ function Bio() {
                 viewport={{
                   once: true,
                 }}
-                className="sm:col-span-2 justify-center items-center mx-auto  md:pr-8 z-[2]"
+                className="sm:col-span-2 justify-center items-center mx-auto md:pr-8 z-[2]"
               >
                 <motion.div
                   initial={{
                     opacity: 0,
+                    x: -200,
                   }}
                   whileInView={{
                     opacity: 1,
+                    x: 0,
                   }}
                   transition={{
                     duration: 1,
-                    delay: 1,
+                    delay: 1.5,
                   }}
                   viewport={{
                     once: true,
                   }}
-                  className="px-4 py-2 mb-2 pt-5 sm:pt-20"
+                  className="px-4 py-2 mb-2 pt-5 sm:pt-20 lg:pt-0"
                 >
                   <div className="lg:pl-28 text-justify">
                     <p className="px-4 py-2">
@@ -208,7 +210,7 @@ function Bio() {
                     }}
                     transition={{
                       duration: 1,
-                      delay: 1,
+                      delay: 0,
                     }}
                     viewport={{
                       once: true,
@@ -237,12 +239,15 @@ function Bio() {
                 <motion.div
                   initial={{
                     opacity: 0,
+                    x: 200,
                   }}
                   whileInView={{
                     opacity: 1,
+                    x: 0,
                   }}
                   transition={{
                     duration: 1,
+                    delay: 1.5,
                   }}
                   viewport={{
                     once: true,

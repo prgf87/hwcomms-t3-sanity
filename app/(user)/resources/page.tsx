@@ -10,7 +10,6 @@ import DirectoryListSmall from '@/components/directory/DirectoryListSmall';
 import PreviewDirectoryList from '@/components/preview/PreviewDirectoryList';
 import Link from 'next/link';
 import { Directory } from '@/typing';
-import BannerOptions from '@/components/navigation/BannerOptions';
 import BannerBio from '@/components/navigation/BannerBio';
 import ReviewCarousel from '@/components/modules/ReviewCarousel';
 
@@ -76,10 +75,8 @@ async function Resources() {
           <h1 className="mt-20 text-3xl text-center md:text-5xl lg:text-7xl pb-8 tracking-[15px] text-gray-200 uppercase px-20">
             Resources &amp; Tips
           </h1>
-          <hr className="border-2 border-[#5EBCAA] my-2" />
-          <BannerOptions />
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 mx-auto p-10">
+          <div className="max-w-7xl grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 mx-auto p-10">
             <div className="grid mx-auto">
               <h1 className="text-center mt-10 text-2xl tracking-widest">
                 Graphic Designer&apos;s Bag of Tricks

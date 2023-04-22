@@ -198,33 +198,33 @@ function Navbar() {
           }
         >
           <ul onClick={handleNav}>
-            <li className="p-4 text-4xl hover:text-gray-500">
+            <li className="p-4 text-2xl hover:text-gray-500">
               <Link href="/">Home</Link>
             </li>
-            <li className="p-4 text-4xl hover:text-gray-500">
+            <li className="p-4 text-2xl hover:text-gray-500">
               <Link href="/about">About</Link>
             </li>
-            <li className="p-4 text-4xl hover:text-gray-500">
+            <li className="p-4 text-2xl hover:text-gray-500">
               <Link href="/services">Services</Link>
             </li>
-            <li className="p-4 text-4xl hover:text-gray-500">
+            <li className="p-4 text-2xl hover:text-gray-500">
               <Link href="/contact">Contact</Link>
             </li>
-            <li className="p-4 text-4xl hover:text-gray-500">
+            <li className="p-4 text-2xl hover:text-gray-500">
               <Link href="/resources">Resources</Link>
             </li>
-            <li className="p-4 text-4xl hover:text-gray-500">
+            <li className="p-4 text-2xl hover:text-gray-500">
               <Link href="http://haileycomms.substack.com/">
                 Hailey&apos;s Blog
               </Link>
             </li>
-            <li className="p-4 text-4xl hover:text-gray-500">
+            <li className="p-4 text-2xl hover:text-gray-500">
               <Link href="/toolbox">Writer&apos;s Toolbox</Link>
             </li>
-            <li className="p-4 text-4xl hover:text-gray-500">
+            <li className="p-4 text-2xl hover:text-gray-500">
               <Link href="/tricks">Designer&apos;s Bag of Tricks</Link>
             </li>
-            <li className="p-4 text-4xl hover:text-gray-500">
+            <li className="p-4 text-2xl hover:text-gray-500">
               <Link href="/directory">Online Resource Directory</Link>
             </li>
           </ul>

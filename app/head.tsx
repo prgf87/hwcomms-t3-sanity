@@ -2,7 +2,7 @@ import Script from 'next/script';
 
 export default function Head({ title }: any) {
   return (
-    <>
+    <head>
       <title>
         {title
           ? title + ' - Hailey Wilson Communications'
@@ -29,6 +29,6 @@ export default function Head({ title }: any) {
         `,
         }}
       />
-    </>
+    </head>
   );
 }

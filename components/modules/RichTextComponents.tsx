@@ -19,7 +19,7 @@ export const RichTextComponents = {
   },
   list: {
     bullet: ({ children }: any) => {
-      return <ul className="ml-5 py-5 list-disc space-y-5">{children}</ul>;
+      return <ul className="ml-5 py-2 list-disc space-y-5">{children}</ul>;
     },
     number: ({ children }: any) => {
       return <ol className="mt-lg list-decimal">{children}</ol>;
@@ -27,25 +27,25 @@ export const RichTextComponents = {
   },
   block: {
     h1: ({ children }: any) => {
-      return <h1 className="text-7xl py-5 font-bold">{children}</h1>;
+      return <h1 className="text-7xl py-2 font-bold">{children}</h1>;
     },
     h2: ({ children }: any) => {
-      return <h2 className="text-5xl py-5 font-bold">{children}</h2>;
+      return <h2 className="text-5xl py-2 font-bold">{children}</h2>;
     },
     h3: ({ children }: any) => {
-      return <h3 className="text-4xl py-5 font-bold">{children}</h3>;
+      return <h3 className="text-3xl py-2 font-bold">{children}</h3>;
     },
     h4: ({ children }: any) => {
-      return <h4 className="text-xl py-5 font-bold">{children}</h4>;
+      return <h4 className="text-xl py-2 font-bold">{children}</h4>;
     },
     h5: ({ children }: any) => {
-      return <div className="text-lg py-5 font-semibold">{children}</div>;
+      return <div className="text-lg py-2 font-semibold">{children}</div>;
     },
     h6: ({ children }: any) => {
-      return <div className="text- py-5">{children}</div>;
+      return <div className="text-sm py-2">{children}</div>;
     },
     normal: ({ children }: any) => {
-      return <div className="py-5 font-light">{children}</div>;
+      return <div className="py-2 font-light">{children}</div>;
     },
 
     blockquote: ({ children }: any) => {

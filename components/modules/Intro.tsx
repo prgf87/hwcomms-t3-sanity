@@ -23,10 +23,10 @@ function Intro() {
         }}
         className="pt-8"
       >
-        <h1 className="text-3xl text-center md:text-5xl lg:text-7xl pt-8 pb-5 xl:pb-0 tracking-[15px] overflow-y-hidden z-[2] uppercase">
+        <h1 className="text-2xl sm:text-3xl text-center px-20 md:text-3xl lg:text-7xl lg:pt-8 pb-5 xl:pb-0 tracking-[15px] z-[2] uppercase">
           Think like a scientist
         </h1>
-        <h2 className="text-3xl text-center md:text-5xl lg:text-[4.5rem] pt-6 tracking-[15px] text-gray-200 overflow-y-hidden uppercase">
+        <h2 className="text-2xl sm:text-3xl text-center px-20 md:text-3xl lg:text-[4.5rem] lg:pt-6 tracking-[15px] text-gray-200 uppercase">
           Sound like a human
         </h2>
       </motion.div>
@@ -46,23 +46,7 @@ function Intro() {
         }}
         className="max-w-3xl md:max-w-5xl lg:max-w-7xl mx-auto grid grid-cols-1"
       >
-        <section className="grid grid-cols-1 xl:grid-cols-2 max-w-[1440px] gap-5 mt-10">
-          {/* <div className="hidden xl:block mx-auto mb-10 sm:mb-0">
-            <div className="hidden md:flex xl:hidden items-center justify-center pt-5">
-              <Link href="/services">
-                <button className="mb-10 sm:mb-[2rem] text-xl btn1-large">
-                  My Services
-                </button>
-              </Link>
-            </div>
-            <div className="hidden md:flex lg:hidden items-center justify-center">
-              <Link href="/contact">
-                <button className="mb-10 sm:mb-[4rem] text-xl btn1-large">
-                  Contact Me
-                </button>
-              </Link>
-            </div>
-          </div> */}
+        <section className="hidden lg:grid grid-cols-1 xl:grid-cols-2 max-w-[1440px] gap-5 mt-10">
           <Image
             src={'/images/img8.png'}
             width={1664}
@@ -95,18 +79,20 @@ function Intro() {
               PS - most of the art on this site was created by MidJourney, an AI
               artist.
             </p>
-            {/* <div className="flex justify-center items-center mt-2">
-              <Link href="https://www.talkingpointsforlife.com/">
-                <button className="mb-12 sm:mb-[8rem] text-lg btn1-large">
-                  Talking Points
-                </button>
-              </Link>
-            </div> */}
           </div>
         </section>
         <div className="md:col-span-2 xl:hidden">
           <div className="text-center mb-5 sm:mb-5 md:col-span-2">
-            <h1 className="text-4xl font-bold px-4 pb-5 md:pb-5 md:px-2 lg:pb-5">
+            <div className="md:grid px-10">
+              <Image
+                src={'/images/img8.png'}
+                width={1664}
+                height={1664}
+                alt={'/'}
+                className="mt-10 m-auto rounded-full"
+              />
+            </div>
+            <h1 className="text-2xl font-bold px-20 pt-8 pb-5 md:pb-5 md:px-2 lg:pb-5">
               Deep understanding leads to deep connections
             </h1>
             <p className="px-6 md:px-40">
@@ -149,15 +135,15 @@ function Intro() {
           }}
           className="col-span-2 xl:hidden mx-auto pt-5"
         >
-          <div className="grid mx-auto">
+          <div className="flex-row space-x-4 mx-auto">
             <Link href="/services">
-              <button className="mb-10 sm:mb-[4rem] text-lg btn1-large">
+              <button className="mb-10 sm:mb-[4rem] text-lg btn1">
                 My Services
               </button>
             </Link>
 
             <Link href="/contact">
-              <button className="mb-10 sm:mb-[4rem] text-lg btn1-large">
+              <button className="mb-10 sm:mb-[4rem] text-lg btn1">
                 Contact Me
               </button>
             </Link>

@@ -8,6 +8,7 @@ import PreviewReviewCarousel from '@/components/preview/PreviewReviewCarousel';
 import QuoteCarousel from '@/components/modules/QuoteCarousel';
 import ReviewCarousel from '@/components/modules/ReviewCarousel';
 import BannerBio from '@/components/navigation/BannerBio';
+import LatestNews from '@/components/modules/LatestNews';
 
 const queryQuote = groq`
 *[_type=='quote'] {
@@ -64,6 +65,11 @@ export default async function HomePage() {
         <div>
           <div id="intro" className="relative top-[-80px]" />
           <Intro />
+        </div>
+
+        <div>
+          <div id="news" className="relative top-[-80px]" />
+          <LatestNews />
         </div>
 
         <div>

@@ -102,12 +102,10 @@ export default function Footer({ anchor }: any) {
       <hr className="border-1 border-white" />
       <div className="flex justify-center items-center">
         <div className="p-5">
-          <h1 className="text-center text-white">
-            Hailey Wilson Communications
-          </h1>
-          <h1 className="text-center text-white">
+          <p className="text-center text-white">Hailey Wilson Communications</p>
+          <p className="text-center text-white">
             Copyright&nbsp;&copy;&nbsp;2023&nbsp;-&nbsp;All Rights Reserved
-          </h1>
+          </p>
         </div>
       </div>
     </section>
