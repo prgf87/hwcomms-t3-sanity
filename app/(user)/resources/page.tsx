@@ -9,7 +9,6 @@ import PreviewToolboxList from '@/components/preview/PreviewToolboxList';
 import DirectoryListSmall from '@/components/directory/DirectoryListSmall';
 import PreviewDirectoryList from '@/components/preview/PreviewDirectoryList';
 import Link from 'next/link';
-import { Directory } from '@/typing';
 import BannerBio from '@/components/navigation/BannerBio';
 import ReviewCarousel from '@/components/modules/ReviewCarousel';
 

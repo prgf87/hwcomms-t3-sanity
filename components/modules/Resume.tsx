@@ -18,7 +18,7 @@ function Resume({ experiences }: Props) {
           src={`/images/img30.png`}
           width={1920}
           height={800}
-          alt={'Hero Image / Background Image'}
+          alt={'Background Image'}
           priority
           className={`absolute left-0 top-0 right-0 bottom-0 h-[800px] w-full z-[0]`}
         />

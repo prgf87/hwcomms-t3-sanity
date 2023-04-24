@@ -11,6 +11,8 @@ const queryExperience = groq`
 } | order(_createdAt asc)
 `;
 
+export const revalidate = 60;
+
 export default async function AboutPage() {
   const experiences = await client.fetch(queryExperience);
   return (

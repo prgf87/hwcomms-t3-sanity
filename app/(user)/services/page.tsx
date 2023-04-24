@@ -1,4 +1,3 @@
-import Banner from '@/components/navigation/Banner';
 import ServicesList from '@/components/modules/ServicesList';
 import Snapshots from '@/components/modules/Snapshots';
 import BannerBio from '@/components/navigation/BannerBio';
@@ -14,6 +13,8 @@ const queryReview = groq`
   categories[]->
 } | order(_createdAt asc)
 `;
+
+export const revalidate = 60;
 
 async function Services() {
   const reviews = await client.fetch(queryReview);

@@ -4,7 +4,6 @@ import '../../globals.css';
 import Hero from '@/components/modules/Hero';
 import Navbar from '@/components/navigation/Navbar';
 import Footer from '@/components/navigation/Footer';
-import ReviewCarousel from '@/components/modules/ReviewCarousel';
 
 export default function RootLayout({
   children,

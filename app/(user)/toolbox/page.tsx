@@ -16,7 +16,7 @@ const queryToolbox = groq`
 } | order(_createdAt desc)
 `;
 
-export const revalidate = 60; // revalidate this page every /n seconds
+export const revalidate = 60;
 
 async function ToolboxPage() {
   if (previewData()) {
@@ -39,12 +39,8 @@ async function ToolboxPage() {
   return (
     <main className="bg-gradient p-10 md:p-3">
       <div className="mx-auto pt-80">
-        {/* <h1 className="text-3xl xl:text-7xl text-center text-gray-300 tracking-[10px] uppercase transition transform mx-auto my-16">
-          Graphic Designer&apos;s
-          <br></br> Bag of Tricks
-        </h1> */}
         <h1 className="absolute left-0 right-0 top-44 text-center text-gray-200 sm:text-5xl lg:text-7xl tracking-widest sm:tracking-[15px] uppercase font-bold">
-          Writer&apos;s Toolbox
+          Creative Writer&apos;s Toolbox
         </h1>
         <div className="text-gray-200 grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-3 gap-5 items-center mx-auto max-w-[800px] lg:max-w-[1000px] xl:max-w-full">
           {toolboxes.map((toolbox: any) => {
