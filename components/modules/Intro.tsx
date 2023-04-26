@@ -15,7 +15,7 @@ function Intro() {
           opacity: 1,
         }}
         transition={{
-          delay: 1,
+          delay: 0,
           duration: 0.5,
         }}
         viewport={{
@@ -23,7 +23,7 @@ function Intro() {
         }}
         className="pt-8"
       >
-        <h1 className="text-2xl sm:text-3xl text-center px-20 md:text-3xl lg:text-7xl lg:pt-8 pb-5 xl:pb-0 tracking-[15px] z-[2] uppercase">
+        <h1 className="text-2xl sm:text-3xl text-center px-20 md:text-3xl lg:text-7xl pt-8 pb-5 xl:pb-0 tracking-[15px] z-[2] uppercase">
           Think like a scientist
         </h1>
         <h2 className="text-2xl sm:text-3xl text-center px-20 md:text-3xl lg:text-[4.5rem] lg:pt-6 tracking-[15px] text-gray-200 uppercase">
@@ -39,7 +39,7 @@ function Intro() {
         }}
         transition={{
           duration: 0.5,
-          delay: 1.5,
+          delay: 0.5,
         }}
         viewport={{
           once: true,
@@ -128,7 +128,7 @@ function Intro() {
           }}
           transition={{
             duration: 1,
-            delay: 1,
+            delay: 0,
           }}
           viewport={{
             once: true,

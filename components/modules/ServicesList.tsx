@@ -17,7 +17,7 @@ function ServicesList() {
         </p>
         <div className="grid grid-cols-1 mx-auto pt-10 max-w-7xl">
           <div className="flex-row justify-center lg:flex lg:justify-evenly items-center">
-            <video
+            {/* <video
               src="/videos/tpgif.mp4"
               autoPlay
               muted
@@ -26,10 +26,10 @@ function ServicesList() {
               width={960}
               height={960}
               className="rounded-lg h-[30rem] w-[30rem]"
-            />
+            /> */}
 
             <div>
-              <div className="h-[30rem] grid border-2 rounded-xl border-gray-800/20 p-[0.10rem] px-8 bg-slate-600/70 text-gray-200 hover:text-gray-300 hover:bg-gray-700/80 hover:border-gray-800/20 transition transform ease-in duration-300">
+              <div className="h-[30rem] grid border-2 rounded-xl border-gray-800/20 p-[0.10rem] px-8 bg-slate-600/70 text-gray-200">
                 <h1 className="text-xl font-bold mt-4 px-10">
                   Internal/Employee Communications Consultation
                 </h1>
@@ -63,7 +63,7 @@ function ServicesList() {
 
           <div className="flex justify-evenly items-center">
             <div>
-              <div className="h-[30rem] grid border-2 rounded-xl border-gray-800/20 p-[0.10rem] px-2 gap-y-2 bg-slate-600/70 text-gray-200 hover:text-gray-300 hover:bg-gray-700/80 hover:border-gray-800/20 transition transform ease-in duration-300">
+              <div className="h-[30rem] grid border-2 rounded-xl border-gray-800/20 p-[0.10rem] px-2 gap-y-2 bg-slate-600/70 text-gray-200">
                 <h1 className="text-xl font-bold mt-4 px-10">
                   Empathy Communications Training
                 </h1>
@@ -94,7 +94,7 @@ function ServicesList() {
                 </p>
               </div>
             </div>
-            <video
+            {/* <video
               src="/videos/tpgif.mp4"
               autoPlay
               muted
@@ -103,7 +103,7 @@ function ServicesList() {
               width={960}
               height={960}
               className="rounded-lg h-[30rem] w-[30rem]"
-            />
+            /> */}
           </div>
         </div>
       </div>

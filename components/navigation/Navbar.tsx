@@ -69,23 +69,23 @@ function Navbar() {
         </div>
 
         <ul style={{ color: `${textColor}` }} className="hidden md:flex gap-4">
-          <li className="p-2 hover:text-gray-400 text-xs md:text-sm lg:text-lg link link-underline link-underline-black">
+          <li className="p-2 hover:text-gray-400 text-xs md:text-sm lg:text-lg">
             <Link href="/#home">Home</Link>
           </li>
-          <li className="p-2 hover:text-gray-400 text-xs md:text-sm lg:text-lg link link-underline link-underline-black">
+          <li className="p-2 hover:text-gray-400 text-xs md:text-sm lg:text-lg">
             <Link href="/about">About</Link>
           </li>
-          <li className="p-2 hover:text-gray-400 text-xs md:text-sm lg:text-lg link link-underline link-underline-black">
+          <li className="p-2 hover:text-gray-400 text-xs md:text-sm lg:text-lg">
             <Link href="/contact">Contact</Link>
           </li>
-          <li className="p-2 hover:text-gray-400 text-xs md:text-sm lg:text-lg link link-underline link-underline-black">
+          <li className="p-2 hover:text-gray-400 text-xs md:text-sm lg:text-lg">
             <Link href="/services">Services</Link>
           </li>
 
           <li className="relative">
             <button
               onClick={() => setdropdownOpen(!dropdownOpen)}
-              className="flex justify-center items-center p-2 hover:text-gray-400 text-xs md:text-sm lg:text-lg link link-underline link-underline-black"
+              className="flex justify-center items-center p-2 hover:text-gray-400 text-xs md:text-sm lg:text-lg"
             >
               More
             </button>
@@ -94,40 +94,40 @@ function Navbar() {
                 dropdownOpen
                   ? `top-full opacity-100 visible`
                   : 'top-[110%] invisible opacity-0'
-              } absolute top-0 left-0 z-40 mt-2 w-[22rem] rounded bg-slate-800/60 py-2 shadow-card transition-all duration-300`}
+              } absolute top-0 left-0 z-40 mt-2 w-[22rem] rounded bg-slate-800 py-2 shadow-card transition-all duration-300`}
             >
               <Link
                 onClick={() => setdropdownOpen(!dropdownOpen)}
                 href="http://haileycomms.substack.com/"
-                className="block py-2 px-5 text-base font-semibold text-gray-200 hover:bg-gray-800/60 hover:text-primary link link-underline link-underline-black"
+                className="block py-2 px-5 text-base font-semibold text-gray-200 hover:text-gray-400 hover:bg-slate-800/60"
               >
                 Hailey&apos;s Blog
               </Link>
               <Link
                 onClick={() => setdropdownOpen(!dropdownOpen)}
                 href="/resources"
-                className="block py-2 px-5 text-base font-semibold text-gray-200 hover:bg-gray-800/60 hover:text-primary link link-underline link-underline-black"
+                className="block py-2 px-5 text-base font-semibold text-gray-200 hover:text-gray-400 hover:bg-slate-800/60"
               >
                 Resources &amp; Tips
               </Link>
               <Link
                 onClick={() => setdropdownOpen(!dropdownOpen)}
                 href="/toolbox"
-                className="block py-2 px-5 text-base font-semibold text-gray-200 hover:bg-gray-800/60 hover:text-primary link link-underline link-underline-black"
+                className="block py-2 px-5 text-base font-semibold text-gray-200 hover:text-gray-400 hover:bg-slate-800/60"
               >
                 Writer&apos;s Toolbox
               </Link>
               <Link
                 onClick={() => setdropdownOpen(!dropdownOpen)}
                 href="/tricks"
-                className="block py-2 px-5 text-base font-semibold text-gray-200 hover:bg-gray-800/60 hover:text-primary link link-underline link-underline-black"
+                className="block py-2 px-5 text-base font-semibold text-gray-200 hover:text-gray-400 hover:bg-gray-800/60"
               >
                 Designer&apos;s Bag of Tricks
               </Link>
               <Link
                 onClick={() => setdropdownOpen(!dropdownOpen)}
                 href="/directory"
-                className="block py-2 px-5 text-base font-semibold text-gray-200 hover:bg-gray-800/60 hover:text-primary link link-underline link-underline-black"
+                className="block py-2 px-5 text-base font-semibold text-gray-200 hover:text-gray-400 hover:bg-gray-800/60"
               >
                 Online Resource Directory
               </Link>

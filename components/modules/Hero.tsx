@@ -5,8 +5,8 @@ import Image from 'next/image';
 
 function Hero({ custombg, position }: any) {
   return (
-    <section>
-      <div className="relative h-[400px] z-[0]">
+    <section className="bg-black">
+      <div className="relative h-[300px] z-[0]">
         <motion.div
           initial={{
             opacity: 0,
@@ -28,7 +28,7 @@ function Hero({ custombg, position }: any) {
             height={800}
             alt={'Hero Image / Background Image'}
             priority
-            className={`absolute top-0 ${position} h-[400px]`}
+            className={`absolute top-0 ${position} h-[300px]`}
           />
         </motion.div>
         <motion.div
@@ -37,7 +37,7 @@ function Hero({ custombg, position }: any) {
             scale: 1,
           }}
           animate={{
-            opacity: 0.5,
+            opacity: 0.7,
             scale: 1,
           }}
           transition={{
@@ -47,8 +47,8 @@ function Hero({ custombg, position }: any) {
           viewport={{
             once: true,
           }}
-          className="absolute w-full bg-black top-0 object-cover h-[400px] z-[1]"
-        ></motion.div>
+          className="absolute w-full bg-black top-0 object-cover h-[300px] z-[1]"
+        />
       </div>
     </section>
   );

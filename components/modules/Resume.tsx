@@ -39,10 +39,10 @@ function Resume({ experiences }: Props) {
                           </h2>
                           <p className="text-xl font-bold py-5 text-gray-200 text-center lg:text-left">
                             Started -{' '}
-                            {new Date(experience.dateStarted).toDateString()}{' '}
+                            {new Date(experience?.dateStarted).toDateString()}{' '}
                             <br></br>
                             Ended -{' '}
-                            {new Date(experience.dateEnded).toDateString()}
+                            {new Date(experience?.dateEnded).toDateString()}
                           </p>
                         </div>
                       </div>

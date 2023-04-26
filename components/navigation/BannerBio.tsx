@@ -6,17 +6,15 @@ type Props = {};
 
 function BannerBio({}: Props) {
   return (
-    <div className="relative min-h-[30vh] bg-fixed z-0">
+    <div className="relative h-[300px] bg-fixed z-0">
       <Image
         src={`/images/img23.png`}
         width={1920}
         height={800}
         alt={'/'}
-        className="h-[30vh] object-cover"
-        // objectFit={fill}
-        // objectPosition={75% 50%}
+        className="h-[300px] object-cover"
       />
-      <div className="absolute left-0 top-0 right-0 bottom-0 bg-black/60 z-[2] flex justify-center items-center sm:px-40">
+      <div className="absolute left-0 top-0 right-0 bottom-0 bg-black/20 z-[2] flex justify-center items-center sm:px-40">
         <div className="grid grid-cols-1 lg:grid-cols-3 mx-auto gap-4 z-[4]">
           <Link href="/about/#resume">
             <button className="btn1-large mx-2 lg:mx-10">My Resume</button>

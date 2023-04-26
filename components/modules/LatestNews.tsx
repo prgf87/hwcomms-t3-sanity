@@ -19,8 +19,8 @@ function LatestNews() {
               latest news
             </h1>
             <div className="grid grid-cols-2 max-w-7xl mx-auto text-center lg:pt-20">
-              <div className="grid">
-                <div className=" mx-auto p-10 mt-1">
+              <div className="grid px-20">
+                <div className="mx-auto p-10 mt-1">
                   <Image
                     src="/images/tpfl-logo.png"
                     alt="Talking Points Logo"
@@ -38,7 +38,7 @@ function LatestNews() {
                   </Link>
                 </div>
               </div>
-              <div className="grid">
+              <div className="grid px-20">
                 <div className="mx-auto">
                   <Image
                     src="/images/aimpactlogo.png"
@@ -52,7 +52,7 @@ function LatestNews() {
                     October 29 - 30 Charlotte, NC
                   </p>
                   <p className="text-2xl font-bold pt-4">
-                    Don&apos;t miss the first conference designed by AI!
+                    Don&apos;t miss the first virtual conference designed by AI!
                   </p>
                   <Link href={'https://www.aimpactevent.com/'}>
                     <button className="btn1-large mt-10">AImpact</button>
