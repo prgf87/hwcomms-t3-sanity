@@ -59,11 +59,9 @@ export const RichTextComponents = {
         : undefined;
 
       return (
-        <div className="underline text-sm decoration-[#5EBCAA] hover:decoration-[#5EBCAA]/40">
-          <Link href={value.href} rel={rel}>
-            {children}
-          </Link>
-        </div>
+        <Link href={value.href} rel={rel} className="hover:text-gray-400">
+          {children}
+        </Link>
       );
     },
   },

@@ -20,7 +20,7 @@ function Resume({ experiences }: Props) {
           height={800}
           alt={'Background Image'}
           priority
-          className={`absolute left-0 top-0 right-0 bottom-0 h-[800px] w-full z-[0]`}
+          className={`absolute left-0 top-0 right-0 bottom-0 h-[800px] bg-fixed w-full z-[0]`}
         />
         <div className="absolute left-0 top-0 right-0 bottom-0 object-cover bg-gradient-to-b from-black/40 to-black/80 z-[1] text-gray-200">
           <h1 className="text-center text-gray-200 text-4xl sm:text-5xl lg:text-7xl tracking-widest sm:tracking-[15px] uppercase py-10">
@@ -40,9 +40,9 @@ function Resume({ experiences }: Props) {
                           <p className="text-xl font-bold py-5 text-gray-200 text-center lg:text-left">
                             Started -{' '}
                             {new Date(experience?.dateStarted).toDateString()}{' '}
-                            <br></br>
+                            {/* <br></br>
                             Ended -{' '}
-                            {new Date(experience?.dateEnded).toDateString()}
+                            {new Date(experience?.dateEnded).toDateString()} */}
                           </p>
                         </div>
                       </div>

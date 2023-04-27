@@ -8,7 +8,7 @@ import BannerOptions from '@/components/navigation/BannerOptions';
 const queryExperience = groq`
 *[_type=='experience'] {
   ...,
-} | order(_createdAt asc)
+} | order(dateStarted desc)
 `;
 
 export const revalidate = 60;
