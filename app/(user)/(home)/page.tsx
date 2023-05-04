@@ -54,7 +54,7 @@ export default async function HomePage() {
           </h1>
           <div className="flex flex-col">
             <div>
-              <PreviewLatestNews news={queryNews} />
+              <PreviewLatestNews query={queryNews} />
             </div>
             <div>
               <PreviewQuoteCarousel query={queryQuote} />

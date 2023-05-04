@@ -7,7 +7,7 @@ export default defineType({
   fields: [
     defineField({
       name: 'title',
-      title: 'News Title',
+      title: 'News Article Title',
       type: 'string',
     }),
 
@@ -23,7 +23,7 @@ export default defineType({
 
     defineField({
       name: 'description',
-      description: 'Enter a description for this piece of News',
+      description: 'Enter a description for this News Article',
       title: 'Description',
       type: 'string',
     }),
@@ -46,13 +46,13 @@ export default defineType({
 
     defineField({
       name: 'button',
-      title: 'Button',
+      title: 'Button Text',
       type: 'string',
     }),
 
     defineField({
       name: 'linkToNews',
-      title: 'Link to News',
+      title: 'Link to News Article/Website/Resource',
       type: 'url',
     }),
 
