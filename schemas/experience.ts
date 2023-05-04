@@ -35,6 +35,7 @@ export default defineType({
       name: 'dateEnded',
       title: 'DateEnded',
       type: 'date',
+      hidden: ({ parent }) => !parent?.asset,
     }),
     defineField({
       name: 'body',

@@ -4,6 +4,7 @@ import { client } from '@/lib/sanity.client';
 import PreviewSuspense from '@/components/preview/PreviewSuspense';
 import Intro from '@/components/modules/Intro';
 import PreviewQuoteCarousel from '@/components/preview/PreviewQuoteCarousel';
+import PreviewLatestNews from '@/components/preview/PreviewLatestNews';
 import PreviewReviewCarousel from '@/components/preview/PreviewReviewCarousel';
 import QuoteCarousel from '@/components/modules/QuoteCarousel';
 import ReviewCarousel from '@/components/modules/ReviewCarousel';
@@ -16,6 +17,13 @@ const queryQuote = groq`
   author->,
   categories[]->
 } | order(_createdAt asc)
+`;
+const queryNews = groq`
+*[_type=='news'][0...2] {
+  ...,
+  author->,
+  categories[]->
+} | order(publishedAt asc)
 `;
 const queryReview = groq`
 *[_type=='review'] {
@@ -46,6 +54,9 @@ export default async function HomePage() {
           </h1>
           <div className="flex flex-col">
             <div>
+              <PreviewLatestNews news={queryNews} />
+            </div>
+            <div>
               <PreviewQuoteCarousel query={queryQuote} />
             </div>
             <div>
@@ -58,6 +69,7 @@ export default async function HomePage() {
   }
   const quotes = await client.fetch(queryQuote);
   const reviews = await client.fetch(queryReview);
+  const news = await client.fetch(queryNews);
 
   return (
     <main>
@@ -69,7 +81,7 @@ export default async function HomePage() {
 
         <div>
           <div id="news" className="relative top-[-80px]" />
-          <LatestNews />
+          <LatestNews news={news} />
         </div>
 
         <div>

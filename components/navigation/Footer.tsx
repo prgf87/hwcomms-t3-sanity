@@ -7,51 +7,41 @@ import BackToTop from '../navigation/BackToTop';
 export default function Footer({ anchor }: any) {
   return (
     <section className="bg-black text-white">
-      <div className="grid grid-cols-1">
-        <div className="hidden p-10 mt-5">
-          <div className="text-gray-200 flex cursor-pointer place-content-center">
+      <div className="grid grid-cols-3">
+        <div className="hidden lg:grid mt-28 ml-60">
+          <div className="text-gray-200 flex cursor-pointer place-content-start">
             <p className="hover:brightness-50 flex">
               <ChevronRightIcon className="h-5 w-5 pt-1 text-gray-200 " />
-              <Link href={'/'}>
-                <u>Home</u>
-              </Link>
+              <Link href={'/'}>Home</Link>
             </p>
           </div>
-          <div className="text-gray-200 flex cursor-pointer place-content-center">
+          <div className="text-gray-200 flex cursor-pointer place-content-start">
             <p className="hover:brightness-50 flex">
               <ChevronRightIcon className="h-5 w-5 pt-1 text-gray-200 " />
-              <Link href={'/about'}>
-                <u>About</u>
-              </Link>
+              <Link href={'/about'}>About</Link>
             </p>
           </div>
-          <div className="text-gray-200 flex cursor-pointer place-content-center">
+          <div className="text-gray-200 flex cursor-pointer place-content-start">
             <p className="hover:brightness-50 flex">
               <ChevronRightIcon className="h-5 w-5 pt-1 text-gray-200 " />
-              <Link href={'/services'}>
-                <u>Services</u>
-              </Link>
+              <Link href={'/services'}>Services</Link>
             </p>
           </div>
-          <div className="text-gray-200 flex cursor-pointer place-content-center">
+          <div className="text-gray-200 flex cursor-pointer place-content-start">
             <p className="hover:brightness-50 flex">
               <ChevronRightIcon className="h-5 w-5 pt-1 text-gray-200 " />
-              <Link href={'/contact'}>
-                <u>Contact</u>
-              </Link>
+              <Link href={'/contact'}>Contact</Link>
             </p>
           </div>
 
-          <div className="text-gray-200 flex cursor-pointer place-content-center">
+          <div className="text-gray-200 flex cursor-pointer place-content-start">
             <p className="hover:brightness-50 flex">
               <ChevronRightIcon className="h-5 w-5 pt-1 text-gray-200 " />
-              <Link href="/resources">
-                <u>Resources</u>
-              </Link>
+              <Link href="/resources">Resources</Link>
             </p>
           </div>
         </div>
-        <div className="sm:hidden mb-5 pt-10 px-8 place-content-center text-center w-full">
+        <div className="sm:hidden lg:grid mb-5 pt-10 px-8 place-content-center text-center w-full">
           <div className="grid mx-auto">
             <h4 className="font-bold text-xl pb-4 ">Social Media</h4>
             <p className="hidden md:block italic px-12 md:px-0">
@@ -80,11 +70,11 @@ export default function Footer({ anchor }: any) {
             </div>
           </div>
         </div>
-        <div className="sm:hidden p-10 text-center">
+        <div className="sm:hidden lg:grid mt-28 text-center">
           <p className="text-gray-200 italic">
             Please feel free to send me an email:
-          </p>
-          <p className="pt-8">
+            <br></br>
+            <br></br>
             <a
               href="mailto:hwilsoncomms@gmail.com"
               className="cursor-pointer hover:text-gray-400"

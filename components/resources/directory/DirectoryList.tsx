@@ -1,12 +1,18 @@
-import { previewData } from 'next/headers';
-import { groq } from 'next-sanity';
-import { client } from '@/lib/sanity.client';
-import PreviewSuspense from '@/components/preview/PreviewSuspense';
-import PreviewDirectoryList from '@/components/preview/PreviewDirectoryList';
-import Image from 'next/image';
-import urlFor from '@/lib/urlFor';
-import { PortableText } from '@portabletext/react';
+'use client';
+
 import { RichTextComponents } from '@/components/modules/RichTextComponents';
+import urlFor from '@/lib/urlFor';
+import { Directory } from '@/typing';
+import { ArrowUpRightIcon } from '@heroicons/react/24/solid';
+import { PortableText } from '@portabletext/react';
+import groq from 'groq';
+import Image from 'next/image';
+import Link from 'next/link';
+import ClientSideRoute from '@/components/navigation/ClientSideRoute';
+
+type Props = {
+  directories: Directory[];
+};
 
 const queryDirectory = groq`
 *[_type=='directory'] {
@@ -18,24 +24,7 @@ const queryDirectory = groq`
 
 export const revalidate = 60;
 
-async function Resources() {
-  if (previewData()) {
-    return (
-      <PreviewSuspense
-        fallback={
-          <div role="status">
-            <p className="text-center text-lg animate-pulse text-[#5EBCAA]">
-              Loading Preview Data...
-            </p>
-          </div>
-        }
-      >
-        <PreviewDirectoryList query={queryDirectory} />
-      </PreviewSuspense>
-    );
-  }
-  const directories = await client.fetch(queryDirectory);
-
+function DirectoryList({ directories }: Props) {
   return (
     <main className="bg-gradient p-10 md:p-3">
       <div className="mx-auto pt-[22rem]">
@@ -84,4 +73,4 @@ async function Resources() {
   );
 }
 
-export default Resources;
+export default DirectoryList;

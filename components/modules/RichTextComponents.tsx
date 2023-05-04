@@ -45,7 +45,7 @@ export const RichTextComponents = {
       return <div className="text-sm py-2">{children}</div>;
     },
     normal: ({ children }: any) => {
-      return <div className="py-2 font-light">{children}</div>;
+      return <div className="py-2">{children}</div>;
     },
 
     blockquote: ({ children }: any) => {
@@ -59,7 +59,11 @@ export const RichTextComponents = {
         : undefined;
 
       return (
-        <Link href={value.href} rel={rel} className="hover:text-gray-400">
+        <Link
+          href={value.href}
+          rel={rel}
+          className="hover:text-gray-500 underline"
+        >
           {children}
         </Link>
       );

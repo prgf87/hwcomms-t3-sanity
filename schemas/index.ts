@@ -7,6 +7,7 @@ import directory from './directory';
 import toolbox from './toolbox';
 import experience from './experience';
 import trick from './trick';
+import news from './news';
 
 export const schemaTypes = [
   quote,
@@ -18,4 +19,5 @@ export const schemaTypes = [
   toolbox,
   trick,
   experience,
+  news,
 ];

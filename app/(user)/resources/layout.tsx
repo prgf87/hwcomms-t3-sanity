@@ -17,10 +17,10 @@ export default function RootLayout({
         <div className="hero-image-container-resources">
           <Hero
             heading="Resources &amp; Tips"
-            message="Search through our many tips and resources"
-            heroanchor="/resources/#resources-banner"
+            message="Resources &amp; Tips"
+            heroanchor="/resources#resources-banner"
             custombg="img31.png"
-            position="object-cover object-bottom"
+            position="object-cover object-[center_top]"
           />
         </div>
 

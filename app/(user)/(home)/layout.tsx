@@ -16,6 +16,8 @@ export default function RootLayout({
         <Navbar />
         <div id="home" className="snap-start" />
         <Hero
+          heading="Hailey Wilson Communications"
+          message="Where there's a Wilson, there's a way"
           custombg="bg1.png"
           position="object-cover object-[center_center]"
         />

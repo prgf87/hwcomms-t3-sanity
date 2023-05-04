@@ -54,6 +54,15 @@ interface Trick extends Base {
   linktotrick: string;
 }
 
+interface News extends Base {
+  title: string;
+  slug: Slug;
+  description: string;
+  mainImage: Image;
+  categories: Category[];
+  linkToNews: string;
+}
+
 interface Toolbox extends Base {
   title: string;
   slug: Slug;
@@ -117,6 +126,11 @@ interface BgImage {
 }
 
 interface Title {
+  _type: 'string';
+  current: string;
+}
+
+interface Button {
   _type: 'string';
   current: string;
 }

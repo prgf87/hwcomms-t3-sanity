@@ -2,7 +2,7 @@ import urlFor from '@/lib/urlFor';
 import { Toolbox } from '@/typing';
 import { ArrowUpRightIcon } from '@heroicons/react/24/solid';
 import Image from 'next/image';
-import ClientSideRoute from '../navigation/ClientSideRoute';
+import ClientSideRoute from '@/components/navigation/ClientSideRoute';
 
 type Props = {
   toolboxes: Toolbox[];

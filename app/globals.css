@@ -16,24 +16,13 @@ html {
 }
 
 body {
-  font-size: 1.2rem;
-  /* font-family: 'Montserrat', sans-serif; */
-  /* font-family: 'Playfair Display', serif; */
-  /* font-family: 'Libre Caslon Text', serif; */
-  /* font-family: 'PT Serif', serif; */
-  /* font-family:  */
-  /* font-family: sans-serif; */
+  font-size: 1.25rem;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 footer {
   font-size: 1.25rem;
-  /* font-family: 'Montserrat', sans-serif; */
-  /* font-family: 'Playfair Display', serif; */
-  /* font-family: 'Libre Caslon Text', serif; */
-  /* font-family: 'PT Serif', serif; */
-  /* font-family: sans-serif; */
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
@@ -48,11 +37,15 @@ h2 {
 }
 
 .btn1-large {
-  @apply px-10 py-4 w-56 bg-[#737899]/80 border border-gray-500 rounded-full tracking-widest text-gray-100 transition duration-300 hover:border-gray-400/70 hover:bg-[#737899]/50 hover:text-gray-100 active:bg-zinc-700/50 active:border-gray-400;
+  @apply px-10 py-4 bg-[#737899]/80 border border-gray-500 rounded-full tracking-widest text-gray-100 transition duration-300 hover:border-gray-400/70 hover:bg-[#737899]/50 hover:text-gray-100 active:bg-zinc-700/50 active:border-gray-400;
 }
 
 .btn2 {
   @apply px-8 py-2 border border-gray-500 rounded-full tracking-widest text-gray-800 transition hover:border-gray-600/70 hover:bg-[#737899] hover:text-gray-100 active:bg-gray-300/30 active:border-white;
+}
+
+.btn2-large {
+  @apply px-10 py-4 border border-gray-500 rounded-full tracking-widest text-gray-800 transition hover:border-gray-600/70 hover:bg-[#737899] hover:text-gray-100 active:bg-gray-300/30 active:border-white;
 }
 
 .btn4-large {
@@ -87,6 +80,10 @@ section.snapshot {
 
 .bg-gradient {
   background-image: linear-gradient(45deg, #000000, rgb(18, 20, 49), #0c4758);
+}
+
+.bg-gradient-flip {
+  background-image: linear-gradient(-315deg, #000000, rgb(18, 20, 49), #0c4758);
 }
 
 .bg-gradient-invert {
@@ -173,108 +170,6 @@ section.snapshot {
   inset: 0;
   transform: skewY(var(--skew-angle));
   z-index: -1;
-}
-
-/* Background Images */
-
-.custom-img {
-  background-image: url('/images/bg1.png');
-  background-position: 75% 50%;
-  background-size: fill;
-}
-
-.custom-img2 {
-  background-image: url('/images/bg2.jpg');
-  background-position: center;
-  background-size: cover;
-}
-
-.custom-img3 {
-  background-image: url('/images/img15.png');
-  background-position: bottom;
-  background-size: cover;
-}
-
-.custom-img4 {
-  background-image: url('/images/img31.png');
-  background-position: 0% 0%;
-  background-size: cover;
-}
-
-.hero-image-container-resources {
-  object-position: 0% 0%;
-}
-
-.custom-img5 {
-  background-image: url('/images/img23.png');
-  background-position: center;
-  background-size: cover;
-}
-
-.custom-img6 {
-  background-image: url('/images/img5.jpg');
-  background-position: center;
-  background-size: cover;
-}
-
-.custom-img7 {
-  background-image: url('/images/img21.png');
-  background-position: center;
-  background-size: cover;
-}
-
-.custom-img8 {
-  background-image: url('/images/img28.png');
-  background-position: center;
-  background-size: cover;
-}
-
-.custom-img9 {
-  background-image: url('/images/img12.png');
-  background-position: center;
-  background-size: cover;
-}
-
-.custom-img10 {
-  background-image: url('/images/img17.png');
-  background-position: center;
-  background-size: cover;
-}
-
-.custom-img11 {
-  background-image: url('/images/img30.png');
-  background-position: center;
-  background-size: cover;
-}
-
-.custom-img12 {
-  background-image: url('/images/img32.png');
-  background-position: center;
-  background-size: cover;
-}
-
-.custom-img13 {
-  background-image: url('/images/img33.png');
-  background-position: center;
-  background-size: cover;
-}
-
-.custom-img14 {
-  background-image: url('/images/img34.png');
-  background-position: center;
-  background-size: cover;
-}
-
-.custom-img15 {
-  background-image: url('/images/img7.png');
-  background-position: center;
-  background-size: cover;
-}
-
-.custom-img16 {
-  background-image: url('/images/img29.png');
-  background-position: 0% 60%;
-  background-size: cover;
 }
 
 /* Latest News CSS*/
