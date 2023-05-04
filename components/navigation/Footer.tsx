@@ -53,14 +53,14 @@ export default function Footer({ anchor }: any) {
                 <div className="p-2 md:px-6 md:py-5 md:flex">
                   <SocialIcon
                     style={{ height: 30, width: 30 }}
-                    url="https://www.twitter.com"
+                    url="https://twitter.com/HaileyComms"
                     fgColor="white"
                     bgColor="transparent"
                     className="sm:p-6 transition-transform hover:scale-125 duration-200 hover:opacity-50"
                   />
                   <SocialIcon
                     style={{ height: 30, width: 30 }}
-                    url="https://www.linkedin.com"
+                    url="https://www.linkedin.com/in/haileycomms/"
                     fgColor="white"
                     bgColor="transparent"
                     className="sm:p-6 transition-transform hover:scale-125 duration-200 hover:opacity-50"
