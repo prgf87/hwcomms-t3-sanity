@@ -55,7 +55,7 @@ function Navbar() {
         }}
         transition={{
           duration: 0.5,
-          delay: 1.5,
+          delay: 0,
         }}
         className="max-w-[1240px] mx-auto flex justify-between text-white items-center p-4"
       >

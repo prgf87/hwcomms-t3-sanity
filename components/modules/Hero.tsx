@@ -8,7 +8,7 @@ function Hero({ heading, message, custombg, position }: any) {
   const [text] = useTypewriter({
     words: ['', heading, message],
     loop: true,
-    delaySpeed: 2000,
+    delaySpeed: 1000,
   });
   return (
     <section className="bg-black">

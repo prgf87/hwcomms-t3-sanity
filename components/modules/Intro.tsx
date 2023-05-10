@@ -15,7 +15,7 @@ function Intro() {
           opacity: 1,
         }}
         transition={{
-          delay: 5,
+          delay: 1.5,
           duration: 0.5,
         }}
         viewport={{
@@ -23,13 +23,15 @@ function Intro() {
         }}
         className="pt-8"
       >
-        <div>
-          <h1 className="text-2xl sm:text-3xl text-center px-20 md:text-3xl lg:text-7xl pt-8 pb-5 xl:pb-0 tracking-[15px] z-[2] uppercase">
-            Think like a scientist
-          </h1>
-          <h2 className="text-2xl sm:text-3xl text-center px-20 md:text-3xl lg:text-[4.5rem] lg:pt-6 tracking-[15px] text-gray-200 uppercase">
-            Sound like a human
-          </h2>
+        <div className="relative">
+          <div className="z-[2]">
+            <h1 className="text-2xl sm:text-3xl text-center px-20 md:text-4xl lg:text-7xl pt-8 pb-5 xl:pb-0 tracking-[15px] z-[2] uppercase">
+              Think like a scientist
+            </h1>
+            <h2 className="text-2xl sm:text-3xl text-center px-20 md:text-4xl lg:text-[4.5rem] lg:pt-6 tracking-[15px] text-gray-200 uppercase">
+              Sound like a human
+            </h2>
+          </div>
         </div>
 
         <motion.section
@@ -41,7 +43,7 @@ function Intro() {
           }}
           transition={{
             duration: 1.5,
-            delay: 3,
+            delay: 0,
           }}
           viewport={{
             once: true,
@@ -87,43 +89,45 @@ function Intro() {
             </div>
           </section>
           <div className="md:col-span-2 xl:hidden">
-            <div className="text-center mb-5 sm:mb-5 md:col-span-2">
-              <div className="md:grid px-10">
+            <div className="text-center mb-5 sm:mb-5 md:col-span-2 z-0">
+              <div className="md:grid px-10 relative z-0">
                 <Image
                   src={'/images/img8.png'}
                   width={1664}
                   height={1664}
                   alt={'/'}
-                  className="mt-10 m-auto rounded-full"
+                  className="mt-10 m-auto rounded-full absolute top-[-10em] opacity-100 z-0"
                 />
               </div>
-              <h1 className="text-2xl font-bold px-20 pt-8 pb-5 md:pb-5 md:px-2 lg:pb-5">
-                Deep understanding leads to deep connections
-              </h1>
-              <p className="px-6 md:px-40">
-                Welcome! I am a seasoned communications consultant with over 15
-                years of experience in the industry. My passion is helping teams
-                and entrepreneurs unlock the full potential of AI tools,
-                empowering them to thrive in today&apos;s competitive landscape.
-                With a little help from me, you can energize your
-                communications, create efficient workflows, and stay ahead of
-                the curve with the power of AI tools.
-                <br></br>
-                <br></br>
-                My unique approach to communications strategy blends empathy
-                practices with a deep knowledge of how our brains work, while
-                taking advantage of the latest technologies. Together, we can
-                connect to your desired audiences in meaningful ways , meeting
-                them where they are — not where we think they should be.
-                <br></br>
-                <br></br>
-                Take a look around and explore the various services I offer,
-                snapshots of my experience, and samples of my work
-                <br></br>
-                <br></br>
-                PS - most of the art on this site was created by MidJourney, an
-                AI artist.
-              </p>
+              <div className="absolute bottom-[-200px] z-[2]">
+                <h1 className="text-2xl font-bold px-20 pt-8 pb-5 md:pb-5 md:px-2 lg:pb-5">
+                  Deep understanding leads to deep connections
+                </h1>
+                <p className="px-6 md:px-40">
+                  Welcome! I am a seasoned communications consultant with over
+                  15 years of experience in the industry. My passion is helping
+                  teams and entrepreneurs unlock the full potential of AI tools,
+                  empowering them to thrive in today&apos;s competitive
+                  landscape. With a little help from me, you can energize your
+                  communications, create efficient workflows, and stay ahead of
+                  the curve with the power of AI tools.
+                  <br></br>
+                  <br></br>
+                  My unique approach to communications strategy blends empathy
+                  practices with a deep knowledge of how our brains work, while
+                  taking advantage of the latest technologies. Together, we can
+                  connect to your desired audiences in meaningful ways , meeting
+                  them where they are — not where we think they should be.
+                  <br></br>
+                  <br></br>
+                  Take a look around and explore the various services I offer,
+                  snapshots of my experience, and samples of my work
+                  <br></br>
+                  <br></br>
+                  PS - most of the art on this site was created by MidJourney,
+                  an AI artist.
+                </p>
+              </div>
             </div>
           </div>
 
@@ -141,7 +145,7 @@ function Intro() {
             // viewport={{
             //   once: true,
             // }}
-            className="col-span-2 xl:hidden mx-auto pt-5"
+            className="col-span-2 xl:hidden mx-auto pt-5 relative bottom-[-800px]"
           >
             <div className="flex-row space-x-4 mx-auto">
               <Link href="/services">
