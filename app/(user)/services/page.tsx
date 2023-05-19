@@ -25,22 +25,6 @@ async function Services() {
           <div id="services" className="relative top-[-70px]" />
           <ServicesList />
         </div>
-        <div>
-          <div id="bannerbio" className="relative top-[-70px]" />
-          <BannerBio />
-        </div>
-        <div>
-          <div id="snapshot" className="relative top-[-70px]" />
-          <Snapshots />
-        </div>
-        <div>
-          <div id="snapshot" className="relative top-[-70px]" />
-          <ReviewCarousel reviews={reviews} />
-        </div>
-        <div>
-          <div id="banneroptions" className="relative top-[-70px]" />
-          <BannerOptions />
-        </div>
       </div>
     </section>
   );

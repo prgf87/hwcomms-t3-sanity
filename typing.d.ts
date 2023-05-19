@@ -41,6 +41,7 @@ interface Experience extends Base {
   company: string;
   dateStarted: date;
   dateEnded: date;
+  dates: Block[];
   categories: Category[];
   body: Block[];
 }

@@ -2,7 +2,7 @@ import { defineField, defineType } from 'sanity';
 
 export default defineType({
   name: 'directory',
-  title: 'Directory',
+  title: 'The Online Resource Directory',
   type: 'document',
   fields: [
     defineField({
@@ -21,7 +21,7 @@ export default defineType({
     }),
     defineField({
       name: 'description',
-      description: 'Enter a description for this Online Directory',
+      description: 'Enter a description for this Online Resource Directory',
       title: 'Description',
       type: 'string',
     }),

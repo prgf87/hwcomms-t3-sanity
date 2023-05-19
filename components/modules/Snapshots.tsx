@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 function Snapshots() {
   return (
-    <section className="bg-gradient-invert">
+    <section className="bg-gradient-invert-x">
       <motion.h1
         initial={{
           opacity: 0,
@@ -23,7 +23,7 @@ function Snapshots() {
       >
         Snapshots
       </motion.h1>
-      <div className="snapshot grid grid-cols-1 lg:grid-cols-3 mx-20 sm:mx-40 mt-10 pb-20 gap-10">
+      <div className="snapshot grid grid-cols-1 lg:grid-cols-3 mx-20 sm:mx-40 mt-10 pb-20 gap-10 overflow-hidden">
         <motion.section
           initial={{
             opacity: 0,

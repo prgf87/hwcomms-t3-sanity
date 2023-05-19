@@ -1,7 +1,7 @@
 'use client';
 
 import { usePreview } from '@/lib/sanity.preview';
-import ToolboxList from '../resources/toolbox/ToolboxList';
+import ToolboxList from '../resources/ToolboxList';
 
 type Props = {
   query: string;

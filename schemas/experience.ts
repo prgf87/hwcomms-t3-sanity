@@ -2,7 +2,7 @@ import { defineField, defineType } from 'sanity';
 
 export default defineType({
   name: 'experience',
-  title: 'Experience',
+  title: 'Work Experience',
   type: 'document',
   fields: [
     defineField({
@@ -27,16 +27,11 @@ export default defineType({
     }),
 
     defineField({
-      name: 'dateStarted',
-      title: 'DateStarted',
-      type: 'date',
+      name: 'dates',
+      title: 'Dates',
+      type: 'blockContent',
     }),
-    defineField({
-      name: 'dateEnded',
-      title: 'DateEnded',
-      type: 'date',
-      hidden: ({ parent }) => !parent?.asset,
-    }),
+
     defineField({
       name: 'body',
       title: 'Body',

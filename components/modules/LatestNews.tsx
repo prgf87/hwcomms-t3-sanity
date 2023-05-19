@@ -27,17 +27,17 @@ function LatestNews({ news }: Props) {
               latest news
             </h1>
 
-            <div className="grid grid-cols-2 max-w-7xl mx-auto text-center lg:pt-20">
+            <div className="grid grid-cols-1 md:grid-cols-2 max-w-7xl mx-auto text-center lg:pt-20">
               {news.map((news: any) => {
                 return (
-                  <div key={news._id} className="grid px-20">
-                    <div className="mx-auto p-10 mt-1">
+                  <div key={news._id} className="grid px-4 md:px-20">
+                    <div className="mx-auto p-1 mt-1">
                       <Image
                         src={urlFor(news.mainImage).url()}
                         alt="Talking Points Logo"
                         width={490}
                         height={490}
-                        className="h-40 w-40 mx-auto mb-[1.25rem]"
+                        className="h-20 w-20 sm:h-40 sm:w-40 mx-auto mb-[1.25rem]"
                       />
                       <h1 className="text-2xl uppercase">{news.title}</h1>
                       <p className="font-bold pt-4">{news.title}</p>
@@ -45,7 +45,7 @@ function LatestNews({ news }: Props) {
                         {news.description}
                       </p>
                       <Link href={`${news.linkToNews}`}>
-                        <button className="btn1-large mt-10">
+                        <button className="btn1-large mt-20">
                           {news.title}
                         </button>
                       </Link>

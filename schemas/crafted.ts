@@ -1,8 +1,8 @@
 import { defineField, defineType } from 'sanity';
 
 export default defineType({
-  name: 'trick',
-  title: "Designer's Bag of Trick",
+  name: 'crafted',
+  title: 'Crafted by Hailey',
   type: 'document',
   fields: [
     defineField({
@@ -21,8 +21,7 @@ export default defineType({
     }),
     defineField({
       name: 'description',
-      description:
-        "Enter a description for this Graphic Designer's Bag of Tricks",
+      description: 'Enter a description for Resource Crafted by Hailey',
       title: 'Description',
       type: 'string',
     }),
@@ -41,8 +40,13 @@ export default defineType({
       of: [{ type: 'reference', to: { type: 'category' } }],
     }),
     defineField({
-      name: 'linktotrick',
-      title: 'Link to Trick',
+      name: 'body',
+      title: 'Body',
+      type: 'blockContent',
+    }),
+    defineField({
+      name: 'linktocrafted',
+      title: 'Link to the resource crafted by Hailey',
       type: 'url',
     }),
     defineField({

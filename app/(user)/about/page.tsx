@@ -33,10 +33,6 @@ export default async function AboutPage() {
           <div id="resume" className="relative top-[-70px]" />
           <Resume experiences={experiences} />
         </div>
-        <div>
-          <div id="banner" className="relative top-[-80px]" />
-          <BannerOptions />
-        </div>
       </div>
     </main>
   );

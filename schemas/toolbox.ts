@@ -2,7 +2,7 @@ import { defineField, defineType } from 'sanity';
 
 export default defineType({
   name: 'toolbox',
-  title: 'Toolbox',
+  title: "Creative Writer's Toolbox",
   type: 'document',
   fields: [
     defineField({

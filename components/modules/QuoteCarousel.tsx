@@ -37,24 +37,30 @@ function QuoteCarousel({ quotes }: Props) {
 
   return (
     <section>
-      <div className="relative h-[600px] lg:h-[800px] z-[0]">
+      <div className="relative h-[400px] sm:h-[500px] lg:h-[800px] z-[0]">
         <Image
           src={`/images/img21.png`}
           width={1920}
           height={800}
           alt={'/'}
-          className={`absolute top-0 bg-cover h-[600px] lg:h-[800px]`}
+          className={`absolute top-0 bg-cover h-[400px] sm:h-[500px] lg:h-[800px]`}
         />
         <div className="absolute left-0 top-0 right-0 bottom-0 bg-black/70 flex justify-center items-center py-10 z-[2]">
-          <div className="w-[1440px] mx-auto">
+          <div className="w-full mx-auto">
             <div className="mx-auto">
               {/* Quotes */}
-              <div className="hidden relative top-[8rem] md:top-[14rem] lg:top-[18rem] sm:flex items-center justify-between z-[2] opacity-0 hover:opacity-100">
-                <button onClick={prevQuote}>
-                  <ChevronLeftIcon className="h-6 w-6 md:h-12 md:w-12 text-gray-300" />
+              <div className="relative top-[10.5rem] md:top-[14rem] lg:top-[16rem] flex items-center justify-between z-[2] px-[2vw]">
+                <button
+                  onClick={prevQuote}
+                  className="opacity-70 hover:opacity-100 active:scale-90 transition-transform duration-150"
+                >
+                  <ChevronLeftIcon className="h-8 w-8 md:h-12 md:w-12 text-gray-300 border rounded-full p-2" />
                 </button>
-                <button onClick={nextQuote}>
-                  <ChevronRightIcon className="h-6 w-6 md:h-12 md:w-12 text-gray-300" />
+                <button
+                  onClick={nextQuote}
+                  className="opacity-70 hover:opacity-100 active:scale-90 transition-transform duration-150"
+                >
+                  <ChevronRightIcon className="h-8 w-8 md:h-12 md:w-12 text-gray-300 border rounded-full p-2" />
                 </button>
               </div>
               <div>
@@ -69,20 +75,20 @@ function QuoteCarousel({ quotes }: Props) {
                       }
                     >
                       {index === current && (
-                        <div className="bg-[#2d5a52]/90 w-full text-white grid grid-cols-2 z-[0]">
-                          <div className="m-auto py-4 ml-20 sm:ml-28  md:ml-[10rem] lg:ml-40 z-[2]">
+                        <div className="bg-[#2d5a52]/90 w-full text-white grid grid-cols-2 z-[0] h-[300px] md:h-[350px] lg:h-[450px]">
+                          <div className="m-auto py-4 ml-14 sm:ml-28  md:ml-[10rem] lg:ml-44 z-[2]">
                             <h2 className="text-sm md:text-2xl">
                               {quote.quotation}
                             </h2>
-                            <p className="text-sm md:text-xl pt-2 font-bold">
+                            <p className="text-base md:text-lg pt-2 font-bold">
                               {quote.author.name}
                             </p>
                           </div>
-                          <div className="relative sm:left-5 md:left-[-2rem] overflow-hidden h-40 w-40 m-auto md:h-60 md:w-60 lg:h-[35vh] lg:w-[35vh] p-10 sm:m-5 md:m-20">
+                          <div className="relative top-[22%] sm:top-[19%] md:top-[12%] left-[10%] lg:left-[20%] h-40 w-40 md:h-60 md:w-60 lg:h-[35vh] lg:w-[35vh] flex justify-center items-center">
                             <Image
                               src={urlFor(quote.mainImage).url()}
                               alt={quote.title}
-                              className="rounded-full m-auto fill"
+                              className="rounded-full m-auto"
                               fill
                             />
                           </div>

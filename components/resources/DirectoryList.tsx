@@ -9,6 +9,7 @@ import groq from 'groq';
 import Image from 'next/image';
 import Link from 'next/link';
 import ClientSideRoute from '@/components/navigation/ClientSideRoute';
+import BackToTop from '../navigation/BackToTop';
 
 type Props = {
   directories: Directory[];
@@ -27,6 +28,7 @@ export const revalidate = 60;
 function DirectoryList({ directories }: Props) {
   return (
     <main className="bg-gradient p-10 md:p-3">
+      {/* Directory List */}
       <div className="mx-auto pt-[22rem]">
         <h1 className="absolute left-0 right-0 top-44 text-center text-gray-200 sm:text-5xl lg:text-6xl tracking-widest sm:tracking-[15px] uppercase font-bold max-w-7xl mx-auto">
           The Online Resource Directory

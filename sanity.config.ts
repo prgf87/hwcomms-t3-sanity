@@ -15,7 +15,7 @@ export default defineConfig({
   basePath: '/studio',
 
   name: 'HWC_Content_Studio',
-  title: 'HWC Content Studio',
+  title: 'HW Comms Content Studio',
 
   projectId: 'vlh7m3oc',
   dataset: 'production',

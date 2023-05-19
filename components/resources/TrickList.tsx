@@ -16,7 +16,7 @@ function TrickList({ tricks }: Props) {
         <hr className="border-2 border-[#5EBCAA] my-2" />
 
         <div className="grid grid-cols-1 px-10 gap-10 gap-y-16 pb-24">
-          {/* Posts */}
+          {/* Trick List */}
 
           {tricks.map((trick, index) => {
             return (

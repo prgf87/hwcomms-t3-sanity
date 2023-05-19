@@ -8,16 +8,20 @@ import toolbox from './toolbox';
 import experience from './experience';
 import trick from './trick';
 import news from './news';
+import aitool from './aitool';
+import crafted from './crafted';
 
 export const schemaTypes = [
-  quote,
-  review,
+  blockContent,
+  aitool,
   author,
   category,
-  blockContent,
-  directory,
+  review,
+  crafted,
   toolbox,
   trick,
-  experience,
+  quote,
   news,
+  directory,
+  experience,
 ];

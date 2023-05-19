@@ -4,11 +4,11 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { Cursor, useTypewriter } from 'react-simple-typewriter';
 
-function Hero({ heading, message, custombg, position }: any) {
+function Hero({ heading, custombg, position }: any) {
   const [text] = useTypewriter({
-    words: ['', heading, message],
+    words: ['', heading],
     loop: true,
-    delaySpeed: 1500,
+    delaySpeed: 2500,
   });
   return (
     <section className="bg-black">
@@ -40,11 +40,9 @@ function Hero({ heading, message, custombg, position }: any) {
         <motion.div
           initial={{
             opacity: 1,
-            scale: 5,
           }}
           animate={{
             opacity: 0.7,
-            scale: 1,
           }}
           transition={{
             duration: 1.2,

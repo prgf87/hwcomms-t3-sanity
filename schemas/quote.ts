@@ -2,7 +2,7 @@ import { defineField, defineType } from 'sanity';
 
 export default defineType({
   name: 'quote',
-  title: 'Quote',
+  title: 'Famous Quotes',
   type: 'document',
   fields: [
     defineField({

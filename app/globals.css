@@ -39,7 +39,7 @@ h2 {
 }
 
 .btn1-large {
-  @apply px-10 py-4 bg-[#737899]/80 border border-gray-500 rounded-full tracking-widest text-gray-100 transition duration-300 hover:border-gray-400/70 hover:bg-[#737899]/50 hover:text-gray-100 active:bg-zinc-700/50 active:border-gray-400;
+  @apply min-w-[207px] text-sm px-10 py-4 bg-[#737899]/80 border border-gray-500 rounded-full tracking-widest text-gray-100 transition duration-300 hover:border-gray-400/70 hover:bg-[#737899]/50 hover:text-gray-100 active:bg-zinc-700/50 active:border-gray-400;
 }
 
 .btn2 {
@@ -56,6 +56,10 @@ h2 {
 
 .btn3 {
   @apply px-8 py-2 border border-gray-800 rounded-full bg-gradient-to-t from-zinc-800 via-black to-zinc-800 tracking-widest text-gray-200 transition hover:border-gray-600/70 hover:bg-[#737899]/90 hover:text-gray-500 active:bg-zinc-700 active:border-gray-500 active:text-white;
+}
+
+.btn4 {
+  @apply hover:text-gray-100 hover:bg-white/30 transition-transform ease-in border rounded-lg px-8 py-2 mb-6;
 }
 
 .nav-chev-down {
@@ -90,6 +94,10 @@ section.snapshot {
 
 .bg-gradient-invert {
   background-image: linear-gradient(225deg, #000000, rgb(18, 20, 49), #286464);
+}
+
+.bg-gradient-invert-x {
+  background-image: linear-gradient(-135deg, #000000, rgb(18, 20, 49), #286464);
 }
 
 .bg-gradient-lite {

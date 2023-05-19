@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import React from 'react';
 
 function ServicesList() {
@@ -7,7 +8,7 @@ function ServicesList() {
     <section id="services-list" className="bg-gradient-invert w-full">
       <div className="min-h-screen mt-20 text-gray-200">
         <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-6xl text-center tracking-[10px]  sm:px-20 py-5 lg:pt-24 xl:px-[15rem] uppercase pt-20">
-          I&apos;m here to help
+          I&apos;m here to help.
         </h1>
         <p className="max-w-3xl mx-auto pb-8 pt-4">
           My services are customized to meet the specific needs of each client.
@@ -24,13 +25,20 @@ function ServicesList() {
           >
             Contact me
           </a>{' '}
-          for a free consultation
+          for a free consultation.
         </p>
         <div className="grid grid-cols-1 mx-auto pt-10 max-w-7xl">
           <div>
             {/* <div className="h-[50rem] grid grid-cols-2 border-2 rounded-xl border-gray-800/20 space-x-4 space-y-4 text-gray-200"> */}
-            <div className="grid grid-cols-2 gap-8 my-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 my-8 mx-8 xl:mx-0">
               <div className="border bg-slate-600/70 rounded-xl p-8">
+                <Image
+                  src={'/images/img1.png'}
+                  width={1000}
+                  height={1000}
+                  alt={'Image'}
+                  className="h-40 w-40 m-auto rounded-full border-2 border-white"
+                />
                 <h1 className="text-xl font-bold mt-4">
                   AI Safety Training for Individuals and Businesses
                 </h1>
@@ -38,12 +46,19 @@ function ServicesList() {
                   Safety first! I will help you establish guidelines and best
                   practices for using AI tools, balancing data protection with
                   the power of innovation. Learn about data - protection and
-                  privacy laws, security, and transparency. I will empower y ou
-                  to harness the full potential of AI in a responsible, human -
-                  centered way.
+                  privacy laws, security, and transparency. I will empower you
+                  to harness the full potential of AI in a responsible,
+                  human-centered way.
                 </p>
               </div>
               <div className="border bg-slate-600/70 rounded-xl p-8">
+                <Image
+                  src={'/images/img9.png'}
+                  width={1000}
+                  height={1000}
+                  alt={'Image'}
+                  className="h-40 w-40 m-auto rounded-full border-2 border-white"
+                />
                 <h1 className="text-xl font-bold mt-4">
                   AI Marketing Tools Consultation
                 </h1>
@@ -55,17 +70,13 @@ function ServicesList() {
                 </p>
               </div>
               <div className="border bg-slate-600/70 rounded-xl p-8">
-                <h1 className="text-xl font-bold mt-4">
-                  Internal/Employee Communications Consultation
-                </h1>
-                <p className="mb-2 mt-4">
-                  My services are customized to meet the specific needs of each
-                  client. I work collaboratively throughout the entire process
-                  and guarantee measurable results. Contact me to find out how I
-                  can help today.
-                </p>
-              </div>
-              <div className="border bg-slate-600/70 rounded-xl p-8">
+                <Image
+                  src={'/images/img10.png'}
+                  width={1000}
+                  height={1000}
+                  alt={'Image'}
+                  className="h-40 w-40 m-auto rounded-full border-2 border-white"
+                />
                 <h1 className="text-xl font-bold mt-4">
                   Crisis Communication/Issue Management Consultation
                 </h1>
@@ -76,18 +87,50 @@ function ServicesList() {
                 </p>
               </div>
               <div className="border bg-slate-600/70 rounded-xl p-8">
+                <Image
+                  src={'/images/img11.png'}
+                  width={1000}
+                  height={1000}
+                  alt={'Image'}
+                  className="h-40 w-40 m-auto rounded-full border-2 border-white"
+                />
                 <h1 className="text-xl font-bold mt-4">
-                  Change Management Communications Consultation
+                  Internal/Employee Communications Consultation
+                </h1>
+                <p className="mb-2 mt-4">
+                  Together, we will build communication strategies and practices
+                  to ensure your employees are informed, engaged, and aligned
+                  with your organization&apos;s mission. Good communication
+                  leads to improved morale, job satisfaction and productivity.
+                </p>
+              </div>
+              <div className="border bg-slate-600/70 rounded-xl p-8">
+                <Image
+                  src={'/images/img12.png'}
+                  width={1000}
+                  height={1000}
+                  alt={'Image'}
+                  className="h-40 w-40 m-auto rounded-full border-2 border-white"
+                />
+                <h1 className="text-xl font-bold mt-4">
+                  Change in Management Communications Consultation
                 </h1>
                 <p className="mb-2 mt-4">
                   Change is hard, but I can help you through it by executing a
                   people-first strategy. Combining a deep knowledge of brain
-                  science and nearly 12 years of communications experience, I
+                  science and nearly 15 years of communications experience, I
                   will create a plan to help your employees or customers
                   navigate change.
                 </p>
               </div>
               <div className="border bg-slate-600/70 rounded-xl p-8">
+                <Image
+                  src={'/images/img13.png'}
+                  width={1000}
+                  height={1000}
+                  alt={'Image'}
+                  className="h-40 w-40 m-auto rounded-full border-2 border-white"
+                />
                 <h1 className="text-xl font-bold mt-4">
                   Empathy Communications Training
                 </h1>
@@ -101,6 +144,13 @@ function ServicesList() {
                 </p>
               </div>
               <div className="border bg-slate-600/70 rounded-xl p-8">
+                <Image
+                  src={'/images/img14.png'}
+                  width={1000}
+                  height={1000}
+                  alt={'Image'}
+                  className="h-40 w-40 m-auto rounded-full border-2 border-white"
+                />
                 <h1 className="text-xl font-bold mt-4">
                   Empathy Mapping Workshop
                 </h1>
@@ -112,6 +162,13 @@ function ServicesList() {
                 </p>
               </div>
               <div className="border bg-slate-600/70 rounded-xl p-8">
+                <Image
+                  src={'/images/img18.png'}
+                  width={1000}
+                  height={1000}
+                  alt={'Image'}
+                  className="h-40 w-40 m-auto rounded-full border-2 border-white"
+                />
                 <h1 className="text-xl font-bold mt-4">
                   Design Thinking Workshop
                 </h1>
@@ -123,12 +180,6 @@ function ServicesList() {
               </div>
             </div>
           </div>
-
-          {/* <div className="flex justify-evenly items-center">
-            <div>
-              <div className="h-[40rem] grid grid-cols-2 border-2 rounded-xl border-gray-800/20 p-[0.10rem] space-x-2 space-y-4 text-gray-200"></div>
-            </div>
-          </div> */}
         </div>
       </div>
     </section>
