@@ -75,7 +75,7 @@ async function Resources({ anchor }: any) {
   const aitool = await client.fetch(queryAiTool);
 
   return (
-    <main className="bg-gradient text-gray-200 grid grid-cols-1">
+    <main className="realtive top-0 bg-gradient text-gray-200 grid grid-cols-1">
       <div className="overflow-x-hidden">
         <div className="mx-auto text-center">
           <div>

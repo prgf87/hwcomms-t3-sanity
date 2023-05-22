@@ -89,18 +89,6 @@ function Values({}: Props) {
                 the way) so that your communications are fresh and relevant.
               </p>
             </motion.div>
-            {/* <div className="space-x-8">
-              <Link href="/services" className="relative">
-                <button className="btn1-large mt-10 sm:mt-28">
-                  My Services
-                </button>
-              </Link>
-              <Link href="/contact" className="relative">
-                <button className="btn1-large mt-10 sm:mt-28">
-                  Contact Me
-                </button>
-              </Link>
-            </div> */}
           </div>
         </div>
       </div>

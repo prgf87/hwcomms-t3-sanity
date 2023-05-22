@@ -60,9 +60,9 @@ function Intro() {
                 className="mt-4 sm:mt-10 w-[70vw] lg:w-[80vw] mx-auto"
               />
               <div className="mx-4 text-center mt-4 sm:mt-4 mb-5">
-                <h1 className="hidden sm:block text-2xl mb-8 sm:mb-0 sm:px-12 lg:px-20 md:pb-5 lg:pb-5 pt-5 uppercase tracking-widest">
+                <p className="hidden sm:block text-2xl mb-8 sm:mb-0 sm:px-12 md:pb-5 lg:pb-5 pt-5 lg:pt-10">
                   Deep understanding leads to deep connections
-                </h1>
+                </p>
                 <p className="sm:px-6 md:px-2 text-center">
                   I am a seasoned communications consultant with over 15 years
                   of experience in the industry. My passion is helping teams and
@@ -87,13 +87,6 @@ function Intro() {
                   PS - most of the art on this site was created by MidJourney.
                 </p>
               </div>
-              {/* <Image
-                src={'/images/img8.png'}
-                width={1664}
-                height={1664}
-                alt={'/'}
-                className="sm:hidden pt-8 sm:mt-10 w-[70vw] lg:w-[80vw] mx-auto"
-              /> */}
             </section>
 
             <div className="col-span-2 xl:hidden mx-auto pt-5 relative bottom-[-800px]">

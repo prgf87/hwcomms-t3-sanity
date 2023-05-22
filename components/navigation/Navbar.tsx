@@ -7,7 +7,6 @@ import { SocialIcon } from 'react-social-icons';
 import { motion } from 'framer-motion';
 import Logo from '../modules/Logo';
 import Image from 'next/image';
-import { Directory } from '@/typing';
 
 function Navbar() {
   const [nav, setNav] = useState(false);
@@ -80,7 +79,7 @@ function Navbar() {
               <Logo />
             </Link>
           </div>
-          <div className="relative top-2 left-[5vw] h-14 w-14 hover:scale-110 transition-transform ease-in-out duration-300">
+          <div className="relative top-1.5 mb-4 left-[5vw] h-14 w-14 hover:scale-110 transition-transform ease-in-out duration-300">
             <Link href="https://www.talkingpointsforlife.com/">
               <Image
                 src={'/images/tpfl-logo.png'}

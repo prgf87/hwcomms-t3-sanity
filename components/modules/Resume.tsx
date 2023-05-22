@@ -10,10 +10,6 @@ type Props = {
 };
 
 function Resume({ experiences }: Props) {
-  const dateOptions = {
-    month: 'long',
-    year: 'numeric',
-  } as const;
   return (
     <section className="bg-gradient-invert pb-32">
       <div className="relative h-[900px] z-[0] p-8">
@@ -21,7 +17,7 @@ function Resume({ experiences }: Props) {
           <h1 className="text-center text-gray-200 text-4xl sm:text-5xl lg:text-7xl tracking-widest sm:tracking-[5px] uppercase py-10 mb-10">
             my resume
           </h1>
-          <div className="overflow-y-hidden hover:overflow-y-scroll [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'2px'] sm:mx-10 lg:mx-20  h-[800px] lg:h-[600px] lg:px-0">
+          <div className="overflow-y-scroll [-ms-overflow-style:'none'] [scrollbar-width:'2px'] sm:mx-10 lg:mx-20  h-[800px] lg:h-[600px] lg:px-0 border border-gray-800/30">
             <div className="grid gap-y-8">
               {experiences.map((experience) => {
                 return (

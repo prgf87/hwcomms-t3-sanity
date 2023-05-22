@@ -39,12 +39,14 @@ function Snapshots() {
           viewport={{
             once: true,
           }}
-          className="diagonal text-center"
+          className="diagonal"
         >
           <div className="wrapper">
             <img src="/images/img27.png" alt="/" />
-            <h2 className="text-xl font-bold py-2">Experienced Communicator</h2>
-            <p>
+            <h2 className="text-xl font-bold py-2  text-center">
+              Experienced Communicator
+            </h2>
+            <p className=" text-center">
               15 years of corporate communications experience with a focus on
               crisis and internal communications.
             </p>
@@ -69,10 +71,10 @@ function Snapshots() {
         >
           <div className="wrapper">
             <img src="/images/img12.png" alt="/" />
-            <h2 className="text-xl font-bold py-2">
+            <h2 className="text-xl font-bold py-2  text-center">
               Writer, Editor, and Producer
             </h2>
-            <p>
+            <p className=" text-center">
               I create fun and inspiring content that shapes a corporate image
               and drives a positive narrative.
             </p>
@@ -97,8 +99,8 @@ function Snapshots() {
         >
           <div className="wrapper">
             <img src="/images/img26.png" alt="/" />
-            <h2 className="text-xl font-bold py-2">Brain Nerd</h2>
-            <p>
+            <h2 className="text-xl font-bold py-2  text-center">Brain Nerd</h2>
+            <p className=" text-center">
               My approach of blending brain science and empathy practices to
               create communications strategies has been proven on the frontlines
               of wildfires to control room floors of nuclear power plants.

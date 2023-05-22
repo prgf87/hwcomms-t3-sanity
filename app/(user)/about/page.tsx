@@ -3,7 +3,6 @@ import { client } from '@/lib/sanity.client';
 import Bio from '@/components/modules/Bio';
 import Resume from '@/components/modules/Resume';
 import Values from '@/components/modules/Values';
-import BannerOptions from '@/components/navigation/BannerOptions';
 
 const queryExperience = groq`
 *[_type=='experience'] {

@@ -20,7 +20,6 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
         reCaptchaRes
       );
       if (reCaptchaRes.score >= 0.5) {
-        // Save data to the database from here
         res.status(200).json({
           status: 'success',
           message: 'Enquiry submitted successfully',

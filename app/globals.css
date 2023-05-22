@@ -62,10 +62,6 @@ h2 {
   @apply hover:text-gray-100 hover:bg-white/30 transition-transform ease-in border rounded-lg px-8 py-2 mb-6 border-dotted;
 }
 
-.nav-chev-down {
-  @apply hidden lg:block;
-}
-
 section.snapshot {
   color: rgb(226, 226, 226);
 }

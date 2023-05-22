@@ -3,7 +3,6 @@ import { Toolbox } from '@/typing';
 import { ArrowUpRightIcon, ChevronDownIcon } from '@heroicons/react/24/solid';
 import Image from 'next/image';
 import Link from 'next/link';
-// import Link from 'next/link';
 import ClientSideRoute from '@/components/navigation/ClientSideRoute';
 
 type Props = {
@@ -68,12 +67,7 @@ function ToolboxList({ toolboxes }: Props) {
           })}
         </div>
       </div>
-      {/* <a href="#tips">
-        <button className="nav-chev-down absolute right-0 bottom-[61.5rem] m-5 lg:m-20 md:pr-5 animate-bounce">
-          <ChevronDownIcon className="h-6 w-6 md:h-10 md:w-10 text-white" />
-        </button>
-      </a>
-    */}
+
       <div className="mb-6 flex items-center justify-center bottom-10 relative">
         <Link href="/blog">
           <button className="btn1-large text-xl">Writer&apos;s Toolbox</button>

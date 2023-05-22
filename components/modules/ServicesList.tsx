@@ -29,7 +29,6 @@ function ServicesList() {
         </p>
         <div className="grid grid-cols-1 mx-auto pt-10 max-w-7xl">
           <div>
-            {/* <div className="h-[50rem] grid grid-cols-2 border-2 rounded-xl border-gray-800/20 space-x-4 space-y-4 text-gray-200"> */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 my-8 mx-8 xl:mx-0">
               <div className="border bg-slate-600/70 rounded-xl p-8">
                 <Image

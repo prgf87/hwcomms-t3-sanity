@@ -47,8 +47,7 @@ export default defineType({
 
   preview: {
     select: {
-      title: 'jobtitle',
-      media: 'companyImage',
+      title: 'company',
       dateStarted: 'dateStarted',
     },
     prepare(selection) {
