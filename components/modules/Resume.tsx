@@ -4,7 +4,6 @@ import React from 'react';
 import { Experience } from '@/typing';
 import { PortableText } from '@portabletext/react';
 import { RichTextComponents } from '@/components/modules/RichTextComponents';
-import Image from 'next/image';
 
 type Props = {
   experiences: Experience[];

@@ -6,9 +6,9 @@ import { Cursor, useTypewriter } from 'react-simple-typewriter';
 
 function Hero({ heading, message, custombg, position }: any) {
   const [text] = useTypewriter({
-    words: ['', heading, message],
+    words: ['', heading, '', message, ''],
     loop: true,
-    delaySpeed: 1500,
+    delaySpeed: 2000,
   });
   return (
     <section className="bg-black">

@@ -37,7 +37,7 @@ export default function Footer({ anchor }: any) {
           </div>
         </div>
       </div>
-      <div className="grid text-base sm:text-lg">
+      <div className="grid text-sm sm:text-lg">
         <div className="flex space-x-6 sm:space-x-8 mt-8 mx-auto">
           <div className="text-gray-200 flex justify-center items-center cursor-pointer place-content-start">
             <ChevronRightIcon className="h-4 w-4 sm:h-5 sm:w-5 text-gray-200 " />
@@ -57,14 +57,14 @@ export default function Footer({ anchor }: any) {
             <ChevronRightIcon className="h-4 w-4 sm:h-5 sm:w-5 text-gray-200 " />
 
             <p className="hover:brightness-50 flex justify-center items-center hover:underline">
-              <Link href={'/contact'}>Contact</Link>
+              <Link href={'/services'}>Services</Link>
             </p>
           </div>
           <div className="text-gray-200 flex justify-center items-center cursor-pointer place-content-start">
             <ChevronRightIcon className="h-4 w-4 sm:h-5 sm:w-5 text-gray-200 " />
 
             <p className="hover:brightness-50 flex justify-center items-center hover:underline">
-              <Link href={'/services'}>Services</Link>
+              <Link href={'/contact'}>Contact</Link>
             </p>
           </div>
           <div className="text-gray-200 flex justify-center items-center cursor-pointer place-content-start">

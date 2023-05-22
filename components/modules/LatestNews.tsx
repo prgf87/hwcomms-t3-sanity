@@ -13,21 +13,21 @@ type Props = {
 function LatestNews({ news }: Props) {
   return (
     <section className="news-body">
-      <div className="relative min-h-[750px] lg:min-h-[800px] z-[0]">
+      <div className="relative h-[900px] lg:min-h-[800px] z-[0]">
         <Image
           src={'/images/img35.jpg'}
           alt={'Background Image'}
           width={1600}
           height={914}
-          className="w-full min-h-[750px] lg:min-h-[800px] absolute z-[0]"
+          className="w-full h-[900px] lg:min-h-[800px] absolute z-[0]"
         />
-        <div className="absolute w-full bg-gradient-to-b from-black/70 to-black/10 top-0 object-cover min-h-[750px] lg:min-h-[800px] z-[1]">
+        <div className="absolute w-full bg-gradient-to-b from-black/70 to-black/10 top-0 object-cover h-[900px] lg:min-h-[800px] z-[1]">
           <div className="z-[1]">
             <h1 className="text-3xl text-center md:text-5xl lg:text-7xl pt-16 pb-10 xl:pb-0 tracking-[15px] uppercase">
               latest news
             </h1>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 max-w-7xl mx-auto text-center lg:pt-20">
+            <div className="grid grid-cols-1 md:grid-cols-2 max-w-7xl mx-auto text-center lg:pt-20 gap-y-10">
               {news.map((news: any) => {
                 return (
                   <div key={news._id} className="grid px-4 md:px-20">
@@ -45,7 +45,7 @@ function LatestNews({ news }: Props) {
                         {news.description}
                       </p>
                       <Link href={`${news.linkToNews}`}>
-                        <button className="btn1-large mt-20">
+                        <button className="btn1-large mt-4 sm:mt-20">
                           {news.title}
                         </button>
                       </Link>

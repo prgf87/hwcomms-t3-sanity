@@ -26,10 +26,10 @@ function Intro() {
         >
           <div className="relative">
             <div className="z-[2]">
-              <h1 className="text-2xl sm:text-3xl text-center sm:px-20 md:text-4xl lg:text-6xl sm:pt-8 pb-5 xl:pb-0 tracking-[5px] z-[2] uppercase">
+              <h1 className="text-2xl sm:text-3xl text-center sm:px-20 md:text-4xl lg:text-6xl sm:pt-8 lg:pt-4 pb-5 xl:pb-0 tracking-[5px] z-[2] uppercase">
                 Think like a scientist
               </h1>
-              <h2 className="text-2xl sm:text-3xl text-center sm:px-20 md:text-4xl lg:text-6xl lg:pt-6 tracking-[5px] text-gray-200 uppercase">
+              <h2 className="text-2xl sm:text-3xl text-center sm:px-20 md:text-4xl lg:text-6xl lg:pt-4 tracking-[5px] text-gray-200 uppercase">
                 Sound like a human
               </h2>
             </div>
@@ -51,7 +51,7 @@ function Intro() {
             }}
             className="max-w-3xl md:max-w-5xl lg:max-w-7xl mx-auto grid grid-cols-1"
           >
-            <section className="lg:grid grid-cols-1 xl:grid-cols-2 max-w-[1440px] sm:gap-5 lg:mt-10">
+            <section className="lg:grid grid-cols-1 xl:grid-cols-2 max-w-[1440px] sm:gap-5 lg:mt-0">
               <Image
                 src={'/images/img8.png'}
                 width={1664}
@@ -59,8 +59,8 @@ function Intro() {
                 alt={'/'}
                 className="mt-4 sm:mt-10 w-[70vw] lg:w-[80vw] mx-auto"
               />
-              <div className="mx-4 text-center mt-4 sm:mt-10 mb-5">
-                <h1 className="hidden sm:block text-2xl mb-8 sm:mb-0 sm:px-12 md:pb-5 lg:pb-5 pt-5">
+              <div className="mx-4 text-center mt-4 sm:mt-4 mb-5">
+                <h1 className="hidden sm:block text-2xl mb-8 sm:mb-0 sm:px-12 lg:px-20 md:pb-5 lg:pb-5 pt-5 uppercase tracking-widest">
                   Deep understanding leads to deep connections
                 </h1>
                 <p className="sm:px-6 md:px-2 text-center">

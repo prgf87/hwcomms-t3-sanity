@@ -190,8 +190,10 @@ function Navbar() {
               : 'md:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300'
           }
         >
-          <div className="flex-grid justify-center items-center">
+          <div className="absolute top-40">
             <Logo />
+          </div>
+          <div className="flex-grid justify-center items-center">
             <ul onClick={handleNav}>
               <li className="p-4 text-2xl hover:text-gray-500">
                 <Link href="/">Home</Link>

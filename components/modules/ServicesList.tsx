@@ -33,7 +33,7 @@ function ServicesList() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 my-8 mx-8 xl:mx-0">
               <div className="border bg-slate-600/70 rounded-xl p-8">
                 <Image
-                  src={'/images/img1.png'}
+                  src={'/images/PPDrawing.png'}
                   width={1000}
                   height={1000}
                   alt={'Image'}
@@ -53,7 +53,7 @@ function ServicesList() {
               </div>
               <div className="border bg-slate-600/70 rounded-xl p-8">
                 <Image
-                  src={'/images/img9.png'}
+                  src={'/images/PPPresentation.png'}
                   width={1000}
                   height={1000}
                   alt={'Image'}
@@ -71,7 +71,7 @@ function ServicesList() {
               </div>
               <div className="border bg-slate-600/70 rounded-xl p-8">
                 <Image
-                  src={'/images/img10.png'}
+                  src={'/images/PPSelfie.png'}
                   width={1000}
                   height={1000}
                   alt={'Image'}
@@ -88,7 +88,7 @@ function ServicesList() {
               </div>
               <div className="border bg-slate-600/70 rounded-xl p-8">
                 <Image
-                  src={'/images/img11.png'}
+                  src={'/images/PPSide.png'}
                   width={1000}
                   height={1000}
                   alt={'Image'}
@@ -106,7 +106,7 @@ function ServicesList() {
               </div>
               <div className="border bg-slate-600/70 rounded-xl p-8">
                 <Image
-                  src={'/images/img12.png'}
+                  src={'/images/PPUi.png'}
                   width={1000}
                   height={1000}
                   alt={'Image'}
@@ -125,7 +125,7 @@ function ServicesList() {
               </div>
               <div className="border bg-slate-600/70 rounded-xl p-8">
                 <Image
-                  src={'/images/img13.png'}
+                  src={'/images/PPDrawing.png'}
                   width={1000}
                   height={1000}
                   alt={'Image'}
@@ -145,7 +145,7 @@ function ServicesList() {
               </div>
               <div className="border bg-slate-600/70 rounded-xl p-8">
                 <Image
-                  src={'/images/img14.png'}
+                  src={'/images/PPUi.png'}
                   width={1000}
                   height={1000}
                   alt={'Image'}
@@ -163,7 +163,7 @@ function ServicesList() {
               </div>
               <div className="border bg-slate-600/70 rounded-xl p-8">
                 <Image
-                  src={'/images/img18.png'}
+                  src={'/images/PPSelfie.png'}
                   width={1000}
                   height={1000}
                   alt={'Image'}

@@ -33,6 +33,12 @@ export default defineType({
     }),
 
     defineField({
+      name: 'dateStarted',
+      title: 'DateStarted',
+      type: 'date',
+    }),
+
+    defineField({
       name: 'body',
       title: 'Body',
       type: 'blockContent',

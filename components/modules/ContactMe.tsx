@@ -146,22 +146,22 @@ export default function ContactMe() {
         <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-100 dark:text-white">
           Contact Me
         </h2>
-        <p className="mb-8 lg:mb-16 font-light text-center text-gray-200 dark:text-gray-100 sm:text-xl px-40">
+        <p className="mb-8 lg:mb-16 font-light text-center text-gray-200 dark:text-gray-100 sm:text-xl sm:px-20 lg:px-40">
           Not sure what you need? Would you like to discuss a particular
           project? <br></br>I&apos;m here to help, please get in touch.
         </p>
         <form
           noValidate={false}
           onSubmit={handleSumit}
-          className="rounded-lg shadow-xl flex flex-col px-8 py-8 bg-slate-100 dark:bg-blue-500"
+          className="rounded-lg shadow-xl flex flex-col px-8 py-8 bg-slate-800 dark:bg-blue-500"
         >
-          <h1 className="text-2xl font-bold dark:text-gray-50">
-            Send a message
+          <h1 className="text-gray-300 text-2xl font-bold dark:text-gray-50 ">
+            Send me a message
           </h1>
 
           <label
             htmlFor="name"
-            className="text-gray-900 font-light mt-8 dark:text-gray-50"
+            className="text-gray-300 font-light mt-8 dark:text-gray-50"
           >
             Full Name
             <span className="text-red-500 ml-0.5 dark:text-gray-50">*</span>
@@ -177,12 +177,12 @@ export default function ContactMe() {
             onChange={(e) => {
               setName(e?.target?.value);
             }}
-            className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-zinc-800 font-light text-gray-900"
+            className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-zinc-300 font-light text-gray-300"
           />
 
           <label
             htmlFor="email"
-            className="text-gray-900 font-light mt-4 dark:text-gray-50"
+            className="text-gray-300 font-light mt-4 dark:text-gray-50"
           >
             E-mail<span className="text-red-500 ml-0.5">*</span>
           </label>
@@ -197,12 +197,12 @@ export default function ContactMe() {
             onChange={(e) => {
               setEmail(e?.target?.value);
             }}
-            className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-zinc-800 font-light text-gray-900"
+            className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-zinc-300 font-light text-gray-300"
           />
 
           <label
             htmlFor="phone"
-            className="text-gray-900 font-light mt-4 dark:text-gray-50"
+            className="text-gray-300 font-light mt-4 dark:text-gray-50"
           >
             Phone Number
           </label>
@@ -215,12 +215,12 @@ export default function ContactMe() {
             onChange={(e) => {
               setPhone(e?.target?.value);
             }}
-            className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-zinc-800 font-light text-gray-900"
+            className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-zinc-300 font-light text-gray-300"
           />
 
           <label
             htmlFor="org"
-            className="text-gray-900 font-light mt-4 dark:text-gray-50"
+            className="text-gray-300 font-light mt-4 dark:text-gray-50"
           >
             Organization
           </label>
@@ -233,12 +233,12 @@ export default function ContactMe() {
             onChange={(e) => {
               setOrg(e?.target?.value);
             }}
-            className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-zinc-800 font-light text-gray-900"
+            className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-zinc-300 font-light text-gray-300"
           />
 
           <label
             htmlFor="date"
-            className="text-gray-900 font-light mt-4 dark:text-gray-50"
+            className="text-gray-300 font-light mt-4 dark:text-gray-50"
           >
             Project Start Date
           </label>
@@ -251,12 +251,12 @@ export default function ContactMe() {
             onChange={(e) => {
               setDate(e?.target?.value);
             }}
-            className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-zinc-800 font-light text-gray-900"
+            className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-zinc-300 font-light text-gray-300"
           />
 
           <label
             htmlFor="address"
-            className="text-gray-900 font-light mt-4 dark:text-gray-50"
+            className="text-gray-300 font-light mt-4 dark:text-gray-50"
           >
             Business Address
           </label>
@@ -269,12 +269,12 @@ export default function ContactMe() {
             onChange={(e) => {
               setAddress(e?.target?.value);
             }}
-            className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-zinc-800 font-light text-gray-900"
+            className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-zinc-300 font-light text-gray-300"
           />
 
           <label
             htmlFor="projectType"
-            className="text-gray-900 font-light mt-4 mb-4 dark:text-gray-50"
+            className="text-gray-300 font-light mt-4 mb-4 dark:text-gray-50"
           >
             What type of project are you looking for?
           </label>
@@ -286,7 +286,7 @@ export default function ContactMe() {
             onChange={(e) => {
               setProjectType(e?.target?.value);
             }}
-            className="bg-transparent border-b py-4 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-zinc-800 font-light block w-full text-sm text-gray-600 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+            className="bg-transparent border-b py-4 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-zinc-300 font-light block w-full text-sm text-gray-600 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
           >
             <option>{defaultValue}</option>
             <option>Bio &amp; Social Interview</option>
@@ -304,7 +304,7 @@ export default function ContactMe() {
 
           <label
             htmlFor="hear"
-            className="text-gray-900 font-light mt-4 mb-4 dark:text-gray-50"
+            className="text-gray-300 font-light mt-4 mb-4 dark:text-gray-50"
           >
             How did you hear about me?
           </label>
@@ -315,7 +315,7 @@ export default function ContactMe() {
             onChange={(e) => {
               setHear(e?.target?.value);
             }}
-            className="bg-transparent border-b py-4 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-zinc-800 font-light block w-full text-sm text-gray-600 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+            className="bg-transparent border-b py-4 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-zinc-300 font-light block w-full text-sm text-gray-600 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
           >
             <option>{defaultValue}</option>
 
@@ -332,7 +332,7 @@ export default function ContactMe() {
 
           <label
             htmlFor="subject"
-            className="text-gray-900 font-light mt-4 dark:text-gray-50"
+            className="text-gray-300 font-light mt-4 dark:text-gray-50"
           >
             Subject<span className="text-red-500 ml-0.5">*</span>
           </label>
@@ -347,12 +347,12 @@ export default function ContactMe() {
             onChange={(e) => {
               setSubject(e?.target?.value);
             }}
-            className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-zinc-800 font-light text-gray-900"
+            className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-zinc-300 font-light text-gray-300"
           />
 
           <label
             htmlFor="message"
-            className="text-gray-900 font-light mt-4 dark:text-gray-50"
+            className="text-gray-300 font-light mt-4 dark:text-gray-50"
           >
             Message<span className="text-red-500 ml-0.5">*</span>
           </label>
@@ -366,13 +366,13 @@ export default function ContactMe() {
             onChange={(e) => {
               setMessage(e?.target?.value);
             }}
-            className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-zinc-800 font-light text-gray-900"
+            className="bg-transparent border py-2 pl-4 focus:outline-none rounded-sm focus:ring-1 ring-zinc-300 font-light text-gray-300"
           />
           <div className="flex justify-center items-center">
             <button
               type="submit"
               disabled={buttonDis}
-              className="py-3 px-5 text-lg font-bold text-center text-white rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 mt-10"
+              className="btn4 py-3 px-5 text-lg font-bold text-center text-white rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 mt-10"
             >
               {buttonText}
             </button>

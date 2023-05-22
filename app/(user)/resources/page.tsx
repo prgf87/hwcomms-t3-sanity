@@ -79,11 +79,11 @@ async function Resources({ anchor }: any) {
       <div className="overflow-x-hidden">
         <div className="mx-auto text-center">
           <div>
-            <p className="max-w-3xl mx-auto pb-4 pt-8 text-3xl">
+            <p className="max-w-3xl mt-8 lg:mb-4 font-light text-center text-gray-200 dark:text-gray-100 sm:text-xl px-10 sm:px-40 mx-auto">
               Feel free to explore these helpful resources for creators, all
               gathered in one place.
             </p>
-            <p className="max-w-3xl mx-auto pb-12 text-3xl">
+            <p className="max-w-3xl mx-auto pb-8 sm:pb-4 sm:text-xl px-10">
               Check out{' '}
               <a
                 href="https://haileycomms.substack.com/"
@@ -95,47 +95,44 @@ async function Resources({ anchor }: any) {
             </p>
           </div>
           {/*Internal Navbar */}
-          <ul className="flex space-x-8 justify-center items-center">
+          <hr className="max-w-7xl my-2 border-dashed mx-auto" />
+          <ul className="flex-1 sm:flex w-3/4 mx-auto sm:space-x-8 justify-center items-center text-base lg:text-xl overflow-hidden">
             <li className="hover:text-gray-400">
-              <button className="btn-4">
+              <button className="btn-4 py-1">
+                <a href="/resources#aitool">AI Tools</a>
+              </button>
+            </li>
+            <li className="py-2">
+              <button className="btn-4 hover:text-gray-400 hover:underline">
                 <a href="/resources#crafted">Crafted by Hailey</a>
               </button>
             </li>
             <li className="hover:text-gray-400">
-              <button className="btn-4">
+              <button className="btn-4 py-1">
+                <a href="/resources#toolbox">Creative Writer&apos;s Toolbox</a>
+              </button>
+            </li>
+            <li className="hover:text-gray-400">
+              <button className="btn-4 py-1">
+                <a href="/resources#trick">Designer&apos;s Bag of Tricks</a>
+              </button>
+            </li>
+            <li className="hover:text-gray-400">
+              <button className="btn-4 py-1">
                 <a href="/resources#directory">Online Resource Directory</a>
               </button>
             </li>
-            <li className="hover:text-gray-400">
-              <button className="btn-4">
-                <a href="/resources#aitool">AI Tools</a>
-              </button>
-            </li>
-            <li className="hover:text-gray-400">
-              <button className="btn-4">
-                <a href="/resources#toolbox">Creative Writers Toolbox</a>
-              </button>
-            </li>
-            <li className="hover:text-gray-400">
-              <button className="btn-4">
-                <a href="/resources#tricks">Designer&apos;s Bag of Tricks</a>
-              </button>
-            </li>
           </ul>
-
-          <section>
-            <main id="crafted" className="relative top-[-80px]" />
-            <CraftedByHailey crafted={crafted} />
-          </section>
-
-          <section>
-            <main id="directory" className="relative top-[-80px]" />
-            <ResourceDirectory directories={directories} />
-          </section>
+          <hr className="max-w-7xl my-2 border-dashed mx-auto" />
 
           <section>
             <main id="aitool" className="relative top-[-80px]" />
             <AiTools aitool={aitool} />
+          </section>
+
+          <section>
+            <main id="crafted" className="relative top-[-80px]" />
+            <CraftedByHailey crafted={crafted} />
           </section>
 
           <section>
@@ -144,8 +141,13 @@ async function Resources({ anchor }: any) {
           </section>
 
           <section>
-            <main id="tricks" className="relative top-[-80px]" />
+            <main id="trick" className="relative top-[-80px]" />
             <DesignerTricks tricks={tricks} />
+          </section>
+
+          <section>
+            <main id="directory" className="relative top-[-80px]" />
+            <ResourceDirectory directories={directories} />
           </section>
         </div>
       </div>

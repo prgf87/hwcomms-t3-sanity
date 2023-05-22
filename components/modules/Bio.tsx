@@ -75,7 +75,7 @@ function Bio() {
                   className="px-4 py-2 mb-2 mt-20"
                 >
                   <div className="ml-4 sm:ml-24">
-                    <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold tracking-widest sm:pr-2 text-left mt-40 uppercase">
+                    <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold tracking-widest sm:pr-2 text-left mt-40 sm:mt-12 uppercase">
                       Who is
                     </h1>
                     <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold tracking-[10px] text-left text-gray-200 uppercase">
