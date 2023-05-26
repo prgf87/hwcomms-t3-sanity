@@ -75,15 +75,15 @@ async function Resources({ anchor }: any) {
   const aitool = await client.fetch(queryAiTool);
 
   return (
-    <main className="realtive top-0 bg-gradient text-gray-200 grid grid-cols-1">
+    <main className="realtive top-0 bg-gradient-invert text-gray-200 grid grid-cols-1">
       <div className="overflow-x-hidden">
         <div className="mx-auto text-center">
           <div>
-            <p className="max-w-3xl mt-8 lg:mb-4 font-light text-center text-gray-200 dark:text-gray-100 sm:text-xl px-10 sm:px-40 mx-auto">
+            <p className="max-w-3xl mt-8 lg:mb-4 font-light text-center text-gray-200 dark:text-gray-100 lg:text-xl px-10 lg:px-40 mx-auto">
               Feel free to explore these helpful resources for creators, all
               gathered in one place.
             </p>
-            <p className="max-w-3xl mx-auto pb-8 sm:pb-4 sm:text-xl px-10">
+            <p className="max-w-3xl mx-auto pb-8 lg:pb-4 lg:text-xl px-10">
               Check out{' '}
               <a
                 href="https://haileycomms.substack.com/"
@@ -95,35 +95,38 @@ async function Resources({ anchor }: any) {
             </p>
           </div>
           {/*Internal Navbar */}
-          <hr className="max-w-7xl my-2 border-dashed mx-auto" />
-          <ul className="flex-1 sm:flex w-3/4 mx-auto sm:space-x-8 justify-center items-center text-base lg:text-xl overflow-hidden">
-            <li className="hover:text-gray-400">
-              <button className="btn-4 py-1">
+          <hr className="max-w-7xl mb-8 border-dashed mx-auto" />
+          <ul className="flex-1 xl:flex w-full mx-auto space-x-0 xl:space-x-4 justify-center items-center text-base lg:text-xl overflow-hidden">
+            <li>
+              <button className="btn4 py-1 w-80 hover:text-gray-200 hover:font-bold">
                 <a href="/resources#aitool">AI Tools</a>
               </button>
             </li>
-            <li className="py-2">
-              <button className="btn-4 hover:text-gray-400 hover:underline">
+            <li>
+              <button className="btn4 py-1 w-80 hover:text-gray-200 hover:font-bold">
+                {' '}
                 <a href="/resources#crafted">Crafted by Hailey</a>
               </button>
             </li>
-            <li className="hover:text-gray-400">
-              <button className="btn-4 py-1">
+            <li>
+              <button className="btn4 py-1 w-80 hover:text-gray-200 hover:font-bold">
+                {' '}
                 <a href="/resources#toolbox">Creative Writer&apos;s Toolbox</a>
               </button>
             </li>
-            <li className="hover:text-gray-400">
-              <button className="btn-4 py-1">
+            <li>
+              <button className="btn4 py-1 w-80 hover:text-gray-200 hover:font-bold">
+                {' '}
                 <a href="/resources#trick">Designer&apos;s Bag of Tricks</a>
               </button>
             </li>
-            <li className="hover:text-gray-400">
-              <button className="btn-4 py-1">
-                <a href="/resources#directory">Online Resource Directory</a>
+            <li>
+              <button className="btn4 py-1 w-80 hover:text-gray-200 hover:font-bold">
+                {' '}
+                <a href="/resources#directory">Free Resources</a>
               </button>
             </li>
           </ul>
-          <hr className="max-w-7xl my-2 border-dashed mx-auto" />
 
           <section>
             <main id="aitool" className="relative top-[-80px]" />

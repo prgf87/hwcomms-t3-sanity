@@ -79,12 +79,12 @@ export default function Footer({ anchor }: any) {
 
       <div className="flex place-content-center py-10">
         <BackToTop path={anchor}>
-          <button className="btn3 text-gray-200">Back To Top</button>
+          <button className="btn4 text-gray-200">Back To Top</button>
         </BackToTop>
       </div>
       <hr className="border-1 border-white" />
       <div className="flex justify-center items-center">
-        <div className="p-5">
+        <div className="p-3 text-sm">
           <p className="text-center text-white">Hailey Wilson Communications</p>
           <p className="text-center text-white">
             Copyright&nbsp;&copy;&nbsp;2023&nbsp;-&nbsp;All Rights Reserved

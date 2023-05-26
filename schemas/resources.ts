@@ -1,16 +1,15 @@
 import { defineField, defineType } from 'sanity';
 
 export default defineType({
-  name: 'news',
-  title: 'Latest News',
+  name: 'resources',
+  title: 'Free Resources',
   type: 'document',
   fields: [
     defineField({
       name: 'title',
-      title: 'News Article Title',
+      title: 'Title',
       type: 'string',
     }),
-
     defineField({
       name: 'slug',
       title: 'Slug',
@@ -20,21 +19,12 @@ export default defineType({
         maxLength: 96,
       },
     }),
-
-    defineField({
-      name: 'date',
-      title: 'Date',
-      description: 'Enter a date if needed',
-      type: 'string',
-    }),
-
     defineField({
       name: 'description',
+      description: 'Enter a description for this free resource',
       title: 'Description',
-      description: 'Enter a description for this News Article',
       type: 'string',
     }),
-
     defineField({
       name: 'mainImage',
       title: 'Main image',
@@ -43,26 +33,22 @@ export default defineType({
         hotspot: true,
       },
     }),
-
     defineField({
       name: 'categories',
       title: 'Categories',
       type: 'array',
       of: [{ type: 'reference', to: { type: 'category' } }],
     }),
-
     defineField({
-      name: 'button',
-      title: 'Button Text',
-      type: 'string',
+      name: 'body',
+      title: 'Body',
+      type: 'blockContent',
     }),
-
     defineField({
-      name: 'linktonews',
-      title: 'Link to News Article/Website/Resource',
+      name: 'linktoresource',
+      title: 'Link to Free Resource',
       type: 'url',
     }),
-
     defineField({
       name: 'publishedAt',
       title: 'Published at',

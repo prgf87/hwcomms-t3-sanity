@@ -146,10 +146,18 @@ export default function ContactMe() {
         <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-100 dark:text-white">
           Contact Me
         </h2>
-        <p className="mb-8 lg:mb-16 font-light text-center text-gray-200 dark:text-gray-100 sm:text-xl sm:px-20 lg:px-40">
-          Not sure what you need? Would you like to discuss a particular
-          project? <br></br>I&apos;m here to help, please get in touch.
+        <p className="mb-8 lg:mb-12 font-light text-center text-gray-200 dark:text-gray-100 sm:text-xl sm:px-20 lg:px-40">
+          Ready to discuss a particular project? Not sure what you need?
+          <br></br>
+          <br></br>
+          I&apos;m here to help! Please get in touch by using the form below.
+          <br></br>
+          <br></br>
+          <p className="text-xs text-center text-gray-300">
+            Please Note: fields marked with a red asterisk are mandatory
+          </p>
         </p>
+
         <form
           noValidate={false}
           onSubmit={handleSumit}
@@ -184,7 +192,7 @@ export default function ContactMe() {
             htmlFor="email"
             className="text-gray-300 font-light mt-4 dark:text-gray-50"
           >
-            E-mail<span className="text-red-500 ml-0.5">*</span>
+            Email<span className="text-red-500 ml-0.5">*</span>
           </label>
 
           <input
@@ -276,7 +284,7 @@ export default function ContactMe() {
             htmlFor="projectType"
             className="text-gray-300 font-light mt-4 mb-4 dark:text-gray-50"
           >
-            What type of project are you looking for?
+            Please select the type of service you are looking for.
           </label>
 
           <select

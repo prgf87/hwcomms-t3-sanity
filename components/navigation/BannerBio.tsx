@@ -14,7 +14,7 @@ function BannerBio({}: Props) {
         alt={'/'}
         className="h-[300px] object-cover"
       />
-      <div className="absolute left-0 top-0 right-0 bottom-0 bg-black/20 z-[2] flex justify-center items-center sm:px-40">
+      <div className="absolute left-0 top-0 right-0 bottom-0 bg-black/60 z-[2] flex justify-center items-center sm:px-40">
         <div className="grid grid-cols-1 lg:grid-cols-3 mx-auto gap-4 z-[4]">
           <Link href="/about">
             <button className="btn1-large mx-2 lg:mx-10">About Me</button>

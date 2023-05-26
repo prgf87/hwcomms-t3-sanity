@@ -114,6 +114,7 @@ function Navbar() {
             </button>
             <div
               ref={dropdownRef}
+              onClick={() => setdropdownOpen(!dropdownOpen)}
               className={`${
                 dropdownOpen
                   ? `top-8 x-100 visible`
@@ -121,16 +122,15 @@ function Navbar() {
               } absolute top-0 left-0 z-40 mt-2 w-[15rem] rounded-lg bg-slate-800 py-2 shadow-card transition-all duration-300`}
             >
               <Link
-                onClick={() => setdropdownOpen(!dropdownOpen)}
                 href="/resources"
-                className="block py-2 px-5 text-base font-semibold text-gray-200 hover:text-gray-400 hover:bg-slate-800/60"
+                className="block py-2 px-5 hover:text-gray-400 text-xs md:text-sm lg:text-lg"
               >
                 Resource Directory
               </Link>
               <Link
                 onClick={() => setdropdownOpen(!dropdownOpen)}
                 href="http://haileycomms.substack.com/"
-                className="block py-2 px-5 text-base font-semibold text-gray-200 hover:text-gray-400 hover:bg-slate-800/60"
+                className="block py-2 px-5 hover:text-gray-400 text-xs md:text-sm lg:text-lg"
               >
                 Hailey&apos;s Blog
               </Link>

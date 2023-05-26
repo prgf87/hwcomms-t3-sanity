@@ -6,7 +6,7 @@ import { Cursor, useTypewriter } from 'react-simple-typewriter';
 
 function Hero({ heading, custombg, position }: any) {
   const [text] = useTypewriter({
-    words: ['', heading],
+    words: ['', heading, ''],
     loop: true,
     delaySpeed: 2500,
   });

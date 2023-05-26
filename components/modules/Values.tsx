@@ -9,7 +9,7 @@ type Props = {};
 
 function Values({}: Props) {
   return (
-    <section className="relative bg-black h-[1100px] sm:h-[850px] z-[0]">
+    <section className="relative bg-black h-[1100px] sm:h-[950px] z-[0]">
       <Image
         src={'/images/img17.png'}
         alt={'Background Image'}
@@ -54,8 +54,8 @@ function Values({}: Props) {
               <h2 className="text-xl lg:text-4xl lg:tracking-[5px] text-gray-300 uppercase">
                 Seek Extraordinary Experiences
               </h2>
-              <p className="p-lite px-4 md:px-20 py-2">
-                You deserve my best, so you&apos;ll get it. Which means that
+              <p className="p-lite px-4 sm:px-16 md:px-20 py-2">
+                You deserve my best, so you&apos;ll get it. This means that
                 I&apos;m always on the lookout for a chance to delight you and
                 your team (that&apos;s the fun part of the job!).
               </p>
@@ -63,7 +63,7 @@ function Values({}: Props) {
               <h2 className="pt-8 text-xl lg:text-4xl lg:tracking-[5px] text-gray-300 uppercase">
                 Be Thorough
               </h2>
-              <p className="p-lite px-4 md:px-20 py-2">
+              <p className="p-lite px-4 sm:px-16 md:px-20 py-2">
                 My grandfather always said, “If you don&apos;t do it right, you
                 might as well not do it at all.” I believe in doing the job well
                 down to the smallest detail.
@@ -72,7 +72,7 @@ function Values({}: Props) {
               <h2 className="pt-8 text-xl lg:text-4xl lg:tracking-[5px] text-gray-300 uppercase">
                 Have Integrity
               </h2>
-              <p className="p-lite px-4 md:px-20 py-2">
+              <p className="p-lite px-4 sm:px-16 md:px-20 py-2">
                 In my line of work, integrity presents itself in the form of
                 radical candor. I will always tell you the truth (the good, the
                 bad, the ugly).
@@ -81,7 +81,7 @@ function Values({}: Props) {
               <h2 className="pt-8 text-xl lg:text-4xl lg:tracking-[5px] text-gray-300 uppercase">
                 Move Forward, Move Fast
               </h2>
-              <p className="p-lite px-4 md:px-20 py-2">
+              <p className="p-lite px-4 sm:px-16 md:px-20 py-2">
                 In the literal interpretation of this value, excellent
                 communications must be timely (no argument there), but “Moving
                 Forward” also applies to doing my homework on learning the

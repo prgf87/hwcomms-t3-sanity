@@ -17,12 +17,12 @@ function AiTools({ aitool }: any) {
             <button className="btn4 text-gray-200 pb-4">Back To Top</button>
           </BackToTop>
         </div>
-        <div className="text-gray-200 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5 items-center mx-auto max-w-[500px] md:max-w-[750px] lg:max-w-[1000px] xl:max-w-full">
+        <div className="text-gray-200 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-2 mt-4 items-center mx-auto max-w-[500px] md:max-w-[750px] lg:max-w-[1000px] xl:max-w-full">
           {aitool.map((aitool: any) => {
             return (
               <ClientSideRoute key={aitool._id} route={aitool.linktoaitool}>
                 <div className="overflow-hidden rounded-xl">
-                  <div className="grid grid-cols-1 mx-auto md:mx-none md:grid-cols-2 group cursor-pointer bg-slate-600/70">
+                  <div className="grid grid-cols-1 mx-auto md:mx-none md:grid-cols-2 group cursor-pointer bg-slate-600/70 h-none md:h-40 lg:h-60">
                     <div className="relative w-full h-52 md:h-full md:w-60 drop-shadow-xl group-hover:scale-110 transition-transform duration-200 ease-out ">
                       <Image
                         className="overflow-hidden object-cover object-center md:rounded-xl m-auto"
@@ -30,17 +30,16 @@ function AiTools({ aitool }: any) {
                         alt={aitool.title}
                         fill
                       />
-                      <div className="absolute hidden xl:block w-full h-52 md:h-full md:w-60 bg-opacity-10 bg-black rounded text-white" />
                     </div>
-                    <div className="z-[2] px-4 md:px-0 md:text-left mt-10 lg:mt-4 md:ml-[-100px] md:mr-4 lg:ml-10 xl:ml-[-20px] xl:mr-0 xl:px-0 group-hover:underline">
+                    <div className="z-[2] px-4 md:px-0 md:text-left mt-4 md:mt-10 lg:mt-4 md:ml-[-100px] md:mr-4 lg:ml-10 xl:ml-[-20px] xl:mr-0 xl:px-0 group-hover:underline">
                       <p className="font-bold text-xl">{aitool.title}</p>
                       <div className="flex justify-center md:justify-start items-center">
-                        <p className="mt-5 font-bold flex items-center text-sm">
+                        <p className="mt-5 sm:mt-2 font-bold flex items-center text-sm">
                           Go to Resource{' '}
                           <ArrowUpRightIcon className="ml-2 h-4 w-4" />
                         </p>
                       </div>
-                      <p className="font-bold py-4 md:pr-10 lg:pr-0 xl:pr-5 text-sm">
+                      <p className="font-bold mt-2 md:pr-10 lg:pr-0 xl:pr-5 text-sm pb-4">
                         {aitool.description}
                       </p>
                     </div>

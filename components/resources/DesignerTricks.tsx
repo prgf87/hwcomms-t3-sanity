@@ -17,12 +17,12 @@ function DesignerTricks({ tricks }: any) {
             <button className="btn4 text-gray-200 pb-4">Back To Top</button>
           </BackToTop>
         </div>
-        <div className="text-gray-200 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5 items-center mx-auto max-w-[500px] md:max-w-[750px] lg:max-w-[1000px] xl:max-w-full">
+        <div className="text-gray-200 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-2 items-center mx-auto max-w-[500px] md:max-w-[750px] lg:max-w-[1000px] xl:max-w-full mt-4">
           {tricks.map((trick: any) => {
             return (
               <ClientSideRoute key={trick._id} route={trick.linktotrick}>
                 <div className="overflow-hidden rounded-xl">
-                  <div className="grid grid-cols-1 mx-auto md:mx-none md:grid-cols-2 group cursor-pointer bg-slate-600/70">
+                  <div className="grid grid-cols-1 mx-auto md:mx-none md:grid-cols-2 group cursor-pointer bg-slate-600/70 h-none md:h-40 lg:h-60">
                     <div className="relative w-full h-52 md:h-full md:w-60 drop-shadow-xl group-hover:scale-110 transition-transform duration-200 ease-out ">
                       <Image
                         className="overflow-hidden object-cover object-center md:rounded-xl m-auto"

@@ -59,10 +59,10 @@ function Intro() {
                 alt={'/'}
                 className="mt-4 sm:mt-10 w-[70vw] lg:w-[80vw] mx-auto"
               />
-              <div className="mx-4 text-center mt-4 sm:mt-4 mb-5">
-                <p className="hidden sm:block text-2xl mb-8 sm:mb-0 sm:px-12 md:pb-5 lg:pb-5 pt-5 lg:pt-10">
-                  Deep understanding leads to deep connections
-                </p>
+              <div className="mx-4 text-center mt-4 sm:mt-4 mb-5 px-10 md:px-20 xl:px-0">
+                <h1 className="hidden sm:block text-2xl mb-8 sm:mb-0 sm:px-12 md:pb-5 lg:pb-5 pt-5 lg:pt-10 font-bold uppercase">
+                  Deep understanding leads to deep connections.
+                </h1>
                 <p className="sm:px-6 md:px-2 text-center">
                   I am a seasoned communications consultant with over 15 years
                   of experience in the industry. My passion is helping teams and
@@ -76,20 +76,20 @@ function Intro() {
                   My unique approach to communications strategy blends empathy
                   practices with a deep knowledge of how our brains work, while
                   taking advantage of the latest technologies. Together, we can
-                  connect to your desired audiences in meaningful ways , meeting
-                  them where they are — not where we think they should be.
+                  connect to your desired audiences in meaningful ways, meeting
+                  them where they are - not where we think they should be.
                   <br></br>
                   <br></br>
                   Take a look around and explore the various services I offer,
                   snapshots of my experience, and samples of my work.
                   <br></br>
                   <br></br>
-                  PS - most of the art on this site was created by MidJourney.
+                  PS — most of the art on this site was created by Midjourney.
                 </p>
               </div>
             </section>
 
-            <div className="col-span-2 xl:hidden mx-auto pt-5 relative bottom-[-800px]">
+            <div className="col-span-2 xl:hidden mx-auto pt-5 relative bottom-[0px]">
               <div className="flex-row space-x-4 mx-auto">
                 <Link href="/services">
                   <button className="mb-10 sm:mb-[4rem] text-lg btn1">
