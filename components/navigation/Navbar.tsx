@@ -119,7 +119,7 @@ function Navbar() {
                 dropdownOpen
                   ? `top-8 x-100 visible`
                   : 'top-0 x-0 invisible opacity-0'
-              } absolute top-0 left-0 z-40 mt-2 w-[15rem] rounded-lg bg-slate-800 py-2 shadow-card transition-all duration-300`}
+              } absolute top-0 left-0 z-40 mt-2 w-[15rem] rounded-lg bg-slate-800 text-white py-2 shadow-card transition-all duration-300`}
             >
               <Link
                 href="/resources"
