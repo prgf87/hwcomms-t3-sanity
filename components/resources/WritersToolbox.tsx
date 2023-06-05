@@ -7,7 +7,7 @@ import ClientSideRoute from '../navigation/ClientSideRoute';
 
 function WritersToolbox({ toolboxes }: any) {
   return (
-    <section id="toolbox" className="relative px-10 md:p-3">
+    <section id="toolbox" className="relative px-2 sm:px-10 md:p-3">
       <div className="relative mx-auto mt-8">
         <h1 className="absolute top-0 left-0 right-0 text-center text-gray-200 tracking-widest md:tracking-[8px] uppercase underline text-2xl lg:text-3xl">
           creative writer&apos;s toolbox{' '}

@@ -90,16 +90,16 @@ function Intro() {
             </section>
 
             <div className="col-span-2 xl:hidden mx-auto pt-5 relative bottom-[0px]">
-              <div className="flex-row space-x-4 mx-auto">
-                <Link href="/services">
-                  <button className="mb-10 sm:mb-[4rem] text-lg btn1">
-                    My Services
+              <div className="grid sm:space-x-4 mx-auto">
+                <Link href="/about">
+                  <button className="mb-10 sm:mb-[4rem] text-lg btn1 w-48">
+                    About me
                   </button>
                 </Link>
 
-                <Link href="/contact">
-                  <button className="mb-10 sm:mb-[4rem] text-lg btn1">
-                    Contact Me
+                <Link href="/services">
+                  <button className="mb-10 sm:mb-[4rem] text-lg btn1 w-48">
+                    My Services
                   </button>
                 </Link>
               </div>

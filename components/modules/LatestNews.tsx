@@ -23,7 +23,7 @@ function LatestNews({ news }: Props) {
         />
         <div className="absolute w-full bg-gradient-to-b from-black/70 to-black/10 top-0 object-cover h-[900px] sm:h-[1050px] md:h-[800px] z-[1]">
           <div className="z-[1]">
-            <h1 className="text-3xl text-center md:text-5xl lg:text-7xl pt-20 pb-10 xl:pb-0 tracking-[15px] uppercase">
+            <h1 className="text-3xl text-center md:text-5xl lg:text-7xl pt-20 pb-10 xl:pb-0 tracking-widest sm:tracking-[15px] uppercase">
               latest news
             </h1>
 

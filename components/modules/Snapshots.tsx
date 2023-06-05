@@ -19,7 +19,7 @@ function Snapshots() {
         viewport={{
           once: true,
         }}
-        className="text-4xl sm:text-7xl text-gray-300 tracking-[20px] uppercase text-center pt-20"
+        className="text-4xl sm:text-7xl text-gray-300 tracking-widest sm:tracking-[15px] uppercase text-center pt-20"
       >
         Snapshots
       </motion.h1>
