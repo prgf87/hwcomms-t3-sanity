@@ -45,11 +45,6 @@ export default defineType({
       type: 'blockContent',
     }),
     defineField({
-      name: 'linktotrick',
-      title: 'Link to Trick',
-      type: 'url',
-    }),
-    defineField({
       name: 'publishedAt',
       title: 'Published at',
       type: 'datetime',

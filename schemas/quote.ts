@@ -48,8 +48,8 @@ export default defineType({
 
   preview: {
     select: {
-      title: 'title',
       author: 'author.name',
+      title: 'title',
       media: 'mainImage',
     },
     prepare(selection) {

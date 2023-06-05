@@ -40,11 +40,6 @@ export default defineType({
       of: [{ type: 'reference', to: { type: 'category' } }],
     }),
     defineField({
-      name: 'body',
-      title: 'Body',
-      type: 'blockContent',
-    }),
-    defineField({
       name: 'linktoaitool',
       title: 'Link to the AI Tool',
       type: 'url',
