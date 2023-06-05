@@ -96,32 +96,32 @@ async function Resources({ anchor }: any) {
           </div>
           {/*Internal Navbar */}
           <hr className="max-w-7xl mb-8 border-dashed mx-auto" />
-          <ul className="flex-1 xl:flex w-full mx-auto space-x-0 xl:space-x-4 justify-center items-center text-base lg:text-xl overflow-hidden">
+          <ul className="flex-1 xl:flex w-full mx-auto space-x-0 justify-center items-center text-base xl:text-xl overflow-hidden">
             <li>
-              <button className="btn4 py-1 w-80 hover:text-gray-200 hover:font-bold">
+              <button className="btn4 py-1 w-[255px] hover:text-gray-200 hover:font-thin">
                 <a href="/resources#aitool">AI Tools</a>
               </button>
             </li>
             <li>
-              <button className="btn4 py-1 w-80 hover:text-gray-200 hover:font-bold">
+              <button className="btn4 py-1 w-[255px] hover:text-gray-200 hover:font-thin">
                 {' '}
                 <a href="/resources#crafted">Crafted by Hailey</a>
               </button>
             </li>
             <li>
-              <button className="btn4 py-1 w-80 hover:text-gray-200 hover:font-bold">
+              <button className="btn4 py-1 w-[255px] hover:text-gray-200 hover:font-thin">
                 {' '}
                 <a href="/resources#toolbox">Creative Writer&apos;s Toolbox</a>
               </button>
             </li>
             <li>
-              <button className="btn4 py-1 w-80 hover:text-gray-200 hover:font-bold">
+              <button className="btn4 py-1 w-[255px] hover:text-gray-200 hover:font-thin">
                 {' '}
                 <a href="/resources#trick">Designer&apos;s Bag of Tricks</a>
               </button>
             </li>
             <li>
-              <button className="btn4 py-1 w-80 hover:text-gray-200 hover:font-bold">
+              <button className="btn4 py-1 w-[255px] hover:text-gray-200 hover:font-thin">
                 {' '}
                 <a href="/resources#directory">Free Resources</a>
               </button>

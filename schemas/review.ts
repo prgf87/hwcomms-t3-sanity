@@ -30,29 +30,13 @@ export default defineType({
       title: 'Review',
       type: 'string',
     }),
-    defineField({
-      name: 'mainImage',
-      title: 'Main image',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
-    }),
-    defineField({
-      name: 'bgImage',
-      title: 'Background Image',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
-    }),
+
     defineField({
       name: 'publishedAt',
       title: 'Published at',
       type: 'datetime',
     }),
   ],
-
   preview: {
     select: {
       title: 'title',

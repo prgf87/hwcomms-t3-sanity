@@ -61,7 +61,7 @@ h2 {
 
 .btn4 {
   font-family: 'Montserrat', sans-serif;
-  @apply hover:text-gray-100 hover:bg-white/30 transition-transform ease-in border rounded-lg px-8 py-2 border-dotted font-light;
+  @apply hover:text-gray-100 hover:bg-white/30 transition-transform ease-in border rounded-lg px-4 py-2 border-dotted font-light;
 }
 
 .btn4-large {

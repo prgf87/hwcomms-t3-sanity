@@ -8,7 +8,7 @@ function ServicesList() {
     <section id="services-list" className="bg-gradient-invert w-full">
       <div className="min-h-screen mt-20 text-gray-200">
         <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-6xl text-center tracking-[10px]  sm:px-20 lg:pt-24 xl:px-[15rem] uppercase pt-8 sm:pt-20">
-          I&apos;m here to help.
+          I&apos;m here to help
         </h1>
         <div className="mx-8">
           <p className="max-w-3xl mx-auto pb-8 pt-4">
