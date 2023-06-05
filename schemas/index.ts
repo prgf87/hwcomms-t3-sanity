@@ -10,7 +10,6 @@ import trick from './trick';
 import news from './news';
 import aitool from './aitool';
 import crafted from './crafted';
-import resources from './resources';
 
 export const schemaTypes = [
   blockContent,
@@ -22,7 +21,6 @@ export const schemaTypes = [
   toolbox,
   trick,
   quote,
-  resources,
   news,
   directory,
   experience,
