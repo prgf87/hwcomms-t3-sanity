@@ -37,8 +37,8 @@ export default function Footer({ anchor }: any) {
           </div>
         </div>
       </div>
-      <div className="grid max-w-lg text-xs sm:text-lg">
-        <div className="flex space-x-2 sm:space-x-8 mt-8 mx-auto">
+      <div className="grid max-w-lg text-xs sm:text-lg mx-auto">
+        <div className="flex space-x-2 sm:space-x-8 mt-8">
           <div className="text-gray-200 flex justify-center items-center cursor-pointer place-content-start">
             <ChevronRightIcon className="h-4 w-4 sm:h-5 sm:w-5 text-gray-200 " />
 
