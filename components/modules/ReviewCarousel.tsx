@@ -25,15 +25,15 @@ function ReviewCarousel({ reviews }: Props) {
   };
 
   return (
-    <section className="relative h-[950px] z-0">
+    <section className="relative h-[800px] md:h-[900px] z-0">
       <Image
         src={`/images/img28.png`}
         width={1920}
         height={800}
         alt={'/'}
-        className="absolute h-[950px] object-cover"
+        className="absolute h-[800px] md:h-[900px] object-cover"
       />
-      <div className="absolute h-[950px] bg-gradient-to-b from-black/90 via-black/60 to-black/90 left-0 top-0 right-0 bottom-0 z-[1] lg:py-20 opacity-100" />
+      <div className="absolute h-[800px] md:h-[900px] bg-gradient-to-b from-black/90 via-black/60 to-black/90 left-0 top-0 right-0 bottom-0 z-[1] lg:py-20 opacity-100" />
       <div className="absolute z-[10]">
         <motion.h1
           initial={{
@@ -71,12 +71,12 @@ function ReviewCarousel({ reviews }: Props) {
                       alt={review.title}
                       width={1024}
                       height={1024}
-                      className="h-[30vh] w-[30vh] rounded-full mx-auto items-center"
+                      className="h-[250px] w-[250px] rounded-full mx-auto items-center"
                     />
                   </div>
-                  <div className="max-w-3xl mx-auto z-[2] text-gray-200 px-8 py-5 text-center">
-                    <p className="p-2">{review.review}</p>
-                    <h2 className="text-3xl p-2">{review.author.name}</h2>
+                  <div className="max-w-3xl mx-auto z-[2] text-gray-200 px-8 py-4 text-center">
+                    <p className="pb-2 text-sm sm:text-lg">{review.review}</p>
+                    <h2 className="text-3xl pt-2">{review.author.name}</h2>
                   </div>
                 </div>
               )}

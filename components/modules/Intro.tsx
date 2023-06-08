@@ -77,7 +77,7 @@ function Intro() {
                   practices with a deep knowledge of how our brains work, while
                   taking advantage of the latest technologies. Together, we can
                   connect to your desired audiences in meaningful ways, meeting
-                  them where they are - not where we think they should be.
+                  them where they are — not where we think they should be.
                   <br></br>
                   <br></br>
                   Take a look around and explore the various services I offer,
@@ -90,7 +90,7 @@ function Intro() {
             </section>
 
             <div className="col-span-2 xl:hidden mx-auto pt-5 relative bottom-[0px]">
-              <div className="grid sm:space-x-4 mx-auto">
+              <div className="grid md:flex md:space-x-4 mx-auto">
                 <Link href="/about">
                   <button className="mb-10 sm:mb-[4rem] text-lg btn1 w-48">
                     About me

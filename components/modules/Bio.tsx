@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 function Bio() {
   return (
@@ -35,7 +36,7 @@ function Bio() {
                     alt="Hailey Wilson Hiking"
                     width={960}
                     height={720}
-                    className="h-[48rem] sm:h-[40rem] w-[40rem] object-cover object-right rounded-full m-auto lg:ml-10 xl:ml-60 absolute opacity-20 top-20 md:top-0 md:relative md:opacity-100"
+                    className="h-[48rem] sm:h-[44rem] w-[40rem] object-cover object-right rounded-full m-auto lg:ml-10 xl:ml-60 absolute opacity-20 top-20 md:top-0 md:relative md:opacity-100"
                   />
                 </motion.div>
               </div>
@@ -147,15 +148,15 @@ function Bio() {
                   viewport={{
                     once: true,
                   }}
-                  className="px-4 sm:py-2 mb-2 sm:pt-48 lg:pt-0"
+                  className="px-4 sm:py-2 mb-2 sm:pt-24 lg:pt-0"
                 >
-                  <div className="xl:pl-24 text-left mt-[20rem] sm:mt-0 md:mt-12 md:relative md:top-[-225px] lg:top-[-125px]">
-                    <h1 className="px-4 py-2 my-4 text-2xl md:text-3xl lg:text-5xl tracking-widest uppercase font-bold">
+                  <div className="xl:pl-24 text-left mt-[12rem] sm:mt-0 md:mt-12 md:relative md:top-[-225px] lg:top-[-125px]">
+                    <h1 className="px-4 py-2 mt-4 md:px-0 md:pl-3 text-2xl md:text-3xl lg:text-5xl tracking-widest uppercase font-bold">
                       up for the challenge
                     </h1>
                     <p className="px-4 py-2">
                       Whether it is explaining complex energy issues to business
-                      leaders, or detailing changes to a popular company policy
+                      leaders or detailing changes to a popular company policy
                       to employees, I meet each challenge by remembering three
                       keys to successful communications:
                     </p>
@@ -183,11 +184,20 @@ function Bio() {
                         </p>
                       </li>
                     </ul>
-                    <p className="px-4 py-2 pb-28 md:pb-0">
+                    <p className="px-4 pb-2 md:pb-0">
                       I&apos;ve had a lot of success by following these simple
                       rules and I&apos;m thankful to the hundreds of employees,
                       executives and community members who have taught me
                       through experience.
+                    </p>
+                    <p className="px-4 py-2 pb-10 md:pb-0 mt-8">
+                      On a personal level, I am an avid photographer always on
+                      the hunt for that perfect shot. Despite my extreme dislike
+                      of strenuous exercise, I&apos;ve climbed up steep ravines
+                      and braved windy summits to capture dreamy sunsets and
+                      snowy landscapes. When I&apos;m not looking through my
+                      camera lens, I&apos;m writing and chronicling stories of
+                      my eccentric family.
                     </p>
                   </div>
                 </motion.div>
@@ -216,8 +226,8 @@ function Bio() {
                     alt="Hailey Wilson Hiking"
                     width={952}
                     height={1400}
-                    className="h-[48rem] md:h-[40rem]
-                    md:top-[-7rem] w-[40rem] object-cover object-center rounded-full m-auto absolute opacity-30 top-[55rem] md:relative md:opacity-100"
+                    className="h-[48rem] md:h-[52rem]
+                    md:top-[-7rem] w-[40rem] object-cover object-center rounded-full m-auto absolute opacity-30 top-[49rem] md:relative md:opacity-100"
                   />
                 </motion.div>
               </div>

@@ -66,7 +66,7 @@ function Values({}: Props) {
               <p className="p-lite px-4 sm:px-16 md:px-20 py-2">
                 My grandfather always said, “If you don&apos;t do it right, you
                 might as well not do it at all.” I believe in doing the job well
-                down to the smallest detail.
+                — down to the smallest detail.
               </p>
 
               <h2 className="pt-8 text-xl lg:text-4xl lg:tracking-[5px] text-gray-300 uppercase">
@@ -82,11 +82,11 @@ function Values({}: Props) {
                 Move Forward, Move Fast
               </h2>
               <p className="p-lite px-4 sm:px-16 md:px-20 py-2">
-                In the literal interpretation of this value, excellent
-                communications must be timely (no argument there), but “Moving
-                Forward” also applies to doing my homework on learning the
-                industry&apos;s best, newest ideas (and come up with a few on
-                the way) so that your communications are fresh and relevant.
+                Excellent communications must be timely, that much is obvious.
+                Beyond communicating “fast”, I believe in communicating
+                “forward”. Following this value means I do my homework to learn
+                the industry&apos;s best, newest ideas (and come up with a few
+                on the way) so that your communications are fresh and relevant.
               </p>
             </motion.div>
           </div>
