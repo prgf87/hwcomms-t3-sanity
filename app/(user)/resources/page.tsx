@@ -6,6 +6,7 @@ import PreviewTrickList from '@/components/preview/PreviewTrickList';
 import PreviewToolboxList from '@/components/preview/PreviewToolboxList';
 import PreviewDirectoryList from '@/components/preview/PreviewDirectoryList';
 import AiTools from '@/components/resources/AiTools';
+import AiTools2 from '@/components/resources/AiTools2';
 import CraftedByHailey from '@/components/resources/CraftedByHailey';
 import ResourceDirectory from '@/components/resources/ResourceDirectory';
 import DesignerTricks from '@/components/resources/DesignerTricks';
@@ -46,6 +47,13 @@ const queryAiTool = groq`
   categories[]->
 } | order(_createdAt desc)
 `;
+const queryAiTool2 = groq`
+*[_type=='aitool2'] {
+  ...,
+  author->,
+  categories[]->
+} | order(_createdAt desc)
+`;
 
 export const revalidate = 60;
 
@@ -73,6 +81,7 @@ async function Resources({ anchor }: any) {
   const directories = await client.fetch(queryDirectory);
   const crafted = await client.fetch(queryCrafted);
   const aitool = await client.fetch(queryAiTool);
+  const aitool2 = await client.fetch(queryAiTool2);
 
   return (
     <main className="realtive top-0 bg-gradient-invert text-gray-200 grid grid-cols-1">
@@ -96,10 +105,15 @@ async function Resources({ anchor }: any) {
           </div>
           {/*Internal Navbar */}
           <hr className="max-w-7xl mb-8 border-dashed mx-auto" />
-          <ul className="flex-1 xl:flex w-full mx-auto space-x-0 justify-center items-center text-base xl:text-xl overflow-hidden">
+          <ul className="grid grid-cols-2 mx-auto space-x-0 text-base xl:text-xl">
             <li>
               <button className="btn4 py-1 w-[255px] hover:text-gray-200 hover:font-thin">
-                <a href="/resources#aitool">AI Tools</a>
+                <a href="/resources#aitool">AI Tools (Free)</a>
+              </button>
+            </li>
+            <li>
+              <button className="btn4 py-1 w-[255px] hover:text-gray-200 hover:font-thin">
+                <a href="/resources#aitool2">AI Tools (Paid)</a>
               </button>
             </li>
             <li>
@@ -131,6 +145,11 @@ async function Resources({ anchor }: any) {
           <section>
             <main id="aitool" className="relative top-[-80px]" />
             <AiTools aitool={aitool} />
+          </section>
+
+          <section>
+            <main id="aitool2" className="relative top-[-80px]" />
+            <AiTools2 aitool2={aitool2} />
           </section>
 
           <section>

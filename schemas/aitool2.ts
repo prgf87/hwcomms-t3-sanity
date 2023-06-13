@@ -1,8 +1,8 @@
 import { defineField, defineType } from 'sanity';
 
 export default defineType({
-  name: 'aitool',
-  title: 'AI Tools (Free/Freemium)',
+  name: 'aitool2',
+  title: 'AI Tools (Paid)',
   type: 'document',
   fields: [
     defineField({

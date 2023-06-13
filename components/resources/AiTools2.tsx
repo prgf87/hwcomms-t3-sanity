@@ -5,12 +5,12 @@ import React from 'react';
 import BackToTop from '../navigation/BackToTop';
 import ClientSideRoute from '../navigation/ClientSideRoute';
 
-function AiTools({ aitool }: any) {
+function AiTools2({ aitool2 }: any) {
   return (
-    <section id="aitool" className="relative px-2 sm:px-10 md:p-3">
+    <section id="aitool2" className="relative px-2 sm:px-10 md:p-3">
       <div className="relative mx-auto mt-8">
         <h1 className="absolute top-0 left-0 right-0 text-center text-gray-200 tracking-widest md:tracking-[8px] uppercase underline text-2xl lg:text-3xl">
-          AI Tools (Free/Freemium)
+          AI Tools (Paid)
         </h1>
         <div className="flex place-content-center pt-12">
           <BackToTop path={'resources/#resources'}>
@@ -18,7 +18,7 @@ function AiTools({ aitool }: any) {
           </BackToTop>
         </div>
         <div className="text-gray-200 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-2 mt-4 items-center mx-auto max-w-[500px] md:max-w-[750px] lg:max-w-[1000px] xl:max-w-full">
-          {aitool.map((aitool: any) => {
+          {aitool2.map((aitool: any) => {
             return (
               <ClientSideRoute key={aitool._id} route={aitool.linktoaitool}>
                 <div className="overflow-hidden rounded-xl">
@@ -54,4 +54,4 @@ function AiTools({ aitool }: any) {
   );
 }
 
-export default AiTools;
+export default AiTools2;

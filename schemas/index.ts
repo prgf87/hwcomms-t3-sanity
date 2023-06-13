@@ -10,10 +10,12 @@ import trick from './trick';
 import news from './news';
 import aitool from './aitool';
 import crafted from './crafted';
+import aitool2 from './aitool2';
 
 export const schemaTypes = [
   blockContent,
   aitool,
+  aitool2,
   author,
   category,
   review,
