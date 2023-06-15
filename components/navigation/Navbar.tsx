@@ -75,9 +75,9 @@ function Navbar() {
             style={{ color: `${textColor}` }}
             className="flex h-[55px] w-[120px] bg-cover transition-transform hover:scale-110 duration-200"
           >
-            <Link href="/" className="pt-2">
+            <div className="pt-2">
               <Logo />
-            </Link>
+            </div>
           </div>
           <div className="relative top-1.5 mb-4 left-[5vw] h-14 w-14 hover:scale-110 transition-transform ease-in-out duration-300">
             <Link href="https://www.talkingpointsforlife.com/">
@@ -92,23 +92,23 @@ function Navbar() {
         </div>
 
         <ul style={{ color: `${textColor}` }} className="hidden md:flex gap-4">
-          <li className="p-2 hover:text-gray-400 text-xs md:text-sm lg:text-lg">
+          <li className="p-2 hover:underline hover:text-gray-400 text-xs md:text-sm lg:text-lg">
             <Link href="/#home">Home</Link>
           </li>
-          <li className="p-2 hover:text-gray-400 text-xs md:text-sm lg:text-lg">
+          <li className="p-2 hover:underline hover:text-gray-400 text-xs md:text-sm lg:text-lg">
             <Link href="/about">About</Link>
           </li>
-          <li className="p-2 hover:text-gray-400 text-xs md:text-sm lg:text-lg">
+          <li className="p-2 hover:underline hover:text-gray-400 text-xs md:text-sm lg:text-lg">
             <Link href="/services">Services</Link>
           </li>
-          <li className="p-2 hover:text-gray-400 text-xs md:text-sm lg:text-lg">
+          <li className="p-2 hover:underline hover:text-gray-400 text-xs md:text-sm lg:text-lg">
             <Link href="/contact">Contact</Link>
           </li>
 
           <li className="relative">
             <button
               onClick={() => setdropdownOpen(!dropdownOpen)}
-              className="flex justify-center items-center p-2 hover:text-gray-400 text-xs md:text-sm lg:text-lg"
+              className="flex justify-center items-center p-2 hover:underline hover:text-gray-400 text-xs md:text-sm lg:text-lg"
             >
               More
             </button>
