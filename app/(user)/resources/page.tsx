@@ -11,6 +11,9 @@ import CraftedByHailey from '@/components/resources/CraftedByHailey';
 import ResourceDirectory from '@/components/resources/ResourceDirectory';
 import DesignerTricks from '@/components/resources/DesignerTricks';
 import WritersToolbox from '@/components/resources/WritersToolbox';
+import PreviewCrafted from '@/components/preview/PreviewCrafted';
+import PreviewAiTool from '@/components/preview/PreviewAiTool';
+import PreviewAiTool2 from '@/components/preview/PreviewAiTool2';
 
 const queryTrick = groq`
 *[_type=='trick'] {
@@ -72,6 +75,9 @@ async function Resources({ anchor }: any) {
         <PreviewTrickList query={queryTrick} />
         <PreviewToolboxList query={queryToolbox} />
         <PreviewDirectoryList query={queryDirectory} />
+        <PreviewCrafted query={queryCrafted} />
+        <PreviewAiTool query={queryAiTool} />
+        <PreviewAiTool2 query={queryAiTool2} />
       </PreviewSuspense>
     );
   }
@@ -105,70 +111,115 @@ async function Resources({ anchor }: any) {
           </div>
           {/*Internal Navbar */}
           <hr className="max-w-7xl mb-8 border-dashed mx-auto" />
-          <ul className="grid grid-cols-2 mx-auto space-x-0 text-base xl:text-xl">
+          <ul className="grid mx-auto lg:flex justify-center items-center gap-4 text-lg xl:text-xl">
             <li>
-              <button className="btn4 py-1 w-[255px] hover:text-gray-200 hover:font-thin">
-                <a href="/resources#aitool">AI Tools (Free)</a>
+              <button>
+                <a
+                  href="/resources#aitool"
+                  className="hover:text-gray-400 hover:font-thin underline"
+                >
+                  AI Tools (Free)
+                </a>
               </button>
             </li>
             <li>
-              <button className="btn4 py-1 w-[255px] hover:text-gray-200 hover:font-thin">
-                <a href="/resources#aitool2">AI Tools (Paid)</a>
+              <button>
+                <a
+                  href="/resources#aitool2"
+                  className="hover:text-gray-400 hover:font-thin underline"
+                >
+                  AI Tools (Paid)
+                </a>
               </button>
             </li>
             <li>
-              <button className="btn4 py-1 w-[255px] hover:text-gray-200 hover:font-thin">
+              <button>
                 {' '}
-                <a href="/resources#crafted">Crafted by Hailey</a>
+                <a
+                  href="/resources#crafted"
+                  className="hover:text-gray-400 hover:font-thin underline"
+                >
+                  Crafted by Hailey
+                </a>
               </button>
             </li>
             <li>
-              <button className="btn4 py-1 w-[255px] hover:text-gray-200 hover:font-thin">
+              <button>
                 {' '}
-                <a href="/resources#toolbox">Creative Writer&apos;s Toolbox</a>
+                <a
+                  href="/resources#toolbox"
+                  className="hover:text-gray-400 hover:font-thin underline"
+                >
+                  Creative Writer&apos;s Toolbox
+                </a>
               </button>
             </li>
             <li>
-              <button className="btn4 py-1 w-[255px] hover:text-gray-200 hover:font-thin">
+              <button>
                 {' '}
-                <a href="/resources#trick">Designer&apos;s Bag of Tricks</a>
+                <a
+                  href="/resources#trick"
+                  className="hover:text-gray-400 hover:font-thin underline"
+                >
+                  Designer&apos;s Bag of Tricks
+                </a>
               </button>
             </li>
             <li>
-              <button className="btn4 py-1 w-[255px] hover:text-gray-200 hover:font-thin">
+              <button>
                 {' '}
-                <a href="/resources#directory">Free Resources</a>
+                <a
+                  href="/resources#directory"
+                  className="hover:text-gray-400 hover:font-thin underline"
+                >
+                  Free Resources
+                </a>
               </button>
             </li>
           </ul>
 
           <section>
-            <main id="aitool" className="relative top-[-80px]" />
+            <main
+              id="aitool"
+              className="relative top-[-140px] md:top-[-80px]"
+            />
             <AiTools aitool={aitool} />
           </section>
 
           <section>
-            <main id="aitool2" className="relative top-[-80px]" />
+            <main
+              id="aitool2"
+              className="relative top-[-140px] md:top-[-80px]"
+            />
             <AiTools2 aitool2={aitool2} />
           </section>
 
           <section>
-            <main id="crafted" className="relative top-[-80px]" />
+            <main
+              id="crafted"
+              className="relative top-[-140px] md:top-[-80px]"
+            />
             <CraftedByHailey crafted={crafted} />
           </section>
 
           <section>
-            <main id="toolbox" className="relative top-[-80px]" />
+            <main
+              id="toolbox"
+              className="relative top-[-140px] md:top-[-80px]"
+            />
             <WritersToolbox toolboxes={toolboxes} />
           </section>
 
           <section>
-            <main id="trick" className="relative top-[-80px]" />
+            <main id="trick" className="relative top-[-140px] md:top-[-80px]" />
             <DesignerTricks tricks={tricks} />
           </section>
 
           <section>
-            <main id="directory" className="relative top-[-80px]" />
+            <main
+              id="directory"
+              className="relative top-[-140px] md:top-[-80px]"
+            />
             <ResourceDirectory directories={directories} />
           </section>
         </div>

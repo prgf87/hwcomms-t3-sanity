@@ -7,10 +7,10 @@ import ClientSideRoute from '../navigation/ClientSideRoute';
 
 function AiTools({ aitool }: any) {
   return (
-    <section id="aitool" className="relative px-2 sm:px-10 md:p-3">
+    <section className="relative px-2 sm:px-10 md:p-3">
       <div className="relative mx-auto mt-8">
         <h1 className="absolute top-0 left-0 right-0 text-center text-gray-200 tracking-widest md:tracking-[8px] uppercase underline text-2xl lg:text-3xl">
-          AI Tools (Free/Freemium)
+          AI Tools (Free)
         </h1>
         <div className="flex place-content-center pt-12">
           <BackToTop path={'resources/#resources'}>
