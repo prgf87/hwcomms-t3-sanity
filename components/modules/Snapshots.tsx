@@ -2,6 +2,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 function Snapshots() {
   return (
@@ -42,7 +43,8 @@ function Snapshots() {
           className="diagonal"
         >
           <div className="wrapper">
-            <img src="/images/img27.png" alt="/" />
+            <Image src="/images/img27.png" alt="/" width={1024} height={1024} />
+
             <h2 className="text-xl font-bold py-2 text-center">
               Experienced Communicator
             </h2>
@@ -70,7 +72,7 @@ function Snapshots() {
           className="diagonal3"
         >
           <div className="wrapper">
-            <img src="/images/img26.png" alt="/" />
+            <Image src="/images/img26.png" alt="/" width={1024} height={1024} />
             <h2 className="text-xl font-bold py-2 text-center">Brain Nerd</h2>
             <p className="text-base text-center">
               My unique communications strategy blends brain science with
@@ -98,7 +100,7 @@ function Snapshots() {
           className="diagonal2"
         >
           <div className="wrapper">
-            <img src="/images/img12.png" alt="/" />
+            <Image src="/images/img12.png" alt="/" width={1024} height={1024} />
             <h2 className="text-xl font-bold py-2 text-center">
               Writer, Editor, and Producer
             </h2>
