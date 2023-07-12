@@ -74,7 +74,7 @@ export default async function HomePage() {
 
   return (
     <main>
-      <div className="overflow-y-hidden">
+      <div className="overflow-hidden">
         <div>
           <div id="intro" className="relative top-[-80px]" />
           <Intro />

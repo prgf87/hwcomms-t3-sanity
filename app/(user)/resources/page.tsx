@@ -90,7 +90,7 @@ async function Resources({ anchor }: any) {
   const aitool2 = await client.fetch(queryAiTool2);
 
   return (
-    <main className="realtive top-0 bg-gradient-invert text-gray-200 grid grid-cols-1">
+    <main className="relative top-0 bg-gradient-invert text-gray-200 grid grid-cols-1">
       <div className="overflow-x-hidden">
         <div className="mx-auto text-center">
           <div>
@@ -109,6 +109,7 @@ async function Resources({ anchor }: any) {
               for the latest tips and resources.
             </p>
           </div>
+
           {/*Internal Navbar */}
           <hr className="max-w-7xl mb-8 border-dashed mx-auto" />
           <ul className="grid mx-auto lg:flex justify-center items-center gap-4 text-lg xl:text-xl">
