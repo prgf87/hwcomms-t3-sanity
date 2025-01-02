@@ -1,19 +1,11 @@
-import { previewData } from 'next/headers';
 import { groq } from 'next-sanity';
 import { client } from '@/lib/sanity.client';
-import PreviewSuspense from '@/components/preview/PreviewSuspense';
-import PreviewTrickList from '@/components/preview/PreviewTrickList';
-import PreviewToolboxList from '@/components/preview/PreviewToolboxList';
-import PreviewDirectoryList from '@/components/preview/PreviewDirectoryList';
 import AiTools from '@/components/resources/AiTools';
 import AiTools2 from '@/components/resources/AiTools2';
 import CraftedByHailey from '@/components/resources/CraftedByHailey';
 import ResourceDirectory from '@/components/resources/ResourceDirectory';
 import DesignerTricks from '@/components/resources/DesignerTricks';
 import WritersToolbox from '@/components/resources/WritersToolbox';
-import PreviewCrafted from '@/components/preview/PreviewCrafted';
-import PreviewAiTool from '@/components/preview/PreviewAiTool';
-import PreviewAiTool2 from '@/components/preview/PreviewAiTool2';
 
 const queryTrick = groq`
 *[_type=='trick'] {
@@ -61,26 +53,26 @@ const queryAiTool2 = groq`
 export const revalidate = 60;
 
 async function Resources({ anchor }: any) {
-  if (previewData()) {
-    return (
-      <PreviewSuspense
-        fallback={
-          <div role="status">
-            <p className="text-center text-lg animate-pulse text-[#5EBCAA]">
-              Loading Preview Data...
-            </p>
-          </div>
-        }
-      >
-        <PreviewTrickList query={queryTrick} />
-        <PreviewToolboxList query={queryToolbox} />
-        <PreviewDirectoryList query={queryDirectory} />
-        <PreviewCrafted query={queryCrafted} />
-        <PreviewAiTool query={queryAiTool} />
-        <PreviewAiTool2 query={queryAiTool2} />
-      </PreviewSuspense>
-    );
-  }
+  // if (previewData()) {
+  //   return (
+  //     <PreviewSuspense
+  //       fallback={
+  //         <div role="status">
+  //           <p className="text-center text-lg animate-pulse text-[#5EBCAA]">
+  //             Loading Preview Data...
+  //           </p>
+  //         </div>
+  //       }
+  //     >
+  //       <PreviewTrickList query={queryTrick} />
+  //       <PreviewToolboxList query={queryToolbox} />
+  //       <PreviewDirectoryList query={queryDirectory} />
+  //       <PreviewCrafted query={queryCrafted} />
+  //       <PreviewAiTool query={queryAiTool} />
+  //       <PreviewAiTool2 query={queryAiTool2} />
+  //     </PreviewSuspense>
+  //   );
+  // }
 
   const tricks = await client.fetch(queryTrick);
   const toolboxes = await client.fetch(queryToolbox);
