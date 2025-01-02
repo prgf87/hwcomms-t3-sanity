@@ -1,11 +1,6 @@
-import { previewData } from 'next/headers';
 import { groq } from 'next-sanity';
 import { client } from '@/lib/sanity.client';
-import PreviewSuspense from '@/components/preview/PreviewSuspense';
 import Intro from '@/components/modules/Intro';
-import PreviewQuoteCarousel from '@/components/preview/PreviewQuoteCarousel';
-import PreviewLatestNews from '@/components/preview/PreviewLatestNews';
-import PreviewReviewCarousel from '@/components/preview/PreviewReviewCarousel';
 import QuoteCarousel from '@/components/modules/QuoteCarousel';
 import ReviewCarousel from '@/components/modules/ReviewCarousel';
 import BannerBio from '@/components/navigation/BannerBio';
@@ -37,37 +32,6 @@ const queryReview = groq`
 export const revalidate = 60;
 
 export default async function HomePage() {
-  if (previewData()) {
-    return (
-      <PreviewSuspense
-        fallback={
-          <div role="status">
-            <p className="text-center text-lg animate-pulse text-[#5EBCAA]">
-              Loading Preview Data...
-            </p>
-          </div>
-        }
-      >
-        <div>
-          <h1 className="fixed text-7xl z-40 opacity-10 bottom-0">
-            PREVIEW MODE - PREVIEW MODE - PREVIEW MODE PREVIEW MODE - PREVIEW
-            MODE - PREVIEW MODE PREVIEW MODE - PREVIEW MODE - PREVIEW MODE
-          </h1>
-          <div className="flex flex-col">
-            <div>
-              <PreviewLatestNews query={queryNews} />
-            </div>
-            <div>
-              <PreviewQuoteCarousel query={queryQuote} />
-            </div>
-            <div>
-              <PreviewReviewCarousel query={queryReview} />
-            </div>
-          </div>
-        </div>
-      </PreviewSuspense>
-    );
-  }
   const quotes = await client.fetch(queryQuote);
   const reviews = await client.fetch(queryReview);
   const news = await client.fetch(queryNews);
