@@ -14,7 +14,7 @@
     "@portabletext/react": "^2.0.0",
     "@sanity/image-url": "^1.0.2",
     "@sanity/vision": "^3.0.0",
-    "@sendgrid/mail": "^7.7.0",
+    "@sendgrid/mail": "^8.1.6",
     "@tailwindcss/line-clamp": "^0.4.2",
     "@types/node": "18.11.18",
     "@types/react": "18.0.27",
